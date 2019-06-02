@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE FBType SYSTEM "../LibraryElement.dtd">
+<FBType Name="SYMLINKMULTIVARDST_1559B0FF8170C9BA0" Comment="Multiple variables single value symbolic link destination FB" Namespace="Main">
+  <Attribute Name="Runtime.FBType.ImplementingType" Value="Runtime.System#DYNGEN_SYMLINKMVAR" />
+  <Attribute Name="Configuration.GenericFBType.InterfaceParams" Value="Runtime.System#I:=1;VALUE${I}:BOOL" />
+  <Attribute Name="Configuration.FB.IDCounter" Value="0" />
+  <Identification Standard="61499-2" />
+  <VersionInfo Organization="nxtControl GmbH " Version="1.0" Author="milos" Date="2008-10-02" Remarks="template" />
+  <CompilerInfo>
+    <Compiler Language="Cpp" />
+  </CompilerInfo>
+  <InterfaceList>
+    <EventInputs>
+      <Event Name="INIT" Comment="Initializes the symbolic link data destination FB with N (1 &lt;= N &lt;= 16) variables">
+        <With Var="QI" />
+        <With Var="NAME1" />
+      </Event>
+      <Event Name="REQ" Comment="Explicit data read request" />
+    </EventInputs>
+    <EventOutputs>
+      <Event Name="INITO" Comment="Initialization confirm">
+        <With Var="QO" />
+        <With Var="STATUS" />
+        <With Var="VALUE1" />
+      </Event>
+      <Event Name="CNF" Comment="Confirmation of an explicit or implicit data read request">
+        <With Var="QO" />
+        <With Var="STATUS" />
+        <With Var="VALUE1" />
+      </Event>
+    </EventOutputs>
+    <InputVars>
+      <VarDeclaration Name="QI" Type="BOOL" Comment="INIT event input qualifier" />
+      <VarDeclaration Name="NAME1" Type="STRING" InitialValue="'$${PATH}'" Comment="Names a symbolic link variable" />
+    </InputVars>
+    <OutputVars>
+      <VarDeclaration Name="QO" Type="BOOL" Comment="Output event qualifier" />
+      <VarDeclaration Name="STATUS" Type="STRING" Comment="FB status indicator" />
+      <VarDeclaration Name="VALUE1" Type="BOOL" Comment="Current value(i) in the named variable array element" />
+    </OutputVars>
+  </InterfaceList>
+  <BasicFB>
+    <ECC>
+      <ECState Name="START" />
+    </ECC>
+  </BasicFB>
+</FBType>

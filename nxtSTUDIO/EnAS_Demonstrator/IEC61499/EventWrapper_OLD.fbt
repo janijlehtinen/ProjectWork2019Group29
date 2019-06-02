@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE FBType SYSTEM "../LibraryElement.dtd">
+<FBType GUID="1236B1DD3F05FC3D" Name="EventWrapper_OLD" Comment="Composite Function Block Type" Namespace="Main">
+  <Attribute Name="Configuration.FB.IDCounter" Value="2" />
+  <Identification Standard="61499-2" />
+  <VersionInfo Organization="nxtControl GmbH" Version="0.0" Author="erik" Date="4/9/2019" Remarks="template" />
+  <InterfaceList>
+    <EventInputs>
+      <Event Name="INIT" Comment="Initialization Request" />
+      <Event Name="REQ" Comment="Normal Execution Request" />
+      <Event Name="REQ1" />
+      <Event Name="REQ2" />
+      <Event Name="REQ3" />
+      <Event Name="REQ4" />
+    </EventInputs>
+    <EventOutputs>
+      <Event Name="INITO" Comment="Initialization Confirm" />
+      <Event Name="CNF" Comment="Execution Confirmation" />
+      <Event Name="CNF1" />
+      <Event Name="CNF2" />
+    </EventOutputs>
+  </InterfaceList>
+  <FBNetwork>
+    <FB ID="1" Name="FB1" Type="TCPIO" x="1580" y="660" Namespace="Runtime.IoCommon">
+      <Parameter Name="QI" Value="TRUE" />
+    </FB>
+    <FB ID="2" Name="FB2" Type="Wrapper" x="620" y="660" Namespace="Main">
+      <Parameter Name="EVENT1" Value="''" />
+      <Parameter Name="EVENT2" Value="''" />
+      <Parameter Name="EVENT3" Value="''" />
+      <Parameter Name="EVENT4" Value="'Pause'" />
+      <Parameter Name="EVENT5" Value="'Start'" />
+      <Parameter Name="NAME" Value="''" />
+      <Parameter Name="CONNECTIONS" Value="''" />
+      <Parameter Name="LOCATION" Value="''" />
+      <Parameter Name="EVENT_NAME1" Value="''" />
+      <Parameter Name="EVENT_NAME2" Value="''" />
+      <Parameter Name="EVENT_NAME3" Value="''" />
+      <Parameter Name="EVENT_NAME4" Value="''" />
+      <Parameter Name="EVENT_NAME5" Value="''" />
+      <Parameter Name="DATA_NAME1" Value="''" />
+      <Parameter Name="DATA_NAME2" Value="''" />
+      <Parameter Name="DATA1" Value="''" />
+      <Parameter Name="DATA2" Value="''" />
+      <Parameter Name="RUN" Value="''" />
+      <Parameter Name="FREE" Value="''" />
+    </FB>
+    <Input Name="INIT" x="40" y="272" Type="Event" />
+    <Input Name="REQ" x="40" y="332" Type="Event" />
+    <Input Name="REQ1" x="40" y="392" Type="Event" />
+    <Input Name="REQ2" x="40" y="452" Type="Event" />
+    <Input Name="REQ3" x="40" y="912" Type="Event" />
+    <Input Name="REQ4" x="40" y="972" Type="Event" />
+    <Output Name="INITO" x="2900" y="192" Type="Event" />
+    <Output Name="CNF" x="2920" y="252" Type="Event" />
+    <Output Name="CNF1" x="2900" y="312" Type="Event" />
+    <Output Name="CNF2" x="2900" y="372" Type="Event" />
+    <EventConnections>
+      <Connection Source="REQ" Destination="FB2.REQ1" dx1="139.5417">
+        <AvoidsNodes>false</AvoidsNodes>
+      </Connection>
+      <Connection Source="REQ1" Destination="FB2.REQ2" dx1="45.8125" />
+      <Connection Source="REQ2" Destination="FB2.REQ3">
+        <Points>
+          <Points>
+            <X>81.046875</X>
+            <Y>120</Y>
+          </Points>
+          <Points>
+            <X>50</X>
+            <Y>120</Y>
+          </Points>
+          <Points>
+            <X>50</X>
+            <Y>220</Y>
+          </Points>
+          <Points>
+            <X>150</X>
+            <Y>220</Y>
+          </Points>
+        </Points>
+        <AvoidsNodes>false</AvoidsNodes>
+      </Connection>
+      <Connection Source="FB2.CNF" Destination="FB1.REQ" />
+      <Connection Source="REQ" Destination="CNF" dx1="1579.542">
+        <AvoidsNodes>false</AvoidsNodes>
+      </Connection>
+      <Connection Source="REQ1" Destination="CNF1" dx1="1635.813">
+        <AvoidsNodes>false</AvoidsNodes>
+      </Connection>
+      <Connection Source="REQ2" Destination="CNF2" dx1="1735.813">
+        <AvoidsNodes>false</AvoidsNodes>
+      </Connection>
+      <Connection Source="REQ3" Destination="FB2.REQ4" />
+      <Connection Source="REQ4" Destination="FB2.REQ5" />
+      <Connection Source="INIT" Destination="FB1.INIT" dx1="801.4167" />
+      <Connection Source="FB1.INITO" Destination="FB2.INIT" dx1="40" dx2="30" dy="-110" />
+      <Connection Source="INIT" Destination="INITO" dx1="41.41669" />
+    </EventConnections>
+    <DataConnections>
+      <Connection Source="FB2.STR1" Destination="FB1.DATAOUT" dx1="40.95837" />
+    </DataConnections>
+  </FBNetwork>
+</FBType>

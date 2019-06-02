@@ -1,0 +1,18 @@
+<Mapping>
+  <EventInputs>
+    <Event Name="INID" Map="REQ_1">StartIn;PauseIn;ResetIn</Event>
+  </EventInputs>
+  <EventOutputs>
+    <Event Name="INIDO" Map="IND_1">StartOut;PauseOut;ResetOut</Event>
+  </EventOutputs>
+  <Inputs>
+    <Input Name="StartIn" Type="BOOL" Map="SD_1" />
+    <Input Name="PauseIn" Type="BOOL" Map="SD_2" />
+    <Input Name="ResetIn" Type="BOOL" Map="SD_3" />
+  </Inputs>
+  <Outputs>
+    <Output Name="StartOut" Type="BOOL" Map="RD_1" />
+    <Output Name="PauseOut" Type="BOOL" Map="RD_2" />
+    <Output Name="ResetOut" Type="BOOL" Map="RD_3" />
+  </Outputs>
+</Mapping>

@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DeviceProperties xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <DefaultProfile>
+    <Device Name="IceBlock_J1">
+      <Property Name="IPAddress" Value="192.168.0.102" />
+    </Device>
+    <Device Name="IceBlock5">
+      <Property Name="IPAddress" Value="192.168.0.103" />
+    </Device>
+    <Device Name="IceBlock6_2">
+      <Property Name="IPAddress" Value="192.168.0.104" />
+    </Device>
+    <Device Name="IceBlock_R">
+      <Property Name="IPAddress" Value="192.168.0.34" />
+    </Device>
+    <Device Name="IceBlock1">
+      <Property Name="IPAddress" Value="192.168.0.105" />
+    </Device>
+    <Device Name="IceBlock2">
+      <Property Name="IPAddress" Value="192.168.0.106" />
+    </Device>
+    <Device Name="IceBlock3">
+      <Property Name="IPAddress" Value="192.168.0.107" />
+    </Device>
+    <Device Name="IceBlock_J2">
+      <Property Name="IPAddress" Value="192.168.0.109" />
+    </Device>
+    <Device Name="IceBlock4">
+      <Property Name="IPAddress" Value="192.168.0.110" />
+    </Device>
+    <Device Name="IceBlock7">
+      <ComplexProperty Name="Ports" Expanded="true">
+        <Property Name="Deploy" Value="61535" />
+        <Property Name="HMI" Value="61534" />
+        <Property Name="Watch" Value="61533" />
+        <Property Name="Archive" Value="61532" />
+      </ComplexProperty>
+    </Device>
+  </DefaultProfile>
+  <Profile Name="(Local Test)">
+    <Device Name="IceBlock_J1">
+      <Property Name="IPAddress" Value="127.0.0.1" />
+      <ComplexProperty Name="Ports" Expanded="true">
+        <Property Name="Deploy" Value="61499" />
+        <Property Name="HMI" Value="61498" />
+        <Property Name="Watch" Value="61497" />
+        <Property Name="Archive" Value="61496" />
+      </ComplexProperty>
+    </Device>
+    <Device Name="IceBlock5">
+      <Property Name="IPAddress" Value="127.0.0.1" />
+      <ComplexProperty Name="Ports" Expanded="true">
+        <Property Name="Deploy" Value="61503" />
+        <Property Name="HMI" Value="61502" />
+        <Property Name="Watch" Value="61501" />
+        <Property Name="Archive" Value="61500" />
+      </ComplexProperty>
+    </Device>
+    <Device Name="IceBlock6_2">
+      <Property Name="IPAddress" Value="127.0.0.1" />
+      <ComplexProperty Name="Ports" Expanded="true">
+        <Property Name="Deploy" Value="61507" />
+        <Property Name="HMI" Value="61506" />
+        <Property Name="Watch" Value="61505" />
+        <Property Name="Archive" Value="61504" />
+      </ComplexProperty>
+    </Device>
+    <Device Name="IceBlock_R">
+      <Property Name="IPAddress" Value="127.0.0.1" />
+      <ComplexProperty Name="Ports" Expanded="true">
+        <Property Name="Deploy" Value="61511" />
+        <Property Name="HMI" Value="61510" />
+        <Property Name="Watch" Value="61509" />
+        <Property Name="Archive" Value="61508" />
+      </ComplexProperty>
+    </Device>
+    <Device Name="IceBlock1">
+      <Property Name="IPAddress" Value="127.0.0.1" />
+      <ComplexProperty Name="Ports" Expanded="true">
+        <Property Name="Deploy" Value="61515" />
+        <Property Name="HMI" Value="61514" />
+        <Property Name="Watch" Value="61513" />
+        <Property Name="Archive" Value="61512" />
+      </ComplexProperty>
+    </Device>
+    <Device Name="IceBlock2">
+      <Property Name="IPAddress" Value="127.0.0.1" />
+      <ComplexProperty Name="Ports" Expanded="true">
+        <Property Name="Deploy" Value="61519" />
+        <Property Name="HMI" Value="61518" />
+        <Property Name="Watch" Value="61517" />
+        <Property Name="Archive" Value="61516" />
+      </ComplexProperty>
+    </Device>
+    <Device Name="IceBlock3">
+      <Property Name="IPAddress" Value="127.0.0.1" />
+      <ComplexProperty Name="Ports" Expanded="true">
+        <Property Name="Deploy" Value="61523" />
+        <Property Name="HMI" Value="61522" />
+        <Property Name="Watch" Value="61521" />
+        <Property Name="Archive" Value="61520" />
+      </ComplexProperty>
+    </Device>
+    <Device Name="IceBlock_J2">
+      <Property Name="IPAddress" Value="127.0.0.1" />
+      <ComplexProperty Name="Ports" Expanded="true">
+        <Property Name="Deploy" Value="61527" />
+        <Property Name="HMI" Value="61526" />
+        <Property Name="Watch" Value="61525" />
+        <Property Name="Archive" Value="61524" />
+      </ComplexProperty>
+    </Device>
+    <Device Name="IceBlock4">
+      <Property Name="IPAddress" Value="127.0.0.1" />
+      <ComplexProperty Name="Ports" Expanded="true">
+        <Property Name="Deploy" Value="61531" />
+        <Property Name="HMI" Value="61530" />
+        <Property Name="Watch" Value="61529" />
+        <Property Name="Archive" Value="61528" />
+      </ComplexProperty>
+    </Device>
+    <Device Name="IceBlock7">
+      <ComplexProperty Name="Ports" Expanded="true">
+        <Property Name="Deploy" Value="61535" />
+        <Property Name="HMI" Value="61534" />
+        <Property Name="Watch" Value="61533" />
+        <Property Name="Archive" Value="61532" />
+      </ComplexProperty>
+    </Device>
+  </Profile>
+</DeviceProperties>

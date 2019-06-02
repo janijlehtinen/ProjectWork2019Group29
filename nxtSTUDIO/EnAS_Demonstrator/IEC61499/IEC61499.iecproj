@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ProjectDatabase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="EnAS_Demonstrator" Guid="{408DA983-FB87-4E9B-86CF-75CE76907CED}" Version="1.5.0.0" xmlns="http://www.nxtcontrol.com/IEC61499.xsd">
+  <Folders>
+    <Folder Type="Basic" Name=".DeliveryServices" />
+    <Folder Type="Basic" Name=".EnAS" />
+    <Folder Type="Composite" Name=".HAL" />
+  </Folders>
+  <Archive>
+    <ExcludeDir>
+      <string>Exports</string>
+      <string>Imports</string>
+      <string>Documentation</string>
+    </ExcludeDir>
+  </Archive>
+  <References />
+  <CanvasResolution StartCanvasClass="HMI.Main.Canvases.StartCanvas_2" Width="1024" Height="768" WorkAreaWidth="1024" WorkAreaHeight="688" Template="Default">
+    <Topology Name="Default">
+      <Canvases>
+        <Canvas Name="Canvas1" Title="" Tooltip="" Instance="HMI.Main.Canvases.Canvas1" />
+      </Canvases>
+    </Topology>
+  </CanvasResolution>
+  <CanvasResolution StartCanvasClass="" Width="-1" Height="-1" WorkAreaWidth="-1" WorkAreaHeight="-1" Template="">
+    <Topology Name="Default" />
+  </CanvasResolution>
+  <Graphics Name="Graphics" />
+  <WebGraphics Name="WebGraphics" />
+  <Security Level="None">
+    <Info xsi:nil="true" />
+  </Security>
+</ProjectDatabase>

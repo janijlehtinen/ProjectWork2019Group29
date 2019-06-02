@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="DemoServer/src"/>
+	<classpathentry kind="lib" path="DemoServer/lib/bcpkix-jdk15on-1.54.jar"/>
+	<classpathentry kind="lib" path="DemoServer/lib/bcprov-jdk15on-1.54.jar"/>
+	<classpathentry kind="lib" path="DemoServer/lib/commons-codec-1.9.jar"/>
+	<classpathentry kind="lib" path="DemoServer/lib/commons-logging-1.2.jar"/>
+	<classpathentry kind="lib" path="DemoServer/lib/httpclient-4.5.2.jar"/>
+	<classpathentry kind="lib" path="DemoServer/lib/httpcore-4.4.4.jar"/>
+	<classpathentry kind="lib" path="DemoServer/lib/httpcore-nio-4.4.4.jar"/>
+	<classpathentry kind="lib" path="DemoServer/lib/log4j-1.2.17.jar"/>
+	<classpathentry kind="lib" path="DemoServer/lib/opc-ua-stack-1.3.344-173.jar"/>
+	<classpathentry kind="lib" path="DemoServer/lib/prosys-opc-ua-java-sdk-client-server-evaluation-3.1.4-514.jar"/>
+	<classpathentry kind="lib" path="DemoServer/lib/slf4j-api-1.7.7.jar"/>
+	<classpathentry kind="lib" path="DemoServer/lib/slf4j-log4j12-1.7.7.jar"/>
+	<classpathentry kind="output" path="DemoServer/bin"/>
+</classpath>

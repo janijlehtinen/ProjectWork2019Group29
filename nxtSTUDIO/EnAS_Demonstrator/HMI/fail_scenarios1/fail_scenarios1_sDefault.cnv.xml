@@ -1,0 +1,13 @@
+<Mapping>
+  <EventInputs>
+    <Event Name="REQ" Map="REQ_1"></Event>
+  </EventInputs>
+  <EventOutputs>
+    <Event Name="CNF" Map="IND_1">J1_OUT;CONV1_OUT</Event>
+  </EventOutputs>
+  <Inputs />
+  <Outputs>
+    <Output Name="J1_OUT" Type="BOOL" Map="RD_1" />
+    <Output Name="CONV1_OUT" Type="BOOL" Map="RD_2" />
+  </Outputs>
+</Mapping>

@@ -1,0 +1,3726 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE System SYSTEM "../LibraryElement.dtd">
+<System Name="System" Comment="System Configuration">
+  <Identification Standard="61499-1" />
+  <VersionInfo Organization="nxtControl GmbH" Version="0.0" Author="Aalto_IT" Date="3/9/2016" />
+  <Application ID="1B045A1950BBCA4D" Name="APP2">
+    <SubAppNetwork>
+      <SubApp ID="24C409D035625D05" Name="SUB_APP1" Type="DeliveryServices" x="8060" y="1720" Namespace="Main" />
+      <FB ID="7C7F8E26B649D6B2" Name="Section1" Type="StandardSection" x="10440" y="780" Namespace="Main" />
+      <FB ID="FE0EDF57CBC90A85" Name="Section2" Type="StandardSection" x="10420" y="1480" Namespace="Main" />
+      <FB ID="90DC51F0AAB17CCF" Name="Section3" Type="StandardSection" x="10440" y="2220" Namespace="Main" />
+      <FB ID="301D9114A86628D0" Name="Section4" Type="StandardSection" x="10460" y="2940" Namespace="Main" />
+      <FB ID="F380533F131DFEDA" Name="Section5" Type="StandardSection" x="10440" y="3660" Namespace="Main" />
+      <FB ID="AB63A54BB8A57112" Name="Section6" Type="StandardSection" x="10460" y="4380" Namespace="Main" />
+      <FB ID="772A3CC57AC44988" Name="FB3" Type="S5Gate" x="8940" y="960" Namespace="Main" />
+      <FB ID="B9CFCDF0B81F1816" Name="FB4" Type="SRSection" x="10460" y="200" Namespace="Main" />
+      <FB ID="F258F827C51F23BA" Name="JACK1" Type="JackStation" x="8120" y="4380" Namespace="Main" />
+      <FB ID="C8122D02EB37224" Name="JACK2" Type="JackStation" x="8100" y="5500" Namespace="Main" />
+      <FB ID="4B8FF00459B95D6F" Name="PRODUCE_RED" Type="Produce" x="2680" y="1860" Namespace="Main" />
+      <FB ID="CA2F0BF821A99F05" Name="CAMERA" Type="ColorDetect" x="4760" y="2220" Namespace="Main" />
+      <FB ID="68A70D6253DFF18" Name="OrderConsole" Type="ProductOrder" x="6520" y="2320" Namespace="Main">
+        <Parameter Name="QI" Value="TRUE" />
+      </FB>
+      <FB ID="55AF667317488C9" Name="ButtonConsole" Type="ConsoleHMI" x="6460" y="3100" Namespace="Main" />
+      <FB ID="5B91DE6A216E4034" Name="FB2" Type="ConfigurationManagerC" x="6920" y="640" Namespace="Main" />
+      <FB ID="818B2C5420EBD050" Name="DockConfirmationButton" Type="ConfirmationButton" x="4860" y="3140" Namespace="Main">
+        <Parameter Name="message" Value="'Confirm dock'" />
+      </FB>
+      <FB ID="3C3C8DB11BF295F6" Name="FB10" Type="EventWrapper1" x="9880" y="720" Namespace="Main" />
+      <FB ID="F908138020310B33" Name="FB12" Type="EventOutWrapper1" x="11320" y="720" Namespace="Main" />
+      <FB ID="B76A74183AD98F33" Name="FB20" Type="EventWrapper2" x="9820" y="1500" Namespace="Main" />
+      <FB ID="B7C01EF073FCC73A" Name="FB9" Type="EventWrapper3" x="9820" y="2160" Namespace="Main" />
+      <FB ID="355CD6D54FBD9A52" Name="FB8" Type="EventWrapper4" x="9900" y="2880" Namespace="Main" />
+      <FB ID="452DAF2602D39204" Name="FB6" Type="EventWrapper5" x="9860" y="3600" Namespace="Main" />
+      <FB ID="72700C7DBCE346E0" Name="FB11" Type="EventWrapper6" x="9900" y="4320" Namespace="Main" />
+      <FB ID="A279D59D9B3475F7" Name="FB5" Type="EventWrapper_JACK1" x="7220" y="4340" Namespace="Main">
+        <Parameter Name="IN_BOOL1" Value="FALSE" />
+      </FB>
+      <FB ID="FF2AC73CB4BB7562" Name="FB1" Type="EventWrapper_JACK2" x="7060" y="5440" Namespace="Main">
+        <Parameter Name="IN_BOOL1" Value="TRUE" />
+      </FB>
+      <FB ID="5AC65885EC296F28" Name="FB7" Type="EventWrapper_Gate" x="8440" y="900" Namespace="Main" />
+      <FB ID="2EED6007A80A3CA5" Name="FB21" Type="EventOutWrapper2" x="11340" y="1440" Namespace="Main" />
+      <FB ID="13EAA33FED759F9F" Name="FB13" Type="EventOutWrapper3" x="11260" y="2160" Namespace="Main" />
+      <FB ID="7E308803C17D8609" Name="FB14" Type="EventOutWrapper4" x="11320" y="2880" Namespace="Main" />
+      <FB ID="2C0BBCD7B655E677" Name="FB15" Type="EventOutWrapper5" x="11380" y="3600" Namespace="Main" />
+      <FB ID="E66A119EC023C6D4" Name="FB16" Type="EventOutWrapper6" x="11320" y="4320" Namespace="Main" />
+      <FB ID="D795FC467E3B0A13" Name="FB17" Type="EventOutWrapper_JACK1" x="9100" y="4360" Namespace="Main" />
+      <FB ID="1887F9A1F969EE59" Name="FB18" Type="EventOutWrapper_JACK2" x="9140" y="5520" Namespace="Main" />
+      <FB ID="21D9CC0DCDC0A601" Name="FB19" Type="EventWrapper_Console" x="5820" y="3040" Namespace="Main" />
+      <FB ID="66DD1DEBE71A760F" Name="FB22" Type="EventOutWrapper_Console" x="7120" y="3040" Namespace="Main" />
+      <FB ID="327865F77C7A0F6F" Name="PRODUCE_GREEN" Type="Produce" x="2680" y="3100" Namespace="Main" />
+      <FB ID="B252C3DA0C2515D4" Name="FB23" Type="EventWrapper_Produce_Green" x="1700" y="3040" Namespace="Main" />
+      <FB ID="C5AD7CB0E58FDDE2" Name="FB24" Type="EventWrapper_Produce_RED" x="1700" y="1800" Namespace="Main" />
+      <FB ID="3FF7E74FEAB095B4" Name="failure1HMI" Type="fail_scenarios1" x="520" y="2700" Namespace="Main">
+        <Parameter Name="QI" Value="TRUE" />
+      </FB>
+      <EventConnections>
+        <Connection Source="FB2.S5_GATE_CLOSE" Destination="FB7.REQ3" dx1="100" />
+        <Connection Source="FB2.S5_GATE_OPEN" Destination="FB7.REQ2" dx1="80" />
+        <Connection Source="FB2.READY" Destination="SUB_APP1.CONFIG" dx1="120" />
+        <Connection Source="SUB_APP1.SR_OUTPUT" Destination="FB4.OUTPUT" dx1="451.916" />
+        <Connection Source="SUB_APP1.SR_INPUT" Destination="FB4.INPUT" dx1="451.916" />
+        <Connection Source="SUB_APP1.CONFIG_FEED" Destination="FB2.REQ_FEED" dx1="151.916" dx2="110" dy="-410" />
+        <Connection Source="SUB_APP1.CONFIG_REJECT" Destination="FB2.REQ_REJECT" dx1="171.916" dx2="70" dy="-470" />
+        <Connection Source="SUB_APP1.CONFIG_DELIVERY" Destination="FB2.REQ_COLLECT" dx1="191.916" dx2="90" dy="-530" />
+        <Connection Source="FB4.SENSOR_OFF" Destination="SUB_APP1.SR_SENSOR" dx1="45.5625" dx2="170" dy="290" />
+        <Connection Source="PRODUCE_RED.W1W2" Destination="SUB_APP1.W1W2" dx1="70" />
+        <Connection Source="PRODUCE_RED.W2W3" Destination="SUB_APP1.W2W3" dx1="110" />
+        <Connection Source="PRODUCE_RED.W3W1" Destination="SUB_APP1.W3W1" dx1="150" />
+        <Connection Source="SUB_APP1.W1W2_DONE" Destination="FB24.REQ2" dx1="540" dx2="70" dy="-110" />
+        <Connection Source="SUB_APP1.W2W3_DONE" Destination="FB24.REQ4" dx1="520" dx2="110" dy="-170" />
+        <Connection Source="SUB_APP1.W3W1_DONE" Destination="FB24.REQ6" dx1="480" dx2="150" dy="-290" />
+        <Connection Source="PRODUCE_RED.W3W4" Destination="SUB_APP1.W3W4" dx1="170" />
+        <Connection Source="PRODUCE_RED.TEST" Destination="CAMERA.DETECT" dx1="40.20825" />
+        <Connection Source="CAMERA.RED" Destination="FB24.REQ5" dx1="70" dx2="170" dy="-590" />
+        <Connection Source="CAMERA.GREEN" Destination="FB24.REQ7" dx1="90" dx2="130" dy="470" />
+        <Connection Source="CAMERA.OTHER" Destination="FB24.REQ7" dx1="110" dx2="130" dy="410" />
+        <Connection Source="PRODUCE_GREEN.W1W2" Destination="SUB_APP1.W1W2" dx1="70" />
+        <Connection Source="PRODUCE_GREEN.W2W3" Destination="SUB_APP1.W2W3" dx1="110" />
+        <Connection Source="PRODUCE_GREEN.TEST" Destination="CAMERA.DETECT" dx1="130" />
+        <Connection Source="CAMERA.GREEN" Destination="FB23.REQ5" dx1="67.604" dx2="150" dy="470" />
+        <Connection Source="CAMERA.RED" Destination="FB23.REQ7" dx1="87.604" dx2="190" dy="530" />
+        <Connection Source="CAMERA.OTHER" Destination="FB23.REQ7" dx1="47.604" dx2="190" dy="410" />
+        <Connection Source="PRODUCE_GREEN.W3W1" Destination="SUB_APP1.W3W1" dx1="150" />
+        <Connection Source="PRODUCE_GREEN.W3W4" Destination="SUB_APP1.W3W4" dx1="170" />
+        <Connection Source="SUB_APP1.W1W2_DONE" Destination="FB23.REQ2" dx1="540" dx2="70" dy="-110" />
+        <Connection Source="SUB_APP1.W2W3_DONE" Destination="FB23.REQ4" dx1="520" dx2="110" dy="-170" />
+        <Connection Source="SUB_APP1.W3W1_DONE" Destination="FB23.REQ6" dx1="480" dx2="150" dy="-290" />
+        <Connection Source="Section5.INITO" Destination="CAMERA.INIT">
+          <Points>
+            <Points>
+              <X>2777.073</X>
+              <Y>925</Y>
+            </Points>
+            <Points>
+              <X>2787.5</X>
+              <Y>925</Y>
+            </Points>
+            <Points>
+              <X>2787.5</X>
+              <Y>882.5</Y>
+            </Points>
+            <Points>
+              <X>2452.5</X>
+              <Y>882.5</Y>
+            </Points>
+            <Points>
+              <X>2452.5</X>
+              <Y>887.5</Y>
+            </Points>
+            <Points>
+              <X>1172.5</X>
+              <Y>887.5</Y>
+            </Points>
+            <Points>
+              <X>1172.5</X>
+              <Y>565</Y>
+            </Points>
+            <Points>
+              <X>1185</X>
+              <Y>565</Y>
+            </Points>
+          </Points>
+        </Connection>
+        <Connection Source="SUB_APP1.W3W4_DONE" Destination="FB24.REQ8" dx1="500" dx2="190" dy="-230" />
+        <Connection Source="SUB_APP1.W3W4_DONE" Destination="FB23.REQ8" dx1="500" dx2="190" dy="-230" />
+        <Connection Source="OrderConsole.PRODUCE_RED" Destination="FB24.REQ1" dx1="70" dx2="30" dy="-690" />
+        <Connection Source="OrderConsole.PRODUCE_GREEN" Destination="FB23.REQ1" dx1="63.41699" dx2="30" dy="370" />
+        <Connection Source="CAMERA.INITO" Destination="OrderConsole.INIT" dx1="107.604" />
+        <Connection Source="PRODUCE_RED.REJECTED" Destination="OrderConsole.CHECK_J1">
+          <Points>
+            <Points>
+              <X>897.4479</X>
+              <Y>640</Y>
+            </Points>
+            <Points>
+              <X>934.9479</X>
+              <Y>640</Y>
+            </Points>
+            <Points>
+              <X>934.9479</X>
+              <Y>682.5</Y>
+            </Points>
+            <Points>
+              <X>1317.5</X>
+              <Y>682.5</Y>
+            </Points>
+            <Points>
+              <X>1317.5</X>
+              <Y>605</Y>
+            </Points>
+            <Points>
+              <X>1625</X>
+              <Y>605</Y>
+            </Points>
+          </Points>
+        </Connection>
+        <Connection Source="PRODUCE_GREEN.REJECTED" Destination="OrderConsole.CHECK_J1">
+          <Points>
+            <Points>
+              <X>897.4479</X>
+              <Y>950</Y>
+            </Points>
+            <Points>
+              <X>934.9479</X>
+              <Y>950</Y>
+            </Points>
+            <Points>
+              <X>934.9479</X>
+              <Y>767.5</Y>
+            </Points>
+            <Points>
+              <X>1317.5</X>
+              <Y>767.5</Y>
+            </Points>
+            <Points>
+              <X>1317.5</X>
+              <Y>605</Y>
+            </Points>
+            <Points>
+              <X>1625</X>
+              <Y>605</Y>
+            </Points>
+          </Points>
+        </Connection>
+        <Connection Source="FB4.INITO" Destination="FB2.INIT">
+          <Points>
+            <Points>
+              <X>2766.10938</X>
+              <Y>60</Y>
+            </Points>
+            <Points>
+              <X>2782.5</X>
+              <Y>60</Y>
+            </Points>
+            <Points>
+              <X>2782.5</X>
+              <Y>162.5</Y>
+            </Points>
+            <Points>
+              <X>2602.5</X>
+              <Y>162.5</Y>
+            </Points>
+            <Points>
+              <X>2602.5</X>
+              <Y>142.5</Y>
+            </Points>
+            <Points>
+              <X>1712.5</X>
+              <Y>142.5</Y>
+            </Points>
+            <Points>
+              <X>1712.5</X>
+              <Y>170</Y>
+            </Points>
+            <Points>
+              <X>1725</X>
+              <Y>170</Y>
+            </Points>
+          </Points>
+        </Connection>
+        <Connection Source="OrderConsole.INITO" Destination="FB19.INIT" dx1="103.417" dx2="50" dy="470" />
+        <Connection Source="PRODUCE_RED.DONE" Destination="OrderConsole.READY" dx1="1680.208" />
+        <Connection Source="PRODUCE_GREEN.DONE" Destination="OrderConsole.READY">
+          <Points>
+            <Points>
+              <X>897.4479</X>
+              <Y>785</Y>
+            </Points>
+            <Points>
+              <X>909.9479</X>
+              <Y>785</Y>
+            </Points>
+            <Points>
+              <X>909.9479</X>
+              <Y>767.5</Y>
+            </Points>
+            <Points>
+              <X>1317.5</X>
+              <Y>767.5</Y>
+            </Points>
+            <Points>
+              <X>1317.5</X>
+              <Y>635</Y>
+            </Points>
+            <Points>
+              <X>1625</X>
+              <Y>635</Y>
+            </Points>
+          </Points>
+        </Connection>
+        <Connection Source="FB22.CNF3" Destination="FB2.RESET" dx1="510" dx2="450" dy="-1010" />
+        <Connection Source="FB22.CNF3" Destination="SUB_APP1.RESET" dx1="208.1875" />
+        <Connection Source="FB22.CNF3" Destination="FB4.STOP" dx1="510" />
+        <Connection Source="FB22.CNF3" Destination="FB19.REQ2" dx1="510" dx2="30" dy="-290" />
+        <Connection Source="PRODUCE_RED.W4W2" Destination="SUB_APP1.W4W2" dx1="230" />
+        <Connection Source="PRODUCE_GREEN.W4W2" Destination="SUB_APP1.W4W2" dx1="230" />
+        <Connection Source="SUB_APP1.SR_OFF" Destination="FB4.STOP" dx1="551.917" />
+        <Connection Source="SUB_APP1.W4W2_DONE" Destination="FB24.REQ2" dx1="131.917" dx2="30" dy="-350" />
+        <Connection Source="SUB_APP1.W4W2_DONE" Destination="FB23.REQ2" dx1="460" dx2="70" dy="-350" />
+        <Connection Source="DockConfirmationButton.CNF" Destination="FB2.CONFIRM" dx1="70" />
+        <Connection Source="FB2.REQ_CONFIRMATION" Destination="DockConfirmationButton.REQ">
+          <Points>
+            <Points>
+              <X>1954.5625</X>
+              <Y>230</Y>
+            </Points>
+            <Points>
+              <X>1964.5625</X>
+              <Y>230</Y>
+            </Points>
+            <Points>
+              <X>1964.5625</X>
+              <Y>332.5</Y>
+            </Points>
+            <Points>
+              <X>1617.5</X>
+              <Y>332.5</Y>
+            </Points>
+            <Points>
+              <X>1617.5</X>
+              <Y>682.5</Y>
+            </Points>
+            <Points>
+              <X>1197.5</X>
+              <Y>682.5</Y>
+            </Points>
+            <Points>
+              <X>1197.5</X>
+              <Y>810</Y>
+            </Points>
+            <Points>
+              <X>1210</X>
+              <Y>810</Y>
+            </Points>
+          </Points>
+        </Connection>
+        <Connection Source="SUB_APP1.S1_ON" Destination="FB10.REQ2" dx1="451.917" />
+        <Connection Source="SUB_APP1.S1_OFF" Destination="FB10.REQ3" dx1="461.917">
+          <AvoidsNodes>false</AvoidsNodes>
+        </Connection>
+        <Connection Source="FB22.CNF3" Destination="FB10.REQ3">
+          <Points>
+            <Points>
+              <X>1945.45313</X>
+              <Y>815</Y>
+            </Points>
+            <Points>
+              <X>1922.95313</X>
+              <Y>815</Y>
+            </Points>
+            <Points>
+              <X>1922.95313</X>
+              <Y>411.5</Y>
+            </Points>
+            <Points>
+              <X>2295</X>
+              <Y>411.5</Y>
+            </Points>
+            <Points>
+              <X>2295</X>
+              <Y>235</Y>
+            </Points>
+            <Points>
+              <X>2445</X>
+              <Y>235</Y>
+            </Points>
+          </Points>
+          <AvoidsNodes>false</AvoidsNodes>
+        </Connection>
+        <Connection Source="FB10.CNF2" Destination="Section1.DRIVE_ON" />
+        <Connection Source="FB10.CNF3" Destination="Section1.DRIVE_OFF" />
+        <Connection Source="SUB_APP1.S2_ON" Destination="FB20.REQ2" dx1="291.917" />
+        <Connection Source="SUB_APP1.S2_OFF" Destination="FB20.REQ3" dx1="311.917" />
+        <Connection Source="FB20.CNF2" Destination="Section2.DRIVE_ON" dx1="90" />
+        <Connection Source="FB20.CNF3" Destination="Section2.DRIVE_OFF" dx1="110" />
+        <Connection Source="SUB_APP1.S3_ON" Destination="FB9.REQ2" dx1="331.917" />
+        <Connection Source="SUB_APP1.S3_OFF" Destination="FB9.REQ3" dx1="351.917" />
+        <Connection Source="SUB_APP1.S3_DELIVERY" Destination="FB9.REQ4" dx1="371.917" />
+        <Connection Source="FB9.CNF2" Destination="Section3.DRIVE_ON" />
+        <Connection Source="FB9.CNF3" Destination="Section3.DRIVE_OFF" />
+        <Connection Source="FB9.CNF4" Destination="Section3.DELIVERY" />
+        <Connection Source="SUB_APP1.S4_ON" Destination="FB8.REQ2" dx1="200" />
+        <Connection Source="SUB_APP1.S4_OFF" Destination="FB8.REQ3" dx1="180" />
+        <Connection Source="FB22.CNF4" Destination="FB8.REQ3">
+          <Points>
+            <Points>
+              <X>1925.45313</X>
+              <Y>830</Y>
+            </Points>
+            <Points>
+              <X>1942.95313</X>
+              <Y>830</Y>
+            </Points>
+            <Points>
+              <X>1942.95313</X>
+              <Y>887.5</Y>
+            </Points>
+            <Points>
+              <X>2237.5</X>
+              <Y>887.5</Y>
+            </Points>
+            <Points>
+              <X>2237.5</X>
+              <Y>775</Y>
+            </Points>
+            <Points>
+              <X>2470</X>
+              <Y>775</Y>
+            </Points>
+          </Points>
+        </Connection>
+        <Connection Source="FB8.CNF2" Destination="Section4.DRIVE_ON" />
+        <Connection Source="FB8.CNF3" Destination="Section4.DRIVE_OFF" />
+        <Connection Source="SUB_APP1.S6_ON" Destination="FB11.REQ2" dx1="771.917" />
+        <Connection Source="SUB_APP1.S6_OFF" Destination="FB11.REQ3" dx1="771.917" />
+        <Connection Source="FB22.CNF4" Destination="FB11.REQ3">
+          <Points>
+            <Points>
+              <X>1925.45313</X>
+              <Y>830</Y>
+            </Points>
+            <Points>
+              <X>1937.5</X>
+              <Y>830</Y>
+            </Points>
+            <Points>
+              <X>1937.5</X>
+              <Y>887.5</Y>
+            </Points>
+            <Points>
+              <X>2422.5</X>
+              <Y>887.5</Y>
+            </Points>
+            <Points>
+              <X>2422.5</X>
+              <Y>1135</Y>
+            </Points>
+            <Points>
+              <X>2470</X>
+              <Y>1135</Y>
+            </Points>
+          </Points>
+        </Connection>
+        <Connection Source="SUB_APP1.S6_DELIVERY" Destination="FB11.REQ4" dx1="771.917" />
+        <Connection Source="FB11.CNF2" Destination="Section6.DRIVE_ON" />
+        <Connection Source="FB11.CNF3" Destination="Section6.DRIVE_OFF" />
+        <Connection Source="FB11.CNF4" Destination="Section6.DELIVERY" />
+        <Connection Source="OrderConsole.CLEAR" Destination="FB5.REQ5" dx1="43.41699" dx2="130" dy="290" />
+        <Connection Source="FB22.CNF4" Destination="FB5.REQ6" dx1="208.1875" dx2="90" dy="230" />
+        <Connection Source="FB5.CNF4" Destination="JACK1.REMOVE_WP" dx1="130" />
+        <Connection Source="FB5.CNF5" Destination="JACK1.CLEAR" dx1="150" />
+        <Connection Source="FB5.CNF6" Destination="JACK1.RESET" dx1="170" />
+        <Connection Source="PRODUCE_RED.PLACE_CAP" Destination="FB1.REQ2" dx1="200.2085" />
+        <Connection Source="PRODUCE_GREEN.PLACE_CAP" Destination="FB1.REQ3" dx1="200.2085" />
+        <Connection Source="OrderConsole.CLEAR" Destination="FB1.REQ5">
+          <Points>
+            <Points>
+              <X>1816.64575</X>
+              <Y>635</Y>
+            </Points>
+            <Points>
+              <X>1827.5</X>
+              <Y>635</Y>
+            </Points>
+            <Points>
+              <X>1827.5</X>
+              <Y>707.5</Y>
+            </Points>
+            <Points>
+              <X>1767.5</X>
+              <Y>707.5</Y>
+            </Points>
+            <Points>
+              <X>1767.5</X>
+              <Y>887.5</Y>
+            </Points>
+            <Points>
+              <X>1737.5</X>
+              <Y>887.5</Y>
+            </Points>
+            <Points>
+              <X>1737.5</X>
+              <Y>1445</Y>
+            </Points>
+            <Points>
+              <X>1760</X>
+              <Y>1445</Y>
+            </Points>
+          </Points>
+        </Connection>
+        <Connection Source="FB22.CNF4" Destination="FB1.REQ6" dx1="208.1875" dx2="130" dy="230" />
+        <Connection Source="FB1.CNF2" Destination="JACK2.PLACE_RED" />
+        <Connection Source="FB1.CNF3" Destination="JACK2.PLACE_GREEN" />
+        <Connection Source="FB1.CNF5" Destination="JACK2.CLEAR" />
+        <Connection Source="FB1.CNF6" Destination="JACK2.RESET" />
+        <Connection Source="SUB_APP1.S5_ON" Destination="FB6.REQ2" dx1="160" />
+        <Connection Source="SUB_APP1.S5_OFF" Destination="FB6.REQ3" dx1="140" />
+        <Connection Source="FB22.CNF4" Destination="FB6.REQ3" dx1="288.1875" />
+        <Connection Source="SUB_APP1.S5_DELIVERY" Destination="FB6.REQ4" dx1="120" />
+        <Connection Source="FB6.CNF2" Destination="Section5.DRIVE_ON" />
+        <Connection Source="FB6.CNF3" Destination="Section5.DRIVE_OFF" />
+        <Connection Source="FB6.CNF4" Destination="Section5.DELIVERY" />
+        <Connection Source="FB12.CNF3" Destination="SUB_APP1.S1_SENSOR" dx1="44.79102" dx2="190" dy="410" />
+        <Connection Source="Section1.SENSOR_OFF" Destination="FB12.REQ3" />
+        <Connection Source="FB10.INITO" Destination="FB12.INIT">
+          <Points>
+            <Points>
+              <X>2569.01563</X>
+              <Y>190</Y>
+            </Points>
+            <Points>
+              <X>2579.01563</X>
+              <Y>190</Y>
+            </Points>
+            <Points>
+              <X>2579.01563</X>
+              <Y>177.5</Y>
+            </Points>
+            <Points>
+              <X>2787.5</X>
+              <Y>177.5</Y>
+            </Points>
+            <Points>
+              <X>2787.5</X>
+              <Y>190</Y>
+            </Points>
+            <Points>
+              <X>2825</X>
+              <Y>190</Y>
+            </Points>
+          </Points>
+        </Connection>
+        <Connection Source="FB21.CNF3" Destination="SUB_APP1.S2_SENSOR">
+          <Points>
+            <Points>
+              <X>2941.302</X>
+              <Y>415</Y>
+            </Points>
+            <Points>
+              <X>2952.5</X>
+              <Y>415</Y>
+            </Points>
+            <Points>
+              <X>2952.5</X>
+              <Y>512.5</Y>
+            </Points>
+            <Points>
+              <X>2457.5</X>
+              <Y>512.5</Y>
+            </Points>
+            <Points>
+              <X>2457.5</X>
+              <Y>412.5</Y>
+            </Points>
+            <Points>
+              <X>1957.5</X>
+              <Y>412.5</Y>
+            </Points>
+            <Points>
+              <X>1957.5</X>
+              <Y>560</Y>
+            </Points>
+            <Points>
+              <X>2010</X>
+              <Y>560</Y>
+            </Points>
+          </Points>
+        </Connection>
+        <Connection Source="Section2.SENSOR_OFF" Destination="FB21.REQ3" dx1="61.70801" />
+        <Connection Source="FB20.INITO" Destination="FB21.INIT">
+          <Points>
+            <Points>
+              <X>2547.4895</X>
+              <Y>385</Y>
+            </Points>
+            <Points>
+              <X>2577.5</X>
+              <Y>385</Y>
+            </Points>
+            <Points>
+              <X>2577.5</X>
+              <Y>352.5</Y>
+            </Points>
+            <Points>
+              <X>2782.5</X>
+              <Y>352.5</Y>
+            </Points>
+            <Points>
+              <X>2782.5</X>
+              <Y>370</Y>
+            </Points>
+            <Points>
+              <X>2830</X>
+              <Y>370</Y>
+            </Points>
+          </Points>
+        </Connection>
+        <Connection Source="FB13.CNF4" Destination="SUB_APP1.S3_DELIVERED">
+          <Points>
+            <Points>
+              <X>2921.302</X>
+              <Y>610</Y>
+            </Points>
+            <Points>
+              <X>2932.5</X>
+              <Y>610</Y>
+            </Points>
+            <Points>
+              <X>2932.5</X>
+              <Y>522.5</Y>
+            </Points>
+            <Points>
+              <X>2457.5</X>
+              <Y>522.5</Y>
+            </Points>
+            <Points>
+              <X>2457.5</X>
+              <Y>412.5</Y>
+            </Points>
+            <Points>
+              <X>1997.5</X>
+              <Y>412.5</Y>
+            </Points>
+            <Points>
+              <X>1997.5</X>
+              <Y>590</Y>
+            </Points>
+            <Points>
+              <X>2010</X>
+              <Y>590</Y>
+            </Points>
+          </Points>
+        </Connection>
+        <Connection Source="FB13.CNF3" Destination="SUB_APP1.S3_SENSOR">
+          <Points>
+            <Points>
+              <X>2921.302</X>
+              <Y>595</Y>
+            </Points>
+            <Points>
+              <X>2933.802</X>
+              <Y>595</Y>
+            </Points>
+            <Points>
+              <X>2933.802</X>
+              <Y>522.5</Y>
+            </Points>
+            <Points>
+              <X>2457.5</X>
+              <Y>522.5</Y>
+            </Points>
+            <Points>
+              <X>2457.5</X>
+              <Y>412.5</Y>
+            </Points>
+            <Points>
+              <X>1992.5</X>
+              <Y>412.5</Y>
+            </Points>
+            <Points>
+              <X>1992.5</X>
+              <Y>575</Y>
+            </Points>
+            <Points>
+              <X>2010</X>
+              <Y>575</Y>
+            </Points>
+          </Points>
+        </Connection>
+        <Connection Source="Section3.SENSOR_OFF" Destination="FB13.REQ3" />
+        <Connection Source="Section3.DELIVERED" Destination="FB13.REQ4" />
+        <Connection Source="FB9.INITO" Destination="FB13.INIT">
+          <Points>
+            <Points>
+              <X>2547.4895</X>
+              <Y>550</Y>
+            </Points>
+            <Points>
+              <X>2557.5</X>
+              <Y>550</Y>
+            </Points>
+            <Points>
+              <X>2557.5</X>
+              <Y>537.5</Y>
+            </Points>
+            <Points>
+              <X>2787.5</X>
+              <Y>537.5</Y>
+            </Points>
+            <Points>
+              <X>2787.5</X>
+              <Y>550</Y>
+            </Points>
+            <Points>
+              <X>2810</X>
+              <Y>550</Y>
+            </Points>
+          </Points>
+        </Connection>
+        <Connection Source="FB14.CNF3" Destination="SUB_APP1.S4_SENSOR">
+          <Points>
+            <Points>
+              <X>2936.302</X>
+              <Y>775</Y>
+            </Points>
+            <Points>
+              <X>2947.5</X>
+              <Y>775</Y>
+            </Points>
+            <Points>
+              <X>2947.5</X>
+              <Y>877.5</Y>
+            </Points>
+            <Points>
+              <X>2452.5</X>
+              <Y>877.5</Y>
+            </Points>
+            <Points>
+              <X>2452.5</X>
+              <Y>887.5</Y>
+            </Points>
+            <Points>
+              <X>1997.5</X>
+              <Y>887.5</Y>
+            </Points>
+            <Points>
+              <X>1997.5</X>
+              <Y>605</Y>
+            </Points>
+            <Points>
+              <X>2010</X>
+              <Y>605</Y>
+            </Points>
+          </Points>
+        </Connection>
+        <Connection Source="Section4.SENSOR_OFF" Destination="FB14.REQ3" />
+        <Connection Source="FB8.INITO" Destination="FB14.INIT">
+          <Points>
+            <Points>
+              <X>2567.4895</X>
+              <Y>730</Y>
+            </Points>
+            <Points>
+              <X>2577.5</X>
+              <Y>730</Y>
+            </Points>
+            <Points>
+              <X>2577.5</X>
+              <Y>717.5</Y>
+            </Points>
+            <Points>
+              <X>2792.5</X>
+              <Y>717.5</Y>
+            </Points>
+            <Points>
+              <X>2792.5</X>
+              <Y>730</Y>
+            </Points>
+            <Points>
+              <X>2825</X>
+              <Y>730</Y>
+            </Points>
+          </Points>
+        </Connection>
+        <Connection Source="FB15.CNF3" Destination="SUB_APP1.S5_SENSOR">
+          <Points>
+            <Points>
+              <X>2951.302</X>
+              <Y>955</Y>
+            </Points>
+            <Points>
+              <X>2962.5</X>
+              <Y>955</Y>
+            </Points>
+            <Points>
+              <X>2962.5</X>
+              <Y>882.5</Y>
+            </Points>
+            <Points>
+              <X>2452.5</X>
+              <Y>882.5</Y>
+            </Points>
+            <Points>
+              <X>2452.5</X>
+              <Y>887.5</Y>
+            </Points>
+            <Points>
+              <X>1997.5</X>
+              <Y>887.5</Y>
+            </Points>
+            <Points>
+              <X>1997.5</X>
+              <Y>620</Y>
+            </Points>
+            <Points>
+              <X>2010</X>
+              <Y>620</Y>
+            </Points>
+          </Points>
+        </Connection>
+        <Connection Source="FB15.CNF4" Destination="SUB_APP1.S5_DELIVERED">
+          <Points>
+            <Points>
+              <X>2951.302</X>
+              <Y>970</Y>
+            </Points>
+            <Points>
+              <X>2968.802</X>
+              <Y>970</Y>
+            </Points>
+            <Points>
+              <X>2968.802</X>
+              <Y>882.5</Y>
+            </Points>
+            <Points>
+              <X>2452.5</X>
+              <Y>882.5</Y>
+            </Points>
+            <Points>
+              <X>2452.5</X>
+              <Y>887.5</Y>
+            </Points>
+            <Points>
+              <X>1997.5</X>
+              <Y>887.5</Y>
+            </Points>
+            <Points>
+              <X>1997.5</X>
+              <Y>635</Y>
+            </Points>
+            <Points>
+              <X>2010</X>
+              <Y>635</Y>
+            </Points>
+          </Points>
+        </Connection>
+        <Connection Source="Section5.SENSOR_OFF" Destination="FB15.REQ3" />
+        <Connection Source="Section5.DELIVERED" Destination="FB15.REQ4" />
+        <Connection Source="FB6.INITO" Destination="FB15.INIT">
+          <Points>
+            <Points>
+              <X>2557.4895</X>
+              <Y>910</Y>
+            </Points>
+            <Points>
+              <X>2567.5</X>
+              <Y>910</Y>
+            </Points>
+            <Points>
+              <X>2567.5</X>
+              <Y>897.5</Y>
+            </Points>
+            <Points>
+              <X>2787.5</X>
+              <Y>897.5</Y>
+            </Points>
+            <Points>
+              <X>2787.5</X>
+              <Y>910</Y>
+            </Points>
+            <Points>
+              <X>2840</X>
+              <Y>910</Y>
+            </Points>
+          </Points>
+        </Connection>
+        <Connection Source="FB16.CNF4" Destination="SUB_APP1.S6_DELIVERED" dx1="90" dx2="70" dy="-350" />
+        <Connection Source="FB16.CNF3" Destination="SUB_APP1.S6_SENSOR" dx1="70" dx2="90" dy="-290" />
+        <Connection Source="Section6.SENSOR_OFF" Destination="FB16.REQ3" />
+        <Connection Source="Section6.DELIVERED" Destination="FB16.REQ4" />
+        <Connection Source="FB11.INITO" Destination="FB16.INIT">
+          <Points>
+            <Points>
+              <X>2567.4895</X>
+              <Y>1090</Y>
+            </Points>
+            <Points>
+              <X>2577.5</X>
+              <Y>1090</Y>
+            </Points>
+            <Points>
+              <X>2577.5</X>
+              <Y>1077.5</Y>
+            </Points>
+            <Points>
+              <X>2792.5</X>
+              <Y>1077.5</Y>
+            </Points>
+            <Points>
+              <X>2792.5</X>
+              <Y>1090</Y>
+            </Points>
+            <Points>
+              <X>2825</X>
+              <Y>1090</Y>
+            </Points>
+          </Points>
+        </Connection>
+        <Connection Source="FB17.CNF4" Destination="OrderConsole.CHECK_J1">
+          <Points>
+            <Points>
+              <X>2414.45313</X>
+              <Y>1160</Y>
+            </Points>
+            <Points>
+              <X>2424.45313</X>
+              <Y>1160</Y>
+            </Points>
+            <Points>
+              <X>2424.45313</X>
+              <Y>1067.5</Y>
+            </Points>
+            <Points>
+              <X>1767.5</X>
+              <Y>1067.5</Y>
+            </Points>
+            <Points>
+              <X>1767.5</X>
+              <Y>757.5</Y>
+            </Points>
+            <Points>
+              <X>1607.5</X>
+              <Y>757.5</Y>
+            </Points>
+            <Points>
+              <X>1607.5</X>
+              <Y>605</Y>
+            </Points>
+            <Points>
+              <X>1625</X>
+              <Y>605</Y>
+            </Points>
+          </Points>
+        </Connection>
+        <Connection Source="JACK1.WP_REMOVED" Destination="FB17.REQ5" dx1="46.8125" />
+        <Connection Source="JACK1.MAN_CHECK" Destination="FB17.REQ4" dx1="66.8125" />
+        <Connection Source="FB18.CNF2" Destination="FB24.REQ3" dx1="72.1875" dx2="210" dy="-250" />
+        <Connection Source="FB18.CNF3" Destination="FB23.REQ3" dx1="92.1875" dx2="210" dy="-310" />
+        <Connection Source="FB18.CNF4" Destination="OrderConsole.CHECK_J2">
+          <Points>
+            <Points>
+              <X>2424.45313</X>
+              <Y>1450</Y>
+            </Points>
+            <Points>
+              <X>2447.5</X>
+              <Y>1450</Y>
+            </Points>
+            <Points>
+              <X>2447.5</X>
+              <Y>1342.5</Y>
+            </Points>
+            <Points>
+              <X>1767.5</X>
+              <Y>1342.5</Y>
+            </Points>
+            <Points>
+              <X>1767.5</X>
+              <Y>757.5</Y>
+            </Points>
+            <Points>
+              <X>1607.5</X>
+              <Y>757.5</Y>
+            </Points>
+            <Points>
+              <X>1607.5</X>
+              <Y>620</Y>
+            </Points>
+            <Points>
+              <X>1625</X>
+              <Y>620</Y>
+            </Points>
+          </Points>
+        </Connection>
+        <Connection Source="JACK2.MAN_CHECK" Destination="FB18.REQ4" dx1="66.8125" />
+        <Connection Source="JACK2.DONE_GREEN" Destination="FB18.REQ3" dx1="86.8125" />
+        <Connection Source="JACK2.DONE_RED" Destination="FB18.REQ2" dx1="106.8125" />
+        <Connection Source="FB1.INITO" Destination="FB18.INIT">
+          <Points>
+            <Points>
+              <X>1916.099</X>
+              <Y>1370</Y>
+            </Points>
+            <Points>
+              <X>1947.5</X>
+              <Y>1370</Y>
+            </Points>
+            <Points>
+              <X>1947.5</X>
+              <Y>1357.5</Y>
+            </Points>
+            <Points>
+              <X>2227.5</X>
+              <Y>1357.5</Y>
+            </Points>
+            <Points>
+              <X>2227.5</X>
+              <Y>1390</Y>
+            </Points>
+            <Points>
+              <X>2280</X>
+              <Y>1390</Y>
+            </Points>
+          </Points>
+        </Connection>
+        <Connection Source="Section3.SENSOR_ON" Destination="Section3.DRIVE_OFF" dx1="81.70801" dx2="90" dy="-170" />
+        <Connection Source="FB10.CNF1" Destination="Section1.INIT" />
+        <Connection Source="FB10.CNF4" Destination="Section1.DELIVERY" />
+        <Connection Source="FB10.CNF5" Destination="Section1.PAUSE" />
+        <Connection Source="FB10.CNF6" Destination="Section1.START" />
+        <Connection Source="FB20.CNF1" Destination="Section2.INIT" dx1="70" />
+        <Connection Source="FB20.CNF4" Destination="Section2.DELIVERY" dx1="130" />
+        <Connection Source="FB20.CNF5" Destination="Section2.PAUSE" dx1="80.04199" />
+        <Connection Source="FB20.CNF6" Destination="Section2.START" dx1="100.042" />
+        <Connection Source="FB9.CNF5" Destination="Section3.PAUSE" />
+        <Connection Source="FB9.CNF6" Destination="Section3.START" />
+        <Connection Source="FB8.CNF4" Destination="Section4.DELIVERY" />
+        <Connection Source="FB8.CNF5" Destination="Section4.PAUSE" />
+        <Connection Source="FB8.CNF6" Destination="Section4.START" />
+        <Connection Source="FB6.CNF5" Destination="Section5.PAUSE" />
+        <Connection Source="FB6.CNF6" Destination="Section5.START" />
+        <Connection Source="FB11.CNF5" Destination="Section6.PAUSE" />
+        <Connection Source="FB11.CNF6" Destination="Section6.START" />
+        <Connection Source="FB5.CNF1" Destination="JACK1.INIT" dx1="70" />
+        <Connection Source="FB5.CNF2" Destination="JACK1.PLACE_RED" dx1="90" />
+        <Connection Source="FB5.CNF3" Destination="JACK1.PLACE_GREEN" dx1="110" />
+        <Connection Source="FB1.CNF4" Destination="JACK2.REMOVE_WP" />
+        <Connection Source="FB7.CNF2" Destination="FB3.OPEN" dx1="481.25" dx2="530" dy="-230" />
+        <Connection Source="FB7.CNF3" Destination="FB3.CLOSE" dx1="481.25" dx2="530" dy="230" />
+        <Connection Source="FB7.CNF1" Destination="FB3.INIT" dx1="481.25" dx2="530" dy="-170" />
+        <Connection Source="Section1.SENSOR_ON" Destination="FB12.REQ2" />
+        <Connection Source="Section1.DELIVERED" Destination="FB12.REQ4" />
+        <Connection Source="Section2.SENSOR_ON" Destination="FB21.REQ2" dx1="81.70801" />
+        <Connection Source="Section2.DELIVERED" Destination="FB21.REQ4" dx1="41.70801" />
+        <Connection Source="FB21.INITO" Destination="Section2.INIT" dx1="44.79102" dx2="50" dy="-110" />
+        <Connection Source="FB12.INITO" Destination="Section1.INIT" dx1="44.79102" dx2="50" dy="-110" />
+        <Connection Source="Section3.SENSOR_ON" Destination="FB13.REQ2" />
+        <Connection Source="FB13.INITO" Destination="Section3.INIT" dx1="44.79102" dx2="50" dy="-110" />
+        <Connection Source="FB9.CNF1" Destination="Section3.INIT" />
+        <Connection Source="FB14.INITO" Destination="Section4.INIT" dx1="44.79102" dx2="50" dy="-110" />
+        <Connection Source="FB8.CNF1" Destination="Section4.INIT" />
+        <Connection Source="Section4.SENSOR_ON" Destination="FB14.REQ2" />
+        <Connection Source="Section4.DELIVERED" Destination="FB14.REQ4" />
+        <Connection Source="DockConfirmationButton.INITO" Destination="FB7.INIT">
+          <Points>
+            <Points>
+              <X>1321.724</X>
+              <Y>795</Y>
+            </Points>
+            <Points>
+              <X>1334.224</X>
+              <Y>795</Y>
+            </Points>
+            <Points>
+              <X>1334.224</X>
+              <Y>742.5</Y>
+            </Points>
+            <Points>
+              <X>1962.5</X>
+              <Y>742.5</Y>
+            </Points>
+            <Points>
+              <X>1962.5</X>
+              <Y>235</Y>
+            </Points>
+            <Points>
+              <X>2105</X>
+              <Y>235</Y>
+            </Points>
+          </Points>
+        </Connection>
+        <Connection Source="FB3.INITO" Destination="FB6.INIT" dx1="40" />
+        <Connection Source="FB15.INITO" Destination="Section5.INIT" dx1="44.79102" dx2="50" dy="-110" />
+        <Connection Source="FB6.CNF1" Destination="Section5.INIT" />
+        <Connection Source="Section5.SENSOR_ON" Destination="FB15.REQ2" />
+        <Connection Source="FB16.INITO" Destination="Section6.INIT" dx1="44.79102" dx2="50" dy="-110" />
+        <Connection Source="FB11.CNF1" Destination="Section6.INIT" />
+        <Connection Source="Section6.SENSOR_ON" Destination="FB16.REQ2" />
+        <Connection Source="FB17.INITO" Destination="JACK1.INIT" dx1="40" dx2="50" dy="-110" />
+        <Connection Source="JACK1.DONE_RED" Destination="FB17.REQ2" dx1="106.8125" />
+        <Connection Source="JACK1.DONE_GREEN" Destination="FB17.REQ3" dx1="86.8125" />
+        <Connection Source="FB18.INITO" Destination="JACK2.INIT" dx1="40" dx2="150" dy="-130" />
+        <Connection Source="FB1.CNF1" Destination="JACK2.INIT" />
+        <Connection Source="JACK2.INITO" Destination="FB18.REQ1" dx1="126.8125" />
+        <Connection Source="JACK2.WP_REMOVED" Destination="FB18.REQ5" dx1="46.8125" />
+        <Connection Source="FB19.CNF2" Destination="ButtonConsole.RESET_DONE" />
+        <Connection Source="FB19.CNF1" Destination="ButtonConsole.INIT" />
+        <Connection Source="FB22.CNF2" Destination="Section1.START">
+          <Attribute Name="Configuration.Connections.CrossReference" Value="True" />
+          <Points>
+            <Points>
+              <X>1925.45313</X>
+              <Y>800</Y>
+            </Points>
+            <Points>
+              <X>1937.95313</X>
+              <Y>800</Y>
+            </Points>
+            <Points>
+              <X>1937.95313</X>
+              <Y>887.5</Y>
+            </Points>
+            <Points>
+              <X>2237.5</X>
+              <Y>887.5</Y>
+            </Points>
+            <Points>
+              <X>2237.5</X>
+              <Y>882.5</Y>
+            </Points>
+            <Points>
+              <X>2577.5</X>
+              <Y>882.5</Y>
+            </Points>
+            <Points>
+              <X>2577.5</X>
+              <Y>280</Y>
+            </Points>
+            <Points>
+              <X>2605</X>
+              <Y>280</Y>
+            </Points>
+          </Points>
+        </Connection>
+        <Connection Source="FB22.CNF2" Destination="Section2.START">
+          <Attribute Name="Configuration.Connections.CrossReference" Value="True" />
+          <Points>
+            <Points>
+              <X>1945.45313</X>
+              <Y>800</Y>
+            </Points>
+            <Points>
+              <X>1957.95313</X>
+              <Y>800</Y>
+            </Points>
+            <Points>
+              <X>1957.95313</X>
+              <Y>887.5</Y>
+            </Points>
+            <Points>
+              <X>2237.5</X>
+              <Y>887.5</Y>
+            </Points>
+            <Points>
+              <X>2237.5</X>
+              <Y>702.5</Y>
+            </Points>
+            <Points>
+              <X>2572.5</X>
+              <Y>702.5</Y>
+            </Points>
+            <Points>
+              <X>2572.5</X>
+              <Y>455</Y>
+            </Points>
+            <Points>
+              <X>2600</X>
+              <Y>455</Y>
+            </Points>
+          </Points>
+        </Connection>
+        <Connection Source="FB22.CNF2" Destination="Section3.START">
+          <Attribute Name="Configuration.Connections.CrossReference" Value="True" />
+          <Points>
+            <Points>
+              <X>1945.45313</X>
+              <Y>800</Y>
+            </Points>
+            <Points>
+              <X>1957.95313</X>
+              <Y>800</Y>
+            </Points>
+            <Points>
+              <X>1957.95313</X>
+              <Y>887.5</Y>
+            </Points>
+            <Points>
+              <X>2237.5</X>
+              <Y>887.5</Y>
+            </Points>
+            <Points>
+              <X>2237.5</X>
+              <Y>702.5</Y>
+            </Points>
+            <Points>
+              <X>2557.5</X>
+              <Y>702.5</Y>
+            </Points>
+            <Points>
+              <X>2557.5</X>
+              <Y>640</Y>
+            </Points>
+            <Points>
+              <X>2605</X>
+              <Y>640</Y>
+            </Points>
+          </Points>
+        </Connection>
+        <Connection Source="FB22.CNF2" Destination="Section4.START">
+          <Attribute Name="Configuration.Connections.CrossReference" Value="True" />
+          <Points>
+            <Points>
+              <X>1945.45313</X>
+              <Y>800</Y>
+            </Points>
+            <Points>
+              <X>1967.5</X>
+              <Y>800</Y>
+            </Points>
+            <Points>
+              <X>1967.5</X>
+              <Y>887.5</Y>
+            </Points>
+            <Points>
+              <X>2237.5</X>
+              <Y>887.5</Y>
+            </Points>
+            <Points>
+              <X>2237.5</X>
+              <Y>820</Y>
+            </Points>
+            <Points>
+              <X>2610</X>
+              <Y>820</Y>
+            </Points>
+          </Points>
+        </Connection>
+        <Connection Source="FB22.CNF2" Destination="Section5.START">
+          <Attribute Name="Configuration.Connections.CrossReference" Value="True" />
+          <Points>
+            <Points>
+              <X>1945.45313</X>
+              <Y>800</Y>
+            </Points>
+            <Points>
+              <X>1967.5</X>
+              <Y>800</Y>
+            </Points>
+            <Points>
+              <X>1967.5</X>
+              <Y>887.5</Y>
+            </Points>
+            <Points>
+              <X>2237.5</X>
+              <Y>887.5</Y>
+            </Points>
+            <Points>
+              <X>2237.5</X>
+              <Y>882.5</Y>
+            </Points>
+            <Points>
+              <X>2567.5</X>
+              <Y>882.5</Y>
+            </Points>
+            <Points>
+              <X>2567.5</X>
+              <Y>1000</Y>
+            </Points>
+            <Points>
+              <X>2605</X>
+              <Y>1000</Y>
+            </Points>
+          </Points>
+        </Connection>
+        <Connection Source="FB22.CNF2" Destination="Section6.START">
+          <Attribute Name="Configuration.Connections.CrossReference" Value="True" />
+          <Points>
+            <Points>
+              <X>1945.45313</X>
+              <Y>800</Y>
+            </Points>
+            <Points>
+              <X>1967.5</X>
+              <Y>800</Y>
+            </Points>
+            <Points>
+              <X>1967.5</X>
+              <Y>887.5</Y>
+            </Points>
+            <Points>
+              <X>2422.5</X>
+              <Y>887.5</Y>
+            </Points>
+            <Points>
+              <X>2422.5</X>
+              <Y>1180</Y>
+            </Points>
+            <Points>
+              <X>2610</X>
+              <Y>1180</Y>
+            </Points>
+          </Points>
+        </Connection>
+        <Connection Source="FB22.CNF3" Destination="Section1.PAUSE">
+          <Attribute Name="Configuration.Connections.CrossReference" Value="True" />
+          <Points>
+            <Points>
+              <X>1925.45313</X>
+              <Y>815</Y>
+            </Points>
+            <Points>
+              <X>1942.95313</X>
+              <Y>815</Y>
+            </Points>
+            <Points>
+              <X>1942.95313</X>
+              <Y>887.5</Y>
+            </Points>
+            <Points>
+              <X>2237.5</X>
+              <Y>887.5</Y>
+            </Points>
+            <Points>
+              <X>2237.5</X>
+              <Y>882.5</Y>
+            </Points>
+            <Points>
+              <X>2577.5</X>
+              <Y>882.5</Y>
+            </Points>
+            <Points>
+              <X>2577.5</X>
+              <Y>265</Y>
+            </Points>
+            <Points>
+              <X>2605</X>
+              <Y>265</Y>
+            </Points>
+          </Points>
+        </Connection>
+        <Connection Source="FB22.CNF3" Destination="Section2.PAUSE">
+          <Attribute Name="Configuration.Connections.CrossReference" Value="True" />
+          <Points>
+            <Points>
+              <X>1945.45313</X>
+              <Y>815</Y>
+            </Points>
+            <Points>
+              <X>1962.95313</X>
+              <Y>815</Y>
+            </Points>
+            <Points>
+              <X>1962.95313</X>
+              <Y>887.5</Y>
+            </Points>
+            <Points>
+              <X>2237.5</X>
+              <Y>887.5</Y>
+            </Points>
+            <Points>
+              <X>2237.5</X>
+              <Y>702.5</Y>
+            </Points>
+            <Points>
+              <X>2572.5</X>
+              <Y>702.5</Y>
+            </Points>
+            <Points>
+              <X>2572.5</X>
+              <Y>440</Y>
+            </Points>
+            <Points>
+              <X>2600</X>
+              <Y>440</Y>
+            </Points>
+          </Points>
+        </Connection>
+        <Connection Source="FB22.CNF3" Destination="Section3.PAUSE">
+          <Attribute Name="Configuration.Connections.CrossReference" Value="True" />
+          <Points>
+            <Points>
+              <X>1945.45313</X>
+              <Y>815</Y>
+            </Points>
+            <Points>
+              <X>1962.95313</X>
+              <Y>815</Y>
+            </Points>
+            <Points>
+              <X>1962.95313</X>
+              <Y>887.5</Y>
+            </Points>
+            <Points>
+              <X>2237.5</X>
+              <Y>887.5</Y>
+            </Points>
+            <Points>
+              <X>2237.5</X>
+              <Y>702.5</Y>
+            </Points>
+            <Points>
+              <X>2557.5</X>
+              <Y>702.5</Y>
+            </Points>
+            <Points>
+              <X>2557.5</X>
+              <Y>625</Y>
+            </Points>
+            <Points>
+              <X>2605</X>
+              <Y>625</Y>
+            </Points>
+          </Points>
+        </Connection>
+        <Connection Source="FB22.CNF3" Destination="Section4.PAUSE">
+          <Attribute Name="Configuration.Connections.CrossReference" Value="True" />
+          <Points>
+            <Points>
+              <X>1945.45313</X>
+              <Y>815</Y>
+            </Points>
+            <Points>
+              <X>1962.95313</X>
+              <Y>815</Y>
+            </Points>
+            <Points>
+              <X>1962.95313</X>
+              <Y>887.5</Y>
+            </Points>
+            <Points>
+              <X>2237.5</X>
+              <Y>887.5</Y>
+            </Points>
+            <Points>
+              <X>2237.5</X>
+              <Y>882.5</Y>
+            </Points>
+            <Points>
+              <X>2577.5</X>
+              <Y>882.5</Y>
+            </Points>
+            <Points>
+              <X>2577.5</X>
+              <Y>805</Y>
+            </Points>
+            <Points>
+              <X>2610</X>
+              <Y>805</Y>
+            </Points>
+          </Points>
+        </Connection>
+        <Connection Source="FB22.CNF3" Destination="Section5.PAUSE">
+          <Attribute Name="Configuration.Connections.CrossReference" Value="True" />
+          <Points>
+            <Points>
+              <X>1945.45313</X>
+              <Y>815</Y>
+            </Points>
+            <Points>
+              <X>1962.5</X>
+              <Y>815</Y>
+            </Points>
+            <Points>
+              <X>1962.5</X>
+              <Y>887.5</Y>
+            </Points>
+            <Points>
+              <X>2237.5</X>
+              <Y>887.5</Y>
+            </Points>
+            <Points>
+              <X>2237.5</X>
+              <Y>882.5</Y>
+            </Points>
+            <Points>
+              <X>2567.5</X>
+              <Y>882.5</Y>
+            </Points>
+            <Points>
+              <X>2567.5</X>
+              <Y>985</Y>
+            </Points>
+            <Points>
+              <X>2605</X>
+              <Y>985</Y>
+            </Points>
+          </Points>
+        </Connection>
+        <Connection Source="FB22.CNF3" Destination="Section6.PAUSE">
+          <Attribute Name="Configuration.Connections.CrossReference" Value="True" />
+          <Points>
+            <Points>
+              <X>1945.45313</X>
+              <Y>815</Y>
+            </Points>
+            <Points>
+              <X>1962.5</X>
+              <Y>815</Y>
+            </Points>
+            <Points>
+              <X>1962.5</X>
+              <Y>1057.5</Y>
+            </Points>
+            <Points>
+              <X>2577.5</X>
+              <Y>1057.5</Y>
+            </Points>
+            <Points>
+              <X>2577.5</X>
+              <Y>1165</Y>
+            </Points>
+            <Points>
+              <X>2610</X>
+              <Y>1165</Y>
+            </Points>
+          </Points>
+        </Connection>
+        <Connection Source="FB22.CNF4" Destination="FB2.RESET" dx1="170" dx2="130" dy="-1070">
+          <Attribute Name="Configuration.Connections.CrossReference" Value="True" />
+        </Connection>
+        <Connection Source="FB22.CNF4" Destination="SUB_APP1.RESET" dx1="170">
+          <Attribute Name="Configuration.Connections.CrossReference" Value="True" />
+        </Connection>
+        <Connection Source="FB22.CNF4" Destination="FB4.STOP" dx1="170">
+          <Attribute Name="Configuration.Connections.CrossReference" Value="True" />
+        </Connection>
+        <Connection Source="FB22.CNF4" Destination="FB19.REQ2" dx1="210" dx2="30" dy="230" />
+        <Connection Source="FB22.CNF4" Destination="FB10.REQ3">
+          <Attribute Name="Configuration.Connections.CrossReference" Value="True" />
+          <Points>
+            <Points>
+              <X>1945.45313</X>
+              <Y>830</Y>
+            </Points>
+            <Points>
+              <X>1967.95313</X>
+              <Y>830</Y>
+            </Points>
+            <Points>
+              <X>1967.95313</X>
+              <Y>412.5</Y>
+            </Points>
+            <Points>
+              <X>2342.5</X>
+              <Y>412.5</Y>
+            </Points>
+            <Points>
+              <X>2342.5</X>
+              <Y>235</Y>
+            </Points>
+            <Points>
+              <X>2465</X>
+              <Y>235</Y>
+            </Points>
+          </Points>
+        </Connection>
+        <Connection Source="ButtonConsole.START" Destination="FB22.REQ2" />
+        <Connection Source="ButtonConsole.PAUSE" Destination="FB22.REQ3" />
+        <Connection Source="ButtonConsole.RESET" Destination="FB22.REQ4" />
+        <Connection Source="ButtonConsole.INITO" Destination="FB22.REQ1" />
+        <Connection Source="FB19.INITO" Destination="FB22.INIT">
+          <Points>
+            <Points>
+              <X>1583.26038</X>
+              <Y>770</Y>
+            </Points>
+            <Points>
+              <X>1593.26038</X>
+              <Y>770</Y>
+            </Points>
+            <Points>
+              <X>1593.26038</X>
+              <Y>757.5</Y>
+            </Points>
+            <Points>
+              <X>1767.5</X>
+              <Y>757.5</Y>
+            </Points>
+            <Points>
+              <X>1767.5</X>
+              <Y>770</Y>
+            </Points>
+            <Points>
+              <X>1775</X>
+              <Y>770</Y>
+            </Points>
+          </Points>
+        </Connection>
+        <Connection Source="FB22.INITO" Destination="FB19.REQ1" dx1="128.1875" dx2="70" dy="-110" />
+        <Connection Source="FB22.CNF1" Destination="DockConfirmationButton.INIT" dx1="108.1875" dx2="50" dy="-170" />
+        <Connection Source="PRODUCE_GREEN.J2_REMOVE_WP" Destination="FB1.REQ4" dx1="80.2085" />
+        <Connection Source="PRODUCE_GREEN.J1_REMOVE_WP" Destination="FB5.REQ4" dx1="40.20825" />
+        <Connection Source="PRODUCE_RED.J1_REMOVE_WP" Destination="FB5.REQ4" dx1="40.20825" />
+        <Connection Source="PRODUCE_RED.J2_REMOVE_WP" Destination="FB1.REQ4" dx1="80.2085" />
+        <Connection Source="FB22.CNF4" Destination="FB23.REQ11" dx1="128.1875" dx2="290" dy="-350">
+          <Attribute Name="Configuration.Connections.CrossReference" Value="True" />
+        </Connection>
+        <Connection Source="FB23.CNF1" Destination="PRODUCE_GREEN.START" />
+        <Connection Source="FB23.CNF6" Destination="PRODUCE_GREEN.DELIVERED" />
+        <Connection Source="FB23.CNF2" Destination="PRODUCE_GREEN.AT_W2" />
+        <Connection Source="FB23.CNF3" Destination="PRODUCE_GREEN.ASSEMBLY_DONE" />
+        <Connection Source="FB23.CNF4" Destination="PRODUCE_GREEN.AT_W3" />
+        <Connection Source="FB23.CNF5" Destination="PRODUCE_GREEN.TEST_OK" />
+        <Connection Source="FB23.CNF7" Destination="PRODUCE_GREEN.TEST_FAIL" />
+        <Connection Source="FB23.CNF8" Destination="PRODUCE_GREEN.AT_W4" />
+        <Connection Source="FB23.CNF9" Destination="PRODUCE_GREEN.WP_REMOVED" />
+        <Connection Source="FB23.CNF11" Destination="PRODUCE_GREEN.RESET" dx1="252.7085" />
+        <Connection Source="FB22.CNF4" Destination="FB24.REQ11" dx1="210" dx2="150" dy="-350">
+          <Attribute Name="Configuration.Connections.CrossReference" Value="True" />
+        </Connection>
+        <Connection Source="FB24.CNF11" Destination="PRODUCE_RED.RESET" dx1="230" />
+        <Connection Source="FB24.CNF1" Destination="PRODUCE_RED.START" />
+        <Connection Source="FB24.CNF2" Destination="PRODUCE_RED.AT_W2" />
+        <Connection Source="FB24.CNF3" Destination="PRODUCE_RED.ASSEMBLY_DONE" />
+        <Connection Source="FB24.CNF4" Destination="PRODUCE_RED.AT_W3" />
+        <Connection Source="FB24.CNF5" Destination="PRODUCE_RED.TEST_OK" />
+        <Connection Source="FB24.CNF6" Destination="PRODUCE_RED.DELIVERED" />
+        <Connection Source="FB24.CNF7" Destination="PRODUCE_RED.TEST_FAIL" />
+        <Connection Source="FB24.CNF8" Destination="PRODUCE_RED.AT_W4" />
+        <Connection Source="FB24.CNF9" Destination="PRODUCE_RED.WP_REMOVED" />
+        <Connection Source="OrderConsole.INITO" Destination="failure1HMI.INIT">
+          <Points>
+            <Points>
+              <X>1816.64575</X>
+              <Y>590</Y>
+            </Points>
+            <Points>
+              <X>1842.5</X>
+              <Y>590</Y>
+            </Points>
+            <Points>
+              <X>1842.5</X>
+              <Y>727.5</Y>
+            </Points>
+            <Points>
+              <X>412.5</X>
+              <Y>727.5</Y>
+            </Points>
+            <Points>
+              <X>412.5</X>
+              <Y>657.5</Y>
+            </Points>
+            <Points>
+              <X>112.5</X>
+              <Y>657.5</Y>
+            </Points>
+            <Points>
+              <X>112.5</X>
+              <Y>685</Y>
+            </Points>
+            <Points>
+              <X>125</X>
+              <Y>685</Y>
+            </Points>
+          </Points>
+        </Connection>
+        <Connection Source="FB23.INITO" Destination="FB24.INIT" dx1="52.7085" dx2="270" dy="-110" />
+        <Connection Source="failure1HMI.INITO" Destination="FB23.INIT" dx1="80.00006" />
+        <Connection Source="JACK1.INITO" Destination="FB17.REQ1" dx1="126.8125" />
+        <Connection Source="FB5.INITO" Destination="FB17.INIT">
+          <Points>
+            <Points>
+              <X>1956.099</X>
+              <Y>1095</Y>
+            </Points>
+            <Points>
+              <X>1997.5</X>
+              <Y>1095</Y>
+            </Points>
+            <Points>
+              <X>1997.5</X>
+              <Y>1077.5</Y>
+            </Points>
+            <Points>
+              <X>2232.5</X>
+              <Y>1077.5</Y>
+            </Points>
+            <Points>
+              <X>2232.5</X>
+              <Y>1100</Y>
+            </Points>
+            <Points>
+              <X>2270</X>
+              <Y>1100</Y>
+            </Points>
+          </Points>
+        </Connection>
+        <Connection Source="FB18.CNF5" Destination="FB23.REQ9" dx1="132.1875" dx2="90" dy="-430" />
+        <Connection Source="FB17.CNF5" Destination="FB24.REQ9" dx1="92.1875" dx2="90" dy="-430" />
+        <Connection Source="FB17.CNF5" Destination="FB23.REQ9" dx1="92.1875" dx2="90" dy="-430" />
+        <Connection Source="FB18.CNF5" Destination="FB24.REQ9" dx1="132.1875" dx2="90" dy="-430" />
+        <Connection Source="failure1HMI.CNF" Destination="FB10.REQ7">
+          <Attribute Name="Configuration.Connections.CrossReference" Value="True" />
+          <Points>
+            <Points>
+              <X>268.265625</X>
+              <Y>699.5</Y>
+            </Points>
+            <Points>
+              <X>287.5</X>
+              <Y>699.5</Y>
+            </Points>
+            <Points>
+              <X>287.5</X>
+              <Y>412</Y>
+            </Points>
+            <Points>
+              <X>2357.5</X>
+              <Y>412</Y>
+            </Points>
+            <Points>
+              <X>2357.5</X>
+              <Y>294.5</Y>
+            </Points>
+            <Points>
+              <X>2480</X>
+              <Y>294.5</Y>
+            </Points>
+          </Points>
+          <AvoidsNodes>false</AvoidsNodes>
+        </Connection>
+        <Connection Source="failure1HMI.CNF" Destination="FB5.REQ7" dx1="120">
+          <Attribute Name="Configuration.Connections.CrossReference" Value="True" />
+        </Connection>
+        <Connection Source="PRODUCE_RED.PLACE_CAP1" Destination="FB1.REQ3" dx1="200.2085" />
+        <Connection Source="PRODUCE_GREEN.PLACE_CAP1" Destination="FB1.REQ2" dx1="200.2085" />
+      </EventConnections>
+      <DataConnections>
+        <Connection Source="FB2.configurationID" Destination="SUB_APP1.configurationID" dx1="40" dx2="970" dy="1590" />
+        <Connection Source="FB5.OUT_BOOL1" Destination="JACK1.full" dx1="190" />
+        <Connection Source="FB1.OUT_BOOL1" Destination="JACK2.full" />
+        <Connection Source="FB23.OUT_BOOL1" Destination="PRODUCE_GREEN.J1_WORKING" dx1="60" />
+        <Connection Source="FB23.OUT_BOOL2" Destination="PRODUCE_GREEN.J1_CONV_WORKING" dx1="40" />
+        <Connection Source="FB24.OUT_BOOL1" Destination="PRODUCE_RED.J1_WORKING" dx1="61.2085" />
+        <Connection Source="FB24.OUT_BOOL2" Destination="PRODUCE_RED.J1_CONV_WORKING" dx1="41.2085" />
+        <Connection Source="failure1HMI.J1_OUT" Destination="FB24.IN_BOOL1" dx1="256.9376" />
+        <Connection Source="failure1HMI.CONV1_OUT" Destination="FB24.IN_BOOL2" dx1="276.9376" />
+        <Connection Source="failure1HMI.J1_OUT" Destination="FB23.IN_BOOL1" dx1="220.0001" />
+        <Connection Source="failure1HMI.CONV1_OUT" Destination="FB23.IN_BOOL2" dx1="200.0001" />
+        <Connection Source="failure1HMI.CONV1_OUT" Destination="FB10.BOOL1" dx1="196.9376">
+          <Attribute Name="Configuration.Connections.CrossReference" Value="True" />
+          <AvoidsNodes>false</AvoidsNodes>
+        </Connection>
+        <Connection Source="failure1HMI.J1_OUT" Destination="FB5.IN_BOOL2" dx1="140.0001">
+          <Attribute Name="Configuration.Connections.CrossReference" Value="True" />
+          <AvoidsNodes>false</AvoidsNodes>
+        </Connection>
+      </DataConnections>
+    </SubAppNetwork>
+  </Application>
+  <Device ID="C20062D780C1383F" Name="IceBlock_J1" Type="IceBlock" x="2488.182" y="595.46" Namespace="nxtControl.IceBlock">
+    <Resource ID="22EE4A30CE5874F7" Name="RES0" Type="EMB_RES_CNT" x="3440" y="780" Namespace="nxtControl.IceBlock">
+      <FBNetwork>
+        <FB ID="77F893DC3CDA815E" Name="initApplicationChain" Type="EVENTCHAINHEAD" x="940" y="160" Namespace="Runtime.Standard" Loaded="true">
+          <Parameter Name="NAME" Value="'APP_INIT'" />
+          <Parameter Name="INVERT" Value="FALSE" />
+        </FB>
+        <FB ID="BBD2783A691222CC" Name="initHardwareChain" Type="EVENTCHAINHEAD" x="2140" y="200" Namespace="Runtime.Standard" Loaded="true">
+          <Parameter Name="NAME" Value="'HW_INIT'" />
+          <Parameter Name="INVERT" Value="FALSE" />
+        </FB>
+        <FB ID="9B39C6F7EC519947" Name="JACK1" Type="JackStation" x="3360" y="1420" Namespace="Main" />
+        <FB ID="2BF6DBD914654F12" Name="ICEBLOCKIO" Type="ICEBLOCKIO" x="400" y="400" Namespace="nxtControl.IceBlock">
+          <Parameter Name="BUS_ID" Value="'IBGPIO'" />
+          <Parameter Name="busCycleTime" Value="T#50ms" />
+          <Parameter Name="autoStart" Value="TRUE" />
+          <Parameter Name="DI0" Value="'JACK1.FB1.JACK_TOP'" />
+          <Parameter Name="DI1" Value="'JACK1.FB1.JACK_BOTTOM'" />
+          <Parameter Name="DI2" Value="'JACK1.FB1.EXTENDED'" />
+          <Parameter Name="DI3" Value="'JACK1.FB1.RETRACTED'" />
+          <Parameter Name="DO0" Value="'JACK1.FB1.VACUUM'" />
+          <Parameter Name="DO1" Value="'JACK1.FB1.JACK_EXTEND'" />
+          <Parameter Name="DO2" Value="'JACK1.FB1.JACK_DOWN'" />
+          <Parameter Name="DO3" Value="'JACK1.FB2.SLEDGE_SHIFT'" />
+        </FB>
+        <FB ID="371D9E67E214548B" Name="IceBlock_6_1_RES0_RECV" Type="COMMCHANNELUDPRECV" x="1200" y="400" Namespace="Runtime.System" Loaded="true">
+          <Parameter Name="QI" Value="TRUE" />
+          <Parameter Name="OWNADDR" Value="'0.0.0.0:61301'" />
+        </FB>
+        <FB ID="E2CD3A4CFB7C8BFD" Name="IceBlock5_RES0" Type="COMMCHANNEL" x="1200" y="1040" Namespace="Runtime.System" Loaded="true">
+          <Parameter Name="QI" Value="TRUE" />
+          <Parameter Name="PROTO" Value="2" />
+          <Parameter Name="PEERADDR" Value="'IceBlock5.RES0:61307'" />
+          <Parameter Name="ID" Value="15684121949671534389" />
+          <Parameter Name="ALIVE" Value="3000" />
+        </FB>
+        <FB ID="B5FE9FE0863C7455" Name="FB5" Type="EventWrapper_JACK1" x="2420" y="1360" Namespace="Main">
+          <Parameter Name="IN_BOOL1" Value="FALSE" />
+        </FB>
+        <FB ID="C21F3A9A297D01BD" Name="FB17" Type="EventOutWrapper_JACK1" x="4440" y="1360" Namespace="Main" />
+        <FB ID="4D3AFAC85B3E20C4" Name="FB11" Type="E_DELAY" x="1720" y="1100" Namespace="IEC61499.Standard" Loaded="true">
+          <Parameter Name="DT" Value="T#1s" />
+        </FB>
+        <EventConnections>
+          <Connection Source="IceBlock_6_1_RES0_RECV.INITO" Destination="IceBlock5_RES0.INIT" dx1="1322.396" dx2="1330" dy="350" />
+          <Connection Source="initApplicationChain.INITO" Destination="initApplicationChain.TRIGGER" dx1="42.70837" dx2="70" dy="-108" />
+          <Connection Source="initHardwareChain.INITO" Destination="initHardwareChain.TRIGGER" dx1="42.7085" dx2="70" dy="-108" />
+          <Connection Source="initApplicationChain.FINISHED" Destination="initHardwareChain.INIT" dx1="76.5" />
+          <Connection Source="START.COLD" Destination="initApplicationChain.INIT" dx1="140" />
+          <Connection Source="START.WARM" Destination="initApplicationChain.INIT" />
+          <Connection Source="FB5.CNF4" Destination="JACK1.REMOVE_WP" />
+          <Connection Source="FB5.CNF5" Destination="JACK1.CLEAR" />
+          <Connection Source="FB5.CNF6" Destination="JACK1.RESET" />
+          <Connection Source="FB5.CNF1" Destination="JACK1.INIT" />
+          <Connection Source="FB5.CNF2" Destination="JACK1.PLACE_RED" />
+          <Connection Source="FB5.CNF3" Destination="JACK1.PLACE_GREEN" />
+          <Connection Source="JACK1.WP_REMOVED" Destination="FB17.REQ5" />
+          <Connection Source="JACK1.MAN_CHECK" Destination="FB17.REQ4" />
+          <Connection Source="FB17.INITO" Destination="JACK1.INIT" dx1="40" dx2="50" dy="-110" />
+          <Connection Source="JACK1.DONE_RED" Destination="FB17.REQ2" />
+          <Connection Source="JACK1.DONE_GREEN" Destination="FB17.REQ3" />
+          <Connection Source="JACK1.INITO" Destination="FB17.REQ1" />
+          <Connection Source="FB5.INITO" Destination="FB17.INIT">
+            <Points>
+              <Points>
+                <X>756.098938</X>
+                <Y>350</Y>
+              </Points>
+              <Points>
+                <X>767.5</X>
+                <Y>350</Y>
+              </Points>
+              <Points>
+                <X>767.5</X>
+                <Y>337.5</Y>
+              </Points>
+              <Points>
+                <X>1042.5</X>
+                <Y>337.5</Y>
+              </Points>
+              <Points>
+                <X>1042.5</X>
+                <Y>350</Y>
+              </Points>
+              <Points>
+                <X>1105</X>
+                <Y>350</Y>
+              </Points>
+            </Points>
+          </Connection>
+          <Connection Source="initHardwareChain.FINISHED" Destination="FB11.START" dx1="42.7085" dx2="50" dy="410" />
+          <Connection Source="FB11.EO" Destination="FB5.INIT" dx1="48.5" />
+          <Connection Source="START.WARM" Destination="IceBlock_6_1_RES0_RECV.INIT" dx1="3480" dx2="4590" dy="-170" />
+          <Connection Source="START.COLD" Destination="IceBlock_6_1_RES0_RECV.INIT" dx1="3500" dx2="4590" dy="-110" />
+        </EventConnections>
+        <DataConnections>
+          <Connection Source="FB5.OUT_BOOL1" Destination="JACK1.full" dx1="190" />
+        </DataConnections>
+      </FBNetwork>
+    </Resource>
+    <FBNetwork />
+  </Device>
+  <Device ID="1D556ED52592A94B" Name="IceBlock5" Type="IceBlock" x="1676.964" y="575.46" Namespace="nxtControl.IceBlock">
+    <Resource ID="A45EC2FDB9B454B1" Name="RES0" Type="EMB_RES_CNT" x="1840" y="780" Namespace="nxtControl.IceBlock">
+      <FBNetwork>
+        <FB ID="FEE4FA4BDA1D3127" Name="initApplicationChain" Type="EVENTCHAINHEAD" x="2540" y="160" Namespace="Runtime.Standard" Loaded="true">
+          <Parameter Name="NAME" Value="'APP_INIT'" />
+          <Parameter Name="INVERT" Value="FALSE" />
+        </FB>
+        <FB ID="4225483402B84B2A" Name="initHardwareChain" Type="EVENTCHAINHEAD" x="3740" y="200" Namespace="Runtime.Standard" Loaded="true">
+          <Parameter Name="NAME" Value="'HW_INIT'" />
+          <Parameter Name="INVERT" Value="FALSE" />
+        </FB>
+        <FB ID="C88C62B76ACD0C3A" Name="Section5" Type="StandardSection" x="5660" y="1120" Namespace="Main" />
+        <FB ID="EDB25414826B627C" Name="IceBlock5_RES0_RECV" Type="COMMCHANNELUDPRECV" x="2800" y="400" Namespace="Runtime.System" Loaded="true">
+          <Parameter Name="QI" Value="TRUE" />
+          <Parameter Name="OWNADDR" Value="'0.0.0.0:61307'" />
+        </FB>
+        <FB ID="E7A5FBDD7478868E" Name="ICEBLOCKIO" Type="ICEBLOCKIO" x="2000" y="400" Namespace="nxtControl.IceBlock">
+          <Parameter Name="BUS_ID" Value="'IBGPIO'" />
+          <Parameter Name="busCycleTime" Value="T#50ms" />
+          <Parameter Name="autoStart" Value="TRUE" />
+          <Parameter Name="DI0" Value="'Section5.SENSOR'" />
+          <Parameter Name="DO0" Value="'Section5.DRIVE'" />
+          <Parameter Name="DO1" Value="'FB3.GATE'" />
+        </FB>
+        <FB ID="F80779444A5DFE89" Name="FB3" Type="S5Gate" x="2900" y="1200" Namespace="Main" />
+        <FB ID="6055A71EB98CC2E6" Name="CAMERA" Type="ColorDetect" x="4580" y="2340" Namespace="Main" />
+        <FB ID="F75BB5A7AD5840A9" Name="PRODUCE_RED" Type="Produce" x="1880" y="1920" Namespace="Main" />
+        <FB ID="B30EC1D4C382C911" Name="OrderConsole" Type="ProductOrder" x="3240" y="3400" Namespace="Main">
+          <Parameter Name="QI" Value="TRUE" />
+        </FB>
+        <FB ID="7B22A6FC63D8E3AA" Name="IceBlock6_2_RES0" Type="COMMCHANNEL" x="1200" y="1040" Namespace="Runtime.System" Loaded="true">
+          <Parameter Name="QI" Value="TRUE" />
+          <Parameter Name="PROTO" Value="2" />
+          <Parameter Name="PEERADDR" Value="'IceBlock6_2.RES0:61308'" />
+          <Parameter Name="ID" Value="318350114759489640" />
+          <Parameter Name="ALIVE" Value="3000" />
+        </FB>
+        <FB ID="E5CB0FE9C3C37F65" Name="IceBlock_R_RES0" Type="COMMCHANNEL" x="1200" y="2160" Namespace="Runtime.System" Loaded="true">
+          <Parameter Name="QI" Value="TRUE" />
+          <Parameter Name="PROTO" Value="2" />
+          <Parameter Name="PEERADDR" Value="'IceBlock_R.RES0:61300'" />
+          <Parameter Name="ID" Value="11476408061065696486" />
+          <Parameter Name="ALIVE" Value="3000" />
+        </FB>
+        <FB ID="ED6165DF7BB11100" Name="IceBlock1_RES0" Type="COMMCHANNEL" x="1200" y="3280" Namespace="Runtime.System" Loaded="true">
+          <Parameter Name="QI" Value="TRUE" />
+          <Parameter Name="PROTO" Value="2" />
+          <Parameter Name="PEERADDR" Value="'IceBlock1.RES0:61302'" />
+          <Parameter Name="ID" Value="8684053690372021054" />
+          <Parameter Name="ALIVE" Value="3000" />
+        </FB>
+        <FB ID="EEC9AE06582EB156" Name="IceBlock3_RES0" Type="COMMCHANNEL" x="1200" y="4400" Namespace="Runtime.System" Loaded="true">
+          <Parameter Name="QI" Value="TRUE" />
+          <Parameter Name="PROTO" Value="2" />
+          <Parameter Name="PEERADDR" Value="'IceBlock3.RES0:61303'" />
+          <Parameter Name="ID" Value="9010839850987526484" />
+          <Parameter Name="ALIVE" Value="3000" />
+        </FB>
+        <FB ID="134002496A1F81D0" Name="ButtonConsole" Type="ConsoleHMI" x="4180" y="2980" Namespace="Main" />
+        <FB ID="A72E39FDD0F3454A" Name="IceBlock2_RES0" Type="COMMCHANNEL" x="1200" y="5520" Namespace="Runtime.System" Loaded="true">
+          <Parameter Name="QI" Value="TRUE" />
+          <Parameter Name="PROTO" Value="2" />
+          <Parameter Name="PEERADDR" Value="'IceBlock2.RES0:61306'" />
+          <Parameter Name="ID" Value="7428705805402624087" />
+          <Parameter Name="ALIVE" Value="3000" />
+        </FB>
+        <FB ID="387D6046F0B5346C" Name="IceBlock4_RES0" Type="COMMCHANNEL" x="1200" y="6640" Namespace="Runtime.System" Loaded="true">
+          <Parameter Name="QI" Value="TRUE" />
+          <Parameter Name="PROTO" Value="2" />
+          <Parameter Name="PEERADDR" Value="'IceBlock4.RES0:61305'" />
+          <Parameter Name="ID" Value="8976204426807441628" />
+          <Parameter Name="ALIVE" Value="3000" />
+        </FB>
+        <FB ID="3BF47B8C48C0BD23" Name="APP2_SUB_APP1_W3W1_FB" Type="W3W1" x="3360" y="2220" Namespace="Main" />
+        <FB ID="6318425ACA876BFE" Name="APP2_SUB_APP1_S5_OFF_MERGE" Type="E_MERGE" x="5880" y="2180" Namespace="IEC61499.Standard" />
+        <FB ID="A1CE3ECF1C0EE11C" Name="APP2_SUB_APP1_S5_ON_MERGE0" Type="E_MERGE" x="4760" y="1720" Namespace="IEC61499.Standard" />
+        <FB ID="46835D523A321D14" Name="IceBlock_J2_RES0" Type="COMMCHANNEL" x="1200" y="7760" Namespace="Runtime.System" Loaded="true">
+          <Parameter Name="QI" Value="TRUE" />
+          <Parameter Name="PROTO" Value="2" />
+          <Parameter Name="PEERADDR" Value="'IceBlock_J2.RES0:61304'" />
+          <Parameter Name="ID" Value="4456980697791985048" />
+          <Parameter Name="ALIVE" Value="3000" />
+        </FB>
+        <FB ID="885A94DA9C7CBDA0" Name="IceBlock_J1_RES0" Type="COMMCHANNEL" x="1200" y="8880" Namespace="Runtime.System" Loaded="true">
+          <Parameter Name="QI" Value="TRUE" />
+          <Parameter Name="PROTO" Value="2" />
+          <Parameter Name="PEERADDR" Value="'IceBlock_J1.RES0:61301'" />
+          <Parameter Name="ID" Value="15684121949671534389" />
+          <Parameter Name="ALIVE" Value="3000" />
+        </FB>
+        <FB ID="59BCDE6AB6770CE" Name="DockConfirmationButton" Type="ConfirmationButton" x="3780" y="940" Namespace="Main">
+          <Parameter Name="message" Value="'Confirm dock'" />
+        </FB>
+        <FB ID="5EE4878D608889C6" Name="FB6" Type="EventWrapper5" x="7180" y="2900" Namespace="Main" />
+        <FB ID="4D53087B00FC478" Name="FB7" Type="EventWrapper_Gate" x="7860" y="1040" Namespace="Main" />
+        <FB ID="68A082813173DAF" Name="FB15" Type="EventOutWrapper5" x="7940" y="2140" Namespace="Main" />
+        <FB ID="6168AF58B973D19D" Name="FB19" Type="EventWrapper_Console" x="5180" y="3160" Namespace="Main" />
+        <FB ID="233F09C0D11DD000" Name="FB22" Type="EventOutWrapper_Console" x="5980" y="3580" Namespace="Main" />
+        <FB ID="4FC47135E31391CF" Name="PRODUCE_GREEN" Type="Produce" x="1920" y="3180" Namespace="Main" />
+        <FB ID="ADAF205EA73671C6" Name="FB23" Type="EventWrapper_Produce_Green" x="960" y="3120" Namespace="Main" />
+        <FB ID="4535F790AB061DA5" Name="FB24" Type="EventWrapper_Produce_RED" x="920" y="1860" Namespace="Main" />
+        <FB ID="FC347C30530D3B45" Name="failure1HMI" Type="fail_scenarios1" x="620" y="2180" Namespace="Main">
+          <Parameter Name="QI" Value="TRUE" />
+        </FB>
+        <EventConnections>
+          <Connection Source="IceBlock5_RES0_RECV.INITO" Destination="IceBlock6_2_RES0.INIT" dx1="682.396" dx2="690" dy="350" />
+          <Connection Source="IceBlock6_2_RES0.INITO" Destination="IceBlock_R_RES0.INIT" dx1="680.3542" dx2="690" dy="830" />
+          <Connection Source="IceBlock_R_RES0.INITO" Destination="IceBlock1_RES0.INIT" dx1="680.3542" dx2="690" dy="830" />
+          <Connection Source="IceBlock1_RES0.INITO" Destination="IceBlock3_RES0.INIT" dx1="680.3542" dx2="690" dy="830" />
+          <Connection Source="IceBlock3_RES0.INITO" Destination="IceBlock2_RES0.INIT" dx1="680.3542" dx2="690" dy="830" />
+          <Connection Source="IceBlock2_RES0.INITO" Destination="IceBlock4_RES0.INIT" dx1="680.3542" dx2="690" dy="830" />
+          <Connection Source="IceBlock4_RES0.INITO" Destination="IceBlock_J2_RES0.INIT" dx1="680.3542" dx2="690" dy="830" />
+          <Connection Source="IceBlock_J2_RES0.INITO" Destination="IceBlock_J1_RES0.INIT" dx1="680.3542" dx2="690" dy="830" />
+          <Connection Source="initApplicationChain.INITO" Destination="initApplicationChain.TRIGGER" dx1="42.7085" dx2="70" dy="-108" />
+          <Connection Source="initHardwareChain.INITO" Destination="initHardwareChain.TRIGGER" dx1="42.7085" dx2="70" dy="-108" />
+          <Connection Source="initApplicationChain.FINISHED" Destination="initHardwareChain.INIT" dx1="76.5" />
+          <Connection Source="START.COLD" Destination="initApplicationChain.INIT" dx1="140" />
+          <Connection Source="START.WARM" Destination="initApplicationChain.INIT" />
+          <Connection Source="initHardwareChain.FINISHED" Destination="FB3.INIT" dx1="42.7085" dx2="30" dy="410" />
+          <Connection Source="FB3.INITO" Destination="FB6.INIT">
+            <Points>
+              <Points>
+                <X>824.6041</X>
+                <Y>310</Y>
+              </Points>
+              <Points>
+                <X>834.6041</X>
+                <Y>310</Y>
+              </Points>
+              <Points>
+                <X>834.6041</X>
+                <Y>332.5</Y>
+              </Points>
+              <Points>
+                <X>1027.5</X>
+                <Y>332.5</Y>
+              </Points>
+              <Points>
+                <X>1027.5</X>
+                <Y>712.5</Y>
+              </Points>
+              <Points>
+                <X>1197.5</X>
+                <Y>712.5</Y>
+              </Points>
+              <Points>
+                <X>1197.5</X>
+                <Y>735</Y>
+              </Points>
+              <Points>
+                <X>1790</X>
+                <Y>735</Y>
+              </Points>
+            </Points>
+          </Connection>
+          <Connection Source="PRODUCE_RED.TEST" Destination="CAMERA.DETECT">
+            <Points>
+              <Points>
+                <X>697.4479</X>
+                <Y>565</Y>
+              </Points>
+              <Points>
+                <X>707.5</X>
+                <Y>565</Y>
+              </Points>
+              <Points>
+                <X>707.5</X>
+                <Y>537.5</Y>
+              </Points>
+              <Points>
+                <X>1027.5</X>
+                <Y>537.5</Y>
+              </Points>
+              <Points>
+                <X>1027.5</X>
+                <Y>610</Y>
+              </Points>
+              <Points>
+                <X>1140</X>
+                <Y>610</Y>
+              </Points>
+            </Points>
+          </Connection>
+          <Connection Source="PRODUCE_GREEN.TEST" Destination="CAMERA.DETECT">
+            <Points>
+              <Points>
+                <X>707.4479</X>
+                <Y>880</Y>
+              </Points>
+              <Points>
+                <X>717.5</X>
+                <Y>880</Y>
+              </Points>
+              <Points>
+                <X>717.5</X>
+                <Y>832.5</Y>
+              </Points>
+              <Points>
+                <X>1027.5</X>
+                <Y>832.5</Y>
+              </Points>
+              <Points>
+                <X>1027.5</X>
+                <Y>610</Y>
+              </Points>
+              <Points>
+                <X>1140</X>
+                <Y>610</Y>
+              </Points>
+            </Points>
+          </Connection>
+          <Connection Source="Section5.INITO" Destination="CAMERA.INIT" dx1="81.7085" dx2="50" dy="890" />
+          <Connection Source="CAMERA.INITO" Destination="OrderConsole.INIT" dx1="107.6045" dx2="50" dy="470" />
+          <Connection Source="PRODUCE_RED.REJECTED" Destination="OrderConsole.CHECK_J1" dx1="80.2085" />
+          <Connection Source="PRODUCE_GREEN.REJECTED" Destination="OrderConsole.CHECK_J1" dx1="110" />
+          <Connection Source="PRODUCE_RED.DONE" Destination="OrderConsole.READY" dx1="80.20825" />
+          <Connection Source="PRODUCE_GREEN.DONE" Destination="OrderConsole.READY" dx1="40.20825" />
+          <Connection Source="PRODUCE_RED.W3W1" Destination="APP2_SUB_APP1_W3W1_FB.TRIGGER" dx1="90" />
+          <Connection Source="PRODUCE_GREEN.W3W1" Destination="APP2_SUB_APP1_W3W1_FB.TRIGGER" dx1="90" />
+          <Connection Source="APP2_SUB_APP1_W3W1_FB.S5_ON" Destination="APP2_SUB_APP1_S5_ON_MERGE0.EI2" dx1="69.99976" />
+          <Connection Source="APP2_SUB_APP1_W3W1_FB.S5_OFF" Destination="APP2_SUB_APP1_S5_OFF_MERGE.EI2">
+            <Points>
+              <Points>
+                <X>1017.34894</X>
+                <Y>595</Y>
+              </Points>
+              <Points>
+                <X>1034.84888</X>
+                <Y>595</Y>
+              </Points>
+              <Points>
+                <X>1034.84888</X>
+                <Y>567.5</Y>
+              </Points>
+              <Points>
+                <X>1272.5</X>
+                <Y>567.5</Y>
+              </Points>
+              <Points>
+                <X>1272.5</X>
+                <Y>570</Y>
+              </Points>
+              <Points>
+                <X>1465</X>
+                <Y>570</Y>
+              </Points>
+            </Points>
+          </Connection>
+          <Connection Source="APP2_SUB_APP1_S5_ON_MERGE0.EO" Destination="FB6.REQ2" dx1="61.5415" />
+          <Connection Source="APP2_SUB_APP1_S5_OFF_MERGE.EO" Destination="FB6.REQ3" dx1="41.5415" />
+          <Connection Source="FB6.CNF2" Destination="Section5.DRIVE_ON" dx1="90" dx2="110" dy="-230" />
+          <Connection Source="FB6.CNF3" Destination="Section5.DRIVE_OFF" dx1="110" dx2="90" dy="-290" />
+          <Connection Source="FB6.CNF4" Destination="Section5.DELIVERY" dx1="130" dx2="70" dy="-350" />
+          <Connection Source="FB6.CNF5" Destination="Section5.PAUSE" dx1="150" dx2="50" dy="-410" />
+          <Connection Source="FB6.CNF6" Destination="Section5.START" dx1="170" dx2="30" dy="-470" />
+          <Connection Source="FB7.CNF2" Destination="FB3.OPEN">
+            <Points>
+              <Points>
+                <X>2077.1875</X>
+                <Y>300</Y>
+              </Points>
+              <Points>
+                <X>2087.5</X>
+                <Y>300</Y>
+              </Points>
+              <Points>
+                <X>2087.5</X>
+                <Y>242.5</Y>
+              </Points>
+              <Points>
+                <X>1402.5</X>
+                <Y>242.5</Y>
+              </Points>
+              <Points>
+                <X>1402.5</X>
+                <Y>332.5</Y>
+              </Points>
+              <Points>
+                <X>932.5</X>
+                <Y>332.5</Y>
+              </Points>
+              <Points>
+                <X>932.5</X>
+                <Y>282.5</Y>
+              </Points>
+              <Points>
+                <X>702.5</X>
+                <Y>282.5</Y>
+              </Points>
+              <Points>
+                <X>702.5</X>
+                <Y>325</Y>
+              </Points>
+              <Points>
+                <X>720</X>
+                <Y>325</Y>
+              </Points>
+            </Points>
+          </Connection>
+          <Connection Source="FB7.CNF3" Destination="FB3.CLOSE">
+            <Points>
+              <Points>
+                <X>2077.1875</X>
+                <Y>315</Y>
+              </Points>
+              <Points>
+                <X>2087.5</X>
+                <Y>315</Y>
+              </Points>
+              <Points>
+                <X>2087.5</X>
+                <Y>242.5</Y>
+              </Points>
+              <Points>
+                <X>1402.5</X>
+                <Y>242.5</Y>
+              </Points>
+              <Points>
+                <X>1402.5</X>
+                <Y>332.5</Y>
+              </Points>
+              <Points>
+                <X>932.5</X>
+                <Y>332.5</Y>
+              </Points>
+              <Points>
+                <X>932.5</X>
+                <Y>282.5</Y>
+              </Points>
+              <Points>
+                <X>697.5</X>
+                <Y>282.5</Y>
+              </Points>
+              <Points>
+                <X>697.5</X>
+                <Y>340</Y>
+              </Points>
+              <Points>
+                <X>720</X>
+                <Y>340</Y>
+              </Points>
+            </Points>
+          </Connection>
+          <Connection Source="FB7.CNF1" Destination="FB3.INIT">
+            <Points>
+              <Points>
+                <X>2077.1875</X>
+                <Y>285</Y>
+              </Points>
+              <Points>
+                <X>2097.5</X>
+                <Y>285</Y>
+              </Points>
+              <Points>
+                <X>2097.5</X>
+                <Y>242.5</Y>
+              </Points>
+              <Points>
+                <X>1402.5</X>
+                <Y>242.5</Y>
+              </Points>
+              <Points>
+                <X>1402.5</X>
+                <Y>332.5</Y>
+              </Points>
+              <Points>
+                <X>932.5</X>
+                <Y>332.5</Y>
+              </Points>
+              <Points>
+                <X>932.5</X>
+                <Y>282.5</Y>
+              </Points>
+              <Points>
+                <X>707.5</X>
+                <Y>282.5</Y>
+              </Points>
+              <Points>
+                <X>707.5</X>
+                <Y>310</Y>
+              </Points>
+              <Points>
+                <X>720</X>
+                <Y>310</Y>
+              </Points>
+            </Points>
+          </Connection>
+          <Connection Source="FB15.CNF3" Destination="APP2_SUB_APP1_W3W1_FB.S5_SENSOR" dx1="150" dx2="50" dy="-290" />
+          <Connection Source="Section5.SENSOR_OFF" Destination="FB15.REQ3" dx1="61.7085" />
+          <Connection Source="Section5.DELIVERED" Destination="FB15.REQ4" dx1="41.7085" />
+          <Connection Source="FB6.INITO" Destination="FB15.INIT" dx1="50" />
+          <Connection Source="DockConfirmationButton.INITO" Destination="FB7.INIT" dx1="2163.104" />
+          <Connection Source="FB15.INITO" Destination="Section5.INIT" dx1="49.99902" dx2="280" dy="-110">
+            <AvoidsNodes>false</AvoidsNodes>
+          </Connection>
+          <Connection Source="FB6.CNF1" Destination="Section5.INIT" dx1="70" dx2="130" dy="-170" />
+          <Connection Source="Section5.SENSOR_ON" Destination="FB15.REQ2" dx1="81.7085" />
+          <Connection Source="FB19.CNF2" Destination="ButtonConsole.RESET_DONE" dx1="96.9585" dx2="30" dy="-410" />
+          <Connection Source="OrderConsole.INITO" Destination="FB19.INIT" dx1="803.4167" />
+          <Connection Source="FB19.CNF1" Destination="ButtonConsole.INIT" dx1="76.9585" dx2="30" dy="-350" />
+          <Connection Source="FB22.CNF2" Destination="Section5.START" dx1="170" dx2="30" dy="-650" />
+          <Connection Source="FB22.CNF3" Destination="Section5.PAUSE" dx1="190" dx2="50" dy="-710" />
+          <Connection Source="FB22.CNF4" Destination="APP2_SUB_APP1_W3W1_FB.RESET" dx1="210" dx2="30" dy="-950" />
+          <Connection Source="FB22.CNF4" Destination="FB19.REQ2">
+            <Points>
+              <Points>
+                <X>1660.45313</X>
+                <Y>965</Y>
+              </Points>
+              <Points>
+                <X>1692.95313</X>
+                <Y>965</Y>
+              </Points>
+              <Points>
+                <X>1692.95313</X>
+                <Y>877.5</Y>
+              </Points>
+              <Points>
+                <X>1482.5</X>
+                <Y>877.5</Y>
+              </Points>
+              <Points>
+                <X>1482.5</X>
+                <Y>887.5</Y>
+              </Points>
+              <Points>
+                <X>1282.5</X>
+                <Y>887.5</Y>
+              </Points>
+              <Points>
+                <X>1282.5</X>
+                <Y>830</Y>
+              </Points>
+              <Points>
+                <X>1290</X>
+                <Y>830</Y>
+              </Points>
+            </Points>
+          </Connection>
+          <Connection Source="FB22.CNF3" Destination="FB19.REQ2">
+            <Points>
+              <Points>
+                <X>1660.45313</X>
+                <Y>950</Y>
+              </Points>
+              <Points>
+                <X>1687.95313</X>
+                <Y>950</Y>
+              </Points>
+              <Points>
+                <X>1687.95313</X>
+                <Y>877.5</Y>
+              </Points>
+              <Points>
+                <X>1482.5</X>
+                <Y>877.5</Y>
+              </Points>
+              <Points>
+                <X>1482.5</X>
+                <Y>887.5</Y>
+              </Points>
+              <Points>
+                <X>1282.5</X>
+                <Y>887.5</Y>
+              </Points>
+              <Points>
+                <X>1282.5</X>
+                <Y>830</Y>
+              </Points>
+              <Points>
+                <X>1290</X>
+                <Y>830</Y>
+              </Points>
+            </Points>
+          </Connection>
+          <Connection Source="FB22.CNF3" Destination="APP2_SUB_APP1_W3W1_FB.RESET" dx1="190" dx2="30" dy="-890" />
+          <Connection Source="FB22.CNF4" Destination="FB6.REQ3" dx1="210" />
+          <Connection Source="ButtonConsole.START" Destination="FB22.REQ2" dx1="40" />
+          <Connection Source="ButtonConsole.PAUSE" Destination="FB22.REQ3" dx1="40" />
+          <Connection Source="ButtonConsole.RESET" Destination="FB22.REQ4" dx1="40" />
+          <Connection Source="ButtonConsole.INITO" Destination="FB22.REQ1" dx1="40" />
+          <Connection Source="FB19.INITO" Destination="FB22.INIT" dx1="80" />
+          <Connection Source="FB22.INITO" Destination="FB19.REQ1">
+            <Points>
+              <Points>
+                <X>1640.45313</X>
+                <Y>905</Y>
+              </Points>
+              <Points>
+                <X>1652.95313</X>
+                <Y>905</Y>
+              </Points>
+              <Points>
+                <X>1652.95313</X>
+                <Y>877.5</Y>
+              </Points>
+              <Points>
+                <X>1482.5</X>
+                <Y>877.5</Y>
+              </Points>
+              <Points>
+                <X>1482.5</X>
+                <Y>887.5</Y>
+              </Points>
+              <Points>
+                <X>1277.5</X>
+                <Y>887.5</Y>
+              </Points>
+              <Points>
+                <X>1277.5</X>
+                <Y>815</Y>
+              </Points>
+              <Points>
+                <X>1290</X>
+                <Y>815</Y>
+              </Points>
+            </Points>
+          </Connection>
+          <Connection Source="FB22.CNF1" Destination="DockConfirmationButton.INIT">
+            <Points>
+              <Points>
+                <X>1640.45313</X>
+                <Y>920</Y>
+              </Points>
+              <Points>
+                <X>1657.95313</X>
+                <Y>920</Y>
+              </Points>
+              <Points>
+                <X>1657.95313</X>
+                <Y>877.5</Y>
+              </Points>
+              <Points>
+                <X>1457.5</X>
+                <Y>877.5</Y>
+              </Points>
+              <Points>
+                <X>1457.5</X>
+                <Y>537.5</Y>
+              </Points>
+              <Points>
+                <X>927.5</X>
+                <Y>537.5</Y>
+              </Points>
+              <Points>
+                <X>927.5</X>
+                <Y>245</Y>
+              </Points>
+              <Points>
+                <X>940</X>
+                <Y>245</Y>
+              </Points>
+            </Points>
+          </Connection>
+          <Connection Source="FB22.CNF4" Destination="FB23.REQ11">
+            <Points>
+              <Points>
+                <X>1660.45313</X>
+                <Y>965</Y>
+              </Points>
+              <Points>
+                <X>1692.95313</X>
+                <Y>965</Y>
+              </Points>
+              <Points>
+                <X>1692.95313</X>
+                <Y>877.5</Y>
+              </Points>
+              <Points>
+                <X>1482.5</X>
+                <Y>877.5</Y>
+              </Points>
+              <Points>
+                <X>1482.5</X>
+                <Y>887.5</Y>
+              </Points>
+              <Points>
+                <X>1032.5</X>
+                <Y>887.5</Y>
+              </Points>
+              <Points>
+                <X>1032.5</X>
+                <Y>762.5</Y>
+              </Points>
+              <Points>
+                <X>217.5</X>
+                <Y>762.5</Y>
+              </Points>
+              <Points>
+                <X>217.5</X>
+                <Y>955</Y>
+              </Points>
+              <Points>
+                <X>235</X>
+                <Y>955</Y>
+              </Points>
+            </Points>
+          </Connection>
+          <Connection Source="OrderConsole.PRODUCE_GREEN" Destination="FB23.REQ1" dx1="90" dx2="150" dy="-510" />
+          <Connection Source="CAMERA.GREEN" Destination="FB23.REQ5">
+            <Points>
+              <Points>
+                <X>1260.599</X>
+                <Y>625</Y>
+              </Points>
+              <Points>
+                <X>1272.5</X>
+                <Y>625</Y>
+              </Points>
+              <Points>
+                <X>1272.5</X>
+                <Y>712.5</Y>
+              </Points>
+              <Points>
+                <X>1032.5</X>
+                <Y>712.5</Y>
+              </Points>
+              <Points>
+                <X>1032.5</X>
+                <Y>757.5</Y>
+              </Points>
+              <Points>
+                <X>217.5</X>
+                <Y>757.5</Y>
+              </Points>
+              <Points>
+                <X>217.5</X>
+                <Y>865</Y>
+              </Points>
+              <Points>
+                <X>235</X>
+                <Y>865</Y>
+              </Points>
+            </Points>
+          </Connection>
+          <Connection Source="APP2_SUB_APP1_W3W1_FB.DONE" Destination="FB23.REQ6" dx1="60.60425" dx2="90" dy="770" />
+          <Connection Source="CAMERA.OTHER" Destination="FB23.REQ7">
+            <Points>
+              <Points>
+                <X>1260.599</X>
+                <Y>640</Y>
+              </Points>
+              <Points>
+                <X>1272.5</X>
+                <Y>640</Y>
+              </Points>
+              <Points>
+                <X>1272.5</X>
+                <Y>712.5</Y>
+              </Points>
+              <Points>
+                <X>1032.5</X>
+                <Y>712.5</Y>
+              </Points>
+              <Points>
+                <X>1032.5</X>
+                <Y>757.5</Y>
+              </Points>
+              <Points>
+                <X>207.5</X>
+                <Y>757.5</Y>
+              </Points>
+              <Points>
+                <X>207.5</X>
+                <Y>895</Y>
+              </Points>
+              <Points>
+                <X>235</X>
+                <Y>895</Y>
+              </Points>
+            </Points>
+          </Connection>
+          <Connection Source="CAMERA.RED" Destination="FB23.REQ7">
+            <Points>
+              <Points>
+                <X>1260.599</X>
+                <Y>610</Y>
+              </Points>
+              <Points>
+                <X>1282.5</X>
+                <Y>610</Y>
+              </Points>
+              <Points>
+                <X>1282.5</X>
+                <Y>712.5</Y>
+              </Points>
+              <Points>
+                <X>1032.5</X>
+                <Y>712.5</Y>
+              </Points>
+              <Points>
+                <X>1032.5</X>
+                <Y>757.5</Y>
+              </Points>
+              <Points>
+                <X>207.5</X>
+                <Y>757.5</Y>
+              </Points>
+              <Points>
+                <X>207.5</X>
+                <Y>895</Y>
+              </Points>
+              <Points>
+                <X>235</X>
+                <Y>895</Y>
+              </Points>
+            </Points>
+          </Connection>
+          <Connection Source="FB23.CNF1" Destination="PRODUCE_GREEN.START" />
+          <Connection Source="FB23.CNF6" Destination="PRODUCE_GREEN.DELIVERED" />
+          <Connection Source="FB23.CNF2" Destination="PRODUCE_GREEN.AT_W2" />
+          <Connection Source="FB23.CNF3" Destination="PRODUCE_GREEN.ASSEMBLY_DONE" />
+          <Connection Source="FB23.CNF4" Destination="PRODUCE_GREEN.AT_W3" />
+          <Connection Source="FB23.CNF5" Destination="PRODUCE_GREEN.TEST_OK" />
+          <Connection Source="FB23.CNF7" Destination="PRODUCE_GREEN.TEST_FAIL" />
+          <Connection Source="FB23.CNF8" Destination="PRODUCE_GREEN.AT_W4" />
+          <Connection Source="FB23.CNF9" Destination="PRODUCE_GREEN.WP_REMOVED" />
+          <Connection Source="FB23.CNF11" Destination="PRODUCE_GREEN.RESET" dx1="252.7084" />
+          <Connection Source="OrderConsole.PRODUCE_RED" Destination="FB24.REQ1" dx1="70" dx2="150" dy="-450" />
+          <Connection Source="CAMERA.RED" Destination="FB24.REQ5" dx1="70" dx2="40" dy="-648.2916" />
+          <Connection Source="APP2_SUB_APP1_W3W1_FB.DONE" Destination="FB24.REQ6" dx1="40.60425" dx2="30" dy="-470" />
+          <Connection Source="CAMERA.OTHER" Destination="FB24.REQ7" dx1="110" dx2="40" dy="-768.2916" />
+          <Connection Source="CAMERA.GREEN" Destination="FB24.REQ7" dx1="90" dx2="40" dy="-708.2916" />
+          <Connection Source="FB22.CNF4" Destination="FB24.REQ11" dx1="210" dx2="80" dy="-660.146" />
+          <Connection Source="FB24.CNF11" Destination="PRODUCE_RED.RESET" dx1="230" />
+          <Connection Source="FB24.CNF1" Destination="PRODUCE_RED.START" />
+          <Connection Source="FB24.CNF2" Destination="PRODUCE_RED.AT_W2" />
+          <Connection Source="FB24.CNF3" Destination="PRODUCE_RED.ASSEMBLY_DONE" />
+          <Connection Source="FB24.CNF4" Destination="PRODUCE_RED.AT_W3" />
+          <Connection Source="FB24.CNF5" Destination="PRODUCE_RED.TEST_OK" />
+          <Connection Source="FB24.CNF6" Destination="PRODUCE_RED.DELIVERED" />
+          <Connection Source="FB24.CNF7" Destination="PRODUCE_RED.TEST_FAIL" />
+          <Connection Source="FB24.CNF8" Destination="PRODUCE_RED.AT_W4" />
+          <Connection Source="FB24.CNF9" Destination="PRODUCE_RED.WP_REMOVED" />
+          <Connection Source="FB23.INITO" Destination="FB24.INIT" dx1="52.7085" dx2="170" dy="-110" />
+          <Connection Source="OrderConsole.INITO" Destination="failure1HMI.INIT" dx1="50" dx2="50" dy="-390" />
+          <Connection Source="failure1HMI.INITO" Destination="FB23.INIT" dx1="476.9375" dx2="50" dy="690" />
+          <Connection Source="START.WARM" Destination="IceBlock5_RES0_RECV.INIT" dx1="3880" dx2="4990" dy="-170" />
+          <Connection Source="START.COLD" Destination="IceBlock5_RES0_RECV.INIT" dx1="1740" dx2="2830" dy="-110" />
+        </EventConnections>
+        <DataConnections>
+          <Connection Source="FB23.OUT_BOOL1" Destination="PRODUCE_GREEN.J1_WORKING" dx1="32.70837" />
+          <Connection Source="FB23.OUT_BOOL2" Destination="PRODUCE_GREEN.J1_CONV_WORKING" dx1="40" />
+          <Connection Source="FB24.OUT_BOOL1" Destination="PRODUCE_RED.J1_WORKING" dx1="61.20837" />
+          <Connection Source="FB24.OUT_BOOL2" Destination="PRODUCE_RED.J1_CONV_WORKING" dx1="41.20837" />
+          <Connection Source="failure1HMI.J1_OUT" Destination="FB24.IN_BOOL1" dx1="140" dx2="170" dy="110" />
+          <Connection Source="failure1HMI.CONV1_OUT" Destination="FB24.IN_BOOL2" dx1="120" dx2="190" dy="110" />
+          <Connection Source="failure1HMI.J1_OUT" Destination="FB23.IN_BOOL1" dx1="140" dx2="170" dy="319.854" />
+          <Connection Source="failure1HMI.CONV1_OUT" Destination="FB23.IN_BOOL2" dx1="120" dx2="190" dy="259.854" />
+        </DataConnections>
+      </FBNetwork>
+    </Resource>
+    <FBNetwork />
+  </Device>
+  <Device ID="D5CF815B638A1EE3" Name="IceBlock6_2" Type="IceBlock" x="1948.781" y="575.46" Namespace="nxtControl.IceBlock">
+    <Resource ID="F0BBF9480B3D27FD" Name="RES0" Type="EMB_RES_CNT" x="1040" y="780" Namespace="nxtControl.IceBlock">
+      <FBNetwork>
+        <FB ID="2D45DF7F9C28FC91" Name="initApplicationChain" Type="EVENTCHAINHEAD" x="1740" y="160" Namespace="Runtime.Standard" Loaded="true">
+          <Parameter Name="NAME" Value="'APP_INIT'" />
+          <Parameter Name="INVERT" Value="FALSE" />
+        </FB>
+        <FB ID="C5072C34F0631B9F" Name="initHardwareChain" Type="EVENTCHAINHEAD" x="2940" y="200" Namespace="Runtime.Standard" Loaded="true">
+          <Parameter Name="NAME" Value="'HW_INIT'" />
+          <Parameter Name="INVERT" Value="FALSE" />
+        </FB>
+        <FB ID="4749456BF62E2E9E" Name="Section6" Type="StandardSection" x="3960" y="660" Namespace="Main" />
+        <FB ID="18800A99E6F1D6CC" Name="IceBlock6_2_RES0_RECV" Type="COMMCHANNELUDPRECV" x="2000" y="400" Namespace="Runtime.System" Loaded="true">
+          <Parameter Name="QI" Value="TRUE" />
+          <Parameter Name="OWNADDR" Value="'0.0.0.0:61308'" />
+        </FB>
+        <FB ID="971E7AAE046C4306" Name="ICEBLOCKIO" Type="ICEBLOCKIO" x="1200" y="400" Namespace="nxtControl.IceBlock">
+          <Parameter Name="BUS_ID" Value="'IBGPIO'" />
+          <Parameter Name="busCycleTime" Value="T#10ms" />
+          <Parameter Name="autoStart" Value="TRUE" />
+          <Parameter Name="DI0" Value="'Section6.SENSOR'" />
+          <Parameter Name="DO0" Value="'Section6.DRIVE'" />
+        </FB>
+        <FB ID="19B294DDC7BD3F55" Name="IceBlock5_RES0" Type="COMMCHANNEL" x="1200" y="1040" Namespace="Runtime.System" Loaded="true">
+          <Parameter Name="QI" Value="TRUE" />
+          <Parameter Name="PROTO" Value="2" />
+          <Parameter Name="PEERADDR" Value="'IceBlock5.RES0:61307'" />
+          <Parameter Name="ID" Value="318350114759489640" />
+          <Parameter Name="ALIVE" Value="3000" />
+        </FB>
+        <FB ID="2A0913BB90D2CC4A" Name="IceBlock2_RES0" Type="COMMCHANNEL" x="1200" y="2160" Namespace="Runtime.System" Loaded="true">
+          <Parameter Name="QI" Value="TRUE" />
+          <Parameter Name="PROTO" Value="2" />
+          <Parameter Name="PEERADDR" Value="'IceBlock2.RES0:61306'" />
+          <Parameter Name="ID" Value="15357391792718675122" />
+          <Parameter Name="ALIVE" Value="3000" />
+        </FB>
+        <FB ID="ECFE2209FE1F9A" Name="IceBlock1_RES0" Type="COMMCHANNEL" x="1200" y="3280" Namespace="Runtime.System" Loaded="true">
+          <Parameter Name="QI" Value="TRUE" />
+          <Parameter Name="PROTO" Value="2" />
+          <Parameter Name="PEERADDR" Value="'IceBlock1.RES0:61302'" />
+          <Parameter Name="ID" Value="5469120180262237479" />
+          <Parameter Name="ALIVE" Value="3000" />
+        </FB>
+        <FB ID="647E8887FC3FCFDF" Name="IceBlock3_RES0" Type="COMMCHANNEL" x="1200" y="4400" Namespace="Runtime.System" Loaded="true">
+          <Parameter Name="QI" Value="TRUE" />
+          <Parameter Name="PROTO" Value="2" />
+          <Parameter Name="PEERADDR" Value="'IceBlock3.RES0:61303'" />
+          <Parameter Name="ID" Value="8264472135724687744" />
+          <Parameter Name="ALIVE" Value="3000" />
+        </FB>
+        <FB ID="79747B86CE8CAE71" Name="APP2_SUB_APP1_W4W2_FB" Type="W4W2" x="2460" y="2680" Namespace="Main" />
+        <FB ID="7AF5E20B6EFBEFF3" Name="APP2_SUB_APP1_W3W4_FB" Type="W3W4" x="2460" y="1900" Namespace="Main" />
+        <FB ID="E40156729041607" Name="IceBlock_R_RES0" Type="COMMCHANNEL" x="1200" y="5520" Namespace="Runtime.System" Loaded="true">
+          <Parameter Name="QI" Value="TRUE" />
+          <Parameter Name="PROTO" Value="2" />
+          <Parameter Name="PEERADDR" Value="'IceBlock_R.RES0:61300'" />
+          <Parameter Name="ID" Value="18044024705611176909" />
+          <Parameter Name="ALIVE" Value="3000" />
+        </FB>
+        <FB ID="E3F866B22240AD5C" Name="FB11" Type="EventWrapper6" x="5100" y="1820" Namespace="Main" />
+        <FB ID="953AB1A2B5F359D2" Name="FB16" Type="EventOutWrapper6" x="6020" y="1300" Namespace="Main" />
+        <EventConnections>
+          <Connection Source="IceBlock6_2_RES0_RECV.INITO" Destination="IceBlock5_RES0.INIT">
+            <Points>
+              <Points>
+                <X>651.901</X>
+                <Y>110</Y>
+              </Points>
+              <Points>
+                <X>662.5</X>
+                <Y>110</Y>
+              </Points>
+              <Points>
+                <X>662.5</X>
+                <Y>197.5</Y>
+              </Points>
+              <Points>
+                <X>602.5</X>
+                <Y>197.5</Y>
+              </Points>
+              <Points>
+                <X>602.5</X>
+                <Y>477.5</Y>
+              </Points>
+              <Points>
+                <X>282.5</X>
+                <Y>477.5</Y>
+              </Points>
+              <Points>
+                <X>282.5</X>
+                <Y>270</Y>
+              </Points>
+              <Points>
+                <X>295</X>
+                <Y>270</Y>
+              </Points>
+            </Points>
+          </Connection>
+          <Connection Source="IceBlock5_RES0.INITO" Destination="IceBlock2_RES0.INIT" dx1="600.3542" dx2="610" dy="-110" />
+          <Connection Source="IceBlock2_RES0.INITO" Destination="IceBlock1_RES0.INIT" dx1="1160.354" dx2="1170" dy="830" />
+          <Connection Source="IceBlock1_RES0.INITO" Destination="IceBlock3_RES0.INIT" dx1="1160.354" dx2="1170" dy="830" />
+          <Connection Source="IceBlock3_RES0.INITO" Destination="IceBlock_R_RES0.INIT" dx1="600.3542" dx2="610" dy="830" />
+          <Connection Source="initApplicationChain.INITO" Destination="initApplicationChain.TRIGGER" dx1="42.7085" dx2="70" dy="-108" />
+          <Connection Source="initHardwareChain.INITO" Destination="initHardwareChain.TRIGGER" dx1="42.7085" dx2="70" dy="-108" />
+          <Connection Source="initApplicationChain.FINISHED" Destination="initHardwareChain.INIT" dx1="76.5" />
+          <Connection Source="initHardwareChain.FINISHED" Destination="FB11.INIT" dx1="42.7085" />
+          <Connection Source="START.COLD" Destination="initApplicationChain.INIT" dx1="140" />
+          <Connection Source="START.WARM" Destination="initApplicationChain.INIT" />
+          <Connection Source="APP2_SUB_APP1_W4W2_FB.S6_ON" Destination="FB11.REQ2" dx1="50" />
+          <Connection Source="APP2_SUB_APP1_W4W2_FB.S6_OFF" Destination="FB11.REQ3" dx1="70" />
+          <Connection Source="APP2_SUB_APP1_W3W4_FB.S6_DELIVERY" Destination="FB11.REQ4" dx1="45.646" />
+          <Connection Source="FB11.CNF2" Destination="Section6.DRIVE_ON" dx1="90" dx2="110" dy="-230" />
+          <Connection Source="FB11.CNF3" Destination="Section6.DRIVE_OFF" dx1="110" dx2="90" dy="-290" />
+          <Connection Source="FB11.CNF4" Destination="Section6.DELIVERY" dx1="130" dx2="70" dy="-350" />
+          <Connection Source="FB11.CNF5" Destination="Section6.PAUSE" dx1="150" dx2="130" dy="-410" />
+          <Connection Source="FB11.CNF6" Destination="Section6.START" dx1="170" dx2="110" dy="-470" />
+          <Connection Source="FB16.CNF4" Destination="APP2_SUB_APP1_W3W4_FB.S6_DELIVERED">
+            <Points>
+              <Points>
+                <X>1611.30212</X>
+                <Y>395</Y>
+              </Points>
+              <Points>
+                <X>1622.5</X>
+                <Y>395</Y>
+              </Points>
+              <Points>
+                <X>1622.5</X>
+                <Y>467.5</Y>
+              </Points>
+              <Points>
+                <X>1492.5</X>
+                <Y>467.5</Y>
+              </Points>
+              <Points>
+                <X>1492.5</X>
+                <Y>437.5</Y>
+              </Points>
+              <Points>
+                <X>602.5</X>
+                <Y>437.5</Y>
+              </Points>
+              <Points>
+                <X>602.5</X>
+                <Y>500</Y>
+              </Points>
+              <Points>
+                <X>610</X>
+                <Y>500</Y>
+              </Points>
+            </Points>
+          </Connection>
+          <Connection Source="FB16.CNF3" Destination="APP2_SUB_APP1_W4W2_FB.S6_SENSOR" dx1="44.79199" dx2="30" dy="950" />
+          <Connection Source="Section6.SENSOR_OFF" Destination="FB16.REQ3" dx1="61.7085" />
+          <Connection Source="Section6.DELIVERED" Destination="FB16.REQ4" dx1="41.7085" />
+          <Connection Source="FB11.INITO" Destination="FB16.INIT" dx1="50" />
+          <Connection Source="FB16.INITO" Destination="Section6.INIT" dx1="44.79199" dx2="130" dy="-110" />
+          <Connection Source="FB11.CNF1" Destination="Section6.INIT" dx1="70" dx2="130" dy="-170" />
+          <Connection Source="Section6.SENSOR_ON" Destination="FB16.REQ2" dx1="81.7085" />
+          <Connection Source="START.WARM" Destination="IceBlock6_2_RES0_RECV.INIT" dx1="3880" dx2="4990" dy="-170" />
+          <Connection Source="START.COLD" Destination="IceBlock6_2_RES0_RECV.INIT" dx1="140" />
+        </EventConnections>
+      </FBNetwork>
+    </Resource>
+    <FBNetwork />
+  </Device>
+  <Device ID="6C844954C765FED8" Name="IceBlock_R" Type="IceBlock" x="3044.62" y="595.46" Namespace="nxtControl.IceBlock">
+    <Resource ID="4E54CC1ACD794D33" Name="RES0" Type="EMB_RES_CNT" x="1040" y="780" Namespace="nxtControl.IceBlock">
+      <FBNetwork>
+        <FB ID="316C03D98CC5EAC6" Name="initApplicationChain" Type="EVENTCHAINHEAD" x="940" y="160" Namespace="Runtime.Standard" Loaded="true">
+          <Parameter Name="NAME" Value="'APP_INIT'" />
+          <Parameter Name="INVERT" Value="FALSE" />
+        </FB>
+        <FB ID="F620F51EE4325075" Name="initHardwareChain" Type="EVENTCHAINHEAD" x="2140" y="200" Namespace="Runtime.Standard" Loaded="true">
+          <Parameter Name="NAME" Value="'HW_INIT'" />
+          <Parameter Name="INVERT" Value="FALSE" />
+        </FB>
+        <FB ID="B23FD10B813A4909" Name="FB4" Type="SRSection" x="3300" y="200" Namespace="Main" />
+        <FB ID="B31A90022DFAC52" Name="IceBlock_R_RES0_RECV" Type="COMMCHANNELUDPRECV" x="1200" y="400" Namespace="Runtime.System" Loaded="true">
+          <Parameter Name="QI" Value="TRUE" />
+          <Parameter Name="OWNADDR" Value="'0.0.0.0:61300'" />
+        </FB>
+        <FB ID="6505958CE7C0C2F7" Name="ICEBLOCKIO" Type="ICEBLOCKIO" x="400" y="400" Namespace="nxtControl.IceBlock">
+          <Parameter Name="BUS_ID" Value="'IBGPIO'" />
+          <Parameter Name="busCycleTime" Value="T#50ms" />
+          <Parameter Name="autoStart" Value="TRUE" />
+          <Parameter Name="DI0" Value="'FB4.SENSOR_REAR'" />
+          <Parameter Name="DI1" Value="'FB4.SENSOR_MIDDLE'" />
+          <Parameter Name="DI2" Value="'FB4.SENSOR_FRONT'" />
+          <Parameter Name="DO0" Value="'FB4.DRIVE_OUT'" />
+          <Parameter Name="DO2" Value="'FB4.DRIVE_IN'" />
+        </FB>
+        <FB ID="229964B7048EE7B6" Name="IceBlock5_RES0" Type="COMMCHANNEL" x="1200" y="1040" Namespace="Runtime.System" Loaded="true">
+          <Parameter Name="QI" Value="TRUE" />
+          <Parameter Name="PROTO" Value="2" />
+          <Parameter Name="PEERADDR" Value="'IceBlock5.RES0:61307'" />
+          <Parameter Name="ID" Value="11476408061065696486" />
+          <Parameter Name="ALIVE" Value="3000" />
+        </FB>
+        <FB ID="2A5D3286EC966CAE" Name="IceBlock1_RES0" Type="COMMCHANNEL" x="1200" y="2160" Namespace="Runtime.System" Loaded="true">
+          <Parameter Name="QI" Value="TRUE" />
+          <Parameter Name="PROTO" Value="2" />
+          <Parameter Name="PEERADDR" Value="'IceBlock1.RES0:61302'" />
+          <Parameter Name="ID" Value="8991290990899966962" />
+          <Parameter Name="ALIVE" Value="3000" />
+        </FB>
+        <FB ID="8DA21BF0E5C7A5B9" Name="FB2" Type="ConfigurationManagerC" x="2920" y="640" Namespace="Main" />
+        <FB ID="F43658676A4F78C1" Name="IceBlock6_2_RES0" Type="COMMCHANNEL" x="1200" y="3280" Namespace="Runtime.System" Loaded="true">
+          <Parameter Name="QI" Value="TRUE" />
+          <Parameter Name="PROTO" Value="2" />
+          <Parameter Name="PEERADDR" Value="'IceBlock6_2.RES0:61308'" />
+          <Parameter Name="ID" Value="18044024705611176909" />
+          <Parameter Name="ALIVE" Value="3000" />
+        </FB>
+        <EventConnections>
+          <Connection Source="IceBlock_R_RES0_RECV.INITO" Destination="IceBlock5_RES0.INIT" dx1="599.9999" dx2="610" dy="989.8541" />
+          <Connection Source="IceBlock5_RES0.INITO" Destination="IceBlock1_RES0.INIT" dx1="1160.354" dx2="1170" dy="830" />
+          <Connection Source="IceBlock1_RES0.INITO" Destination="IceBlock6_2_RES0.INIT" dx1="600.3542" dx2="610" dy="830" />
+          <Connection Source="initApplicationChain.INITO" Destination="initApplicationChain.TRIGGER" dx1="42.70837" dx2="70" dy="-108" />
+          <Connection Source="initHardwareChain.INITO" Destination="initHardwareChain.TRIGGER" dx1="42.7085" dx2="70" dy="-108" />
+          <Connection Source="initApplicationChain.FINISHED" Destination="initHardwareChain.INIT" dx1="76.5" />
+          <Connection Source="initHardwareChain.FINISHED" Destination="FB4.INIT" dx1="70" />
+          <Connection Source="START.COLD" Destination="initApplicationChain.INIT" dx1="140" />
+          <Connection Source="START.WARM" Destination="initApplicationChain.INIT" />
+          <Connection Source="FB4.INITO" Destination="FB2.INIT" dx1="65.5625" dx2="30" dy="-110" />
+          <Connection Source="START.WARM" Destination="IceBlock_R_RES0_RECV.INIT" dx1="3240" dx2="4350" dy="-170" />
+          <Connection Source="START.COLD" Destination="IceBlock_R_RES0_RECV.INIT" dx1="1420" dx2="2510" dy="-110" />
+        </EventConnections>
+      </FBNetwork>
+    </Resource>
+    <FBNetwork />
+  </Device>
+  <Device ID="BE973F4B57528AA2" Name="IceBlock1" Type="IceBlock" x="616.9635" y="575.46" Namespace="nxtControl.IceBlock">
+    <Resource ID="A212567DDF9D487B" Name="RES0" Type="EMB_RES_CNT" x="1040" y="780" Namespace="nxtControl.IceBlock">
+      <FBNetwork>
+        <FB ID="B2D10BEF7787E43B" Name="initApplicationChain" Type="EVENTCHAINHEAD" x="940" y="160" Namespace="Runtime.Standard" Loaded="true">
+          <Parameter Name="NAME" Value="'APP_INIT'" />
+          <Parameter Name="INVERT" Value="FALSE" />
+        </FB>
+        <FB ID="FC48FB5943663737" Name="initHardwareChain" Type="EVENTCHAINHEAD" x="2140" y="200" Namespace="Runtime.Standard" Loaded="true">
+          <Parameter Name="NAME" Value="'HW_INIT'" />
+          <Parameter Name="INVERT" Value="FALSE" />
+        </FB>
+        <FB ID="9C62D35DD8E9AC0D" Name="Section1" Type="StandardSection" x="3340" y="160" Namespace="Main" />
+        <FB ID="EA2087292E153ECE" Name="IceBlock1_RES0_RECV" Type="COMMCHANNELUDPRECV" x="1200" y="400" Namespace="Runtime.System" Loaded="true">
+          <Parameter Name="QI" Value="TRUE" />
+          <Parameter Name="OWNADDR" Value="'0.0.0.0:61302'" />
+        </FB>
+        <FB ID="1CC3776E93EF8723" Name="IceBlock6_2_RES0" Type="COMMCHANNEL" x="1200" y="1040" Namespace="Runtime.System" Loaded="true">
+          <Parameter Name="QI" Value="TRUE" />
+          <Parameter Name="PROTO" Value="2" />
+          <Parameter Name="PEERADDR" Value="'IceBlock6_2.RES0:61308'" />
+          <Parameter Name="ID" Value="5469120180262237479" />
+          <Parameter Name="ALIVE" Value="3000" />
+        </FB>
+        <FB ID="66B412D73C92B707" Name="IceBlock_R_RES0" Type="COMMCHANNEL" x="1200" y="2160" Namespace="Runtime.System" Loaded="true">
+          <Parameter Name="QI" Value="TRUE" />
+          <Parameter Name="PROTO" Value="2" />
+          <Parameter Name="PEERADDR" Value="'IceBlock_R.RES0:61300'" />
+          <Parameter Name="ID" Value="8991290990899966962" />
+          <Parameter Name="ALIVE" Value="3000" />
+        </FB>
+        <FB ID="38B5F796654CD88" Name="IceBlock2_RES0" Type="COMMCHANNEL" x="1200" y="3280" Namespace="Runtime.System" Loaded="true">
+          <Parameter Name="QI" Value="TRUE" />
+          <Parameter Name="PROTO" Value="2" />
+          <Parameter Name="PEERADDR" Value="'IceBlock2.RES0:61306'" />
+          <Parameter Name="ID" Value="14034416103807258493" />
+          <Parameter Name="ALIVE" Value="3000" />
+        </FB>
+        <FB ID="B321C4CED1B8611A" Name="IceBlock3_RES0" Type="COMMCHANNEL" x="1200" y="4400" Namespace="Runtime.System" Loaded="true">
+          <Parameter Name="QI" Value="TRUE" />
+          <Parameter Name="PROTO" Value="2" />
+          <Parameter Name="PEERADDR" Value="'IceBlock3.RES0:61303'" />
+          <Parameter Name="ID" Value="10296996564786411765" />
+          <Parameter Name="ALIVE" Value="3000" />
+        </FB>
+        <FB ID="59C9762FEBF99EBA" Name="IceBlock5_RES0" Type="COMMCHANNEL" x="1200" y="5520" Namespace="Runtime.System" Loaded="true">
+          <Parameter Name="QI" Value="TRUE" />
+          <Parameter Name="PROTO" Value="2" />
+          <Parameter Name="PEERADDR" Value="'IceBlock5.RES0:61307'" />
+          <Parameter Name="ID" Value="8684053690372021054" />
+          <Parameter Name="ALIVE" Value="3000" />
+        </FB>
+        <FB ID="A67D01D16E077C84" Name="ICEBLOCKIO" Type="ICEBLOCKIO" x="400" y="400" Namespace="nxtControl.IceBlock">
+          <Parameter Name="BUS_ID" Value="'IBGPIO'" />
+          <Parameter Name="busCycleTime" Value="T#10ms" />
+          <Parameter Name="autoStart" Value="TRUE" />
+          <Parameter Name="DI0" Value="'Section1.SENSOR'" />
+          <Parameter Name="DO0" Value="'Section1.DRIVE'" />
+        </FB>
+        <FB ID="A0FABDA0FEE528FE" Name="APP2_SUB_APP1_W1W2_FB" Type="W1W2" x="1760" y="920" Namespace="Main" />
+        <FB ID="FD8FA017C502CAF2" Name="APP2_SUB_APP1_S1_OFF_MERGE" Type="E_MERGE" x="4380" y="300" Namespace="IEC61499.Standard" />
+        <FB ID="12B6DC64E5E0B893" Name="APP2_SUB_APP1_S1_ON_MERGE" Type="E_MERGE" x="3140" y="920" Namespace="IEC61499.Standard" />
+        <FB ID="AEAF63D29CBCC50D" Name="FB10" Type="EventWrapper1" x="5500" y="780" Namespace="Main" />
+        <FB ID="EC0900C8FBCFD1B8" Name="FB12" Type="EventOutWrapper1" x="6260" y="800" Namespace="Main" />
+        <FB ID="B480271DC49502C6" Name="FB11" Type="E_DELAY" x="4320" y="980" Namespace="IEC61499.Standard" Loaded="true">
+          <Parameter Name="DT" Value="T#3s" />
+        </FB>
+        <EventConnections>
+          <Connection Source="IceBlock1_RES0_RECV.INITO" Destination="IceBlock6_2_RES0.INIT" dx1="1162.396" dx2="1170" dy="350" />
+          <Connection Source="IceBlock6_2_RES0.INITO" Destination="IceBlock_R_RES0.INIT" dx1="1160.354" dx2="1170" dy="830" />
+          <Connection Source="IceBlock_R_RES0.INITO" Destination="IceBlock2_RES0.INIT" dx1="1160.354" dx2="1170" dy="830" />
+          <Connection Source="IceBlock2_RES0.INITO" Destination="IceBlock3_RES0.INIT" dx1="1160.354" dx2="1170" dy="830" />
+          <Connection Source="IceBlock3_RES0.INITO" Destination="IceBlock5_RES0.INIT" dx1="1160.354" dx2="1170" dy="830" />
+          <Connection Source="initApplicationChain.INITO" Destination="initApplicationChain.TRIGGER" dx1="42.70837" dx2="70" dy="-108" />
+          <Connection Source="initHardwareChain.INITO" Destination="initHardwareChain.TRIGGER" dx1="42.7085" dx2="70" dy="-108" />
+          <Connection Source="initApplicationChain.FINISHED" Destination="initHardwareChain.INIT" dx1="76.5" />
+          <Connection Source="START.COLD" Destination="initApplicationChain.INIT" dx1="140" />
+          <Connection Source="START.WARM" Destination="initApplicationChain.INIT" />
+          <Connection Source="APP2_SUB_APP1_W1W2_FB.S1_ON" Destination="APP2_SUB_APP1_S1_ON_MERGE.EI1" dx1="125.646" />
+          <Connection Source="APP2_SUB_APP1_W1W2_FB.S1_OFF" Destination="APP2_SUB_APP1_S1_OFF_MERGE.EI1">
+            <Points>
+              <Points>
+                <X>626.0885</X>
+                <Y>270</Y>
+              </Points>
+              <Points>
+                <X>643.5885</X>
+                <Y>270</Y>
+              </Points>
+              <Points>
+                <X>643.5885</X>
+                <Y>212.5</Y>
+              </Points>
+              <Points>
+                <X>1012.5</X>
+                <Y>212.5</Y>
+              </Points>
+              <Points>
+                <X>1012.5</X>
+                <Y>85</Y>
+              </Points>
+              <Points>
+                <X>1090</X>
+                <Y>85</Y>
+              </Points>
+            </Points>
+          </Connection>
+          <Connection Source="FB10.INITO" Destination="FB12.INIT" dx1="40" />
+          <Connection Source="APP2_SUB_APP1_S1_OFF_MERGE.EO" Destination="FB10.REQ3" dx1="61.5415" />
+          <Connection Source="APP2_SUB_APP1_S1_ON_MERGE.EO" Destination="FB10.REQ2">
+            <Points>
+              <Points>
+                <X>852.114563</X>
+                <Y>240</Y>
+              </Points>
+              <Points>
+                <X>862.5</X>
+                <Y>240</Y>
+              </Points>
+              <Points>
+                <X>862.5</X>
+                <Y>227.5</Y>
+              </Points>
+              <Points>
+                <X>1177.5</X>
+                <Y>227.5</Y>
+              </Points>
+              <Points>
+                <X>1177.5</X>
+                <Y>235</Y>
+              </Points>
+              <Points>
+                <X>1370</X>
+                <Y>235</Y>
+              </Points>
+            </Points>
+          </Connection>
+          <Connection Source="FB10.CNF3" Destination="Section1.DRIVE_OFF">
+            <Points>
+              <Points>
+                <X>1474.01563</X>
+                <Y>250</Y>
+              </Points>
+              <Points>
+                <X>1502.5</X>
+                <Y>250</Y>
+              </Points>
+              <Points>
+                <X>1502.5</X>
+                <Y>177.5</Y>
+              </Points>
+              <Points>
+                <X>1362.5</X>
+                <Y>177.5</Y>
+              </Points>
+              <Points>
+                <X>1362.5</X>
+                <Y>182.5</Y>
+              </Points>
+              <Points>
+                <X>807.5</X>
+                <Y>182.5</Y>
+              </Points>
+              <Points>
+                <X>807.5</X>
+                <Y>80</Y>
+              </Points>
+              <Points>
+                <X>830</X>
+                <Y>80</Y>
+              </Points>
+            </Points>
+          </Connection>
+          <Connection Source="FB10.CNF2" Destination="Section1.DRIVE_ON">
+            <Points>
+              <Points>
+                <X>1474.01563</X>
+                <Y>235</Y>
+              </Points>
+              <Points>
+                <X>1497.5</X>
+                <Y>235</Y>
+              </Points>
+              <Points>
+                <X>1497.5</X>
+                <Y>177.5</Y>
+              </Points>
+              <Points>
+                <X>1362.5</X>
+                <Y>177.5</Y>
+              </Points>
+              <Points>
+                <X>1362.5</X>
+                <Y>182.5</Y>
+              </Points>
+              <Points>
+                <X>802.5</X>
+                <Y>182.5</Y>
+              </Points>
+              <Points>
+                <X>802.5</X>
+                <Y>65</Y>
+              </Points>
+              <Points>
+                <X>830</X>
+                <Y>65</Y>
+              </Points>
+            </Points>
+          </Connection>
+          <Connection Source="FB10.CNF1" Destination="Section1.INIT">
+            <Points>
+              <Points>
+                <X>1474.01563</X>
+                <Y>220</Y>
+              </Points>
+              <Points>
+                <X>1492.5</X>
+                <Y>220</Y>
+              </Points>
+              <Points>
+                <X>1492.5</X>
+                <Y>177.5</Y>
+              </Points>
+              <Points>
+                <X>1362.5</X>
+                <Y>177.5</Y>
+              </Points>
+              <Points>
+                <X>1362.5</X>
+                <Y>182.5</Y>
+              </Points>
+              <Points>
+                <X>797.5</X>
+                <Y>182.5</Y>
+              </Points>
+              <Points>
+                <X>797.5</X>
+                <Y>50</Y>
+              </Points>
+              <Points>
+                <X>830</X>
+                <Y>50</Y>
+              </Points>
+            </Points>
+          </Connection>
+          <Connection Source="FB10.CNF4" Destination="Section1.DELIVERY">
+            <Points>
+              <Points>
+                <X>1474.01563</X>
+                <Y>265</Y>
+              </Points>
+              <Points>
+                <X>1507.5</X>
+                <Y>265</Y>
+              </Points>
+              <Points>
+                <X>1507.5</X>
+                <Y>177.5</Y>
+              </Points>
+              <Points>
+                <X>1362.5</X>
+                <Y>177.5</Y>
+              </Points>
+              <Points>
+                <X>1362.5</X>
+                <Y>182.5</Y>
+              </Points>
+              <Points>
+                <X>812.5</X>
+                <Y>182.5</Y>
+              </Points>
+              <Points>
+                <X>812.5</X>
+                <Y>95</Y>
+              </Points>
+              <Points>
+                <X>830</X>
+                <Y>95</Y>
+              </Points>
+            </Points>
+          </Connection>
+          <Connection Source="FB10.CNF5" Destination="Section1.PAUSE">
+            <Points>
+              <Points>
+                <X>1474.01563</X>
+                <Y>280</Y>
+              </Points>
+              <Points>
+                <X>1512.5</X>
+                <Y>280</Y>
+              </Points>
+              <Points>
+                <X>1512.5</X>
+                <Y>177.5</Y>
+              </Points>
+              <Points>
+                <X>1362.5</X>
+                <Y>177.5</Y>
+              </Points>
+              <Points>
+                <X>1362.5</X>
+                <Y>182.5</Y>
+              </Points>
+              <Points>
+                <X>797.5</X>
+                <Y>182.5</Y>
+              </Points>
+              <Points>
+                <X>797.5</X>
+                <Y>110</Y>
+              </Points>
+              <Points>
+                <X>810</X>
+                <Y>110</Y>
+              </Points>
+            </Points>
+          </Connection>
+          <Connection Source="FB10.CNF6" Destination="Section1.START">
+            <Points>
+              <Points>
+                <X>1474.01563</X>
+                <Y>295</Y>
+              </Points>
+              <Points>
+                <X>1517.5</X>
+                <Y>295</Y>
+              </Points>
+              <Points>
+                <X>1517.5</X>
+                <Y>177.5</Y>
+              </Points>
+              <Points>
+                <X>1362.5</X>
+                <Y>177.5</Y>
+              </Points>
+              <Points>
+                <X>1362.5</X>
+                <Y>182.5</Y>
+              </Points>
+              <Points>
+                <X>802.5</X>
+                <Y>182.5</Y>
+              </Points>
+              <Points>
+                <X>802.5</X>
+                <Y>125</Y>
+              </Points>
+              <Points>
+                <X>810</X>
+                <Y>125</Y>
+              </Points>
+            </Points>
+          </Connection>
+          <Connection Source="FB12.CNF3" Destination="APP2_SUB_APP1_W1W2_FB.S1_SENSOR" dx1="120" dx2="40" dy="688" />
+          <Connection Source="Section1.SENSOR_OFF" Destination="FB12.REQ3">
+            <Points>
+              <Points>
+                <X>1002.07288</X>
+                <Y>80</Y>
+              </Points>
+              <Points>
+                <X>1012.5</X>
+                <Y>80</Y>
+              </Points>
+              <Points>
+                <X>1012.5</X>
+                <Y>157.5</Y>
+              </Points>
+              <Points>
+                <X>1482.5</X>
+                <Y>157.5</Y>
+              </Points>
+              <Points>
+                <X>1482.5</X>
+                <Y>255</Y>
+              </Points>
+              <Points>
+                <X>1560</X>
+                <Y>255</Y>
+              </Points>
+            </Points>
+          </Connection>
+          <Connection Source="Section1.SENSOR_ON" Destination="FB12.REQ2">
+            <Points>
+              <Points>
+                <X>1002.07288</X>
+                <Y>65</Y>
+              </Points>
+              <Points>
+                <X>1017.5</X>
+                <Y>65</Y>
+              </Points>
+              <Points>
+                <X>1017.5</X>
+                <Y>157.5</Y>
+              </Points>
+              <Points>
+                <X>1482.5</X>
+                <Y>157.5</Y>
+              </Points>
+              <Points>
+                <X>1482.5</X>
+                <Y>240</Y>
+              </Points>
+              <Points>
+                <X>1560</X>
+                <Y>240</Y>
+              </Points>
+            </Points>
+          </Connection>
+          <Connection Source="Section1.DELIVERED" Destination="FB12.REQ4">
+            <Points>
+              <Points>
+                <X>1002.07288</X>
+                <Y>95</Y>
+              </Points>
+              <Points>
+                <X>1012.5</X>
+                <Y>95</Y>
+              </Points>
+              <Points>
+                <X>1012.5</X>
+                <Y>157.5</Y>
+              </Points>
+              <Points>
+                <X>1482.5</X>
+                <Y>157.5</Y>
+              </Points>
+              <Points>
+                <X>1482.5</X>
+                <Y>270</Y>
+              </Points>
+              <Points>
+                <X>1560</X>
+                <Y>270</Y>
+              </Points>
+            </Points>
+          </Connection>
+          <Connection Source="FB12.INITO" Destination="Section1.INIT">
+            <Points>
+              <Points>
+                <X>1671.30212</X>
+                <Y>210</Y>
+              </Points>
+              <Points>
+                <X>1683.80212</X>
+                <Y>210</Y>
+              </Points>
+              <Points>
+                <X>1683.80212</X>
+                <Y>177.5</Y>
+              </Points>
+              <Points>
+                <X>1362.5</X>
+                <Y>177.5</Y>
+              </Points>
+              <Points>
+                <X>1362.5</X>
+                <Y>182.5</Y>
+              </Points>
+              <Points>
+                <X>797.5</X>
+                <Y>182.5</Y>
+              </Points>
+              <Points>
+                <X>797.5</X>
+                <Y>50</Y>
+              </Points>
+              <Points>
+                <X>830</X>
+                <Y>50</Y>
+              </Points>
+            </Points>
+          </Connection>
+          <Connection Source="FB11.EO" Destination="FB10.INIT" dx1="48.5" />
+          <Connection Source="initHardwareChain.FINISHED" Destination="FB11.START">
+            <Points>
+              <Points>
+                <X>696.8229</X>
+                <Y>75</Y>
+              </Points>
+              <Points>
+                <X>707.5</X>
+                <Y>75</Y>
+              </Points>
+              <Points>
+                <X>707.5</X>
+                <Y>182.5</Y>
+              </Points>
+              <Points>
+                <X>862.5</X>
+                <Y>182.5</Y>
+              </Points>
+              <Points>
+                <X>862.5</X>
+                <Y>255</Y>
+              </Points>
+              <Points>
+                <X>1075</X>
+                <Y>255</Y>
+              </Points>
+            </Points>
+          </Connection>
+          <Connection Source="START.WARM" Destination="IceBlock1_RES0_RECV.INIT" dx1="2600" dx2="3710" dy="-170" />
+          <Connection Source="START.COLD" Destination="IceBlock1_RES0_RECV.INIT" dx1="2620" dx2="3710" dy="-110" />
+        </EventConnections>
+      </FBNetwork>
+    </Resource>
+    <FBNetwork />
+  </Device>
+  <Device ID="531DCFA69F41ADF9" Name="IceBlock2" Type="IceBlock" x="876.9637" y="575.46" Namespace="nxtControl.IceBlock">
+    <Resource ID="D9ED15F35F2E9AFC" Name="RES0" Type="EMB_RES_CNT" x="1040" y="780" Namespace="nxtControl.IceBlock">
+      <FBNetwork>
+        <FB ID="653F5C1AE662308F" Name="initApplicationChain" Type="EVENTCHAINHEAD" x="940" y="160" Namespace="Runtime.Standard" Loaded="true">
+          <Parameter Name="NAME" Value="'APP_INIT'" />
+          <Parameter Name="INVERT" Value="FALSE" />
+        </FB>
+        <FB ID="E3D938C80DCB66" Name="initHardwareChain" Type="EVENTCHAINHEAD" x="2140" y="200" Namespace="Runtime.Standard" Loaded="true">
+          <Parameter Name="NAME" Value="'HW_INIT'" />
+          <Parameter Name="INVERT" Value="FALSE" />
+        </FB>
+        <FB ID="A1A8F83C04FD7254" Name="Section2" Type="StandardSection" x="3300" y="180" Namespace="Main" />
+        <FB ID="C7A17C9A5F1F5B14" Name="IceBlock2_RES0_RECV" Type="COMMCHANNELUDPRECV" x="1200" y="400" Namespace="Runtime.System" Loaded="true">
+          <Parameter Name="QI" Value="TRUE" />
+          <Parameter Name="OWNADDR" Value="'0.0.0.0:61306'" />
+        </FB>
+        <FB ID="B7157B9E978DF003" Name="IceBlock6_2_RES0" Type="COMMCHANNEL" x="1200" y="1040" Namespace="Runtime.System" Loaded="true">
+          <Parameter Name="QI" Value="TRUE" />
+          <Parameter Name="PROTO" Value="2" />
+          <Parameter Name="PEERADDR" Value="'IceBlock6_2.RES0:61308'" />
+          <Parameter Name="ID" Value="15357391792718675122" />
+          <Parameter Name="ALIVE" Value="3000" />
+        </FB>
+        <FB ID="92234018EFF15310" Name="ICEBLOCKIO" Type="ICEBLOCKIO" x="400" y="400" Namespace="nxtControl.IceBlock">
+          <Parameter Name="BUS_ID" Value="'IBGPIO'" />
+          <Parameter Name="busCycleTime" Value="T#50ms" />
+          <Parameter Name="autoStart" Value="TRUE" />
+          <Parameter Name="DI0" Value="'Section2.SENSOR'" />
+          <Parameter Name="DO0" Value="'Section2.DRIVE'" />
+        </FB>
+        <FB ID="601BC51DE76EB1C5" Name="IceBlock1_RES0" Type="COMMCHANNEL" x="1200" y="2160" Namespace="Runtime.System" Loaded="true">
+          <Parameter Name="QI" Value="TRUE" />
+          <Parameter Name="PROTO" Value="2" />
+          <Parameter Name="PEERADDR" Value="'IceBlock1.RES0:61302'" />
+          <Parameter Name="ID" Value="14034416103807258493" />
+          <Parameter Name="ALIVE" Value="3000" />
+        </FB>
+        <FB ID="AB695B620022AA85" Name="IceBlock5_RES0" Type="COMMCHANNEL" x="1200" y="3280" Namespace="Runtime.System" Loaded="true">
+          <Parameter Name="QI" Value="TRUE" />
+          <Parameter Name="PROTO" Value="2" />
+          <Parameter Name="PEERADDR" Value="'IceBlock5.RES0:61307'" />
+          <Parameter Name="ID" Value="7428705805402624087" />
+          <Parameter Name="ALIVE" Value="3000" />
+        </FB>
+        <FB ID="D6335EAA03B80D3B" Name="APP2_SUB_APP1_S2_ON_MERGE" Type="E_MERGE" x="3140" y="1300" Namespace="IEC61499.Standard" />
+        <FB ID="6A210CC7955A9457" Name="APP2_SUB_APP1_S2_OFF_MERGE" Type="E_MERGE" x="4480" y="820" Namespace="IEC61499.Standard" />
+        <FB ID="B8774C7E9C772F17" Name="FB20" Type="EventWrapper2" x="5460" y="1420" Namespace="Main" />
+        <FB ID="A4E59F97A8D975F2" Name="FB21" Type="EventOutWrapper2" x="6380" y="1420" Namespace="Main" />
+        <FB ID="D4329C7AF23D18C9" Name="FB11" Type="E_DELAY" x="2560" y="900" Namespace="IEC61499.Standard" Loaded="true">
+          <Parameter Name="DT" Value="T#3s" />
+        </FB>
+        <EventConnections>
+          <Connection Source="IceBlock2_RES0_RECV.INITO" Destination="IceBlock6_2_RES0.INIT" dx1="1162.396" dx2="1170" dy="350" />
+          <Connection Source="IceBlock6_2_RES0.INITO" Destination="IceBlock1_RES0.INIT" dx1="1160.354" dx2="1170" dy="830" />
+          <Connection Source="IceBlock1_RES0.INITO" Destination="IceBlock5_RES0.INIT" dx1="1000.354" dx2="1010" dy="830" />
+          <Connection Source="initApplicationChain.INITO" Destination="initApplicationChain.TRIGGER" dx1="42.70837" dx2="70" dy="-108" />
+          <Connection Source="initHardwareChain.INITO" Destination="initHardwareChain.TRIGGER" dx1="42.7085" dx2="70" dy="-108" />
+          <Connection Source="initApplicationChain.FINISHED" Destination="initHardwareChain.INIT" dx1="76.5" />
+          <Connection Source="START.COLD" Destination="initApplicationChain.INIT" dx1="140" />
+          <Connection Source="START.WARM" Destination="initApplicationChain.INIT" />
+          <Connection Source="FB11.EO" Destination="FB20.INIT" dx1="1264.25">
+            <AvoidsNodes>false</AvoidsNodes>
+          </Connection>
+          <Connection Source="APP2_SUB_APP1_S2_ON_MERGE.EO" Destination="FB20.REQ2" dx1="41.54175" />
+          <Connection Source="APP2_SUB_APP1_S2_OFF_MERGE.EO" Destination="FB20.REQ3" dx1="41.5415" />
+          <Connection Source="FB20.CNF2" Destination="Section2.DRIVE_ON" dx1="90" dx2="110" dy="-350" />
+          <Connection Source="FB20.CNF3" Destination="Section2.DRIVE_OFF" dx1="110" dx2="90" dy="-410" />
+          <Connection Source="FB20.CNF1" Destination="Section2.INIT" dx1="70" dx2="130" dy="-290" />
+          <Connection Source="FB20.CNF4" Destination="Section2.DELIVERY" dx1="130" dx2="70" dy="-470" />
+          <Connection Source="FB20.CNF5" Destination="Section2.PAUSE" dx1="150" dx2="130" dy="-530" />
+          <Connection Source="FB20.CNF6" Destination="Section2.START" dx1="170" dx2="110" dy="-590" />
+          <Connection Source="Section2.SENSOR_OFF" Destination="FB21.REQ3" dx1="1901.708" />
+          <Connection Source="FB20.INITO" Destination="FB21.INIT" />
+          <Connection Source="Section2.SENSOR_ON" Destination="FB21.REQ2" dx1="1901.708" />
+          <Connection Source="Section2.DELIVERED" Destination="FB21.REQ4" dx1="1901.708" />
+          <Connection Source="FB21.INITO" Destination="Section2.INIT" dx1="41.06299" dx2="130" dy="-1380">
+            <AvoidsNodes>false</AvoidsNodes>
+          </Connection>
+          <Connection Source="initHardwareChain.FINISHED" Destination="FB11.START" dx1="42.7085" dx2="50" dy="410" />
+          <Connection Source="START.WARM" Destination="IceBlock2_RES0_RECV.INIT" dx1="2760" dx2="3870" dy="-170" />
+          <Connection Source="START.COLD" Destination="IceBlock2_RES0_RECV.INIT" dx1="2220" dx2="3310" dy="-110" />
+        </EventConnections>
+      </FBNetwork>
+    </Resource>
+    <FBNetwork />
+  </Device>
+  <Device ID="319E1F85ABE09EE7" Name="IceBlock3" Type="IceBlock" x="1136.964" y="575.46" Namespace="nxtControl.IceBlock">
+    <Resource ID="21F0B9F7CF4CD989" Name="RES0" Type="EMB_RES_CNT" x="1040" y="780" Namespace="nxtControl.IceBlock">
+      <FBNetwork>
+        <FB ID="981070B6F5B2E23" Name="initApplicationChain" Type="EVENTCHAINHEAD" x="940" y="160" Namespace="Runtime.Standard" Loaded="true">
+          <Parameter Name="NAME" Value="'APP_INIT'" />
+          <Parameter Name="INVERT" Value="FALSE" />
+        </FB>
+        <FB ID="F502D0090B72CEF6" Name="initHardwareChain" Type="EVENTCHAINHEAD" x="2120" y="220" Namespace="Runtime.Standard" Loaded="true">
+          <Parameter Name="NAME" Value="'HW_INIT'" />
+          <Parameter Name="INVERT" Value="FALSE" />
+        </FB>
+        <FB ID="E98FECC6A6E94864" Name="Section3" Type="StandardSection" x="3160" y="200" Namespace="Main" />
+        <FB ID="EA9599FFF4E39333" Name="IceBlock3_RES0_RECV" Type="COMMCHANNELUDPRECV" x="1200" y="400" Namespace="Runtime.System" Loaded="true">
+          <Parameter Name="QI" Value="TRUE" />
+          <Parameter Name="OWNADDR" Value="'0.0.0.0:61303'" />
+        </FB>
+        <FB ID="C0597864854904F3" Name="IceBlock6_2_RES0" Type="COMMCHANNEL" x="1200" y="1040" Namespace="Runtime.System" Loaded="true">
+          <Parameter Name="QI" Value="TRUE" />
+          <Parameter Name="PROTO" Value="2" />
+          <Parameter Name="PEERADDR" Value="'IceBlock6_2.RES0:61308'" />
+          <Parameter Name="ID" Value="8264472135724687744" />
+          <Parameter Name="ALIVE" Value="3000" />
+        </FB>
+        <FB ID="3B0366D933701509" Name="IceBlock1_RES0" Type="COMMCHANNEL" x="1200" y="2160" Namespace="Runtime.System" Loaded="true">
+          <Parameter Name="QI" Value="TRUE" />
+          <Parameter Name="PROTO" Value="2" />
+          <Parameter Name="PEERADDR" Value="'IceBlock1.RES0:61302'" />
+          <Parameter Name="ID" Value="10296996564786411765" />
+          <Parameter Name="ALIVE" Value="3000" />
+        </FB>
+        <FB ID="4BA52EC1DBF3A268" Name="IceBlock4_RES0" Type="COMMCHANNEL" x="1200" y="3280" Namespace="Runtime.System" Loaded="true">
+          <Parameter Name="QI" Value="TRUE" />
+          <Parameter Name="PROTO" Value="2" />
+          <Parameter Name="PEERADDR" Value="'IceBlock4.RES0:61305'" />
+          <Parameter Name="ID" Value="250644258805317304" />
+          <Parameter Name="ALIVE" Value="3000" />
+        </FB>
+        <FB ID="B724C107685A00EB" Name="IceBlock5_RES0" Type="COMMCHANNEL" x="1200" y="4400" Namespace="Runtime.System" Loaded="true">
+          <Parameter Name="QI" Value="TRUE" />
+          <Parameter Name="PROTO" Value="2" />
+          <Parameter Name="PEERADDR" Value="'IceBlock5.RES0:61307'" />
+          <Parameter Name="ID" Value="9010839850987526484" />
+          <Parameter Name="ALIVE" Value="3000" />
+        </FB>
+        <FB ID="C266E5A6D223A7DE" Name="ICEBLOCKIO" Type="ICEBLOCKIO" x="400" y="400" Namespace="nxtControl.IceBlock">
+          <Parameter Name="BUS_ID" Value="'IBGPIO'" />
+          <Parameter Name="busCycleTime" Value="T#10ms" />
+          <Parameter Name="autoStart" Value="TRUE" />
+          <Parameter Name="DI0" Value="'Section3.SENSOR'" />
+          <Parameter Name="DO0" Value="'Section3.DRIVE'" />
+        </FB>
+        <FB ID="6C00CAF1A9AF6AD" Name="APP2_SUB_APP1_W2W3_FB" Type="W2W3" x="1640" y="1260" Namespace="Main" />
+        <FB ID="34573E272A5A44F1" Name="APP2_SUB_APP1_S3_DELIVERY_MERGE" Type="E_MERGE" x="3200" y="2520" Namespace="IEC61499.Standard" />
+        <FB ID="F2C8F594DB879940" Name="FB9" Type="EventWrapper3" x="4680" y="1200" Namespace="Main" />
+        <FB ID="50AD3497A635E493" Name="FB13" Type="EventOutWrapper3" x="5620" y="1220" Namespace="Main" />
+        <EventConnections>
+          <Connection Source="IceBlock3_RES0_RECV.INITO" Destination="IceBlock6_2_RES0.INIT" dx1="1162.396" dx2="1170" dy="350" />
+          <Connection Source="IceBlock6_2_RES0.INITO" Destination="IceBlock1_RES0.INIT" dx1="1160" dx2="1170" dy="1469.854" />
+          <Connection Source="IceBlock1_RES0.INITO" Destination="IceBlock4_RES0.INIT" dx1="1160.354" dx2="1170" dy="830" />
+          <Connection Source="IceBlock4_RES0.INITO" Destination="IceBlock5_RES0.INIT" dx1="1160.354" dx2="1170" dy="830" />
+          <Connection Source="initApplicationChain.INITO" Destination="initApplicationChain.TRIGGER" dx1="42.70837" dx2="70" dy="-108" />
+          <Connection Source="initHardwareChain.INITO" Destination="initHardwareChain.TRIGGER" dx1="42.7085" dx2="70" dy="-108" />
+          <Connection Source="initApplicationChain.FINISHED" Destination="initHardwareChain.INIT" />
+          <Connection Source="START.COLD" Destination="initApplicationChain.INIT" dx1="140" />
+          <Connection Source="START.WARM" Destination="initApplicationChain.INIT" />
+          <Connection Source="Section3.SENSOR_ON" Destination="Section3.DRIVE_OFF" dx1="81.7085" dx2="90" dy="-170" />
+          <Connection Source="APP2_SUB_APP1_W2W3_FB.S3_ON" Destination="FB9.REQ2" dx1="65.646" />
+          <Connection Source="APP2_SUB_APP1_W2W3_FB.S3_OFF" Destination="FB9.REQ3" dx1="45.646" />
+          <Connection Source="APP2_SUB_APP1_S3_DELIVERY_MERGE.EO" Destination="FB9.REQ4" dx1="41.54175" />
+          <Connection Source="FB9.CNF2" Destination="Section3.DRIVE_ON" dx1="90" dx2="110" dy="-230" />
+          <Connection Source="FB9.CNF3" Destination="Section3.DRIVE_OFF" dx1="110" dx2="90" dy="-290" />
+          <Connection Source="FB9.CNF4" Destination="Section3.DELIVERY" dx1="130" dx2="70" dy="-350" />
+          <Connection Source="FB9.CNF5" Destination="Section3.PAUSE" dx1="150" dx2="130" dy="-410" />
+          <Connection Source="FB9.CNF6" Destination="Section3.START" dx1="170" dx2="110" dy="-470" />
+          <Connection Source="FB13.CNF3" Destination="APP2_SUB_APP1_W2W3_FB.S3_SENSOR" dx1="70" dx2="30" dy="-310" />
+          <Connection Source="Section3.SENSOR_OFF" Destination="FB13.REQ3" dx1="1261.708" />
+          <Connection Source="Section3.DELIVERED" Destination="FB13.REQ4" dx1="1261.708" />
+          <Connection Source="FB9.INITO" Destination="FB13.INIT" dx1="160.0415" />
+          <Connection Source="Section3.SENSOR_ON" Destination="FB13.REQ2" dx1="1261.708" />
+          <Connection Source="initHardwareChain.FINISHED" Destination="FB9.INIT" dx1="42.7085" />
+          <Connection Source="FB13.INITO" Destination="Section3.INIT" dx1="44.79199" dx2="130" dy="-130" />
+          <Connection Source="FB9.CNF1" Destination="Section3.INIT" dx1="70" dx2="130" dy="-170" />
+          <Connection Source="START.WARM" Destination="IceBlock3_RES0_RECV.INIT" dx1="2600" dx2="3710" dy="-170" />
+          <Connection Source="START.COLD" Destination="IceBlock3_RES0_RECV.INIT" dx1="2620" dx2="3710" dy="-110" />
+        </EventConnections>
+      </FBNetwork>
+    </Resource>
+    <FBNetwork />
+  </Device>
+  <Device ID="E00A0F0128328BBD" Name="IceBlock_J2" Type="IceBlock" x="2768.182" y="595.46" Namespace="nxtControl.IceBlock">
+    <Resource ID="D26373F626EC8F47" Name="RES0" Type="EMB_RES_CNT" x="1040" y="780" Namespace="nxtControl.IceBlock">
+      <FBNetwork>
+        <FB ID="684E3B8DFFA28BE1" Name="initApplicationChain" Type="EVENTCHAINHEAD" x="940" y="160" Namespace="Runtime.Standard" Loaded="true">
+          <Parameter Name="NAME" Value="'APP_INIT'" />
+          <Parameter Name="INVERT" Value="FALSE" />
+        </FB>
+        <FB ID="4D597DF20E5247F" Name="initHardwareChain" Type="EVENTCHAINHEAD" x="2080" y="240" Namespace="Runtime.Standard" Loaded="true">
+          <Parameter Name="NAME" Value="'HW_INIT'" />
+          <Parameter Name="INVERT" Value="FALSE" />
+        </FB>
+        <FB ID="C23597EC062FDDD8" Name="JACK2" Type="JackStation" x="4280" y="1140" Namespace="Main" />
+        <FB ID="2BE5F0F70707AE5D" Name="IceBlock_J1_RES0_RECV" Type="COMMCHANNELUDPRECV" x="1200" y="400" Namespace="Runtime.System" Loaded="true">
+          <Parameter Name="QI" Value="TRUE" />
+          <Parameter Name="OWNADDR" Value="'0.0.0.0:61304'" />
+        </FB>
+        <FB ID="B76E04938132B961" Name="IceBlock5_RES0" Type="COMMCHANNEL" x="1200" y="1040" Namespace="Runtime.System" Loaded="true">
+          <Parameter Name="QI" Value="TRUE" />
+          <Parameter Name="PROTO" Value="2" />
+          <Parameter Name="PEERADDR" Value="'IceBlock5.RES0:61307'" />
+          <Parameter Name="ID" Value="4456980697791985048" />
+          <Parameter Name="ALIVE" Value="3000" />
+        </FB>
+        <FB ID="8BDA08CE88A229FA" Name="ICEBLOCKIO" Type="ICEBLOCKIO" x="400" y="400" Namespace="nxtControl.IceBlock">
+          <Parameter Name="BUS_ID" Value="'IBGPIO'" />
+          <Parameter Name="busCycleTime" Value="T#50ms" />
+          <Parameter Name="autoStart" Value="TRUE" />
+          <Parameter Name="DI0" Value="'JACK2.FB1.JACK_TOP'" />
+          <Parameter Name="DI1" Value="'JACK2.FB1.JACK_BOTTOM'" />
+          <Parameter Name="DI2" Value="'JACK2.FB1.EXTENDED'" />
+          <Parameter Name="DI3" Value="'JACK2.FB1.RETRACTED'" />
+          <Parameter Name="DO0" Value="'JACK2.FB1.JACK_DOWN'" />
+          <Parameter Name="DO1" Value="'JACK2.FB1.JACK_EXTEND'" />
+          <Parameter Name="DO2" Value="'JACK2.FB1.VACUUM'" />
+          <Parameter Name="DO3" Value="'JACK2.FB2.SLEDGE_SHIFT'" />
+        </FB>
+        <FB ID="96C03F313FB73EB7" Name="FB1" Type="EventWrapper_JACK2" x="3360" y="1080" Namespace="Main">
+          <Parameter Name="IN_BOOL1" Value="TRUE" />
+        </FB>
+        <FB ID="C6CE076A7223DF95" Name="FB18" Type="EventOutWrapper_JACK2" x="5520" y="1080" Namespace="Main" />
+        <FB ID="626C5FABBDA0F6CF" Name="FB11" Type="E_DELAY" x="2340" y="1120" Namespace="IEC61499.Standard" Loaded="true">
+          <Parameter Name="DT" Value="T#2s" />
+        </FB>
+        <EventConnections>
+          <Connection Source="IceBlock_J1_RES0_RECV.INITO" Destination="IceBlock5_RES0.INIT" dx1="1160" dx2="1170" dy="989.8541" />
+          <Connection Source="initApplicationChain.INITO" Destination="initApplicationChain.TRIGGER" dx1="42.70837" dx2="70" dy="-108" />
+          <Connection Source="initHardwareChain.INITO" Destination="initHardwareChain.TRIGGER" dx1="42.7085" dx2="70" dy="-108" />
+          <Connection Source="initApplicationChain.FINISHED" Destination="initHardwareChain.INIT" dx1="42.70837" />
+          <Connection Source="START.COLD" Destination="initApplicationChain.INIT" dx1="140" />
+          <Connection Source="START.WARM" Destination="initApplicationChain.INIT" />
+          <Connection Source="FB1.CNF2" Destination="JACK2.PLACE_RED" />
+          <Connection Source="FB1.CNF3" Destination="JACK2.PLACE_GREEN" />
+          <Connection Source="FB1.CNF5" Destination="JACK2.CLEAR" />
+          <Connection Source="FB1.CNF6" Destination="JACK2.RESET" />
+          <Connection Source="FB1.CNF4" Destination="JACK2.REMOVE_WP" />
+          <Connection Source="JACK2.DONE_RED" Destination="FB18.REQ2" />
+          <Connection Source="JACK2.DONE_GREEN" Destination="FB18.REQ3" />
+          <Connection Source="JACK2.MAN_CHECK" Destination="FB18.REQ4" />
+          <Connection Source="FB1.INITO" Destination="FB18.INIT">
+            <Points>
+              <Points>
+                <X>991.098938</X>
+                <Y>280</Y>
+              </Points>
+              <Points>
+                <X>1002.5</X>
+                <Y>280</Y>
+              </Points>
+              <Points>
+                <X>1002.5</X>
+                <Y>267.5</Y>
+              </Points>
+              <Points>
+                <X>1272.5</X>
+                <Y>267.5</Y>
+              </Points>
+              <Points>
+                <X>1272.5</X>
+                <Y>280</Y>
+              </Points>
+              <Points>
+                <X>1375</X>
+                <Y>280</Y>
+              </Points>
+            </Points>
+          </Connection>
+          <Connection Source="FB18.INITO" Destination="JACK2.INIT" dx1="40" dx2="50" dy="-110" />
+          <Connection Source="FB1.CNF1" Destination="JACK2.INIT" />
+          <Connection Source="JACK2.INITO" Destination="FB18.REQ1" />
+          <Connection Source="JACK2.WP_REMOVED" Destination="FB18.REQ5" />
+          <Connection Source="FB11.EO" Destination="FB1.INIT" dx1="48.5" />
+          <Connection Source="initHardwareChain.FINISHED" Destination="FB11.START" dx1="42.7085" dx2="50" dy="410" />
+          <Connection Source="START.WARM" Destination="IceBlock_J1_RES0_RECV.INIT" dx1="2600" dx2="3710" dy="-170" />
+          <Connection Source="START.COLD" Destination="IceBlock_J1_RES0_RECV.INIT" dx1="940" dx2="2030" dy="-110" />
+        </EventConnections>
+        <DataConnections>
+          <Connection Source="FB1.OUT_BOOL1" Destination="JACK2.full" />
+        </DataConnections>
+      </FBNetwork>
+    </Resource>
+    <FBNetwork />
+  </Device>
+  <Device ID="D4B1E6963DDD4214" Name="IceBlock4" Type="IceBlock" x="1416.964" y="575.46" Namespace="nxtControl.IceBlock">
+    <Resource ID="1CC430E0E9F78626" Name="RES0" Type="EMB_RES_CNT" x="1040" y="780" Namespace="nxtControl.IceBlock">
+      <FBNetwork>
+        <FB ID="6501B7B00F0CA120" Name="initApplicationChain" Type="EVENTCHAINHEAD" x="940" y="160" Namespace="Runtime.Standard" Loaded="true">
+          <Parameter Name="NAME" Value="'APP_INIT'" />
+          <Parameter Name="INVERT" Value="FALSE" />
+        </FB>
+        <FB ID="5F482351DD17723C" Name="initHardwareChain" Type="EVENTCHAINHEAD" x="2140" y="200" Namespace="Runtime.Standard" Loaded="true">
+          <Parameter Name="NAME" Value="'HW_INIT'" />
+          <Parameter Name="INVERT" Value="FALSE" />
+        </FB>
+        <FB ID="85AE3553B22AF274" Name="Section4" Type="StandardSection" x="3100" y="320" Namespace="Main" />
+        <FB ID="8FEAD8AA6428EB1D" Name="IceBlock4_RES0_RECV" Type="COMMCHANNELUDPRECV" x="1200" y="400" Namespace="Runtime.System" Loaded="true">
+          <Parameter Name="QI" Value="TRUE" />
+          <Parameter Name="OWNADDR" Value="'0.0.0.0:61305'" />
+        </FB>
+        <FB ID="90CAE698406CDEC9" Name="IceBlock3_RES0" Type="COMMCHANNEL" x="1200" y="1040" Namespace="Runtime.System" Loaded="true">
+          <Parameter Name="QI" Value="TRUE" />
+          <Parameter Name="PROTO" Value="2" />
+          <Parameter Name="PEERADDR" Value="'IceBlock3.RES0:61303'" />
+          <Parameter Name="ID" Value="250644258805317304" />
+          <Parameter Name="ALIVE" Value="3000" />
+        </FB>
+        <FB ID="26C963EFBBF71813" Name="ICEBLOCKIO" Type="ICEBLOCKIO" x="400" y="400" Namespace="nxtControl.IceBlock">
+          <Parameter Name="BUS_ID" Value="'IBGPIO'" />
+          <Parameter Name="busCycleTime" Value="T#10ms" />
+          <Parameter Name="autoStart" Value="TRUE" />
+          <Parameter Name="DI0" Value="'Section4.SENSOR'" />
+          <Parameter Name="DO0" Value="'Section4.DRIVE'" />
+        </FB>
+        <FB ID="3DE150434B00C3D8" Name="IceBlock5_RES0" Type="COMMCHANNEL" x="1200" y="2160" Namespace="Runtime.System" Loaded="true">
+          <Parameter Name="QI" Value="TRUE" />
+          <Parameter Name="PROTO" Value="2" />
+          <Parameter Name="PEERADDR" Value="'IceBlock5.RES0:61307'" />
+          <Parameter Name="ID" Value="8976204426807441628" />
+          <Parameter Name="ALIVE" Value="3000" />
+        </FB>
+        <FB ID="80C930D03FEDBB75" Name="FB8" Type="EventWrapper4" x="4140" y="1760" Namespace="Main" />
+        <FB ID="21A679583BAF89F9" Name="FB14" Type="EventOutWrapper4" x="6060" y="1700" Namespace="Main" />
+        <EventConnections>
+          <Connection Source="IceBlock4_RES0_RECV.INITO" Destination="IceBlock3_RES0.INIT" dx1="1162.396" dx2="1170" dy="350" />
+          <Connection Source="IceBlock3_RES0.INITO" Destination="IceBlock5_RES0.INIT" dx1="1000.354" dx2="1010" dy="830" />
+          <Connection Source="initApplicationChain.INITO" Destination="initApplicationChain.TRIGGER" dx1="42.70837" dx2="70" dy="-108" />
+          <Connection Source="initHardwareChain.INITO" Destination="initHardwareChain.TRIGGER" dx1="42.7085" dx2="70" dy="-108" />
+          <Connection Source="initApplicationChain.FINISHED" Destination="initHardwareChain.INIT" dx1="76.5" />
+          <Connection Source="START.COLD" Destination="initApplicationChain.INIT" dx1="140" />
+          <Connection Source="START.WARM" Destination="initApplicationChain.INIT" />
+          <Connection Source="initHardwareChain.FINISHED" Destination="FB8.INIT" dx1="42.7085" />
+          <Connection Source="FB8.CNF2" Destination="Section4.DRIVE_ON" dx1="90" dx2="110" dy="-230" />
+          <Connection Source="FB8.CNF3" Destination="Section4.DRIVE_OFF" dx1="110" dx2="90" dy="-290" />
+          <Connection Source="FB8.CNF4" Destination="Section4.DELIVERY" dx1="130" dx2="70" dy="-350" />
+          <Connection Source="FB8.CNF5" Destination="Section4.PAUSE" dx1="150" dx2="130" dy="-410" />
+          <Connection Source="FB8.CNF6" Destination="Section4.START" dx1="170" dx2="110" dy="-470" />
+          <Connection Source="Section4.SENSOR_OFF" Destination="FB14.REQ3" dx1="781.7085" />
+          <Connection Source="FB8.INITO" Destination="FB14.INIT" dx1="50" />
+          <Connection Source="FB14.INITO" Destination="Section4.INIT" dx1="44.79199" dx2="130" dy="-110" />
+          <Connection Source="FB8.CNF1" Destination="Section4.INIT" dx1="70" dx2="130" dy="-170" />
+          <Connection Source="Section4.SENSOR_ON" Destination="FB14.REQ2" dx1="781.7085" />
+          <Connection Source="Section4.DELIVERED" Destination="FB14.REQ4" dx1="781.7085" />
+          <Connection Source="START.WARM" Destination="IceBlock4_RES0_RECV.INIT" dx1="2600" dx2="3710" dy="-170" />
+          <Connection Source="START.COLD" Destination="IceBlock4_RES0_RECV.INIT" dx1="2220" dx2="3310" dy="-110" />
+        </EventConnections>
+      </FBNetwork>
+    </Resource>
+    <FBNetwork />
+  </Device>
+  <Device ID="A0FB5ECDC49BDA00" Name="IceBlock7" Type="IceBlock" x="2196.963" y="595.46" Namespace="nxtControl.IceBlock">
+    <Resource ID="A06A16F190CC6712" Name="RES0" Type="EMB_RES_CNT" x="1040" y="780" Namespace="nxtControl.IceBlock">
+      <FBNetwork>
+        <FB ID="2B533C1516EC500E" Name="initApplicationChain" Type="EVENTCHAINHEAD" x="940" y="160" Namespace="Runtime.Standard" Loaded="true">
+          <Parameter Name="NAME" Value="'APP_INIT'" />
+          <Parameter Name="INVERT" Value="FALSE" />
+        </FB>
+        <FB ID="9A874C32D2ECE13E" Name="initHardwareChain" Type="EVENTCHAINHEAD" x="2140" y="200" Namespace="Runtime.Standard" Loaded="true">
+          <Parameter Name="NAME" Value="'HW_INIT'" />
+          <Parameter Name="INVERT" Value="FALSE" />
+        </FB>
+        <EventConnections>
+          <Connection Source="initApplicationChain.INITO" Destination="initApplicationChain.TRIGGER" dx1="42.70837" dx2="70" dy="-108" />
+          <Connection Source="initHardwareChain.INITO" Destination="initHardwareChain.TRIGGER" dx1="42.7085" dx2="70" dy="-108" />
+          <Connection Source="initApplicationChain.FINISHED" Destination="initHardwareChain.INIT" dx1="76.5" />
+        </EventConnections>
+      </FBNetwork>
+    </Resource>
+    <FBNetwork />
+  </Device>
+  <Mapping From="APP2.JACK1" To="IceBlock_J1.RES0" />
+  <Mapping From="APP2.Section5" To="IceBlock5.RES0" />
+  <Mapping From="APP2.FB3" To="IceBlock5.RES0" />
+  <Mapping From="APP2.Section6" To="IceBlock6_2.RES0" />
+  <Mapping From="APP2.CAMERA" To="IceBlock5.RES0" />
+  <Mapping From="APP2.PRODUCE_RED" To="IceBlock5.RES0" />
+  <Mapping From="APP2.OrderConsole" To="IceBlock5.RES0" />
+  <Mapping From="APP2.FB4" To="IceBlock_R.RES0" />
+  <Mapping From="APP2.Section2" To="IceBlock2.RES0" />
+  <Mapping From="APP2.Section1" To="IceBlock1.RES0" />
+  <Mapping From="APP2.Section3" To="IceBlock3.RES0" />
+  <Mapping From="APP2.Section4" To="IceBlock4.RES0" />
+  <Mapping From="APP2.JACK2" To="IceBlock_J2.RES0" />
+  <Mapping From="APP2.ButtonConsole" To="IceBlock5.RES0" />
+  <Mapping From="APP2.SUB_APP1.W3W1_FB" To="IceBlock5.RES0.APP2_SUB_APP1_W3W1_FB" />
+  <Mapping From="APP2.SUB_APP1.S5_OFF_MERGE" To="IceBlock5.RES0.APP2_SUB_APP1_S5_OFF_MERGE" />
+  <Mapping From="APP2.SUB_APP1.S5_ON_MERGE" To="IceBlock5.RES0.APP2_SUB_APP1_S5_ON_MERGE0" />
+  <Mapping From="APP2.SUB_APP1.W4W2_FB" To="IceBlock6_2.RES0.APP2_SUB_APP1_W4W2_FB" />
+  <Mapping From="APP2.SUB_APP1.W3W4_FB" To="IceBlock6_2.RES0.APP2_SUB_APP1_W3W4_FB" />
+  <Mapping From="APP2.SUB_APP1.S2_ON_MERGE" To="IceBlock2.RES0.APP2_SUB_APP1_S2_ON_MERGE" />
+  <Mapping From="APP2.SUB_APP1.S2_OFF_MERGE" To="IceBlock2.RES0.APP2_SUB_APP1_S2_OFF_MERGE" />
+  <Mapping From="APP2.SUB_APP1.W1W2_FB" To="IceBlock1.RES0.APP2_SUB_APP1_W1W2_FB" />
+  <Mapping From="APP2.SUB_APP1.S1_OFF_MERGE" To="IceBlock1.RES0.APP2_SUB_APP1_S1_OFF_MERGE" />
+  <Mapping From="APP2.SUB_APP1.S1_ON_MERGE" To="IceBlock1.RES0.APP2_SUB_APP1_S1_ON_MERGE" />
+  <Mapping From="APP2.SUB_APP1.W2W3_FB" To="IceBlock3.RES0.APP2_SUB_APP1_W2W3_FB" />
+  <Mapping From="APP2.SUB_APP1.S3_DELIVERY_MERGE" To="IceBlock3.RES0.APP2_SUB_APP1_S3_DELIVERY_MERGE" />
+  <Mapping From="APP2.DockConfirmationButton" To="IceBlock5.RES0" />
+  <Mapping From="APP2.FB2" To="IceBlock_R.RES0" />
+  <Mapping From="APP2.FB10" To="IceBlock1.RES0" />
+  <Mapping From="APP2.FB12" To="IceBlock1.RES0" />
+  <Mapping From="APP2.FB20" To="IceBlock2.RES0" />
+  <Mapping From="APP2.FB9" To="IceBlock3.RES0" />
+  <Mapping From="APP2.FB8" To="IceBlock4.RES0" />
+  <Mapping From="APP2.FB6" To="IceBlock5.RES0" />
+  <Mapping From="APP2.FB11" To="IceBlock6_2.RES0" />
+  <Mapping From="APP2.FB5" To="IceBlock_J1.RES0" />
+  <Mapping From="APP2.FB1" To="IceBlock_J2.RES0" />
+  <Mapping From="APP2.FB7" To="IceBlock5.RES0" />
+  <Mapping From="APP2.FB21" To="IceBlock2.RES0" />
+  <Mapping From="APP2.FB13" To="IceBlock3.RES0" />
+  <Mapping From="APP2.FB14" To="IceBlock4.RES0" />
+  <Mapping From="APP2.FB15" To="IceBlock5.RES0" />
+  <Mapping From="APP2.FB16" To="IceBlock6_2.RES0" />
+  <Mapping From="APP2.FB17" To="IceBlock_J1.RES0" />
+  <Mapping From="APP2.FB18" To="IceBlock_J2.RES0" />
+  <Mapping From="APP2.FB19" To="IceBlock5.RES0" />
+  <Mapping From="APP2.FB22" To="IceBlock5.RES0" />
+  <Mapping From="APP2.PRODUCE_GREEN" To="IceBlock5.RES0" />
+  <Mapping From="APP2.FB23" To="IceBlock5.RES0" />
+  <Mapping From="APP2.FB24" To="IceBlock5.RES0" />
+  <Mapping From="APP2.failure1HMI" To="IceBlock5.RES0" />
+  <Segment Name="SEGMENT1" Type="Ethernet" x="480" y="1000" dx1="2780.949" />
+  <Link SegmentName="SEGMENT1" CommResource="IceBlock6_2" />
+  <Link SegmentName="SEGMENT1" CommResource="IceBlock5" />
+  <Link SegmentName="SEGMENT1" CommResource="IceBlock_R" />
+  <Link SegmentName="SEGMENT1" CommResource="IceBlock1" />
+  <Link SegmentName="SEGMENT1" CommResource="IceBlock2" />
+  <Link SegmentName="SEGMENT1" CommResource="IceBlock3" />
+  <Link SegmentName="SEGMENT1" CommResource="IceBlock4" />
+  <Link SegmentName="SEGMENT1" CommResource="IceBlock_J1" />
+  <Link SegmentName="SEGMENT1" CommResource="IceBlock7" />
+  <Link SegmentName="SEGMENT1" CommResource="IceBlock_J2" />
+</System>

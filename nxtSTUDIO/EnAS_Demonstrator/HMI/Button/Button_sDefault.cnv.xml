@@ -1,0 +1,14 @@
+<Mapping>
+  <EventInputs>
+    <Event Name="INID" Map="REQ_1">Paused</Event>
+  </EventInputs>
+  <EventOutputs>
+    <Event Name="INIDO" Map="IND_1">StopSignal</Event>
+  </EventOutputs>
+  <Inputs>
+    <Input Name="Paused" Type="BOOL" Map="SD_1" />
+  </Inputs>
+  <Outputs>
+    <Output Name="StopSignal" Type="BOOL" Map="RD_1" />
+  </Outputs>
+</Mapping>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RQSTCollection>
+  <Request>
+    <DST />
+    <RQST>&lt;Request ID="1" Action="CREATE"&gt;&lt;FB Name="RES0" Type="Runtime.Management#EMB_RES_ENH" /&gt;&lt;/Request&gt;</RQST>
+    <LineInfo LineNr="3645" />
+  </Request>
+  <Request>
+    <DST>RES0</DST>
+    <RQST>&lt;Request ID="2" Action="CREATE"&gt;&lt;FB Name="initApplicationChain" Type="Runtime.Standard#EVENTCHAINHEAD" /&gt;&lt;/Request&gt;</RQST>
+    <LineInfo LineNr="3647" />
+  </Request>
+  <Request>
+    <DST>RES0</DST>
+    <RQST>&lt;Request ID="3" Action="WRITE"&gt;&lt;Connection Source="APP_INIT" Destination="initApplicationChain.NAME" /&gt;&lt;/Request&gt;</RQST>
+    <LineInfo LineNr="3648" />
+  </Request>
+  <Request>
+    <DST>RES0</DST>
+    <RQST>&lt;Request ID="4" Action="WRITE"&gt;&lt;Connection Source="FALSE" Destination="initApplicationChain.INVERT" /&gt;&lt;/Request&gt;</RQST>
+    <LineInfo LineNr="3649" />
+  </Request>
+  <Request>
+    <DST>RES0</DST>
+    <RQST>&lt;Request ID="5" Action="CREATE"&gt;&lt;FB Name="initHardwareChain" Type="Runtime.Standard#EVENTCHAINHEAD" /&gt;&lt;/Request&gt;</RQST>
+    <LineInfo LineNr="3651" />
+  </Request>
+  <Request>
+    <DST>RES0</DST>
+    <RQST>&lt;Request ID="6" Action="WRITE"&gt;&lt;Connection Source="HW_INIT" Destination="initHardwareChain.NAME" /&gt;&lt;/Request&gt;</RQST>
+    <LineInfo LineNr="3652" />
+  </Request>
+  <Request>
+    <DST>RES0</DST>
+    <RQST>&lt;Request ID="7" Action="WRITE"&gt;&lt;Connection Source="FALSE" Destination="initHardwareChain.INVERT" /&gt;&lt;/Request&gt;</RQST>
+    <LineInfo LineNr="3653" />
+  </Request>
+  <Request>
+    <DST>RES0</DST>
+    <RQST>&lt;Request ID="8" Action="CREATE"&gt;&lt;Connection Source="initApplicationChain.INITO" Destination="initApplicationChain.TRIGGER" /&gt;&lt;/Request&gt;</RQST>
+    <LineInfo LineNr="3656" />
+  </Request>
+  <Request>
+    <DST>RES0</DST>
+    <RQST>&lt;Request ID="9" Action="CREATE"&gt;&lt;Connection Source="initHardwareChain.INITO" Destination="initHardwareChain.TRIGGER" /&gt;&lt;/Request&gt;</RQST>
+    <LineInfo LineNr="3657" />
+  </Request>
+  <Request>
+    <DST>RES0</DST>
+    <RQST>&lt;Request ID="10" Action="CREATE"&gt;&lt;Connection Source="initApplicationChain.FINISHED" Destination="initHardwareChain.INIT" /&gt;&lt;/Request&gt;</RQST>
+    <LineInfo LineNr="3658" />
+  </Request>
+  <Request>
+    <DST />
+    <RQST>&lt;Request ID="11" Action="START" /&gt;</RQST>
+  </Request>
+</RQSTCollection>

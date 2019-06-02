@@ -1,0 +1,260 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{3C4F2CFF-4E17-4F9E-854A-909F72D02826}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <OutputType>Library</OutputType>
+    <RootNamespace>HMI</RootNamespace>
+    <AssemblyName>HMI</AssemblyName>
+    <NxtVersion>3.0.0.0</NxtVersion>
+    <HMILibraries>HMIBaseSymbols:</HMILibraries>
+    <Theme>Default:Default</Theme>
+    <ProjectType>HMI</ProjectType>
+    <Platform Condition=" '$(Platform)' == '' ">Windows</Platform>
+    <CanvasSize>1280,900,1280,980,Default,True,140,30</CanvasSize>
+    <CanvasLookAndFeel>Theme</CanvasLookAndFeel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>bin\$(Platform)\Debug\</OutputPath>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>Full</DebugType>
+    <Optimize>False</Optimize>
+    <CheckForOverflowUnderflow>True</CheckForOverflowUnderflow>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>bin\$(Platform)\Release</OutputPath>
+    <DebugSymbols>false</DebugSymbols>
+    <DebugType>None</DebugType>
+    <Optimize>False</Optimize>
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|Windows' ">
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|Windows' ">
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'Windows' ">
+    <RegisterForComInterop>False</RegisterForComInterop>
+    <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
+    <BaseAddress>4194304</BaseAddress>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <FileAlignment>4096</FileAlignment>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="Button\Button.def.cs" />
+    <Compile Include="Button\Button.event.cs" />
+    <Compile Include="Button\Button_sDefault.cnv.cs" />
+    <Compile Include="Button\Button_sDefault.cnv.Designer.cs">
+      <DependentUpon>Button_sDefault.cnv.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Canvas1.cnv.cs">
+      <Canvas>true</Canvas>
+    </Compile>
+    <Compile Include="Canvas1.cnv.Designer.cs">
+      <DependentUpon>Canvas1.cnv.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Colors\ProjectColors.cs" />
+    <Compile Include="Colors\ProjectDrawingObjects.cs" />
+    <Compile Include="ConfirmationButton\ConfirmationButton.def.cs" />
+    <Compile Include="ConfirmationButton\ConfirmationButton.event.cs" />
+    <Compile Include="ConfirmationButton\ConfirmationButton_sDefault.cnv.cs" />
+    <Compile Include="ConfirmationButton\ConfirmationButton_sDefault.cnv.Designer.cs">
+      <DependentUpon>ConfirmationButton_sDefault.cnv.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ConsoleHMI\ConsoleHMI.def.cs" />
+    <Compile Include="ConsoleHMI\ConsoleHMI.event.cs" />
+    <Compile Include="ConsoleHMI\ConsoleHMI_sDefault.cnv.cs" />
+    <Compile Include="ConsoleHMI\ConsoleHMI_sDefault.cnv.Designer.cs">
+      <DependentUpon>ConsoleHMI_sDefault.cnv.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Conveyor\Conveyor.def.cs" />
+    <Compile Include="Conveyor\Conveyor.event.cs" />
+    <Compile Include="Conveyor\Conveyor_sDefault.cnv.cs" />
+    <Compile Include="Conveyor\Conveyor_sDefault.cnv.Designer.cs">
+      <DependentUpon>Conveyor_sDefault.cnv.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EnASConsole\EnASConsole.def.cs" />
+    <Compile Include="EnASConsole\EnASConsole.event.cs" />
+    <Compile Include="EnASConsole\EnASConsole_sDefault.cnv.cs" />
+    <Compile Include="EnASConsole\EnASConsole_sDefault.cnv.Designer.cs">
+      <DependentUpon>EnASConsole_sDefault.cnv.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FailScenarioHMI\FailScenarioHMI.def.cs" />
+    <Compile Include="FailScenarioHMI\FailScenarioHMI.event.cs" />
+    <Compile Include="FailScenarioHMI\FailScenarioHMI_sDefault.cnv.cs" />
+    <Compile Include="FailScenarioHMI\FailScenarioHMI_sDefault.cnv.Designer.cs">
+      <DependentUpon>FailScenarioHMI_sDefault.cnv.cs</DependentUpon>
+    </Compile>
+    <Compile Include="fail_scenarios1\fail_scenarios1.def.cs" />
+    <Compile Include="fail_scenarios1\fail_scenarios1.event.cs" />
+    <Compile Include="fail_scenarios1\fail_scenarios1_sDefault.cnv.cs" />
+    <Compile Include="fail_scenarios1\fail_scenarios1_sDefault.cnv.Designer.cs">
+      <DependentUpon>fail_scenarios1_sDefault.cnv.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Fail_scenarios\Fail_scenarios.def.cs" />
+    <Compile Include="Fail_scenarios\Fail_scenarios.event.cs" />
+    <Compile Include="Fail_scenarios\Fail_scenarios_sDefault.cnv.cs" />
+    <Compile Include="Fail_scenarios\Fail_scenarios_sDefault.cnv.Designer.cs">
+      <DependentUpon>Fail_scenarios_sDefault.cnv.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JackGripper\JackGripper.def.cs" />
+    <Compile Include="JackGripper\JackGripper.event.cs" />
+    <Compile Include="JackGripper\JackGripper_sDefault.cnv.cs" />
+    <Compile Include="JackGripper\JackGripper_sDefault.cnv.Designer.cs">
+      <DependentUpon>JackGripper_sDefault.cnv.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pallet\Pallet.def.cs" />
+    <Compile Include="Pallet\Pallet.event.cs" />
+    <Compile Include="Pallet\Pallet_sDefault.cnv.cs" />
+    <Compile Include="Pallet\Pallet_sDefault.cnv.Designer.cs">
+      <DependentUpon>Pallet_sDefault.cnv.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProductOrder\ProductOrder.def.cs" />
+    <Compile Include="ProductOrder\ProductOrder.event.cs" />
+    <Compile Include="ProductOrder\ProductOrder_sDefault.cnv.cs" />
+    <Compile Include="ProductOrder\ProductOrder_sDefault.cnv.Designer.cs">
+      <DependentUpon>ProductOrder_sDefault.cnv.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StartCanvas_2.cnv.cs" />
+    <Compile Include="StartCanvas_2.cnv.Designer.cs">
+      <DependentUpon>StartCanvas_2.cnv.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StartPauseResetButtons\StartPauseResetButtons.def.cs" />
+    <Compile Include="StartPauseResetButtons\StartPauseResetButtons.event.cs" />
+    <Compile Include="StartPauseResetButtons\StartPauseResetButtons_sDefault.cnv.cs" />
+    <Compile Include="StartPauseResetButtons\StartPauseResetButtons_sDefault.cnv.Designer.cs">
+      <DependentUpon>StartPauseResetButtons_sDefault.cnv.cs</DependentUpon>
+    </Compile>
+    <None Include="Alarms\AlarmClasses.xml" />
+    <None Include="Button\Button.Design.resx" />
+    <None Include="Colors\Default.color.theme" />
+    <None Include="Colors\Default.do.theme" />
+    <None Include="Colors\ProjectColors.xml" />
+    <None Include="Colors\ProjectDrawingObjects.xml" />
+    <None Include="ConfirmationButton\ConfirmationButton.Design.resx" />
+    <None Include="ConsoleHMI\ConsoleHMI.Design.resx" />
+    <None Include="Conveyor\Conveyor.Design.resx" />
+    <None Include="EnASConsole\EnASConsole.Design.resx" />
+    <None Include="FailScenarioHMI\FailScenarioHMI.Design.resx" />
+    <None Include="fail_scenarios1\fail_scenarios1.Design.resx" />
+    <None Include="Fail_scenarios\Fail_scenarios.Design.resx" />
+    <None Include="ImageStorage\ImageStorage.xml" />
+    <None Include="JackGripper\JackGripper.Design.resx" />
+    <None Include="Languages\Dictionaries.xml" />
+    <None Include="Pallet\Pallet.Design.resx" />
+    <None Include="ProductOrder\ProductOrder.Design.resx" />
+    <None Include="StartPauseResetButtons\StartPauseResetButtons.Design.resx" />
+    <EmbeddedResource Include="Alarms\AlarmClasses.xml" />
+    <EmbeddedResource Include="Alarms\SystemAlarmClasses.xml" />
+    <EmbeddedResource Include="Button\Button_sDefault.cnv.resx">
+      <DependentUpon>Button_sDefault.cnv.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Button\Button_sDefault.cnv.xml">
+      <DependentUpon>Button_sDefault.cnv.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Canvas1.cnv.resx">
+      <DependentUpon>Canvas1.cnv.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Configurations\HistoryTrend.xml" />
+    <EmbeddedResource Include="Configurations\Journalling.xml" />
+    <EmbeddedResource Include="Configurations\TagValueEditor.xml" />
+    <EmbeddedResource Include="ConfirmationButton\ConfirmationButton_sDefault.cnv.resx">
+      <DependentUpon>ConfirmationButton_sDefault.cnv.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConfirmationButton\ConfirmationButton_sDefault.cnv.xml">
+      <DependentUpon>ConfirmationButton_sDefault.cnv.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsoleHMI\ConsoleHMI_sDefault.cnv.resx">
+      <DependentUpon>ConsoleHMI_sDefault.cnv.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ConsoleHMI\ConsoleHMI_sDefault.cnv.xml">
+      <DependentUpon>ConsoleHMI_sDefault.cnv.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Conveyor\Conveyor_sDefault.cnv.resx">
+      <DependentUpon>Conveyor_sDefault.cnv.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Conveyor\Conveyor_sDefault.cnv.xml">
+      <DependentUpon>Conveyor_sDefault.cnv.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EnASConsole\EnASConsole_sDefault.cnv.resx">
+      <DependentUpon>EnASConsole_sDefault.cnv.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EnASConsole\EnASConsole_sDefault.cnv.xml">
+      <DependentUpon>EnASConsole_sDefault.cnv.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FailScenarioHMI\FailScenarioHMI_sDefault.cnv.resx">
+      <DependentUpon>FailScenarioHMI_sDefault.cnv.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FailScenarioHMI\FailScenarioHMI_sDefault.cnv.xml">
+      <DependentUpon>FailScenarioHMI_sDefault.cnv.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fail_scenarios1\fail_scenarios1_sDefault.cnv.resx">
+      <DependentUpon>fail_scenarios1_sDefault.cnv.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fail_scenarios1\fail_scenarios1_sDefault.cnv.xml">
+      <DependentUpon>fail_scenarios1_sDefault.cnv.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fail_scenarios\Fail_scenarios_sDefault.cnv.resx">
+      <DependentUpon>Fail_scenarios_sDefault.cnv.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Fail_scenarios\Fail_scenarios_sDefault.cnv.xml">
+      <DependentUpon>Fail_scenarios_sDefault.cnv.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JackGripper\JackGripper_sDefault.cnv.resx">
+      <DependentUpon>JackGripper_sDefault.cnv.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JackGripper\JackGripper_sDefault.cnv.xml">
+      <DependentUpon>JackGripper_sDefault.cnv.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pallet\Pallet_sDefault.cnv.resx">
+      <DependentUpon>Pallet_sDefault.cnv.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pallet\Pallet_sDefault.cnv.xml">
+      <DependentUpon>Pallet_sDefault.cnv.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductOrder\ProductOrder_sDefault.cnv.resx">
+      <DependentUpon>ProductOrder_sDefault.cnv.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductOrder\ProductOrder_sDefault.cnv.xml">
+      <DependentUpon>ProductOrder_sDefault.cnv.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StartCanvas_2.cnv.resx">
+      <DependentUpon>StartCanvas_2.cnv.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StartPauseResetButtons\StartPauseResetButtons_sDefault.cnv.resx">
+      <DependentUpon>StartPauseResetButtons_sDefault.cnv.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StartPauseResetButtons\StartPauseResetButtons_sDefault.cnv.xml">
+      <DependentUpon>StartPauseResetButtons_sDefault.cnv.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="CommunicationProfile">
+      <HintPath>CommunicationProfile.dll</HintPath>
+    </Reference>
+    <Reference Include="HMIBaseSymbols">
+      <HintPath>HMIBaseSymbols.dll</HintPath>
+    </Reference>
+    <Reference Include="NxtControl.ComponentModel">
+      <HintPath>NxtControl.ComponentModel.dll</HintPath>
+    </Reference>
+    <Reference Include="nxtControl.DCSmini.HMI">
+      <Version>3.0.0.2</Version>
+      <HintPath>nxtControl.DCSmini.HMI.dll</HintPath>
+    </Reference>
+    <Reference Include="NxtControl.GuiFramework">
+      <HintPath>NxtControl.GuiFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="nxtControl.IceBlock.HMI">
+      <Version>3.0.0.0</Version>
+      <HintPath>nxtControl.IceBlock.HMI.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <Import Project="$(SharpDevelopBinPath)\SharpDevelop.Build.CSharp.targets" />
+</Project>

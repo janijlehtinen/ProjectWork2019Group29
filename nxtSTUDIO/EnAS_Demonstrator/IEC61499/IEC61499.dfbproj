@@ -1,0 +1,498 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{408DA983-FB87-4E9B-86CF-75CE76907CED}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Main</RootNamespace>
+    <AssemblyName>IEC61499</AssemblyName>
+    <NxtVersion>3.0.0.0</NxtVersion>
+    <Platform Condition=" '$(Platform)' == '' ">Windows</Platform>
+    <CreateHMI>false</CreateHMI>
+    <HMIProject>HMI</HMIProject>
+    <CATInstancesHaveIds>true</CATInstancesHaveIds>
+    <ProjectType>IEC61499</ProjectType>
+    <VerboseDeploy>False</VerboseDeploy>
+    <DeployOnlyChanges>True</DeployOnlyChanges>
+    <DeployConnectionTimeout>60</DeployConnectionTimeout>
+    <DeployAnswerTimeout>10</DeployAnswerTimeout>
+    <DeployPreConnectWait>2</DeployPreConnectWait>
+    <ArchiveLinkServiceTimeout>30</ArchiveLinkServiceTimeout>
+    <CheckGenericInstances>False</CheckGenericInstances>
+    <ConvertStringValues>False</ConvertStringValues>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>bin\Default\</OutputPath>
+    <DebugSymbols>True</DebugSymbols>
+    <DebugType>Full</DebugType>
+    <Optimize>False</Optimize>
+    <IntermediateOutputPath>obj\Default\</IntermediateOutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>bin\Default\</OutputPath>
+    <DebugSymbols>False</DebugSymbols>
+    <DebugType>None</DebugType>
+    <Optimize>True</Optimize>
+    <IntermediateOutputPath>obj\Default\</IntermediateOutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|Windows' ">
+    <Version>1.0</Version>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'Windows' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+  </PropertyGroup>
+  <Import Project="$(SharpDevelopBinPath)\NxtControl.Build.61499.Targets" />
+  <ItemGroup>
+    <Reference Include="IEC61499.Communication">
+      <Version>3.0.0.0</Version>
+    </Reference>
+    <Reference Include="nxtControl.DCSmini">
+      <Version>3.0.0.2</Version>
+    </Reference>
+    <Reference Include="nxtControl.IceBlock">
+      <Version>3.0.0.0</Version>
+    </Reference>
+    <Reference Include="nxtControl.Standard">
+      <Version>3.0.0.0</Version>
+    </Reference>
+    <Reference Include="Runtime.Base">
+      <Version>3.0.0.2</Version>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Button\Button.cfg">
+      <DependentUpon>Button.fbt</DependentUpon>
+      <IEC61499Type>CAT</IEC61499Type>
+    </None>
+    <None Include="ConfirmationButton\ConfirmationButton.cfg">
+      <DependentUpon>ConfirmationButton.fbt</DependentUpon>
+      <IEC61499Type>CAT</IEC61499Type>
+    </None>
+    <None Include="ConsoleHMI\ConsoleHMI.cfg">
+      <DependentUpon>ConsoleHMI.fbt</DependentUpon>
+      <IEC61499Type>CAT</IEC61499Type>
+    </None>
+    <None Include="Conveyor\Conveyor.cfg">
+      <DependentUpon>Conveyor.fbt</DependentUpon>
+      <IEC61499Type>CAT</IEC61499Type>
+    </None>
+    <None Include="DeliveryServices.app">
+      <IEC61499Type>SubApp</IEC61499Type>
+    </None>
+    <None Include="EnASConsole\EnASConsole.cfg">
+      <DependentUpon>EnASConsole.fbt</DependentUpon>
+      <IEC61499Type>CAT</IEC61499Type>
+    </None>
+    <None Include="FailScenarioHMI\FailScenarioHMI.cfg">
+      <DependentUpon>FailScenarioHMI.fbt</DependentUpon>
+      <IEC61499Type>CAT</IEC61499Type>
+    </None>
+    <None Include="fail_scenarios1\fail_scenarios1.cfg">
+      <DependentUpon>fail_scenarios1.fbt</DependentUpon>
+      <IEC61499Type>CAT</IEC61499Type>
+    </None>
+    <None Include="Fail_scenarios\Fail_scenarios.cfg">
+      <DependentUpon>Fail_scenarios.fbt</DependentUpon>
+      <IEC61499Type>CAT</IEC61499Type>
+    </None>
+    <None Include="IEC61499.iecproj" />
+    <None Include="JackGripper\JackGripper.cfg">
+      <DependentUpon>JackGripper.fbt</DependentUpon>
+      <IEC61499Type>CAT</IEC61499Type>
+    </None>
+    <None Include="Pallet\Pallet.cfg">
+      <DependentUpon>Pallet.fbt</DependentUpon>
+      <IEC61499Type>CAT</IEC61499Type>
+    </None>
+    <None Include="ProductOrder\ProductOrder.cfg">
+      <DependentUpon>ProductOrder.fbt</DependentUpon>
+      <IEC61499Type>CAT</IEC61499Type>
+    </None>
+    <None Include="Project.doc.xml" />
+    <None Include="StartPauseResetButtons\StartPauseResetButtons.cfg">
+      <DependentUpon>StartPauseResetButtons.fbt</DependentUpon>
+      <IEC61499Type>CAT</IEC61499Type>
+    </None>
+    <None Include="System\StartData\fbpers0.System.DEV.dat">
+      <DependentUpon>System.sys</DependentUpon>
+    </None>
+    <None Include="System\StartData\fbpers0.System.DEV3.dat">
+      <DependentUpon>System.sys</DependentUpon>
+    </None>
+    <None Include="System\System.cfg">
+      <DependentUpon>System.sys</DependentUpon>
+      <IEC61499Type>System</IEC61499Type>
+    </None>
+    <None Include="System\System.Device.Properties.xml">
+      <DependentUpon>System.sys</DependentUpon>
+    </None>
+    <Compile Include="ButtonConsole.fbt">
+      <Parent>.HAL</Parent>
+      <IEC61499Type>Composite</IEC61499Type>
+    </Compile>
+    <Compile Include="Button\Button.fbt">
+      <IEC61499Type>CAT</IEC61499Type>
+    </Compile>
+    <Compile Include="Button\Button_HMI.fbt">
+      <IEC61499Type>CAT</IEC61499Type>
+      <Usage>Private</Usage>
+      <DependentUpon>Button.fbt</DependentUpon>
+      <HMI>..\HMI\Button\Button_sDefault.cnv.cs</HMI>
+    </Compile>
+    <Compile Include="ColorDetect.fbt">
+      <IEC61499Type>Composite</IEC61499Type>
+    </Compile>
+    <Compile Include="ConfigurationManager.fbt">
+      <Parent>.DeliveryServices</Parent>
+      <IEC61499Type>Basic</IEC61499Type>
+    </Compile>
+    <Compile Include="ConfigurationManagerC.fbt">
+      <IEC61499Type>Composite</IEC61499Type>
+    </Compile>
+    <Compile Include="ConfirmationButton\ConfirmationButton.fbt">
+      <IEC61499Type>CAT</IEC61499Type>
+    </Compile>
+    <Compile Include="ConfirmationButton\ConfirmationButton_HMI.fbt">
+      <IEC61499Type>CAT</IEC61499Type>
+      <Usage>Private</Usage>
+      <DependentUpon>ConfirmationButton.fbt</DependentUpon>
+      <HMI>..\HMI\ConfirmationButton\ConfirmationButton_sDefault.cnv.cs</HMI>
+    </Compile>
+    <Compile Include="ConsoleControl.fbt">
+      <Parent>.EnAS</Parent>
+      <IEC61499Type>Basic</IEC61499Type>
+    </Compile>
+    <Compile Include="ConsoleHMI\ConsoleHMI.fbt">
+      <IEC61499Type>CAT</IEC61499Type>
+    </Compile>
+    <Compile Include="ConsoleHMI\ConsoleHMI_HMI.fbt">
+      <IEC61499Type>CAT</IEC61499Type>
+      <Usage>Private</Usage>
+      <DependentUpon>ConsoleHMI.fbt</DependentUpon>
+      <HMI>..\HMI\ConsoleHMI\ConsoleHMI_sDefault.cnv.cs</HMI>
+    </Compile>
+    <Compile Include="Conv2Ctrl.fbt">
+      <IEC61499Type>Basic</IEC61499Type>
+    </Compile>
+    <Compile Include="ConvCtrl.fbt">
+      <IEC61499Type>Basic</IEC61499Type>
+    </Compile>
+    <Compile Include="Conveyor\Conveyor.fbt">
+      <IEC61499Type>CAT</IEC61499Type>
+    </Compile>
+    <Compile Include="Conveyor\Conveyor_HMI.fbt">
+      <IEC61499Type>CAT</IEC61499Type>
+      <Usage>Private</Usage>
+      <DependentUpon>Conveyor.fbt</DependentUpon>
+      <HMI>..\HMI\Conveyor\Conveyor_sDefault.cnv.cs</HMI>
+    </Compile>
+    <Compile Include="ConvRobCtrl.fbt">
+      <IEC61499Type>Basic</IEC61499Type>
+    </Compile>
+    <Compile Include="Decoder.fbt">
+      <IEC61499Type>Basic</IEC61499Type>
+    </Compile>
+    <Compile Include="DisableConveyor.fbt">
+      <IEC61499Type>Basic</IEC61499Type>
+    </Compile>
+    <Compile Include="EnASConsole\EnASConsole.fbt">
+      <IEC61499Type>CAT</IEC61499Type>
+    </Compile>
+    <Compile Include="EnASConsole\EnASConsole_HMI.fbt">
+      <IEC61499Type>CAT</IEC61499Type>
+      <Usage>Private</Usage>
+      <DependentUpon>EnASConsole.fbt</DependentUpon>
+      <HMI>..\HMI\EnASConsole\EnASConsole_sDefault.cnv.cs</HMI>
+    </Compile>
+    <Compile Include="EventOutWrapper1.fbt">
+      <IEC61499Type>Composite</IEC61499Type>
+    </Compile>
+    <Compile Include="EventOutWrapper2.fbt">
+      <IEC61499Type>Composite</IEC61499Type>
+    </Compile>
+    <Compile Include="EventOutWrapper3.fbt">
+      <IEC61499Type>Composite</IEC61499Type>
+    </Compile>
+    <Compile Include="EventOutWrapper4.fbt">
+      <IEC61499Type>Composite</IEC61499Type>
+    </Compile>
+    <Compile Include="EventOutWrapper5.fbt">
+      <IEC61499Type>Composite</IEC61499Type>
+    </Compile>
+    <Compile Include="EventOutWrapper6.fbt">
+      <IEC61499Type>Composite</IEC61499Type>
+    </Compile>
+    <Compile Include="EventOutWrapper_Console.fbt">
+      <IEC61499Type>Composite</IEC61499Type>
+    </Compile>
+    <Compile Include="EventOutWrapper_JACK1.fbt">
+      <IEC61499Type>Composite</IEC61499Type>
+    </Compile>
+    <Compile Include="EventOutWrapper_JACK2.fbt">
+      <IEC61499Type>Composite</IEC61499Type>
+    </Compile>
+    <Compile Include="EventWrapper1.fbt">
+      <IEC61499Type>Composite</IEC61499Type>
+    </Compile>
+    <Compile Include="EventWrapper2.fbt">
+      <IEC61499Type>Composite</IEC61499Type>
+    </Compile>
+    <Compile Include="EventWrapper3.fbt">
+      <IEC61499Type>Composite</IEC61499Type>
+    </Compile>
+    <Compile Include="EventWrapper4.fbt">
+      <IEC61499Type>Composite</IEC61499Type>
+    </Compile>
+    <Compile Include="EventWrapper5.fbt">
+      <IEC61499Type>Composite</IEC61499Type>
+    </Compile>
+    <Compile Include="EventWrapper6.fbt">
+      <IEC61499Type>Composite</IEC61499Type>
+    </Compile>
+    <Compile Include="EventWrapper_Console.fbt">
+      <IEC61499Type>Composite</IEC61499Type>
+    </Compile>
+    <Compile Include="EventWrapper_Gate.fbt">
+      <IEC61499Type>Composite</IEC61499Type>
+    </Compile>
+    <Compile Include="EventWrapper_JACK1.fbt">
+      <IEC61499Type>Composite</IEC61499Type>
+    </Compile>
+    <Compile Include="EventWrapper_JACK2.fbt">
+      <IEC61499Type>Composite</IEC61499Type>
+    </Compile>
+    <Compile Include="EventWrapper_OLD.fbt">
+      <IEC61499Type>Composite</IEC61499Type>
+    </Compile>
+    <Compile Include="EventWrapper_Produce_Green.fbt">
+      <IEC61499Type>Composite</IEC61499Type>
+    </Compile>
+    <Compile Include="EventWrapper_Produce_RED.fbt">
+      <IEC61499Type>Composite</IEC61499Type>
+    </Compile>
+    <Compile Include="FailScenarioHMI\FailScenarioHMI.fbt">
+      <IEC61499Type>CAT</IEC61499Type>
+    </Compile>
+    <Compile Include="FailScenarioHMI\FailScenarioHMI_HMI.fbt">
+      <IEC61499Type>CAT</IEC61499Type>
+      <Usage>Private</Usage>
+      <DependentUpon>FailScenarioHMI.fbt</DependentUpon>
+      <HMI>..\HMI\FailScenarioHMI\FailScenarioHMI_sDefault.cnv.cs</HMI>
+    </Compile>
+    <Compile Include="fail_scenarios1\fail_scenarios1.fbt">
+      <IEC61499Type>CAT</IEC61499Type>
+    </Compile>
+    <Compile Include="fail_scenarios1\fail_scenarios1_HMI.fbt">
+      <IEC61499Type>CAT</IEC61499Type>
+      <Usage>Private</Usage>
+      <DependentUpon>fail_scenarios1.fbt</DependentUpon>
+      <HMI>..\HMI\fail_scenarios1\fail_scenarios1_sDefault.cnv.cs</HMI>
+    </Compile>
+    <Compile Include="Fail_scenarios\Fail_scenarios.fbt">
+      <IEC61499Type>CAT</IEC61499Type>
+    </Compile>
+    <Compile Include="Fail_scenarios\Fail_scenarios_HMI.fbt">
+      <IEC61499Type>CAT</IEC61499Type>
+      <Usage>Private</Usage>
+      <DependentUpon>Fail_scenarios.fbt</DependentUpon>
+      <HMI>..\HMI\Fail_scenarios\Fail_scenarios_sDefault.cnv.cs</HMI>
+    </Compile>
+    <Compile Include="Gripper1Ctrl.fbt">
+      <IEC61499Type>Basic</IEC61499Type>
+    </Compile>
+    <Compile Include="Gripper2Ctrl.fbt">
+      <IEC61499Type>Basic</IEC61499Type>
+    </Compile>
+    <Compile Include="Jack1Ctrl.fbt">
+      <IEC61499Type>Basic</IEC61499Type>
+    </Compile>
+    <Compile Include="Jack2Ctrl.fbt">
+      <IEC61499Type>Basic</IEC61499Type>
+    </Compile>
+    <Compile Include="JackGripper\JackGripper.fbt">
+      <IEC61499Type>CAT</IEC61499Type>
+    </Compile>
+    <Compile Include="JackGripper\JackGripper_HMI.fbt">
+      <IEC61499Type>CAT</IEC61499Type>
+      <Usage>Private</Usage>
+      <DependentUpon>JackGripper.fbt</DependentUpon>
+      <HMI>..\HMI\JackGripper\JackGripper_sDefault.cnv.cs</HMI>
+    </Compile>
+    <Compile Include="JackHAL.fbt">
+      <IEC61499Type>Composite</IEC61499Type>
+      <Parent>.HAL</Parent>
+    </Compile>
+    <Compile Include="JackStation.fbt">
+      <IEC61499Type>Composite</IEC61499Type>
+    </Compile>
+    <Compile Include="MapBOOL2INT.fbt">
+      <IEC61499Type>Basic</IEC61499Type>
+    </Compile>
+    <Compile Include="Pallet\Pallet.fbt">
+      <IEC61499Type>CAT</IEC61499Type>
+    </Compile>
+    <Compile Include="Pallet\Pallet_HMI.fbt">
+      <IEC61499Type>CAT</IEC61499Type>
+      <Usage>Private</Usage>
+      <DependentUpon>Pallet.fbt</DependentUpon>
+      <HMI>..\HMI\Pallet\Pallet_sDefault.cnv.cs</HMI>
+    </Compile>
+    <Compile Include="PauseSwitch.fbt">
+      <IEC61499Type>Basic</IEC61499Type>
+    </Compile>
+    <Compile Include="PlaceWP.fbt">
+      <Parent>.EnAS</Parent>
+      <IEC61499Type>Basic</IEC61499Type>
+    </Compile>
+    <Compile Include="POU\ConveyorCTL.fb">
+      <IEC61499Type>POU</IEC61499Type>
+    </Compile>
+    <Compile Include="POU\POU1.pgm">
+      <IEC61499Type>POU</IEC61499Type>
+    </Compile>
+    <Compile Include="Produce.fbt">
+      <Parent>.EnAS</Parent>
+      <IEC61499Type>Basic</IEC61499Type>
+    </Compile>
+    <Compile Include="ProductOrders.fbt">
+      <IEC61499Type>Basic</IEC61499Type>
+    </Compile>
+    <Compile Include="ProductOrder\ProductOrder.fbt">
+      <IEC61499Type>CAT</IEC61499Type>
+    </Compile>
+    <Compile Include="ProductOrder\ProductOrder_HMI.fbt">
+      <IEC61499Type>CAT</IEC61499Type>
+      <Usage>Private</Usage>
+      <DependentUpon>ProductOrder.fbt</DependentUpon>
+      <HMI>..\HMI\ProductOrder\ProductOrder_sDefault.cnv.cs</HMI>
+    </Compile>
+    <Compile Include="RemoveWP.fbt">
+      <IEC61499Type>Basic</IEC61499Type>
+      <Parent>.EnAS</Parent>
+    </Compile>
+    <Compile Include="ResetTrigger.fbt">
+      <IEC61499Type>Composite</IEC61499Type>
+    </Compile>
+    <Compile Include="RobotinoViewUdp.fbt">
+      <IEC61499Type>Composite</IEC61499Type>
+    </Compile>
+    <Compile Include="S5Gate.fbt">
+      <IEC61499Type>Composite</IEC61499Type>
+    </Compile>
+    <Compile Include="Section0.fbt">
+      <IEC61499Type>Composite</IEC61499Type>
+    </Compile>
+    <Compile Include="Section0Ctrl.fbt">
+      <IEC61499Type>Basic</IEC61499Type>
+    </Compile>
+    <Compile Include="Section1.fbt">
+      <IEC61499Type>Composite</IEC61499Type>
+    </Compile>
+    <Compile Include="Section1Ctrl.fbt">
+      <IEC61499Type>Basic</IEC61499Type>
+    </Compile>
+    <Compile Include="Section2.fbt">
+      <IEC61499Type>Composite</IEC61499Type>
+    </Compile>
+    <Compile Include="Section2Ctrl.fbt">
+      <IEC61499Type>Basic</IEC61499Type>
+    </Compile>
+    <Compile Include="Section3.fbt">
+      <IEC61499Type>Composite</IEC61499Type>
+    </Compile>
+    <Compile Include="Section3Ctrl.fbt">
+      <IEC61499Type>Basic</IEC61499Type>
+    </Compile>
+    <Compile Include="Section4.fbt">
+      <IEC61499Type>Composite</IEC61499Type>
+    </Compile>
+    <Compile Include="Section4Ctrl.fbt">
+      <IEC61499Type>Basic</IEC61499Type>
+    </Compile>
+    <Compile Include="Section5.fbt">
+      <IEC61499Type>Composite</IEC61499Type>
+    </Compile>
+    <Compile Include="Section5Ctrl.fbt">
+      <IEC61499Type>Basic</IEC61499Type>
+    </Compile>
+    <Compile Include="Section6.fbt">
+      <IEC61499Type>Composite</IEC61499Type>
+    </Compile>
+    <Compile Include="Section6Ctrl.fbt">
+      <IEC61499Type>Basic</IEC61499Type>
+    </Compile>
+    <Compile Include="SectionDelivery.fbt">
+      <Parent>.DeliveryServices</Parent>
+      <IEC61499Type>Basic</IEC61499Type>
+    </Compile>
+    <Compile Include="SimpleMove_E.fbt">
+      <Parent>.EnAS</Parent>
+      <IEC61499Type>Basic</IEC61499Type>
+    </Compile>
+    <Compile Include="SledgeHAL.fbt">
+      <Parent>.HAL</Parent>
+      <IEC61499Type>Composite</IEC61499Type>
+    </Compile>
+    <Compile Include="SRSection.fbt">
+      <IEC61499Type>Composite</IEC61499Type>
+    </Compile>
+    <Compile Include="StackControl.fbt">
+      <IEC61499Type>Composite</IEC61499Type>
+    </Compile>
+    <Compile Include="StackControl1.fbt">
+      <IEC61499Type>Basic</IEC61499Type>
+    </Compile>
+    <Compile Include="StackControl2.fbt">
+      <IEC61499Type>Composite</IEC61499Type>
+    </Compile>
+    <Compile Include="StackControlLogic.fbt">
+      <Parent>.EnAS</Parent>
+      <IEC61499Type>Basic</IEC61499Type>
+    </Compile>
+    <Compile Include="StandardSection.fbt">
+      <IEC61499Type>Composite</IEC61499Type>
+      <Parent>.HAL</Parent>
+    </Compile>
+    <Compile Include="StartPauseResetButtons\StartPauseResetButtons.fbt">
+      <IEC61499Type>CAT</IEC61499Type>
+    </Compile>
+    <Compile Include="StartPauseResetButtons\StartPauseResetButtons_HMI.fbt">
+      <DependentUpon>StartPauseResetButtons\StartPauseResetButtons.fbt</DependentUpon>
+      <IEC61499Type>CAT</IEC61499Type>
+      <Usage>Normal</Usage>
+    </Compile>
+    <Compile Include="System\System.sys">
+      <IEC61499Type>System</IEC61499Type>
+    </Compile>
+    <Compile Include="W1W2.fbt">
+      <Parent>.DeliveryServices</Parent>
+      <IEC61499Type>Basic</IEC61499Type>
+    </Compile>
+    <Compile Include="W2W3.fbt">
+      <IEC61499Type>Basic</IEC61499Type>
+      <Parent>.DeliveryServices</Parent>
+    </Compile>
+    <Compile Include="W3W1.fbt">
+      <IEC61499Type>Basic</IEC61499Type>
+      <Parent>.DeliveryServices</Parent>
+    </Compile>
+    <Compile Include="W3W4.fbt">
+      <IEC61499Type>Basic</IEC61499Type>
+      <Parent>.DeliveryServices</Parent>
+    </Compile>
+    <Compile Include="W4W2.fbt">
+      <IEC61499Type>Basic</IEC61499Type>
+      <Parent>.DeliveryServices</Parent>
+    </Compile>
+    <Compile Include="Wrapper.fbt">
+      <IEC61499Type>Basic</IEC61499Type>
+    </Compile>
+    <Compile Include="Wrapper_produce.fbt">
+      <IEC61499Type>Basic</IEC61499Type>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Configuration" />
+    <Folder Include="License" />
+    <Folder Include="Log" />
+  </ItemGroup>
+</Project>

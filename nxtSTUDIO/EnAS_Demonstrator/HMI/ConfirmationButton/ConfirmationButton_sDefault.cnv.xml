@@ -1,0 +1,12 @@
+<Mapping>
+  <EventInputs>
+    <Event Name="REQ" Map="REQ_1">message</Event>
+  </EventInputs>
+  <EventOutputs>
+    <Event Name="CNF" Map="IND_1" />
+  </EventOutputs>
+  <Inputs>
+    <Input Name="message" Type="STRING" Map="SD_1" />
+  </Inputs>
+  <Outputs />
+</Mapping>

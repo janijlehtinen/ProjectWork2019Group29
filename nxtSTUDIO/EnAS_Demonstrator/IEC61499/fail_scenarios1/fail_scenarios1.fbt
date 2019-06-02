@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE FBType SYSTEM "../LibraryElement.dtd">
+<FBType GUID="D38CD62AC71D0EBD" Name="fail_scenarios1" Comment="Composite Function Block Type" Namespace="Main">
+  <Attribute Name="Configuration.FB.IDCounter" Value="4" />
+  <Identification Standard="61499-2" />
+  <VersionInfo Organization="nxtControl GmbH" Version="0.0" Author="erik" Date="5/15/2019" Remarks="template" />
+  <InterfaceList>
+    <EventInputs>
+      <Event Name="INIT" Comment="Initialization Request">
+        <With Var="QI" />
+      </Event>
+      <Event Name="REQ" Comment="Normal Execution Request">
+        <With Var="QI" />
+      </Event>
+    </EventInputs>
+    <EventOutputs>
+      <Event Name="INITO" Comment="Initialization Confirm">
+        <With Var="QO" />
+        <With Var="J1_OUT" />
+        <With Var="CONV1_OUT" />
+      </Event>
+      <Event Name="CNF" Comment="Execution Confirmation">
+        <With Var="QO" />
+        <With Var="J1_OUT" />
+        <With Var="CONV1_OUT" />
+      </Event>
+    </EventOutputs>
+    <InputVars>
+      <VarDeclaration Name="QI" Type="BOOL" Comment="Input event qualifier" />
+    </InputVars>
+    <OutputVars>
+      <VarDeclaration Name="QO" Type="BOOL" Comment="Output event qualifier" />
+      <VarDeclaration Name="J1_OUT" Type="BOOL" InitialValue="TRUE" />
+      <VarDeclaration Name="CONV1_OUT" Type="BOOL" InitialValue="TRUE" />
+    </OutputVars>
+  </InterfaceList>
+  <FBNetwork>
+    <FB ID="1" Name="IThis1" Type="fail_scenarios1_HMI" x="980" y="300" Namespace="Main" />
+    <FB ID="2" Name="FB1" Type="NOT_42C76073DCEB1A7A" x="1900" y="400" Namespace="Main">
+      <Attribute Name="Configuration.GenericFBType.InterfaceParams" Value="Runtime.Standard#CNT:=1;OUT${CNT}:BOOL" />
+    </FB>
+    <FB ID="3" Name="FB2" Type="NOT_42C76073DCEB1A7A" x="1800" y="900" Namespace="Main">
+      <Attribute Name="Configuration.GenericFBType.InterfaceParams" Value="Runtime.Standard#CNT:=1;OUT${CNT}:BOOL" />
+    </FB>
+    <FB ID="4" Name="FB3" Type="E_MERGE" x="3180" y="480" Namespace="IEC61499.Standard" />
+    <Input Name="INIT" x="12" y="12" Type="Event" />
+    <Input Name="REQ" x="12" y="72" Type="Event" />
+    <Input Name="QI" x="12" y="132" Type="Data" />
+    <Output Name="INITO" x="2118.229" y="12" Type="Event" />
+    <Output Name="CNF" x="3560" y="432" Type="Event" />
+    <Output Name="QO" x="2023.875" y="132" Type="Data" />
+    <Output Name="J1_OUT" x="2420" y="552" Type="Data" />
+    <Output Name="CONV1_OUT" x="2400" y="1132" Type="Data" />
+    <EventConnections>
+      <Connection Source="INIT" Destination="IThis1.INIT" dx1="89.41669" />
+      <Connection Source="REQ" Destination="IThis1.REQ" dx1="77.54169" />
+      <Connection Source="IThis1.INITO" Destination="INITO" dx1="56.9375" />
+      <Connection Source="IThis1.CNF" Destination="FB1.REQ" dx1="80" />
+      <Connection Source="IThis1.CNF" Destination="FB2.REQ" dx1="60" />
+      <Connection Source="FB3.EO" Destination="CNF" dx1="41.54175" />
+      <Connection Source="FB1.CNF" Destination="FB3.EI1" dx1="63.75" />
+      <Connection Source="FB2.CNF" Destination="FB3.EI2" dx1="763.75" />
+    </EventConnections>
+    <DataConnections>
+      <Connection Source="FB1.OUT1" Destination="J1_OUT" dx1="43.75" />
+      <Connection Source="FB2.OUT1" Destination="CONV1_OUT" dx1="43.75" />
+      <Connection Source="QI" Destination="IThis1.QI" dx1="43.20837" />
+      <Connection Source="IThis1.J1_OUT" Destination="FB1.IN1" dx1="96.9375" />
+      <Connection Source="IThis1.CONV1_OUT" Destination="FB2.IN1" dx1="40" />
+    </DataConnections>
+  </FBNetwork>
+</FBType>

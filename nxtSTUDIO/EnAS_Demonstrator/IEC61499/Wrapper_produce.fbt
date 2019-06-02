@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE FBType SYSTEM "../LibraryElement.dtd">
+<FBType GUID="AC79112BFEB3B4E3" Name="Wrapper_produce" Comment="Basic Function Block Type" Namespace="Main">
+  <Attribute Name="Configuration.FB.IDCounter" Value="0" />
+  <Identification Standard="61499-2" />
+  <VersionInfo Organization="nxtControl GmbH" Version="0.0" Author="erik" Date="5/13/2019" Remarks="Template" />
+  <InterfaceList>
+    <EventInputs>
+      <Event Name="INIT" Comment="Initialization Request">
+        <With Var="initX" />
+        <With Var="DATA_NAME1" />
+        <With Var="IN_BOOL1" />
+        <With Var="DATA_NAME2" />
+        <With Var="IN_BOOL2" />
+        <With Var="NAME" />
+        <With Var="EVENT1" />
+        <With Var="EVENT2" />
+        <With Var="EVENT3" />
+        <With Var="EVENT4" />
+        <With Var="EVENT5" />
+        <With Var="EVENT6" />
+        <With Var="EVENT7" />
+        <With Var="EVENT8" />
+        <With Var="EVENT9" />
+        <With Var="EVENT10" />
+        <With Var="EVENT11" />
+      </Event>
+      <Event Name="REQ1" Comment="Normal Execution Request">
+        <With Var="DATA_NAME1" />
+        <With Var="IN_BOOL1" />
+        <With Var="DATA_NAME2" />
+        <With Var="IN_BOOL2" />
+        <With Var="NAME" />
+        <With Var="EVENT1" />
+        <With Var="EVENT2" />
+        <With Var="EVENT3" />
+        <With Var="EVENT4" />
+        <With Var="EVENT5" />
+        <With Var="EVENT6" />
+        <With Var="EVENT7" />
+        <With Var="EVENT8" />
+        <With Var="EVENT9" />
+        <With Var="EVENT10" />
+        <With Var="EVENT11" />
+      </Event>
+      <Event Name="REQ2">
+        <With Var="DATA_NAME1" />
+        <With Var="IN_BOOL1" />
+        <With Var="DATA_NAME2" />
+        <With Var="IN_BOOL2" />
+        <With Var="NAME" />
+        <With Var="EVENT1" />
+        <With Var="EVENT2" />
+        <With Var="EVENT3" />
+        <With Var="EVENT4" />
+        <With Var="EVENT5" />
+        <With Var="EVENT6" />
+        <With Var="EVENT7" />
+        <With Var="EVENT8" />
+        <With Var="EVENT9" />
+        <With Var="EVENT10" />
+        <With Var="EVENT11" />
+      </Event>
+      <Event Name="REQ3">
+        <With Var="DATA_NAME1" />
+        <With Var="IN_BOOL1" />
+        <With Var="DATA_NAME2" />
+        <With Var="IN_BOOL2" />
+        <With Var="NAME" />
+        <With Var="EVENT1" />
+        <With Var="EVENT2" />
+        <With Var="EVENT3" />
+        <With Var="EVENT4" />
+        <With Var="EVENT5" />
+        <With Var="EVENT6" />
+        <With Var="EVENT7" />
+        <With Var="EVENT8" />
+        <With Var="EVENT9" />
+        <With Var="EVENT10" />
+        <With Var="EVENT11" />
+      </Event>
+      <Event Name="REQ4">
+        <With Var="DATA_NAME1" />
+        <With Var="IN_BOOL1" />
+        <With Var="DATA_NAME2" />
+        <With Var="IN_BOOL2" />
+        <With Var="NAME" />
+        <With Var="EVENT1" />
+        <With Var="EVENT2" />
+        <With Var="EVENT3" />
+        <With Var="EVENT4" />
+        <With Var="EVENT5" />
+        <With Var="EVENT6" />
+        <With Var="EVENT7" />
+        <With Var="EVENT8" />
+        <With Var="EVENT9" />
+        <With Var="EVENT10" />
+        <With Var="EVENT11" />
+      </Event>
+      <Event Name="REQ5">
+        <With Var="DATA_NAME1" />
+        <With Var="IN_BOOL1" />
+        <With Var="DATA_NAME2" />
+        <With Var="IN_BOOL2" />
+        <With Var="NAME" />
+        <With Var="EVENT1" />
+        <With Var="EVENT2" />
+        <With Var="EVENT3" />
+        <With Var="EVENT4" />
+        <With Var="EVENT5" />
+        <With Var="EVENT6" />
+        <With Var="EVENT7" />
+        <With Var="EVENT8" />
+        <With Var="EVENT9" />
+        <With Var="EVENT10" />
+        <With Var="EVENT11" />
+      </Event>
+      <Event Name="REQ6">
+        <With Var="DATA_NAME1" />
+        <With Var="IN_BOOL1" />
+        <With Var="DATA_NAME2" />
+        <With Var="IN_BOOL2" />
+        <With Var="NAME" />
+        <With Var="EVENT1" />
+        <With Var="EVENT2" />
+        <With Var="EVENT3" />
+        <With Var="EVENT4" />
+        <With Var="EVENT5" />
+        <With Var="EVENT6" />
+        <With Var="EVENT7" />
+        <With Var="EVENT8" />
+        <With Var="EVENT9" />
+        <With Var="EVENT10" />
+        <With Var="EVENT11" />
+      </Event>
+      <Event Name="REQ7">
+        <With Var="DATA_NAME1" />
+        <With Var="IN_BOOL1" />
+        <With Var="DATA_NAME2" />
+        <With Var="IN_BOOL2" />
+        <With Var="NAME" />
+        <With Var="EVENT1" />
+        <With Var="EVENT2" />
+        <With Var="EVENT3" />
+        <With Var="EVENT4" />
+        <With Var="EVENT5" />
+        <With Var="EVENT6" />
+        <With Var="EVENT7" />
+        <With Var="EVENT8" />
+        <With Var="EVENT9" />
+        <With Var="EVENT10" />
+        <With Var="EVENT11" />
+      </Event>
+      <Event Name="REQ8">
+        <With Var="DATA_NAME1" />
+        <With Var="IN_BOOL1" />
+        <With Var="DATA_NAME2" />
+        <With Var="IN_BOOL2" />
+        <With Var="NAME" />
+        <With Var="EVENT1" />
+        <With Var="EVENT2" />
+        <With Var="EVENT3" />
+        <With Var="EVENT4" />
+        <With Var="EVENT5" />
+        <With Var="EVENT6" />
+        <With Var="EVENT7" />
+        <With Var="EVENT8" />
+        <With Var="EVENT9" />
+        <With Var="EVENT10" />
+        <With Var="EVENT11" />
+      </Event>
+      <Event Name="REQ9">
+        <With Var="DATA_NAME1" />
+        <With Var="IN_BOOL1" />
+        <With Var="DATA_NAME2" />
+        <With Var="IN_BOOL2" />
+        <With Var="NAME" />
+        <With Var="EVENT1" />
+        <With Var="EVENT2" />
+        <With Var="EVENT3" />
+        <With Var="EVENT4" />
+        <With Var="EVENT5" />
+        <With Var="EVENT6" />
+        <With Var="EVENT7" />
+        <With Var="EVENT8" />
+        <With Var="EVENT9" />
+        <With Var="EVENT10" />
+        <With Var="EVENT11" />
+      </Event>
+      <Event Name="REQ10">
+        <With Var="DATA_NAME1" />
+        <With Var="IN_BOOL1" />
+        <With Var="DATA_NAME2" />
+        <With Var="IN_BOOL2" />
+        <With Var="NAME" />
+        <With Var="EVENT1" />
+        <With Var="EVENT2" />
+        <With Var="EVENT3" />
+        <With Var="EVENT4" />
+        <With Var="EVENT5" />
+        <With Var="EVENT6" />
+        <With Var="EVENT7" />
+        <With Var="EVENT8" />
+        <With Var="EVENT9" />
+        <With Var="EVENT10" />
+        <With Var="EVENT11" />
+      </Event>
+      <Event Name="REQ11">
+        <With Var="DATA_NAME1" />
+        <With Var="IN_BOOL1" />
+        <With Var="DATA_NAME2" />
+        <With Var="IN_BOOL2" />
+        <With Var="NAME" />
+        <With Var="EVENT1" />
+        <With Var="EVENT2" />
+        <With Var="EVENT3" />
+        <With Var="EVENT4" />
+        <With Var="EVENT5" />
+        <With Var="EVENT6" />
+        <With Var="EVENT7" />
+        <With Var="EVENT8" />
+        <With Var="EVENT9" />
+        <With Var="EVENT10" />
+        <With Var="EVENT11" />
+      </Event>
+    </EventInputs>
+    <EventOutputs>
+      <Event Name="INITO" Comment="Initialization Confirm">
+        <With Var="STR1" />
+      </Event>
+      <Event Name="CNF" Comment="Execution Confirmation">
+        <With Var="STR1" />
+      </Event>
+    </EventOutputs>
+    <InputVars>
+      <VarDeclaration Name="initX" Type="STRING" />
+      <VarDeclaration Name="DATA_NAME1" Type="STRING" />
+      <VarDeclaration Name="IN_BOOL1" Type="BOOL" Comment="Input event qualifier" />
+      <VarDeclaration Name="DATA_NAME2" Type="STRING" />
+      <VarDeclaration Name="IN_BOOL2" Type="BOOL" />
+      <VarDeclaration Name="NAME" Type="STRING" />
+      <VarDeclaration Name="EVENT1" Type="STRING" />
+      <VarDeclaration Name="EVENT2" Type="STRING" />
+      <VarDeclaration Name="EVENT3" Type="STRING" />
+      <VarDeclaration Name="EVENT4" Type="STRING" />
+      <VarDeclaration Name="EVENT5" Type="STRING" />
+      <VarDeclaration Name="EVENT6" Type="STRING" />
+      <VarDeclaration Name="EVENT7" Type="STRING" />
+      <VarDeclaration Name="EVENT8" Type="STRING" />
+      <VarDeclaration Name="EVENT9" Type="STRING" />
+      <VarDeclaration Name="EVENT10" Type="STRING" />
+      <VarDeclaration Name="EVENT11" Type="STRING" />
+    </InputVars>
+    <OutputVars>
+      <VarDeclaration Name="STR1" Type="STRING[512]" Comment="Output event qualifier" />
+    </OutputVars>
+  </InterfaceList>
+  <BasicFB>
+    <Attribute Name="FBType.Basic.Algorithm.Order" Value="INIT,REQ1,REQ2,REQ3,REQ4,REQ5,REQ6,REQ7,REQ8,REQ9,REQ10,REQ11" />
+    <InternalVars>
+      <VarDeclaration Name="text1" Type="STRING[255]" />
+    </InternalVars>
+    <ECC>
+      <ECState Name="START" Comment="Initial State" x="1940.941" y="1101.412" />
+      <ECState Name="INIT" Comment="Initialization" x="1907.53" y="77.1765">
+        <ECAction Algorithm="INIT" Output="INITO" />
+      </ECState>
+      <ECState Name="REQ1" Comment="Normal execution" x="1077.647" y="198.9412">
+        <ECAction Algorithm="REQ1" Output="CNF" />
+      </ECState>
+      <ECState Name="REQ2" x="349" y="651">
+        <ECAction Algorithm="REQ2" Output="CNF" />
+      </ECState>
+      <ECState Name="REQ3" x="350" y="1464">
+        <ECAction Algorithm="REQ3" Output="CNF" />
+      </ECState>
+      <ECState Name="REQ4" x="604" y="1930">
+        <ECAction Algorithm="REQ4" Output="CNF" />
+      </ECState>
+      <ECState Name="REQ5" x="1294" y="2135">
+        <ECAction Algorithm="REQ5" Output="CNF" />
+      </ECState>
+      <ECState Name="REQ6" x="2156" y="2138">
+        <ECAction Algorithm="REQ6" Output="CNF" />
+      </ECState>
+      <ECState Name="REQ7" x="2883" y="2012">
+        <ECAction Algorithm="REQ7" Output="CNF" />
+      </ECState>
+      <ECState Name="REQ8" x="3523" y="1464">
+        <ECAction Algorithm="REQ8" Output="CNF" />
+      </ECState>
+      <ECState Name="REQ9" x="3561" y="951.0001">
+        <ECAction Algorithm="REQ9" Output="CNF" />
+      </ECState>
+      <ECState Name="REQ10" x="3334" y="530">
+        <ECAction Algorithm="REQ10" Output="CNF" />
+      </ECState>
+      <ECState Name="REQ11" x="2925" y="167">
+        <ECAction Algorithm="REQ11" Output="CNF" />
+      </ECState>
+      <ECTransition Source="START" Destination="INIT" Condition="INIT" x="1924.107" y="664.2941">
+        <Attribute Name="Configuration.Transaction.BezierPoints" Value="482.3091,210.6515,479.8085,133.9956" />
+      </ECTransition>
+      <ECTransition Source="INIT" Destination="START" Condition="1" x="2002.833" y="586.8489">
+        <Attribute Name="Configuration.Transaction.BezierPoints" Value="504.7953,108.1805,507.2958,184.8364" />
+      </ECTransition>
+      <ECTransition Source="START" Destination="REQ1" Condition="REQ1&#xD;&#xA;" x="1493.804" y="721.1497">
+        <Attribute Name="Configuration.Transaction.BezierPoints" Value="405.5912,219.4659,341.9859,152.9379" />
+      </ECTransition>
+      <ECTransition Source="REQ1" Destination="START" Condition="1" x="1569.445" y="598.3328">
+        <Attribute Name="Configuration.Transaction.BezierPoints" Value="363.5781,112.0085,427.1998,178.5173" />
+      </ECTransition>
+      <ECTransition Source="REQ2" Destination="START" Condition="1" x="1149.856" y="793.6759">
+        <Attribute Name="Configuration.Transaction.BezierPoints" Value="231.8509,177.678,343.6157,208.7304" />
+      </ECTransition>
+      <ECTransition Source="START" Destination="REQ2" Condition="REQ2" x="1176.61" y="960.1632">
+        <Attribute Name="Configuration.Transaction.BezierPoints" Value="353.4283,261.1219,241.3828,229.91" />
+      </ECTransition>
+      <ECTransition Source="REQ3" Destination="START" Condition="1" x="1127.804" y="1206.694">
+        <Attribute Name="Configuration.Transaction.BezierPoints" Value="224.9243,309.6325,337.2663,284.2146" />
+      </ECTransition>
+      <ECTransition Source="START" Destination="REQ3" Condition="REQ3" x="1160.935" y="1359.8">
+        <Attribute Name="Configuration.Transaction.BezierPoints" Value="348.2279,331.6951,235.7375,357.2169" />
+      </ECTransition>
+      <ECTransition Source="REQ4" Destination="START" Condition="1" x="1221.435" y="1460.865">
+        <Attribute Name="Configuration.Transaction.BezierPoints" Value="255.841,390.7353,351.8728,330.5567" />
+      </ECTransition>
+      <ECTransition Source="START" Destination="REQ4" Condition="REQ4" x="1332.467" y="1566.329">
+        <Attribute Name="Configuration.Transaction.BezierPoints" Value="383.972,365.2558,287.611,425.9295" />
+      </ECTransition>
+      <ECTransition Source="REQ5" Destination="START" Condition="1" x="1593.382" y="1543.76">
+        <Attribute Name="Configuration.Transaction.BezierPoints" Value="372.7103,418.7849,422.2734,340.6879" />
+      </ECTransition>
+      <ECTransition Source="START" Destination="REQ5" Condition="REQ5" x="1675.866" y="1665.063">
+        <Attribute Name="Configuration.Transaction.BezierPoints" Value="446.9546,381.425,397.9229,458.9158" />
+      </ECTransition>
+      <ECTransition Source="REQ6" Destination="START" Condition="1" x="1999.523" y="1559.218">
+        <Attribute Name="Configuration.Transaction.BezierPoints" Value="504.4176,423.7354,488.3833,345.7924" />
+      </ECTransition>
+      <ECTransition Source="START" Destination="REQ6" Condition="REQ6" x="2125.967" y="1612.881">
+        <Attribute Name="Configuration.Transaction.BezierPoints" Value="528.9062,363.6897,544.6235,441.6137" />
+      </ECTransition>
+      <ECTransition Source="REQ7" Destination="START" Condition="1" x="2470.14" y="1632.253">
+        <Attribute Name="Configuration.Transaction.BezierPoints" Value="657.4724,447.9134,588.1415,380.8044" />
+      </ECTransition>
+      <ECTransition Source="START" Destination="REQ7" Condition="REQ7" x="2478.809" y="1509.465">
+        <Attribute Name="Configuration.Transaction.BezierPoints" Value="588.8627,339.8718,657.6255,406.9874" />
+      </ECTransition>
+      <ECTransition Source="REQ8" Destination="START" Condition="1" x="2818.646" y="1364.165">
+        <Attribute Name="Configuration.Transaction.BezierPoints" Value="767.9034,358.857,654.633,333.5775" />
+      </ECTransition>
+      <ECTransition Source="START" Destination="REQ8" Condition="REQ8" x="2727.939" y="1199.44">
+        <Attribute Name="Configuration.Transaction.BezierPoints" Value="624.456,281.9581,737.6091,307.1899" />
+      </ECTransition>
+      <ECTransition Source="REQ9" Destination="START" Condition="1" x="2788.419" y="1096.748">
+        <Attribute Name="Configuration.Transaction.BezierPoints" Value="756.0795,273.3,643.1387,283.8048" />
+      </ECTransition>
+      <ECTransition Source="START" Destination="REQ9" Condition="REQ9" x="2755.878" y="949.1195">
+        <Attribute Name="Configuration.Transaction.BezierPoints" Value="631.8222,237.88,745.7025,227.3574" />
+      </ECTransition>
+      <ECTransition Source="REQ10" Destination="START" Condition="1" x="2684.182" y="878.3092">
+        <Attribute Name="Configuration.Transaction.BezierPoints" Value="721.8698,203.4928,624.015,244.1492" />
+      </ECTransition>
+      <ECTransition Source="START" Destination="REQ10" Condition="REQ10" x="2607.518" y="748.5828">
+        <Attribute Name="Configuration.Transaction.BezierPoints" Value="602.2644,202.8333,700.254,162.1776" />
+      </ECTransition>
+      <ECTransition Source="REQ11" Destination="START" Condition="1" x="2481.426" y="693.1107">
+        <Attribute Name="Configuration.Transaction.BezierPoints" Value="659.2573,143.4585,585.5475,212.9143" />
+      </ECTransition>
+      <ECTransition Source="START" Destination="REQ11" Condition="REQ11" x="2424.18" y="556.8432">
+        <Attribute Name="Configuration.Transaction.BezierPoints" Value="570.0611,167.4983,643.7949,98.0295" />
+      </ECTransition>
+    </ECC>
+    <Algorithm Name="INIT" Comment="Initialization algorithm">
+      <ST Text="&#xD;&#xA;&#xD;&#xA;VAR&#xD;&#xA;  events : STRING[255];&#xD;&#xA;  data : STRING[255];&#xD;&#xA;  len1 : DINT;&#xD;&#xA;END_VAR&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;events := '';&#xD;&#xA;data := '';&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;(*initX is the type of init and IN_STR1 is the name*)&#xD;&#xA;STR1 := initX;&#xD;&#xA;STR1 := CONCAT(STR1,';');&#xD;&#xA;STR1 := CONCAT(STR1,NAME);&#xD;&#xA;STR1 := CONCAT(STR1,';');&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;IF EVENT1 &lt;&gt; '' THEN&#xD;&#xA;	events := CONCAT(events,EVENT1);&#xD;&#xA;	events := CONCAT(events,':');&#xD;&#xA;END_IF;&#xD;&#xA;IF EVENT2 &lt;&gt; '' THEN&#xD;&#xA;	events := CONCAT(events,EVENT2);&#xD;&#xA;	events := CONCAT(events,':');&#xD;&#xA;END_IF;&#xD;&#xA;IF EVENT3 &lt;&gt; '' THEN&#xD;&#xA;	events := CONCAT(events,EVENT3);&#xD;&#xA;	events := CONCAT(events,':');&#xD;&#xA;END_IF;&#xD;&#xA;IF EVENT4 &lt;&gt; '' THEN&#xD;&#xA;	events := CONCAT(events,EVENT4);&#xD;&#xA;	events := CONCAT(events,':');&#xD;&#xA;END_IF;&#xD;&#xA;IF EVENT5 &lt;&gt; '' THEN&#xD;&#xA;	events := CONCAT(events,EVENT5);&#xD;&#xA;	events := CONCAT(events,':');&#xD;&#xA;END_IF;&#xD;&#xA;IF EVENT6 &lt;&gt; '' THEN&#xD;&#xA;  events := CONCAT(events,EVENT6);&#xD;&#xA;  events := CONCAT(events,':');&#xD;&#xA;END_IF;&#xD;&#xA;IF EVENT7 &lt;&gt; '' THEN&#xD;&#xA;  events := CONCAT(events,EVENT7);&#xD;&#xA;  events := CONCAT(events,':');&#xD;&#xA;END_IF;&#xD;&#xA;IF EVENT8 &lt;&gt; '' THEN&#xD;&#xA;  events := CONCAT(events,EVENT8);&#xD;&#xA;  events := CONCAT(events,':');&#xD;&#xA;END_IF;&#xD;&#xA;IF EVENT9 &lt;&gt; '' THEN&#xD;&#xA;  events := CONCAT(events,EVENT9);&#xD;&#xA;  events := CONCAT(events,':');&#xD;&#xA;END_IF;&#xD;&#xA;IF EVENT10 &lt;&gt; '' THEN&#xD;&#xA;  events := CONCAT(events,EVENT10);&#xD;&#xA;  events := CONCAT(events,':');&#xD;&#xA;END_IF;&#xD;&#xA;IF EVENT11 &lt;&gt; '' THEN&#xD;&#xA;  events := CONCAT(events,EVENT11);&#xD;&#xA;  events := CONCAT(events,':');&#xD;&#xA;END_IF;&#xD;&#xA;IF events &lt;&gt; '' THEN&#xD;&#xA;	len1 := LEN(events);&#xD;&#xA;	events := LEFT(events, len1 -1);&#xD;&#xA;END_IF;&#xD;&#xA;events := CONCAT(events, ';');&#xD;&#xA;&#xD;&#xA;(*joining the events to the STR1*)&#xD;&#xA;STR1 := CONCAT(STR1, events);&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;(*data*)&#xD;&#xA;data := '';&#xD;&#xA;IF DATA_NAME1 &lt;&gt; '' THEN&#xD;&#xA;	data := CONCAT(data,DATA_NAME1);&#xD;&#xA;	data := CONCAT(data,':');&#xD;&#xA;END_IF;&#xD;&#xA;IF DATA_NAME2 &lt;&gt; '' THEN&#xD;&#xA;  data := CONCAT(data,DATA_NAME2);&#xD;&#xA;  data := CONCAT(data,':');&#xD;&#xA;END_IF;&#xD;&#xA;IF data &lt;&gt; '' THEN&#xD;&#xA;	len1 := LEN(data);&#xD;&#xA;	data := LEFT(data, len1 -1);&#xD;&#xA;END_IF;&#xD;&#xA;&#xD;&#xA;data := CONCAT(data, ';');&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;(*joining data to STR1*)&#xD;&#xA;STR1 := CONCAT(STR1,data);&#xD;&#xA;" />
+    </Algorithm>
+    <Algorithm Name="REQ1" Comment="Normally executed algorithm">
+      <ST Text=";&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;STR1 := CONCAT('update;',NAME);&#xD;&#xA;STR1 := CONCAT(STR1,';');&#xD;&#xA;&#xD;&#xA;STR1 := CONCAT(STR1,EVENT1);&#xD;&#xA;STR1 := CONCAT(STR1,';');&#xD;&#xA;&#xD;&#xA;STR1 := CONCAT(STR1,'None');&#xD;&#xA;&#xD;&#xA;STR1 := CONCAT(STR1,';');&#xD;&#xA;&#xD;&#xA;" />
+    </Algorithm>
+    <Algorithm Name="REQ2">
+      <ST Text=";&#xD;&#xA;STR1 := CONCAT('update;',NAME);&#xD;&#xA;STR1 := CONCAT(STR1,';');&#xD;&#xA;&#xD;&#xA;STR1 := CONCAT(STR1,EVENT2);&#xD;&#xA;STR1 := CONCAT(STR1,';');&#xD;&#xA;&#xD;&#xA;STR1 := CONCAT(STR1,'None');&#xD;&#xA;&#xD;&#xA;STR1 := CONCAT(STR1,';');&#xD;&#xA;" />
+    </Algorithm>
+    <Algorithm Name="REQ3">
+      <ST Text=";&#xD;&#xA;STR1 := CONCAT('update;',NAME);&#xD;&#xA;STR1 := CONCAT(STR1,';');&#xD;&#xA;&#xD;&#xA;STR1 := CONCAT(STR1,EVENT3);&#xD;&#xA;STR1 := CONCAT(STR1,';');&#xD;&#xA;&#xD;&#xA;STR1 := CONCAT(STR1,'None');&#xD;&#xA;&#xD;&#xA;STR1 := CONCAT(STR1,';');&#xD;&#xA;" />
+    </Algorithm>
+    <Algorithm Name="REQ4">
+      <ST Text=";&#xD;&#xA;STR1 := CONCAT('update;',NAME);&#xD;&#xA;STR1 := CONCAT(STR1,';');&#xD;&#xA;&#xD;&#xA;STR1 := CONCAT(STR1,EVENT4);&#xD;&#xA;STR1 := CONCAT(STR1,';');&#xD;&#xA;&#xD;&#xA;STR1 := CONCAT(STR1,'None');&#xD;&#xA;&#xD;&#xA;STR1 := CONCAT(STR1,';');&#xD;&#xA;" />
+    </Algorithm>
+    <Algorithm Name="REQ5">
+      <ST Text=";&#xD;&#xA;STR1 := CONCAT('update;',NAME);&#xD;&#xA;STR1 := CONCAT(STR1,';');&#xD;&#xA;&#xD;&#xA;STR1 := CONCAT(STR1,EVENT5);&#xD;&#xA;STR1 := CONCAT(STR1,';');&#xD;&#xA;&#xD;&#xA;STR1 := CONCAT(STR1,'None');&#xD;&#xA;&#xD;&#xA;STR1 := CONCAT(STR1,';');&#xD;&#xA;" />
+    </Algorithm>
+    <Algorithm Name="REQ6">
+      <ST Text=";&#xD;&#xA;STR1 := CONCAT('update;',NAME);&#xD;&#xA;STR1 := CONCAT(STR1,';');&#xD;&#xA;&#xD;&#xA;STR1 := CONCAT(STR1,EVENT6);&#xD;&#xA;STR1 := CONCAT(STR1,';');&#xD;&#xA;&#xD;&#xA;STR1 := CONCAT(STR1,'None');&#xD;&#xA;&#xD;&#xA;STR1 := CONCAT(STR1,';');&#xD;&#xA;" />
+    </Algorithm>
+    <Algorithm Name="REQ7">
+      <ST Text=";&#xD;&#xA;STR1 := CONCAT('update;',NAME);&#xD;&#xA;STR1 := CONCAT(STR1,';');&#xD;&#xA;&#xD;&#xA;STR1 := CONCAT(STR1,EVENT7);&#xD;&#xA;STR1 := CONCAT(STR1,';');&#xD;&#xA;&#xD;&#xA;STR1 := CONCAT(STR1,'None');&#xD;&#xA;&#xD;&#xA;STR1 := CONCAT(STR1,';');&#xD;&#xA;" />
+    </Algorithm>
+    <Algorithm Name="REQ8">
+      <ST Text=";&#xD;&#xA;STR1 := CONCAT('update;',NAME);&#xD;&#xA;STR1 := CONCAT(STR1,';');&#xD;&#xA;&#xD;&#xA;STR1 := CONCAT(STR1,EVENT8);&#xD;&#xA;STR1 := CONCAT(STR1,';');&#xD;&#xA;&#xD;&#xA;STR1 := CONCAT(STR1,'None');&#xD;&#xA;&#xD;&#xA;STR1 := CONCAT(STR1,';');&#xD;&#xA;" />
+    </Algorithm>
+    <Algorithm Name="REQ9">
+      <ST Text=";&#xD;&#xA;STR1 := CONCAT('update;',NAME);&#xD;&#xA;STR1 := CONCAT(STR1,';');&#xD;&#xA;&#xD;&#xA;STR1 := CONCAT(STR1,EVENT9);&#xD;&#xA;STR1 := CONCAT(STR1,';');&#xD;&#xA;&#xD;&#xA;STR1 := CONCAT(STR1,'None');&#xD;&#xA;&#xD;&#xA;STR1 := CONCAT(STR1,';');&#xD;&#xA;" />
+    </Algorithm>
+    <Algorithm Name="REQ10">
+      <ST Text=";&#xD;&#xA;STR1 := CONCAT('update;',NAME);&#xD;&#xA;STR1 := CONCAT(STR1,';');&#xD;&#xA;&#xD;&#xA;STR1 := CONCAT(STR1,EVENT10);&#xD;&#xA;STR1 := CONCAT(STR1,';');&#xD;&#xA;&#xD;&#xA;STR1 := CONCAT(STR1,'None');&#xD;&#xA;&#xD;&#xA;STR1 := CONCAT(STR1,';');&#xD;&#xA;" />
+    </Algorithm>
+    <Algorithm Name="REQ11">
+      <ST Text=";&#xD;&#xA;STR1 := CONCAT('update;',NAME);&#xD;&#xA;STR1 := CONCAT(STR1,';');&#xD;&#xA;&#xD;&#xA;STR1 := CONCAT(STR1,EVENT11);&#xD;&#xA;STR1 := CONCAT(STR1,';');&#xD;&#xA;&#xD;&#xA;STR1 := CONCAT(STR1,'None');&#xD;&#xA;&#xD;&#xA;STR1 := CONCAT(STR1,';');&#xD;&#xA;" />
+    </Algorithm>
+  </BasicFB>
+</FBType>

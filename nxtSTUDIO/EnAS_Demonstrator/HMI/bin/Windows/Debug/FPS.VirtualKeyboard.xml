@@ -1,0 +1,1642 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>FPS.VirtualKeyboard</name>
+    </assembly>
+    <members>
+        <member name="T:FPS.VirtualKeyboard.Common.ActivationWindow">
+            <summary>
+            Interaction logic for ActivationWindow.xaml
+            </summary>
+        </member>
+        <member name="M:FPS.VirtualKeyboard.Common.ActivationWindow.#ctor">
+            <summary>
+            Defaul Constructor
+            </summary>
+        </member>
+        <member name="F:FPS.VirtualKeyboard.Common.ActivationWindow.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:FPS.VirtualKeyboard.Common.ActivationWindow.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:FPS.VirtualKeyboard.Common.ActivationWindow.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:FPS.VirtualKeyboard.Common.CryptoHelper">
+            <summary>
+            CryptoHelper class
+            </summary>
+        </member>
+        <member name="M:FPS.VirtualKeyboard.Common.CryptoHelper.WriteValue(System.String,System.Object)">
+            <summary>
+            Write  key value to Registry
+            </summary>
+            <param name="name">Key name</param>
+            <param name="value">Value</param>
+        </member>
+        <member name="M:FPS.VirtualKeyboard.Common.CryptoHelper.ReadValue(System.String)">
+            <summary>
+            Read key value from Registry
+            </summary>
+            <param name="name">Key name</param>
+            <returns>Value</returns>
+        </member>
+        <member name="M:FPS.VirtualKeyboard.Common.CryptoHelper.ReadDateValue(System.String)">
+            <summary>
+            Read Date value of key from Registry
+            </summary>
+            <param name="name">Key name</param>
+            <returns>DateTime</returns>
+        </member>
+        <member name="T:FPS.VirtualKeyboard.Common.FPSLicence">
+            <summary>
+            FPSLicence class
+            </summary>
+        </member>
+        <member name="M:FPS.VirtualKeyboard.Common.FPSLicence.Dispose">
+            <summary>
+            Override Dispose
+            </summary>
+        </member>
+        <member name="P:FPS.VirtualKeyboard.Common.FPSLicence.LicenseKey">
+            <summary>
+            Override LicenseKey property
+            </summary>
+        </member>
+        <member name="T:FPS.VirtualKeyboard.Common.FPSLicenseProvider">
+            <summary>
+            FPSLicenseProvider class
+            </summary>
+        </member>
+        <member name="M:FPS.VirtualKeyboard.Common.FPSLicenseProvider.GetLicense(System.ComponentModel.LicenseContext,System.Type,System.Object,System.Boolean)">
+            <summary>
+            GetLicense 
+            </summary>
+            <param name="context">LicenseContext</param>
+            <param name="type">Type</param>
+            <param name="instance">Object Instance</param>
+            <param name="allowExceptions">Is allow exceptions</param>
+            <returns>License</returns>
+        </member>
+        <member name="T:FPS.VirtualKeyboard.Common.LicenseValidator">
+            <summary>
+            license manager
+            </summary>
+        </member>
+        <member name="P:FPS.VirtualKeyboard.Common.LicenseValidator.LicenceKey">
+            <summary>
+            licence key
+            </summary>
+        </member>
+        <member name="P:FPS.VirtualKeyboard.Common.LicenseValidator.IsLicenced">
+            <summary>
+            has product licence
+            </summary>
+        </member>
+        <member name="P:FPS.VirtualKeyboard.Common.LicenseValidator.ShowTrialWindow">
+            <summary>
+            get or set displaying trial window
+            </summary>
+        </member>
+        <member name="T:FPS.VirtualKeyboard.Common.FpsLicenseException">
+            <summary>
+            FpsLicenseException
+            </summary>
+        </member>
+        <member name="M:FPS.VirtualKeyboard.Common.FpsLicenseException.#ctor">
+            <summary>
+            FpsLicenseException
+            </summary>
+        </member>
+        <member name="M:FPS.VirtualKeyboard.Common.FpsLicenseException.#ctor(System.String)">
+            <summary>
+            FpsLicenseException
+            </summary>
+            <param name="message">string</param>
+        </member>
+        <member name="T:FPS.VirtualKeyboard.GradientBrush">
+            <summary>
+            Specify Linear Gradient brush from 1, 2, 6 colors
+            </summary>
+        </member>
+        <member name="M:FPS.VirtualKeyboard.GradientBrush.#ctor(System.Collections.Generic.List{System.Drawing.Color},System.Collections.Generic.List{System.Single},System.Single)">
+            <summary>
+            Create instance of GradientBrush
+            </summary>
+            <param name="colors">Brush colors</param>
+            <param name="positions">Stop positions</param>
+            <param name="angle">GradientBrush colors angle</param>
+        </member>
+        <member name="M:FPS.VirtualKeyboard.GradientBrush.CreateBrush(System.Drawing.Rectangle)">
+            <summary>
+            Create Solid (if colors count = 1) or LinearGradientBrush (colors count >1)
+            </summary>
+            <param name="rect">Rectangle</param>
+            <returns>Brush</returns>
+        </member>
+        <member name="M:FPS.VirtualKeyboard.GradientBrush.Clone">
+            <summary>
+            Create copy instance of object
+            </summary>
+            <returns>object</returns>
+        </member>
+        <member name="M:FPS.VirtualKeyboard.GradientBrush.ToString">
+            <summary>
+            Return XMl format for Gradientt brush
+            </summary>
+            <returns>string</returns>
+        </member>
+        <member name="P:FPS.VirtualKeyboard.GradientBrush.Colors">
+            <summary>
+            Get or set Colors there can be 1 ,2 or 6 colors , you must to set Positions as well.
+            </summary>
+        </member>
+        <member name="P:FPS.VirtualKeyboard.GradientBrush.Positions">
+            <summary>
+            Get or set positions there must be 6 value can be 0 - 1.
+            </summary>
+        </member>
+        <member name="P:FPS.VirtualKeyboard.GradientBrush.Angle">
+            <summary>
+            Get or set angle . used only when colors count more than 1.
+            </summary>
+        </member>
+        <member name="T:FPS.VirtualKeyboard.Key">
+            <summary>
+            This clas Identifies FPS.KEY for FPS.Keyboard
+            </summary>
+        </member>
+        <member name="M:FPS.VirtualKeyboard.Key.Send(System.Boolean)">
+            <summary>
+            Provide sending key to foreground window
+            </summary>
+            <param name="canUnlockSpecialKey">Can unlock special key</param>
+        </member>
+        <member name="M:FPS.VirtualKeyboard.Key.Copy(FPS.VirtualKeyboard.Key)">
+            <summary>
+            This Method Copy base property of object
+            </summary>
+            <param name="objKey">Key</param>
+        </member>
+        <member name="M:FPS.VirtualKeyboard.Key.UpdateKey">
+            <summary>
+            This method update key 
+            </summary>
+        </member>
+        <member name="M:FPS.VirtualKeyboard.Key.Clone">
+            <summary>
+            Create new Object from cuttent
+            </summary>
+            <returns>New instance of Key</returns>
+        </member>
+        <member name="M:FPS.VirtualKeyboard.Key.Equals(FPS.VirtualKeyboard.Key)">
+            <summary>
+            Returns a value indicating whether this instance and a specified Key object represent the same value.
+            </summary>
+            <param name="obj">A Key object to compare to this instance.</param>
+            <returns>true if obj is equal to this instance; otherwise, false.</returns>
+        </member>
+        <member name="M:FPS.VirtualKeyboard.Key.GetVirtualKeyKode(System.Windows.Forms.Keys)">
+            <summary>
+            GetVirtualKeyKode from System.Windows.Input.Key
+            </summary>
+            <param name="value">System.Windows.Input.Key</param>
+            <returns>int</returns>
+        </member>
+        <member name="P:FPS.VirtualKeyboard.Key.Image">
+            <summary>
+            Relative path of image of the key.
+            </summary>
+        </member>
+        <member name="P:FPS.VirtualKeyboard.Key.Content">
+            <summary>
+            Content
+            </summary>
+        </member>
+        <member name="P:FPS.VirtualKeyboard.Key.IsSelected">
+            <summary>
+            IsSelected
+            </summary>
+        </member>
+        <member name="P:FPS.VirtualKeyboard.Key.IsLocked">
+            <summary>
+            IsLocked. Uses only for shift,alt, altgr,control ,caps lock and num lock
+            </summary>
+        </member>
+        <member name="P:FPS.VirtualKeyboard.Key.Left">
+            <summary>
+            Left
+            </summary>
+        </member>
+        <member name="P:FPS.VirtualKeyboard.Key.Top">
+            <summary>
+            Top
+            </summary>
+        </member>
+        <member name="P:FPS.VirtualKeyboard.Key.Width">
+            <summary>
+            Width
+            </summary>
+        </member>
+        <member name="P:FPS.VirtualKeyboard.Key.Height">
+            <summary>
+            Height
+            </summary>
+        </member>
+        <member name="P:FPS.VirtualKeyboard.Key.BACKSPACE">
+            <summary>
+            Get backspace FPS.Key
+            </summary>
+        </member>
+        <member name="P:FPS.VirtualKeyboard.Key.TAB">
+            <summary>
+            Get tab FPS.Key
+            </summary>
+        </member>
+        <member name="P:FPS.VirtualKeyboard.Key.ENTER">
+            <summary>
+            Get enter FPS.Key. Virtual Key = 13
+            </summary>
+        </member>
+        <member name="P:FPS.VirtualKeyboard.Key.SHIFT">
+            <summary>
+            Get shift FPS.Key. Virtual Key = 16
+            </summary>
+        </member>
+        <member name="P:FPS.VirtualKeyboard.Key.CTRL">
+            <summary>
+            Get control FPS.Key. Virtual Key = 17
+            </summary>
+        </member>
+        <member name="P:FPS.VirtualKeyboard.Key.ALT">
+            <summary>
+            Get alt FPS.Key. Virtual Key = 18
+            </summary>
+        </member>
+        <member name="P:FPS.VirtualKeyboard.Key.ALT_GR">
+            <summary>
+            Get alt gr FPS.Key. Virtual Key = 165
+            </summary>
+        </member>
+        <member name="P:FPS.VirtualKeyboard.Key.PAUSEBREAK">
+            <summary>
+            Get pause break FPS.Key
+            </summary>
+        </member>
+        <member name="P:FPS.VirtualKeyboard.Key.CAPSLOCK">
+            <summary>
+            Get caps lock FPS.Key
+            </summary>
+        </member>
+        <member name="P:FPS.VirtualKeyboard.Key.ESC">
+            <summary>
+            Get escape FPS.Key
+            </summary>
+        </member>
+        <member name="P:FPS.VirtualKeyboard.Key.SPACE">
+            <summary>
+            Get space FPS.Key
+            </summary>
+        </member>
+        <member name="P:FPS.VirtualKeyboard.Key.PAGEUP">
+            <summary>
+            Get page up FPS.Key
+            </summary>
+        </member>
+        <member name="P:FPS.VirtualKeyboard.Key.PAGEDOWN">
+            <summary>
+            Get page down FPS.Key
+            </summary>
+        </member>
+        <member name="P:FPS.VirtualKeyboard.Key.END">
+            <summary>
+            Get end FPS.Key
+            </summary>
+        </member>
+        <member name="P:FPS.VirtualKeyboard.Key.HOME">
+            <summary>
+            Get home FPS.Key
+            </summary>
+        </member>
+        <member name="P:FPS.VirtualKeyboard.Key.KEYLEFT">
+            <summary>
+            Get key left FPS.Key
+            </summary>
+        </member>
+        <member name="P:FPS.VirtualKeyboard.Key.KEYUP">
+            <summary>
+            Get key up FPS.Key
+            </summary>
+        </member>
+        <member name="P:FPS.VirtualKeyboard.Key.KEYRIGHT">
+            <summary>
+            Get key right FPS.Key
+            </summary>
+        </member>
+        <member name="P:FPS.VirtualKeyboard.Key.KEYDOWN">
+            <summary>
+            Get key down FPS.Key
+            </summary>
+        </member>
+        <member name="P:FPS.VirtualKeyboard.Key.INSERT">
+            <summary>
+            Get insert FPS.Key
+            </summary>
+        </member>
+        <member name="P:FPS.VirtualKeyboard.Key.DELETE">
+            <summary>
+            Get delete FPS.Key
+            </summary>
+        </member>
+        <member name="P:FPS.VirtualKeyboard.Key.WINDOWS">
+            <summary>
+            Get windows FPS.Key
+            </summary>
+        </member>
+        <member name="P:FPS.VirtualKeyboard.Key.CONTEXT">
+            <summary>
+            Get context FPS.Key
+            </summary>
+        </member>
+        <member name="P:FPS.VirtualKeyboard.Key.F1">
+            <summary>
+            Get f1 FPS.Key
+            </summary>
+        </member>
+        <member name="P:FPS.VirtualKeyboard.Key.F2">
+            <summary>
+            Get f2 FPS.Key
+            </summary>
+        </member>
+        <member name="P:FPS.VirtualKeyboard.Key.F3">
+            <summary>
+            Get f3 FPS.Key
+            </summary>
+        </member>
+        <member name="P:FPS.VirtualKeyboard.Key.F4">
+            <summary>
+            Get f4 FPS.Key
+            </summary>
+        </member>
+        <member name="P:FPS.VirtualKeyboard.Key.F5">
+            <summary>
+            Get f5 FPS.Key
+            </summary>
+        </member>
+        <member name="P:FPS.VirtualKeyboard.Key.F6">
+            <summary>
+            Get f6 FPS.Key
+            </summary>
+        </member>
+        <member name="P:FPS.VirtualKeyboard.Key.F7">
+            <summary>
+            Get f7 FPS.Key
+            </summary>
+        </member>
+        <member name="P:FPS.VirtualKeyboard.Key.F8">
+            <summary>
+            Get f8 FPS.Key
+            </summary>
+        </member>
+        <member name="P:FPS.VirtualKeyboard.Key.F9">
+            <summary>
+            Get f9 FPS.Key
+            </summary>
+        </member>
+        <member name="P:FPS.VirtualKeyboard.Key.F10">
+            <summary>
+            Get f10 FPS.Key
+            </summary>
+        </member>
+        <member name="P:FPS.VirtualKeyboard.Key.F11">
+            <summary>
+            Get f11 FPS.Key
+            </summary>
+        </member>
+        <member name="P:FPS.VirtualKeyboard.Key.F12">
+            <summary>
+            Get f12 FPS.Key
+            </summary>
+        </member>
+        <member name="P:FPS.VirtualKeyboard.Key.NUMLOCK">
+            <summary>
+            Get num lock FPS.Key
+            </summary>
+        </member>
+        <member name="P:FPS.VirtualKeyboard.Key.SCROLLOCK">
+            <summary>
+            Get scroll lock FPS.Key
+            </summary>
+        </member>
+        <member name="P:FPS.VirtualKeyboard.Key.PRTSCR">
+            <summary>
+            Get print Screen lock FPS.Key
+            </summary>
+        </member>
+        <member name="P:FPS.VirtualKeyboard.Key.LANG">
+            <summary>
+            LANG
+            </summary>
+        </member>
+        <member name="P:FPS.VirtualKeyboard.Key.NUM_PAGEUP">
+            <summary>
+            Get page up FPS.Key
+            </summary>
+        </member>
+        <member name="P:FPS.VirtualKeyboard.Key.NUM_PAGEDOWN">
+            <summary>
+            Get page down FPS.Key
+            </summary>
+        </member>
+        <member name="P:FPS.VirtualKeyboard.Key.NUM_END">
+            <summary>
+            Get end FPS.Key
+            </summary>
+        </member>
+        <member name="P:FPS.VirtualKeyboard.Key.NUM_HOME">
+            <summary>
+            Get home FPS.Key
+            </summary>
+        </member>
+        <member name="P:FPS.VirtualKeyboard.Key.NUM_KEYLEFT">
+            <summary>
+            Get key left FPS.Key
+            </summary>
+        </member>
+        <member name="P:FPS.VirtualKeyboard.Key.NUM_KEYUP">
+            <summary>
+            Get key up FPS.Key
+            </summary>
+        </member>
+        <member name="P:FPS.VirtualKeyboard.Key.NUM_KEYRIGHT">
+            <summary>
+            Get key right FPS.Key
+            </summary>
+        </member>
+        <member name="P:FPS.VirtualKeyboard.Key.NUM_KEYDOWN">
+            <summary>
+            Get key down FPS.Key
+            </summary>
+        </member>
+        <member name="P:FPS.VirtualKeyboard.Key.NUM_INSERT">
+            <summary>
+            Get insert FPS.Key
+            </summary>
+        </member>
+        <member name="P:FPS.VirtualKeyboard.Key.NUM_DELETE">
+            <summary>
+            Get delete FPS.Key
+            </summary>
+        </member>
+        <member name="P:FPS.VirtualKeyboard.Key.NUM_5">
+            <summary>
+            Get  FPS.Key
+            </summary>
+        </member>
+        <member name="P:FPS.VirtualKeyboard.Key.NUM_DIV">
+            <summary>
+            Get  FPS.Key
+            </summary>
+        </member>
+        <member name="P:FPS.VirtualKeyboard.Key.NUM_MULT">
+            <summary>
+            Get  FPS.Key
+            </summary>
+        </member>
+        <member name="P:FPS.VirtualKeyboard.Key.NUM_MINUS">
+            <summary>
+            Get  FPS.Key
+            </summary>
+        </member>
+        <member name="P:FPS.VirtualKeyboard.Key.NUM_PLUS">
+            <summary>
+            Get  FPS.Key
+            </summary>
+        </member>
+        <member name="E:FPS.VirtualKeyboard.Key.PropertyChanged">
+            <summary>
+            PropertyChanged
+            </summary>
+        </member>
+        <member name="T:FPS.VirtualKeyboard.RegularKey">
+            <summary>
+             regular key
+            </summary>
+        </member>
+        <member name="M:FPS.VirtualKeyboard.RegularKey.#ctor">
+            <summary>
+            Create instance of Key
+            </summary>
+        </member>
+        <member name="M:FPS.VirtualKeyboard.RegularKey.#ctor(System.Int32)">
+            <summary>
+            Create instance of Key with virtual key kode parameter
+            </summary>
+            /// <param name="virtualKey">Virtual key value</param>
+        </member>
+        <member name="M:FPS.VirtualKeyboard.RegularKey.#ctor(System.Int32,System.Object)">
+            <summary>
+            Create instance of Key with virtual key kode parameter and content
+            </summary>
+            <param name="virtualKey">Virtual Key value</param>
+            <param name="content">Content</param>
+        </member>
+        <member name="M:FPS.VirtualKeyboard.RegularKey.GetHashCode">
+            <summary>
+            hash code of FpsKey
+            </summary>
+            <returns>hash code</returns>
+        </member>
+        <member name="M:FPS.VirtualKeyboard.RegularKey.Send(System.Boolean)">
+            <summary>
+            Provide sending key to foreground window
+            </summary>
+            <param name="canUnlockSpecialKey">Can unlock special key if true</param>
+        </member>
+        <member name="M:FPS.VirtualKeyboard.RegularKey.Clone">
+            <summary>
+            Create new Object from cuttent
+            </summary>
+            <returns>New instance of object</returns>
+        </member>
+        <member name="M:FPS.VirtualKeyboard.RegularKey.Equals(FPS.VirtualKeyboard.Key)">
+            <summary>
+            Returns a value indicating whether this instance and a specified Key object represent the same value.
+            </summary>
+            <param name="obj">A Key object to compare to this instance.</param>
+            <returns>true if obj is equal to this instance; otherwise, false.</returns>
+        </member>
+        <member name="M:FPS.VirtualKeyboard.RegularKey.UpdateKey">
+            <summary>
+            This method update key 
+            </summary>
+        </member>
+        <member name="P:FPS.VirtualKeyboard.RegularKey.LowerCase">
+             <summary>
+            LowerCase 
+             </summary>
+        </member>
+        <member name="P:FPS.VirtualKeyboard.RegularKey.UpperCase">
+             <summary>
+            UpperCase 
+             </summary>
+        </member>
+        <member name="P:FPS.VirtualKeyboard.RegularKey.AlterCase">
+             <summary>
+            AlterCase 
+             </summary>
+        </member>
+        <member name="P:FPS.VirtualKeyboard.RegularKey.CapitalCase">
+             <summary>
+            CapitalCase 
+             </summary>
+        </member>
+        <member name="P:FPS.VirtualKeyboard.RegularKey.AltLock">
+            <summary>
+            AltLock
+            </summary>
+        </member>
+        <member name="P:FPS.VirtualKeyboard.RegularKey.ShiftLock">
+            <summary>
+            ShiftLock
+            </summary>
+        </member>
+        <member name="P:FPS.VirtualKeyboard.RegularKey.AltGrLock">
+            <summary>
+            AltGrLock
+            </summary>
+        </member>
+        <member name="P:FPS.VirtualKeyboard.RegularKey.ControlLock">
+            <summary>
+            ControlLock
+            </summary>
+        </member>
+        <member name="P:FPS.VirtualKeyboard.RegularKey.VirtualKey">
+            <summary>
+            Get or set key code  of key
+            </summary>
+        </member>
+        <member name="P:FPS.VirtualKeyboard.RegularKey.Repetition">
+            <summary>
+            Repetition
+            </summary>
+        </member>
+        <member name="T:FPS.VirtualKeyboard.SpecialKey">
+            <summary>
+            special key
+            </summary>
+        </member>
+        <member name="M:FPS.VirtualKeyboard.SpecialKey.#ctor">
+            <summary>
+            Create instance of Key
+            </summary>
+        </member>
+        <member name="M:FPS.VirtualKeyboard.SpecialKey.#ctor(System.Int32)">
+            <summary>
+            Create instance of Key with virtual key kode parameter
+            </summary>
+            <param name="virtualKey">Virtual Key value</param>
+        </member>
+        <member name="M:FPS.VirtualKeyboard.SpecialKey.#ctor(System.Int32,System.Object)">
+            <summary>
+            Create instance of Key with virtual key kode parameter and content
+            </summary>
+            <param name="virtualKey">Virtual Key value</param>
+            <param name="content">Content</param>
+        </member>
+        <member name="M:FPS.VirtualKeyboard.SpecialKey.Equals(System.Object)">
+            <summary>
+            checks if object is equal to another
+            </summary>
+            <param name="obj">object to equal</param>
+            <returns>returns</returns>
+        </member>
+        <member name="M:FPS.VirtualKeyboard.SpecialKey.GetHashCode">
+            <summary>
+            hash code of FpsKey
+            </summary>
+            <returns>hash code</returns>
+        </member>
+        <member name="M:FPS.VirtualKeyboard.SpecialKey.UpdateKey">
+            <summary>
+            Update Key
+            </summary>
+        </member>
+        <member name="M:FPS.VirtualKeyboard.SpecialKey.Send(System.Boolean)">
+            <summary>
+            Provide sending key to foreground window
+            </summary>
+            <param name="canUnlockSpecialKey">Can unlock special key if true</param>
+        </member>
+        <member name="M:FPS.VirtualKeyboard.SpecialKey.Clone">
+            <summary>
+            Create new Object from cuttent
+            </summary>
+            <returns>New instance of object</returns>
+        </member>
+        <member name="M:FPS.VirtualKeyboard.SpecialKey.Equals(FPS.VirtualKeyboard.Key)">
+            <summary>
+            Returns a value indicating whether this instance and a specified Key object represent the same value.
+            </summary>
+            <param name="obj">A Key object to compare to this instance.</param>
+            <returns>true if obj is equal to this instance; otherwise, false.</returns>
+        </member>
+        <member name="P:FPS.VirtualKeyboard.SpecialKey.VirtualKey">
+            <summary>
+            Get or set key code  of key
+            </summary>
+        </member>
+        <member name="T:FPS.VirtualKeyboard.NumPadKey">
+            <summary>
+            num pad key
+            </summary>
+        </member>
+        <member name="M:FPS.VirtualKeyboard.NumPadKey.#ctor">
+            <summary>
+            Create instance of Key
+            </summary>
+        </member>
+        <member name="M:FPS.VirtualKeyboard.NumPadKey.#ctor(System.Int32)">
+            <summary>
+            Create instance of Key with virtual key kode parameter
+            </summary>
+            <param name="virtualKey">Virtual key value</param>
+        </member>
+        <member name="M:FPS.VirtualKeyboard.NumPadKey.#ctor(System.Int32,System.Object)">
+            <summary>
+            Create instance of Key with virtual key kode parameter and cpecial content
+            </summary>
+            <param name="virtualKey">Virtual Key</param>
+            <param name="content">Content of key</param>
+        </member>
+        <member name="M:FPS.VirtualKeyboard.NumPadKey.Equals(System.Object)">
+            <summary>
+            checks if object is equal to another
+            </summary>
+            <param name="obj">object to equal</param>
+            <returns>returns</returns>
+        </member>
+        <member name="M:FPS.VirtualKeyboard.NumPadKey.GetHashCode">
+            <summary>
+            hash code of FpsKey
+            </summary>
+            <returns>hash code</returns>
+        </member>
+        <member name="M:FPS.VirtualKeyboard.NumPadKey.Send(System.Boolean)">
+            <summary>
+            Provide sending key to foreground window
+            </summary>
+            <param name="canUnlockSpecialKey">Can unlock special key if true</param>
+        </member>
+        <member name="M:FPS.VirtualKeyboard.NumPadKey.Clone">
+            <summary>
+            Create new Object from cuttent
+            </summary>
+            <returns>New instance of object</returns>
+        </member>
+        <member name="M:FPS.VirtualKeyboard.NumPadKey.Equals(FPS.VirtualKeyboard.Key)">
+            <summary>
+            Returns a value indicating whether this instance and a specified Key object represent the same value.
+            </summary>
+            <param name="obj">A Key object to compare to this instance.</param>
+            <returns>true if obj is equal to this instance; otherwise, false.</returns>
+        </member>
+        <member name="P:FPS.VirtualKeyboard.NumPadKey.VirtualKey">
+            <summary>
+            Get or set key code  of key
+            </summary>
+        </member>
+        <member name="P:FPS.VirtualKeyboard.NumPadKey.NumCase">
+            <summary>
+            NumCase
+            </summary>
+        </member>
+        <member name="T:FPS.VirtualKeyboard.ExtendedKey">
+            <summary>
+            extended key
+            </summary>
+        </member>
+        <member name="M:FPS.VirtualKeyboard.ExtendedKey.Send(System.Boolean)">
+            <summary>
+            Provide sending key to foreground window
+            </summary>
+            <param name="canUnlockSpecialKey">Can unlock special key</param>
+        </member>
+        <member name="M:FPS.VirtualKeyboard.ExtendedKey.Clone">
+            <summary>
+            Create new Object from cuttent
+            </summary>
+            <returns>New instance of object</returns>
+        </member>
+        <member name="M:FPS.VirtualKeyboard.ExtendedKey.Equals(FPS.VirtualKeyboard.Key)">
+            <summary>
+            Returns a value indicating whether this instance and a specified Key object represent the same value.
+            </summary>
+            <param name="obj">A Key object to compare to this instance.</param>
+            <returns>true if obj is equal to this instance; otherwise, false.</returns>
+        </member>
+        <member name="P:FPS.VirtualKeyboard.ExtendedKey.Keys">
+            <summary>
+            List of  RegularKey for sending
+            </summary>
+        </member>
+        <member name="T:FPS.VirtualKeyboard.KeyboardLayout">
+            <summary>
+            This class create keyboard layout
+            </summary>
+        </member>
+        <member name="M:FPS.VirtualKeyboard.KeyboardLayout.#ctor">
+            <summary>
+            KeyboardLayout
+            </summary>
+        </member>
+        <member name="M:FPS.VirtualKeyboard.KeyboardLayout.DefaultLayout">
+            <summary>
+            Create  keyboard layout depend on current language
+            </summary>
+            <returns>KeyboardLayout</returns>
+            <example>
+            Examples of using <c>DefaultLayout()</c>:
+            
+            <code lang="XML">
+            Example of structure of keyboard layout, which saved in XML file (for example: "FPS.VirtualKeyboard.Samples.VS2010.CS.CustomLayout.xml"):
+            
+            &lt;KeyboardLayout xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+                &lt;Keys&gt;
+                    &lt;Key xsi:type="SpecialKey"&gt;
+                        &lt;Content xsi:type="xsd:string"&gt;Esc&lt;/Content&gt;
+                        &lt;Left&gt;30&lt;/Left&gt;
+                        &lt;Top&gt;10&lt;/Top&gt;
+                        &lt;Width&gt;40&lt;/Width&gt;
+                        &lt;Height&gt;40&lt;/Height&gt;
+                        &lt;VirtualKey&gt;27&lt;/VirtualKey&gt;
+                    &lt;/Key&gt; 
+                    ...
+                &lt;/Keys&gt;
+                &lt;Width&gt;720&lt;/Width&gt;
+                &lt;Height&gt;300&lt;/Height&gt;
+                &lt;KeyboardLayoutId&gt;67187713&lt;/KeyboardLayoutId&gt;
+            &lt;/KeyboardLayout&gt;
+            </code>
+            
+            <code lang="CS">
+            Add namespace:
+            
+            using FPS.VirtualKeyboard;
+            using FPS.Shared;
+            
+            public partial class MainWindow : FPS.Shared.SkinnedWindow
+            {
+               public MainWindow()
+               {
+                   InitializeComponent();
+                   
+                    VirtualKeyboard virtualKeyboard = new VirtualKeyboard();
+                    virtualKeyboard.DefaultLayout = FPS.VirtualKeyboard.Serializer.Load(this.GetType().Assembly.GetManifestResourceStream("FPS.VirtualKeyboard.Samples.VS2010.CS.CustomLayout.xml"));        
+                    LayoutRoot.Children.Add(virtualKeyboard);
+                    virtualKeyboard.ForceUpdateLayout();
+               }
+               
+                private void buttonDefaultLayout_Click(object sender, EventArgs e)
+                {
+                    virtualKeyboard.DefaultLayout = FPS.VirtualKeyboard.KeyboardLayout.DefaultLayout();
+                }
+               
+               private void buttonExtendedLayout_Click(object sender, EventArgs e)
+               {
+                   virtualKeyboard.DefaultLayout = FPS.VirtualKeyboard.KeyboardLayout.ExtendedLayout();
+               }
+            } 
+            </code>
+            
+            <code lang="VB.NET">
+            Add namespace:
+            
+            Imports FPS.VirtualKeyboard
+            Imports FPS.Shared
+            
+            Partial Public Class MainWindow
+                Inherits FPS.Shared.SkinnedWindow
+                
+               Public Sub New()
+                   Me.InitializeComponent()
+                   
+                    Dim virtualKeyboard As New VirtualKeyboard()
+                    virtualKeyboard.DefaultLayout = FPS.VirtualKeyboard.Serializer.Load(Of FPS.VirtualKeyboard.KeyboardLayout)(Me.[GetType]().Assembly.GetManifestResourceStream("FPS.VirtualKeyboard.Samples.VS2010.VB.CustomLayout.xml"))
+                    LayoutRoot.Children.Add(virtualKeyboard)
+                    virtualKeyboard.ForceUpdateLayout()
+               End Sub
+               
+                Private Sub buttonDefaultLayout_Click(ByVal sender As Object, ByVal e As EventArgs) Handles buttonDefaultLayout.Click
+                    virtualKeyboard.DefaultLayout = FPS.VirtualKeyboard.KeyboardLayout.DefaultLayout()
+                End Sub
+                
+                Private Sub buttonExtendedLayout_Click(ByVal sender As Object, ByVal e As EventArgs) Handles buttonExtendedLayout.Click
+                    virtualKeyboard.DefaultLayout = FPS.VirtualKeyboard.KeyboardLayout.ExtendedLayout()
+                End Sub
+            End Class
+            </code>
+            </example>
+        </member>
+        <member name="M:FPS.VirtualKeyboard.KeyboardLayout.ExtendedLayout">
+            <summary>
+            Create Extended keyboard layout depend on current language
+            </summary>
+            <returns>KeyboardLayout</returns>
+            <example>
+            Examples of using <c>ExtendedLayout()</c>:
+            
+            <code lang="XML">
+            Example of structure of keyboard layout, which saved in XML file (for example: "FPS.VirtualKeyboard.Samples.VS2010.CS.CustomLayout.xml"):
+            
+            &lt;KeyboardLayout xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+                &lt;Keys&gt;
+                    &lt;Key xsi:type="SpecialKey"&gt;
+                        &lt;Content xsi:type="xsd:string"&gt;Esc&lt;/Content&gt;
+                        &lt;Left&gt;30&lt;/Left&gt;
+                        &lt;Top&gt;10&lt;/Top&gt;
+                        &lt;Width&gt;40&lt;/Width&gt;
+                        &lt;Height&gt;40&lt;/Height&gt;
+                        &lt;VirtualKey&gt;27&lt;/VirtualKey&gt;
+                    &lt;/Key&gt; 
+                    ...
+                &lt;/Keys&gt;
+                &lt;Width&gt;720&lt;/Width&gt;
+                &lt;Height&gt;300&lt;/Height&gt;
+                &lt;KeyboardLayoutId&gt;67187713&lt;/KeyboardLayoutId&gt;
+            &lt;/KeyboardLayout&gt;
+            </code>
+            
+            <code lang="CS">
+            Add namespace:
+            
+            using FPS.VirtualKeyboard;
+            using FPS.Shared;
+            
+            public partial class MainWindow : FPS.Shared.SkinnedWindow
+            {
+               public MainWindow()
+               {
+                   InitializeComponent();
+                   
+                    VirtualKeyboard virtualKeyboard = new VirtualKeyboard();
+                    virtualKeyboard.DefaultLayout = FPS.VirtualKeyboard.Serializer.Load(this.GetType().Assembly.GetManifestResourceStream("FPS.VirtualKeyboard.Samples.VS2010.CS.CustomLayout.xml"));        
+                    LayoutRoot.Children.Add(virtualKeyboard);
+                    virtualKeyboard.ForceUpdateLayout();
+               }
+               
+                private void buttonDefaultLayout_Click(object sender, EventArgs e)
+                {
+                    virtualKeyboard.DefaultLayout = FPS.VirtualKeyboard.KeyboardLayout.DefaultLayout();
+                }
+               
+               private void buttonExtendedLayout_Click(object sender, EventArgs e)
+               {
+                   virtualKeyboard.DefaultLayout = FPS.VirtualKeyboard.KeyboardLayout.ExtendedLayout();
+               }
+            } 
+            </code>
+            
+            <code lang="VB.NET">
+            Add namespace:
+            
+            Imports FPS.VirtualKeyboard
+            Imports FPS.Shared
+            
+            Partial Public Class MainWindow
+                Inherits FPS.Shared.SkinnedWindow
+                
+               Public Sub New()
+                   Me.InitializeComponent()
+                   
+                    Dim virtualKeyboard As New VirtualKeyboard()
+                    virtualKeyboard.DefaultLayout = FPS.VirtualKeyboard.Serializer.Load(Of FPS.VirtualKeyboard.KeyboardLayout)(Me.[GetType]().Assembly.GetManifestResourceStream("FPS.VirtualKeyboard.Samples.VS2010.VB.CustomLayout.xml"))
+                    LayoutRoot.Children.Add(virtualKeyboard)
+                    virtualKeyboard.ForceUpdateLayout()
+               End Sub
+               
+                Private Sub buttonDefaultLayout_Click(ByVal sender As Object, ByVal e As EventArgs) Handles buttonDefaultLayout.Click
+                    virtualKeyboard.DefaultLayout = FPS.VirtualKeyboard.KeyboardLayout.DefaultLayout()
+                End Sub
+                
+                Private Sub buttonExtendedLayout_Click(ByVal sender As Object, ByVal e As EventArgs) Handles buttonExtendedLayout.Click
+                    virtualKeyboard.DefaultLayout = FPS.VirtualKeyboard.KeyboardLayout.ExtendedLayout()
+                End Sub
+            End Class
+            </code>
+            </example>
+        </member>
+        <member name="M:FPS.VirtualKeyboard.KeyboardLayout.FromTemplate(FPS.VirtualKeyboard.KeyboardLayout,System.Boolean)">
+            <summary>
+            Create Keyboard Layout  from template
+            </summary>
+            <param name="template">KeyboardLayout</param>
+            <returns></returns>
+        </member>
+        <member name="M:FPS.VirtualKeyboard.KeyboardLayout.ChangeLanguage(System.Boolean)">
+            <summary>
+            Change layout
+            </summary>
+        </member>
+        <member name="M:FPS.VirtualKeyboard.KeyboardLayout.Create(System.String)">
+            <summary>
+            Load keyboard layout from file
+            </summary>
+            <param name="fileName">string</param>
+            <returns></returns>
+        </member>
+        <member name="M:FPS.VirtualKeyboard.KeyboardLayout.Create(System.IO.Stream)">
+            <summary>
+            Create keyboard layout from stream  
+            </summary>
+            <param name="input">Stream</param>
+            <returns></returns>
+        </member>
+        <member name="P:FPS.VirtualKeyboard.KeyboardLayout.Keys">
+            <summary>
+            Keys
+            </summary>
+        </member>
+        <member name="P:FPS.VirtualKeyboard.KeyboardLayout.Width">
+            <summary>
+            Width
+            </summary>
+        </member>
+        <member name="P:FPS.VirtualKeyboard.KeyboardLayout.Height">
+            <summary>
+            Height
+            </summary>
+        </member>
+        <member name="P:FPS.VirtualKeyboard.KeyboardLayout.KeyboardLayoutId">
+            <summary>
+            Get or set keyboard layout id
+            </summary>
+        </member>
+        <member name="E:FPS.VirtualKeyboard.KeyboardLayout.PropertyChanged">
+            <summary>
+            PropertyChanged event
+            </summary>
+        </member>
+        <member name="T:FPS.VirtualKeyboard.KeyTemplate">
+            <summary>
+            Specify template of key
+            </summary>
+        </member>
+        <member name="M:FPS.VirtualKeyboard.KeyTemplate.#ctor">
+            <summary>
+            Create instance of object
+            </summary>
+        </member>
+        <member name="M:FPS.VirtualKeyboard.KeyTemplate.Draw(System.Drawing.Graphics,FPS.VirtualKeyboard.Key,FPS.VirtualKeyboard.KeyTemplate.Mode,System.Drawing.Font)">
+            <summary>
+            Draw key template
+            </summary>
+            <param name="gr">Graphics</param>
+            <param name="objKey">Key</param>
+            <param name="mode">Mode</param>
+            <param name="font">font</param>
+        </member>
+        <member name="P:FPS.VirtualKeyboard.KeyTemplate.Background">
+            <summary>
+            Get or Set Background
+            </summary>
+        </member>
+        <member name="P:FPS.VirtualKeyboard.KeyTemplate.HoverBackground">
+            <summary>
+            Get or Set HoverBackground
+            </summary>
+        </member>
+        <member name="P:FPS.VirtualKeyboard.KeyTemplate.PressedBackground">
+            <summary>
+            Get or Set PressedBackground
+            </summary>
+        </member>
+        <member name="P:FPS.VirtualKeyboard.KeyTemplate.Border">
+            <summary>
+            Get or Set Border
+            </summary>
+        </member>
+        <member name="P:FPS.VirtualKeyboard.KeyTemplate.LowerCaseForeground">
+            <summary>
+            Get or Set LowerCaseForeground
+            </summary>
+        </member>
+        <member name="P:FPS.VirtualKeyboard.KeyTemplate.UpperCaseForeground">
+            <summary>
+            Get or Set UpperCaseForeground
+            </summary>
+        </member>
+        <member name="P:FPS.VirtualKeyboard.KeyTemplate.AlterCaseForeground">
+            <summary>
+            Get or Set AlterCaseForeground
+            </summary>
+        </member>
+        <member name="T:FPS.VirtualKeyboard.KeyTemplate.Mode">
+            <summary>
+            Mode of key state
+            </summary>
+        </member>
+        <member name="F:FPS.VirtualKeyboard.KeyTemplate.Mode.Normal">
+            <summary>
+            When mouse is not pressed
+            </summary>
+        </member>
+        <member name="F:FPS.VirtualKeyboard.KeyTemplate.Mode.Hover">
+            <summary>
+            When mouse is hover on the key
+            </summary>
+        </member>
+        <member name="F:FPS.VirtualKeyboard.KeyTemplate.Mode.Pressed">
+            <summary>
+            When mouse is pressed on the key
+            </summary>
+        </member>
+        <member name="T:FPS.VirtualKeyboard.VirtualKeyboard">
+            <summary>
+            FPS Virtual Keyboard Control
+            </summary>
+            <example>
+            Examples of using <c>VirtualKeyboard</c>:
+            
+            <code lang="CS">
+            Add namespace:
+            
+            using FPS.VirtualKeyboard;
+            using FPS.Shared;
+            
+            Creating keyboard instance in MainWindow.xaml.cs:
+            
+            public partial class MainWindow : FPS.Shared.SkinnedWindow
+            {
+               public MainWindow()
+               {
+                   InitializeComponent();
+                   
+                    VirtualKeyboard virtualKeyboard = new VirtualKeyboard();
+                    LayoutRoot.Children.Add(virtualKeyboard);
+               }
+            } 
+            </code>
+            
+            <code lang="VB.NET">
+            Add namespace:
+            
+            Imports FPS.VirtualKeyboard
+            Imports FPS.Shared
+            
+            Creating keyboard instance in MainWindow.xaml.vb:
+            
+            Partial Public Class MainWindow
+                Inherits FPS.Shared.SkinnedWindow
+                
+               Public Sub New()
+                   Me.InitializeComponent()
+                   
+                    Dim virtualKeyboard As New VirtualKeyboard()
+                    LayoutRoot.Children.Add(virtualKeyboard)
+               End Sub
+            End Class
+            </code>
+            </example>
+            <summary>
+            VirtualKeyboard
+            </summary>
+        </member>
+        <member name="M:FPS.VirtualKeyboard.VirtualKeyboard.#ctor">
+            <summary>
+            Create instance of object
+            </summary>
+        </member>
+        <member name="M:FPS.VirtualKeyboard.VirtualKeyboard.AplyTheme(System.IO.Stream)">
+             <summary>
+             Aply theme for keyboard and keys
+             </summary>
+             <param name="value">Stream</param>
+             <example>
+             Examples of using <c>AplyTheme(Stream value)</c>:
+             
+             <code lang="CS">
+             
+             public partial class MainWindow : Form
+             {
+                 public MainWindow()
+                 {
+                     InitializeComponent();
+                     comboBoxThemes.Items.AddRange(Enum.GetNames(typeof(FPS.VirtualKeyboard.Theme)));
+                     comboBoxThemes.Items.Add("Custom");
+                     comboBoxThemes.SelectedIndex = 0;
+                 }
+            
+                 private void comboBoxThemes_SelectedValueChanged(object sender, EventArgs e)
+                 {
+                     var theme = comboBoxThemes.SelectedItem.ToString();
+                     if (theme.Equals("Custom"))
+                         virtualKeyboard1.AplyTheme(typeof(MainWindow).Assembly.GetManifestResourceStream("FPS.VirtualKeyboard.Samples.VS2010.CS.CustomTheme.xml"));
+                     else
+                         virtualKeyboard1.Theme = (FPS.VirtualKeyboard.Theme)Enum.Parse(typeof(FPS.VirtualKeyboard.Theme), theme);
+                 }
+             }
+             </code>
+             
+             <code lang="VB.NET">
+             
+             Public Class MainWindow
+                 Public Sub New()
+                     InitializeComponent()
+                     comboBoxThemes.Items.AddRange([Enum].GetNames(GetType(FPS.VirtualKeyboard.Theme)))
+                     comboBoxThemes.Items.Add("Custom")
+                     comboBoxThemes.SelectedIndex = 0
+                 End Sub
+                 
+                 Private Sub comboBoxThemes_SelectedValueChanged(ByVal sender As Object, ByVal e As EventArgs) Handles comboBoxThemes.SelectedValueChanged
+                     Dim theme = comboBoxThemes.SelectedItem.ToString()
+                     If theme.Equals("Custom") Then
+                         virtualKeyboard1.AplyTheme(GetType(MainWindow).Assembly.GetManifestResourceStream("FPS.VirtualKeyboard.Samples.VS2010.VB.CustomTheme.xml"))
+                     Else
+                         virtualKeyboard1.Theme = DirectCast([Enum].Parse(GetType(FPS.VirtualKeyboard.Theme), theme), FPS.VirtualKeyboard.Theme)
+                     End If
+                 End Sub
+             End Class
+             </code>
+             </example>
+        </member>
+        <member name="M:FPS.VirtualKeyboard.VirtualKeyboard.AplyTheme(System.String)">
+            <summary>
+            Aply theme for keyboard and keys
+            </summary>
+            <param name="value">string</param>
+        </member>
+        <member name="M:FPS.VirtualKeyboard.VirtualKeyboard.OnPaint(System.Windows.Forms.PaintEventArgs)">
+            <summary>
+            Override OnPaint
+            </summary>
+            <param name="e">PaintEventArgs</param>
+        </member>
+        <member name="M:FPS.VirtualKeyboard.VirtualKeyboard.OnMouseDown(System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            Override OnMouseDown
+            </summary>
+            <param name="e">MouseEventArgs</param>
+        </member>
+        <member name="M:FPS.VirtualKeyboard.VirtualKeyboard.OnMouseUp(System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            Override OnMouseUp
+            </summary>
+            <param name="e">MouseEventArgs</param>
+        </member>
+        <member name="M:FPS.VirtualKeyboard.VirtualKeyboard.OnMouseMove(System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            Override OnMouseMove
+            </summary>
+            <param name="e">MouseEventArgs</param>
+        </member>
+        <member name="M:FPS.VirtualKeyboard.VirtualKeyboard.OnMouseLeave(System.EventArgs)">
+            <summary>
+            Override OnMouseLeave
+            </summary>
+            <param name="e">EventArgs</param>
+        </member>
+        <member name="M:FPS.VirtualKeyboard.VirtualKeyboard.OnMouseEnter(System.EventArgs)">
+            <summary>
+            Override OnMouseEnter
+            </summary>
+            <param name="e">EventArgs</param>
+        </member>
+        <member name="M:FPS.VirtualKeyboard.VirtualKeyboard.HitTest(System.Double,System.Double,System.Double,System.Double,System.Int32,System.Int32)">
+            <summary>
+            Override WndProc
+            </summary>
+            <param name="m">ref Message</param>
+        </member>
+        <member name="M:FPS.VirtualKeyboard.VirtualKeyboard.SendKey(FPS.VirtualKeyboard.Key)">
+            <summary>
+            This Method send FPS.Key to active Window
+            </summary>
+            <param name="objKey">Key</param>
+        </member>
+        <member name="M:FPS.VirtualKeyboard.VirtualKeyboard.ActivateLayout(System.Int64)">
+            <summary>
+            This method load keyboard layout 
+            </summary>
+            <param name="layoutid">layoutid</param>
+        </member>
+        <member name="M:FPS.VirtualKeyboard.VirtualKeyboard.ForceLanguage(System.Int64)">
+            <summary>
+            ForceLanguage
+            </summary>
+            <param name="layoutid">layoutid</param>
+        </member>
+        <member name="F:FPS.VirtualKeyboard.VirtualKeyboard.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:FPS.VirtualKeyboard.VirtualKeyboard.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:FPS.VirtualKeyboard.VirtualKeyboard.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="P:FPS.VirtualKeyboard.VirtualKeyboard.LayoutsFolder">
+            <summary>
+            Get ors Set folder where layouts located
+            </summary>
+        </member>
+        <member name="P:FPS.VirtualKeyboard.VirtualKeyboard.AutoFill">
+            <summary>
+            Get or Set autofill peroperty. This is dependency property. This Property generate layout depends on language (eg. qwerty , azerty, etc layouts)
+            </summary>
+        </member>
+        <member name="P:FPS.VirtualKeyboard.VirtualKeyboard.Theme">
+            <summary>
+            Get or Set Theme 
+            </summary>
+        </member>
+        <member name="P:FPS.VirtualKeyboard.VirtualKeyboard.KeyTemplate">
+            <summary>
+            Get or Set Template for Key
+            </summary>
+        </member>
+        <member name="P:FPS.VirtualKeyboard.VirtualKeyboard.CanUnlockSpecialKey">
+            <summary>
+            Can recular key unlock special key like shift , alt ,control etc.. but it has no effect to CapsLock
+            </summary>
+        </member>
+        <member name="P:FPS.VirtualKeyboard.VirtualKeyboard.DefaultLayout">
+            <summary>
+            Get o Set Default layout
+            </summary>
+        </member>
+        <member name="P:FPS.VirtualKeyboard.VirtualKeyboard.TemplateLayout">
+            <summary>
+            Get o Set Templat layout
+            </summary>
+        </member>
+        <member name="P:FPS.VirtualKeyboard.VirtualKeyboard.Mode">
+            <summary>
+            Layout mode 
+            </summary>
+        </member>
+        <member name="P:FPS.VirtualKeyboard.VirtualKeyboard.IsStandAlone">
+            <summary>
+            Get or set is Stand
+            </summary>
+        </member>
+        <member name="P:FPS.VirtualKeyboard.VirtualKeyboard.CurrentCulture">
+            <summary>
+            Get or set culture info that change input language
+            </summary>
+        </member>
+        <member name="P:FPS.VirtualKeyboard.VirtualKeyboard.Font">
+            <summary>
+            Overrides Font property
+            </summary>
+        </member>
+        <member name="P:FPS.VirtualKeyboard.VirtualKeyboard.ShiftLocked">
+            <summary>
+            Get Shift state
+            </summary>
+        </member>
+        <member name="P:FPS.VirtualKeyboard.VirtualKeyboard.ControlLocked">
+            <summary>
+            Get Control state
+            </summary>
+        </member>
+        <member name="P:FPS.VirtualKeyboard.VirtualKeyboard.AltLocked">
+            <summary>
+            Get Alt state
+            </summary>
+        </member>
+        <member name="P:FPS.VirtualKeyboard.VirtualKeyboard.AltGrLocked">
+            <summary>
+            Get AltGr state
+            </summary>
+        </member>
+        <member name="P:FPS.VirtualKeyboard.VirtualKeyboard.NumLocked">
+            <summary>
+            Get Num state
+            </summary>
+        </member>
+        <member name="P:FPS.VirtualKeyboard.VirtualKeyboard.ScrollLocked">
+            <summary>
+            Get Scroll state
+            </summary>
+        </member>
+        <member name="P:FPS.VirtualKeyboard.VirtualKeyboard.CapsLocked">
+            <summary>
+            Get Caps state
+            </summary>
+        </member>
+        <member name="E:FPS.VirtualKeyboard.VirtualKeyboard.KeyPressed">
+            <summary>
+            Fired when key was pressed
+            </summary>
+        </member>
+        <member name="T:FPS.VirtualKeyboard.FpsKeyEventArgs">
+            <summary>
+            Event Args
+            </summary>
+        </member>
+        <member name="M:FPS.VirtualKeyboard.FpsKeyEventArgs.#ctor(FPS.VirtualKeyboard.Key)">
+            <summary>
+            Create instance with special parameter 
+            </summary>
+            <param name="key">FPS.VirtualKeyboard.Key</param>
+        </member>
+        <member name="P:FPS.VirtualKeyboard.FpsKeyEventArgs.Key">
+            <summary>
+            Get the special FPS.Key
+            </summary>
+        </member>
+        <member name="T:FPS.VirtualKeyboard.Theme">
+            <summary>
+            Theme 
+            </summary>
+        </member>
+        <member name="F:FPS.VirtualKeyboard.Theme.OfficeBlue">
+            <summary>
+            Offise 2007 Blue
+            </summary>
+        </member>
+        <member name="F:FPS.VirtualKeyboard.Theme.OfficeBlack">
+            <summary>
+            Offise 2007 Black
+            </summary>
+        </member>
+        <member name="F:FPS.VirtualKeyboard.Theme.OfficeSilver">
+            <summary>
+            Offise 2007 Silver
+            </summary>
+        </member>
+        <member name="F:FPS.VirtualKeyboard.Theme.OfficeOrange">
+            <summary>
+            Offise 2007 Orange
+            </summary>
+        </member>
+        <member name="F:FPS.VirtualKeyboard.Theme.OfficeGreen">
+            <summary>
+            Offise 2007 Green
+            </summary>
+        </member>
+        <member name="F:FPS.VirtualKeyboard.Theme.Vista">
+            <summary>
+            Vista color scheme
+            </summary>
+        </member>
+        <member name="F:FPS.VirtualKeyboard.Theme.None">
+            <summary>
+            Delete theme 
+            </summary>
+        </member>
+        <member name="T:FPS.VirtualKeyboard.KeyboardMode">
+            <summary>
+            Enum
+            </summary>
+        </member>
+        <member name="F:FPS.VirtualKeyboard.KeyboardMode.Default">
+            <summary>
+            Mode for default layout.
+            </summary>
+        </member>
+        <member name="F:FPS.VirtualKeyboard.KeyboardMode.Extended">
+            <summary>
+            Mode for Extended layout.
+            </summary>
+        </member>
+        <member name="F:FPS.VirtualKeyboard.KeyboardMode.Custom">
+            <summary>
+            Mode for custom layout. Need generate and save  layout to Layouts folder before use this mode. Or use LayoutTemplate Property to define keyboard common view. 
+            </summary>
+        </member>
+        <member name="T:FPS.VirtualKeyboard.NativeMethods">
+            <summary>
+            Implement API functionf for keyboard
+            </summary>
+        </member>
+        <member name="M:FPS.VirtualKeyboard.NativeMethods.GetActiveKeyboardLayout">
+            <summary>
+            This method return active keyboard layout
+            </summary>
+            <returns>long</returns>
+        </member>
+        <member name="M:FPS.VirtualKeyboard.NativeMethods.ChangeLanguage(System.Int64,System.String)">
+            <summary>
+            This method change current keyboard layout
+            </summary>
+            <param name="language">long</param>
+        </member>
+        <member name="M:FPS.VirtualKeyboard.NativeMethods.GetAvailableKeyboardLayouts">
+            <summary>
+            GetAvailableKeyboardLayouts
+            </summary>
+            <returns>List of KeyboardLayouts</returns>
+        </member>
+        <member name="M:FPS.VirtualKeyboard.NativeMethods.SendKey(System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Byte)">
+            <summary>
+            This method send specified key to active vindow
+            </summary>
+            <param name="holdShift">bool</param>
+            <param name="holdControl">bool</param>
+            <param name="holdAlt">bool</param>
+            <param name="holdAltGr">bool</param>
+            <param name="keyCode">byte</param>
+        </member>
+        <member name="M:FPS.VirtualKeyboard.NativeMethods.SendKey(System.Byte)">
+            <summary>
+            This method send specified key to active window
+            </summary>
+            <param name="keyCode">byte</param>
+        </member>
+        <member name="M:FPS.VirtualKeyboard.NativeMethods.SendChar(System.Char)">
+            <summary>
+            his method send specified char to active control.
+            </summary>
+            <param name="symbol">char</param>
+        </member>
+        <member name="M:FPS.VirtualKeyboard.NativeMethods.SendString(System.String)">
+            <summary>
+            This method send specified string to active control.
+            </summary>
+            <param name="content">string</param>
+        </member>
+        <member name="M:FPS.VirtualKeyboard.NativeMethods.NextLanguage">
+            <summary>
+            NextAltLanguage
+            </summary>
+        </member>
+        <member name="M:FPS.VirtualKeyboard.NativeMethods.VirtualKeyCodeToCharacters(System.Byte)">
+            <summary>
+            This method translate virtual key code to shifted and normal character. 
+            </summary>
+            <param name="keyCode">byte</param>
+            <returns>APIKEY</returns>
+        </member>
+        <member name="M:FPS.VirtualKeyboard.NativeMethods.SetIsStandAlone(System.Boolean,System.IntPtr)">
+            <summary>
+            SetIsStandAlone
+            </summary>
+            <param name="value">IsStandAlone</param>
+        </member>
+        <member name="M:FPS.VirtualKeyboard.NativeMethods.Initialize(System.IntPtr)">
+            <summary>
+            Initialize window for win proc
+            </summary>
+            <param name="handle">IntPtr</param>
+        </member>
+        <member name="M:FPS.VirtualKeyboard.NativeMethods.IsLocked(System.Byte)">
+            <summary>
+            Check if key is locket . Only for special keys loke caps shist etc ...
+            </summary>
+            <param name="keyCode">byte</param>
+            <returns>bool</returns>
+        </member>
+        <member name="M:FPS.VirtualKeyboard.NativeMethods.UnLock">
+            <summary>
+            Unlock all special keys
+            </summary>
+        </member>
+        <member name="M:FPS.VirtualKeyboard.NativeMethods.Attach(System.IntPtr)">
+            <summary>
+            attach foreground window
+            </summary>
+            <param name="hwnd"></param>
+        </member>
+        <member name="M:FPS.VirtualKeyboard.NativeMethods.GetLanguageTag">
+            <summary>
+            return two letters ISO language name
+            </summary>
+            <returns>string</returns>
+        </member>
+        <member name="M:FPS.VirtualKeyboard.NativeMethods.MapVirtualKey(System.UInt32)">
+            <summary>
+            The MapsVirtualKey function translates (maps) a virtual-key code into a scan
+            code or character value, or translates a scan code into a virtual-key code 
+            </summary>
+            <param name="p1">Specifies the virtual-key code or scan code for a key.
+            How this value is interpreted depends on the value of the uMapType parameter</param>        
+        </member>
+        <member name="M:FPS.VirtualKeyboard.NativeMethods.WndProc(System.IntPtr,System.Int32,System.IntPtr,System.IntPtr,System.Boolean@)">
+            <summary>
+            hook windows messages
+            </summary>
+            <param name="hwnd">IntPtr</param>
+            <param name="msg">int</param>
+            <param name="wParam">IntPtr</param>
+            <param name="lParam">IntPtr</param>
+            <param name="handled">ref bool</param>
+            <returns>IntPtr</returns>
+        </member>
+        <member name="M:FPS.VirtualKeyboard.NativeMethods.KeyboardHookProc(System.Int32,System.Int32,System.IntPtr)">
+            <summary>
+            hook keyboard messages
+            </summary>
+            <param name="nCode">int</param>
+            <param name="wParam">Int32</param>
+            <param name="lParam">IntPtr</param>
+            <returns></returns>
+        </member>
+        <member name="M:FPS.VirtualKeyboard.NativeMethods.Start">
+            <summary>
+            start hooking keyboard
+            </summary>
+        </member>
+        <member name="M:FPS.VirtualKeyboard.NativeMethods.PreFilterMessage(System.Windows.Forms.Message@)">
+            <summary>
+            PreFilterMessage
+            </summary>
+            <param name="m">Message</param>
+            <returns>bool</returns>
+        </member>
+        <member name="E:FPS.VirtualKeyboard.NativeMethods.LayoutChanged">
+            <summary>
+            fires when layout was changed
+            </summary>
+        </member>
+        <member name="F:FPS.VirtualKeyboard.NativeMethods.KeyboardHookStruct.vkCode">
+            <summary>
+            Specifies a virtual-key code. The code must be a value in the range 1 to 254. 
+            </summary>
+        </member>
+        <member name="F:FPS.VirtualKeyboard.NativeMethods.KeyboardHookStruct.scanCode">
+            <summary>
+            Specifies a hardware scan code for the key. 
+            </summary>
+        </member>
+        <member name="F:FPS.VirtualKeyboard.NativeMethods.KeyboardHookStruct.flags">
+            <summary>
+            Specifies the extended-key flag, event-injected flag, context code, and transition-state flag.
+            </summary>
+        </member>
+        <member name="F:FPS.VirtualKeyboard.NativeMethods.KeyboardHookStruct.time">
+            <summary>
+            Specifies the time stamp for this message.
+            </summary>
+        </member>
+        <member name="F:FPS.VirtualKeyboard.NativeMethods.KeyboardHookStruct.dwExtraInfo">
+            <summary>
+            Specifies extra information associated with the message. 
+            </summary>
+        </member>
+        <member name="M:FPS.VirtualKeyboard.NativeMethods.KeyboardHookStruct.ToString">
+            <summary>
+            Override ToString
+            </summary>
+            <returns>string</returns>
+        </member>
+    </members>
+</doc>

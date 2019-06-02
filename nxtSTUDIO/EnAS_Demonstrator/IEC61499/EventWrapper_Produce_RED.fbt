@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE FBType SYSTEM "../LibraryElement.dtd">
+<FBType GUID="B5A6D85B007A7C09" Name="EventWrapper_Produce_RED" Comment="Composite Function Block Type" Namespace="Main">
+  <Attribute Name="Configuration.FB.IDCounter" Value="4" />
+  <Identification Standard="61499-2" />
+  <VersionInfo Organization="nxtControl GmbH" Version="0.0" Author="erik" Date="4/9/2019" Remarks="template" />
+  <InterfaceList>
+    <EventInputs>
+      <Event Name="INIT" Comment="Initialization Request">
+        <With Var="IN_BOOL1" />
+        <With Var="IN_BOOL2" />
+      </Event>
+      <Event Name="REQ1" Comment="Normal Execution Request">
+        <With Var="IN_BOOL1" />
+        <With Var="IN_BOOL2" />
+      </Event>
+      <Event Name="REQ2">
+        <With Var="IN_BOOL1" />
+        <With Var="IN_BOOL2" />
+      </Event>
+      <Event Name="REQ3">
+        <With Var="IN_BOOL1" />
+        <With Var="IN_BOOL2" />
+      </Event>
+      <Event Name="REQ4">
+        <With Var="IN_BOOL1" />
+        <With Var="IN_BOOL2" />
+      </Event>
+      <Event Name="REQ5">
+        <With Var="IN_BOOL1" />
+        <With Var="IN_BOOL2" />
+      </Event>
+      <Event Name="REQ6">
+        <With Var="IN_BOOL1" />
+        <With Var="IN_BOOL2" />
+      </Event>
+      <Event Name="REQ7">
+        <With Var="IN_BOOL1" />
+        <With Var="IN_BOOL2" />
+      </Event>
+      <Event Name="REQ8">
+        <With Var="IN_BOOL1" />
+        <With Var="IN_BOOL2" />
+      </Event>
+      <Event Name="REQ9">
+        <With Var="IN_BOOL1" />
+        <With Var="IN_BOOL2" />
+      </Event>
+      <Event Name="REQ10">
+        <With Var="IN_BOOL1" />
+        <With Var="IN_BOOL2" />
+      </Event>
+      <Event Name="REQ11">
+        <With Var="IN_BOOL1" />
+        <With Var="IN_BOOL2" />
+      </Event>
+    </EventInputs>
+    <EventOutputs>
+      <Event Name="INITO" Comment="Initialization Confirm">
+        <With Var="OUT_BOOL1" />
+        <With Var="OUT_BOOL2" />
+      </Event>
+      <Event Name="CNF1" Comment="Execution Confirmation">
+        <With Var="OUT_BOOL1" />
+        <With Var="OUT_BOOL2" />
+      </Event>
+      <Event Name="CNF2">
+        <With Var="OUT_BOOL1" />
+        <With Var="OUT_BOOL2" />
+      </Event>
+      <Event Name="CNF3">
+        <With Var="OUT_BOOL1" />
+        <With Var="OUT_BOOL2" />
+      </Event>
+      <Event Name="CNF4">
+        <With Var="OUT_BOOL1" />
+        <With Var="OUT_BOOL2" />
+      </Event>
+      <Event Name="CNF5">
+        <With Var="OUT_BOOL1" />
+        <With Var="OUT_BOOL2" />
+      </Event>
+      <Event Name="CNF6">
+        <With Var="OUT_BOOL1" />
+        <With Var="OUT_BOOL2" />
+      </Event>
+      <Event Name="CNF7">
+        <With Var="OUT_BOOL1" />
+        <With Var="OUT_BOOL2" />
+      </Event>
+      <Event Name="CNF8">
+        <With Var="OUT_BOOL1" />
+        <With Var="OUT_BOOL2" />
+      </Event>
+      <Event Name="CNF9">
+        <With Var="OUT_BOOL1" />
+        <With Var="OUT_BOOL2" />
+      </Event>
+      <Event Name="CNF10">
+        <With Var="OUT_BOOL1" />
+        <With Var="OUT_BOOL2" />
+      </Event>
+      <Event Name="CNF11">
+        <With Var="OUT_BOOL1" />
+        <With Var="OUT_BOOL2" />
+      </Event>
+    </EventOutputs>
+    <InputVars>
+      <VarDeclaration Name="IN_BOOL1" Type="BOOL" />
+      <VarDeclaration Name="IN_BOOL2" Type="BOOL" />
+    </InputVars>
+    <OutputVars>
+      <VarDeclaration Name="OUT_BOOL1" Type="BOOL" />
+      <VarDeclaration Name="OUT_BOOL2" Type="BOOL" />
+    </OutputVars>
+  </InterfaceList>
+  <FBNetwork>
+    <FB ID="1" Name="FB1" Type="TCPIO" x="3180" y="1620" Namespace="Runtime.IoCommon">
+      <Parameter Name="QI" Value="TRUE" />
+    </FB>
+    <FB ID="4" Name="FB2" Type="Wrapper_produce" x="1540" y="1260" Namespace="Main">
+      <Parameter Name="DATA_NAME1" Value="'J1_WORKING'" />
+      <Parameter Name="DATA_NAME2" Value="'J1_CONV_WORKING'" />
+      <Parameter Name="NAME" Value="'PRODUCE_RED'" />
+      <Parameter Name="EVENT1" Value="'START'" />
+      <Parameter Name="EVENT2" Value="'AT_W2'" />
+      <Parameter Name="EVENT3" Value="'ASSEMBLY_DONE'" />
+      <Parameter Name="EVENT4" Value="'AT_W3'" />
+      <Parameter Name="EVENT5" Value="'TEST_OK'" />
+      <Parameter Name="EVENT6" Value="'DELIVERED'" />
+      <Parameter Name="EVENT7" Value="'TEST_FAIL'" />
+      <Parameter Name="EVENT8" Value="'AT_W4'" />
+      <Parameter Name="EVENT9" Value="'WP_REMOVED'" />
+      <Parameter Name="EVENT10" Value="''" />
+      <Parameter Name="EVENT11" Value="'RESET'" />
+      <Parameter Name="initX" Value="'initi'" />
+    </FB>
+    <Input Name="INIT" x="40" y="272" Type="Event" />
+    <Input Name="REQ1" x="40" y="331.8542" Type="Event" />
+    <Input Name="REQ2" x="40" y="392" Type="Event" />
+    <Input Name="REQ3" x="40" y="452" Type="Event" />
+    <Input Name="REQ4" x="40" y="512" Type="Event" />
+    <Input Name="REQ5" x="40" y="572" Type="Event" />
+    <Input Name="REQ6" x="40" y="632" Type="Event" />
+    <Input Name="REQ7" x="40" y="692" Type="Event" />
+    <Input Name="REQ8" x="40" y="752" Type="Event" />
+    <Input Name="REQ9" x="40" y="812" Type="Event" />
+    <Input Name="REQ10" x="40" y="872" Type="Event" />
+    <Input Name="REQ11" x="40" y="932" Type="Event" />
+    <Input Name="IN_BOOL1" x="40" y="992" Type="Data" />
+    <Input Name="IN_BOOL2" x="40" y="1052" Type="Data" />
+    <Output Name="INITO" x="4360" y="272" Type="Event" />
+    <Output Name="CNF1" x="4360" y="332" Type="Event" />
+    <Output Name="CNF2" x="4360" y="392" Type="Event" />
+    <Output Name="CNF3" x="4360" y="452" Type="Event" />
+    <Output Name="CNF4" x="4360" y="512" Type="Event" />
+    <Output Name="CNF5" x="4360" y="572" Type="Event" />
+    <Output Name="CNF6" x="4360" y="632" Type="Event" />
+    <Output Name="CNF7" x="4360" y="692" Type="Event" />
+    <Output Name="CNF8" x="4360" y="752" Type="Event" />
+    <Output Name="CNF9" x="4360" y="812" Type="Event" />
+    <Output Name="CNF10" x="4360" y="872" Type="Event" />
+    <Output Name="CNF11" x="4360" y="932" Type="Event" />
+    <Output Name="OUT_BOOL1" x="4280" y="992" Type="Data" />
+    <Output Name="OUT_BOOL2" x="4280" y="1052" Type="Data" />
+    <EventConnections>
+      <Connection Source="INIT" Destination="FB1.INIT" dx1="2631.417">
+        <AvoidsNodes>false</AvoidsNodes>
+      </Connection>
+      <Connection Source="FB1.IND" Destination="FB1.ACK" dx1="82.16675" dx2="60" dy="-260">
+        <AvoidsNodes>false</AvoidsNodes>
+      </Connection>
+      <Connection Source="REQ1" Destination="FB2.REQ1" dx1="1035.813">
+        <AvoidsNodes>false</AvoidsNodes>
+      </Connection>
+      <Connection Source="REQ2" Destination="FB2.REQ2" dx1="975.8125">
+        <AvoidsNodes>false</AvoidsNodes>
+      </Connection>
+      <Connection Source="REQ3" Destination="FB2.REQ3" dx1="915.8125">
+        <AvoidsNodes>false</AvoidsNodes>
+      </Connection>
+      <Connection Source="REQ4" Destination="FB2.REQ4" dx1="855.8125">
+        <AvoidsNodes>false</AvoidsNodes>
+      </Connection>
+      <Connection Source="REQ5" Destination="FB2.REQ5" dx1="795.8125">
+        <AvoidsNodes>false</AvoidsNodes>
+      </Connection>
+      <Connection Source="REQ6" Destination="FB2.REQ6" dx1="735.8125">
+        <AvoidsNodes>false</AvoidsNodes>
+      </Connection>
+      <Connection Source="REQ7" Destination="FB2.REQ7" dx1="655.8125">
+        <AvoidsNodes>false</AvoidsNodes>
+      </Connection>
+      <Connection Source="REQ8" Destination="FB2.REQ8" dx1="595.8125">
+        <AvoidsNodes>false</AvoidsNodes>
+      </Connection>
+      <Connection Source="REQ9" Destination="FB2.REQ9" dx1="515.8125">
+        <AvoidsNodes>false</AvoidsNodes>
+      </Connection>
+      <Connection Source="REQ10" Destination="FB2.REQ10" dx1="412.0834">
+        <AvoidsNodes>false</AvoidsNodes>
+      </Connection>
+      <Connection Source="REQ11" Destination="FB2.REQ11" dx1="332.0833">
+        <AvoidsNodes>false</AvoidsNodes>
+      </Connection>
+      <Connection Source="INIT" Destination="INITO" />
+      <Connection Source="REQ1" Destination="CNF1" dx1="45.8125" />
+      <Connection Source="REQ2" Destination="CNF2" />
+      <Connection Source="REQ3" Destination="CNF3" />
+      <Connection Source="REQ4" Destination="CNF4" />
+      <Connection Source="REQ5" Destination="CNF5" />
+      <Connection Source="REQ6" Destination="CNF6" />
+      <Connection Source="REQ7" Destination="CNF7" />
+      <Connection Source="REQ8" Destination="CNF8" />
+      <Connection Source="REQ9" Destination="CNF9" />
+      <Connection Source="REQ10" Destination="CNF10" />
+      <Connection Source="REQ11" Destination="CNF11" />
+      <Connection Source="FB1.INITO" Destination="FB2.INIT" dx1="52.16675" dx2="60" dy="-470">
+        <AvoidsNodes>false</AvoidsNodes>
+      </Connection>
+      <Connection Source="FB2.CNF" Destination="FB1.REQ" dx1="41.08325" />
+    </EventConnections>
+    <DataConnections>
+      <Connection Source="IN_BOOL1" Destination="FB2.IN_BOOL1" dx1="81.75">
+        <AvoidsNodes>false</AvoidsNodes>
+      </Connection>
+      <Connection Source="IN_BOOL2" Destination="FB2.IN_BOOL2" dx1="40" />
+      <Connection Source="IN_BOOL1" Destination="OUT_BOOL1" />
+      <Connection Source="IN_BOOL2" Destination="OUT_BOOL2" />
+      <Connection Source="FB2.STR1" Destination="FB1.DATAOUT" dx1="41.08325" />
+    </DataConnections>
+  </FBNetwork>
+</FBType>

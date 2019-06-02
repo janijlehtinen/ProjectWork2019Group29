@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE System SYSTEM "../LibraryElement.dtd">
+<System Name="System">
+  <Device ID="C20062D780C1383F" Name="IceBlock_J1" Type="IceBlock" x="2488.182" y="595.46" Namespace="nxtControl.IceBlock">
+    <Resource ID="22EE4A30CE5874F7" Name="RES0" Type="EMB_RES_CNT" x="3440" y="780" Namespace="nxtControl.IceBlock">
+      <FBNetwork>
+        <FB ID="77F893DC3CDA815E" Name="initApplicationChain" Type="EVENTCHAINHEAD" x="940" y="160" Namespace="Runtime.Standard" Loaded="true">
+          <Parameter Name="NAME" Value="'APP_INIT'" />
+          <Parameter Name="INVERT" Value="FALSE" />
+        </FB>
+        <FB ID="BBD2783A691222CC" Name="initHardwareChain" Type="EVENTCHAINHEAD" x="2140" y="200" Namespace="Runtime.Standard" Loaded="true">
+          <Parameter Name="NAME" Value="'HW_INIT'" />
+          <Parameter Name="INVERT" Value="FALSE" />
+        </FB>
+        <FB ID="9B39C6F7EC519947" Name="JACK1" Type="JackStation" x="3360" y="1420" Namespace="Main" />
+        <FB ID="2BF6DBD914654F12" Name="ICEBLOCKIO" Type="ICEBLOCKIO" x="400" y="400" Namespace="nxtControl.IceBlock">
+          <Parameter Name="BUS_ID" Value="'IBGPIO'" />
+          <Parameter Name="busCycleTime" Value="T#50ms" />
+          <Parameter Name="autoStart" Value="TRUE" />
+          <Parameter Name="DI0" Value="'JACK1.FB1.JACK_TOP'" />
+          <Parameter Name="DI1" Value="'JACK1.FB1.JACK_BOTTOM'" />
+          <Parameter Name="DI2" Value="'JACK1.FB1.EXTENDED'" />
+          <Parameter Name="DI3" Value="'JACK1.FB1.RETRACTED'" />
+          <Parameter Name="DO0" Value="'JACK1.FB1.VACUUM'" />
+          <Parameter Name="DO1" Value="'JACK1.FB1.JACK_EXTEND'" />
+          <Parameter Name="DO2" Value="'JACK1.FB1.JACK_DOWN'" />
+          <Parameter Name="DO3" Value="'JACK1.FB2.SLEDGE_SHIFT'" />
+        </FB>
+        <FB ID="371D9E67E214548B" Name="IceBlock_6_1_RES0_RECV" Type="COMMCHANNELUDPRECV" x="1200" y="400" Namespace="Runtime.System" Loaded="true">
+          <Parameter Name="QI" Value="TRUE" />
+          <Parameter Name="OWNADDR" Value="'0.0.0.0:61301'" />
+        </FB>
+        <FB ID="E2CD3A4CFB7C8BFD" Name="IceBlock5_RES0" Type="COMMCHANNEL" x="1200" y="1040" Namespace="Runtime.System" Loaded="true">
+          <Attribute Name="Runtime.Communication.Peer" Value="IceBlock5.RES0" />
+          <Parameter Name="QI" Value="TRUE" />
+          <Parameter Name="PROTO" Value="2" />
+          <Parameter Name="PEERADDR" Value="192.168.0.103:61307" />
+          <Parameter Name="ID" Value="15684121949671534389" />
+          <Parameter Name="ALIVE" Value="3000" />
+        </FB>
+        <FB ID="B5FE9FE0863C7455" Name="FB5" Type="EventWrapper_JACK1" x="2420" y="1360" Namespace="Main">
+          <Parameter Name="IN_BOOL1" Value="FALSE" />
+        </FB>
+        <FB ID="C21F3A9A297D01BD" Name="FB17" Type="EventOutWrapper_JACK1" x="4440" y="1360" Namespace="Main" />
+        <FB ID="4D3AFAC85B3E20C4" Name="FB11" Type="E_DELAY" x="1720" y="1100" Namespace="IEC61499.Standard" Loaded="true">
+          <Parameter Name="DT" Value="T#1s" />
+        </FB>
+        <FB Name="LER_15684121949671534389_11472184640987424840_0" Type="LINKEVENTRECEIVER_0_0_0_5" Namespace="Runtime.System">
+          <Parameter Name="QI" Value="1" />
+          <Parameter Name="CHANID" Value="15684121949671534389" />
+          <Parameter Name="EVENTWIREIDS" Value="[10187428418710138159,11681129690689609765,15091019883172259469,13952884059676538876,7195610199924564043]" />
+        </FB>
+        <FB Name="LDR_15684121949671534389_11472184640987424840_1" Type="LINKDATARECEIVER_0_1_0_0" Namespace="Runtime.System">
+          <Parameter Name="QI" Value="1" />
+          <Parameter Name="CHANID" Value="15684121949671534389" />
+          <Parameter Name="DATAWIREIDS" Value="[11202150103866309491]" />
+        </FB>
+        <FB Name="LP_15684121949671534389_4289797556196545631_0" Type="LINKPUBLISHER_0_0_1_0" Namespace="Runtime.System">
+          <Parameter Name="QI" Value="1" />
+          <Parameter Name="CHANID" Value="15684121949671534389" />
+          <Parameter Name="EVENTWIREID" Value="15414079114538667449" />
+        </FB>
+        <FB Name="LP_15684121949671534389_4289797556196545631_1" Type="LINKPUBLISHER_0_0_1_0" Namespace="Runtime.System">
+          <Parameter Name="QI" Value="1" />
+          <Parameter Name="CHANID" Value="15684121949671534389" />
+          <Parameter Name="EVENTWIREID" Value="10320378972118890963" />
+        </FB>
+        <FB Name="LP_15684121949671534389_4289797556196545631_2" Type="LINKPUBLISHER_0_0_1_0" Namespace="Runtime.System">
+          <Parameter Name="QI" Value="1" />
+          <Parameter Name="CHANID" Value="15684121949671534389" />
+          <Parameter Name="EVENTWIREID" Value="8270704007835911870" />
+        </FB>
+        <EventConnections>
+          <Connection Source="IceBlock_6_1_RES0_RECV.INITO" Destination="IceBlock5_RES0.INIT" dx1="1322.396" dx2="1330" dy="350" />
+          <Connection Source="initApplicationChain.INITO" Destination="initApplicationChain.TRIGGER" dx1="42.70837" dx2="70" dy="-108" />
+          <Connection Source="initHardwareChain.INITO" Destination="initHardwareChain.TRIGGER" dx1="42.7085" dx2="70" dy="-108" />
+          <Connection Source="initApplicationChain.FINISHED" Destination="initHardwareChain.INIT" dx1="76.5" />
+          <Connection Source="START.COLD" Destination="initApplicationChain.INIT" dx1="140" />
+          <Connection Source="START.WARM" Destination="initApplicationChain.INIT" />
+          <Connection Source="FB5.CNF4" Destination="JACK1.REMOVE_WP" />
+          <Connection Source="FB5.CNF5" Destination="JACK1.CLEAR" />
+          <Connection Source="FB5.CNF6" Destination="JACK1.RESET" />
+          <Connection Source="FB5.CNF1" Destination="JACK1.INIT" />
+          <Connection Source="FB5.CNF2" Destination="JACK1.PLACE_RED" />
+          <Connection Source="FB5.CNF3" Destination="JACK1.PLACE_GREEN" />
+          <Connection Source="JACK1.WP_REMOVED" Destination="FB17.REQ5" />
+          <Connection Source="JACK1.MAN_CHECK" Destination="FB17.REQ4" />
+          <Connection Source="FB17.INITO" Destination="JACK1.INIT" dx1="40" dx2="50" dy="-110" />
+          <Connection Source="JACK1.DONE_RED" Destination="FB17.REQ2" />
+          <Connection Source="JACK1.DONE_GREEN" Destination="FB17.REQ3" />
+          <Connection Source="JACK1.INITO" Destination="FB17.REQ1" />
+          <Connection Source="FB5.INITO" Destination="FB17.INIT">
+            <Points>
+              <Points>
+                <X>756.098938</X>
+                <Y>350</Y>
+              </Points>
+              <Points>
+                <X>767.5</X>
+                <Y>350</Y>
+              </Points>
+              <Points>
+                <X>767.5</X>
+                <Y>337.5</Y>
+              </Points>
+              <Points>
+                <X>1042.5</X>
+                <Y>337.5</Y>
+              </Points>
+              <Points>
+                <X>1042.5</X>
+                <Y>350</Y>
+              </Points>
+              <Points>
+                <X>1105</X>
+                <Y>350</Y>
+              </Points>
+            </Points>
+          </Connection>
+          <Connection Source="initHardwareChain.FINISHED" Destination="FB11.START" dx1="42.7085" dx2="50" dy="410" />
+          <Connection Source="FB11.EO" Destination="FB5.INIT" dx1="48.5" />
+          <Connection Source="START.WARM" Destination="IceBlock_6_1_RES0_RECV.INIT" dx1="3480" dx2="4590" dy="-170" />
+          <Connection Source="START.COLD" Destination="IceBlock_6_1_RES0_RECV.INIT" dx1="3500" dx2="4590" dy="-110" />
+          <Connection Source="START.COLD" Destination="LER_15684121949671534389_11472184640987424840_0.INIT" />
+          <Connection Source="START.WARM" Destination="LER_15684121949671534389_11472184640987424840_0.INIT" />
+          <Connection Source="LER_15684121949671534389_11472184640987424840_0.IND_1" Destination="FB5.REQ5" Comment="10187428418710138159" />
+          <Connection Source="LER_15684121949671534389_11472184640987424840_0.IND_2" Destination="FB5.REQ6" Comment="11681129690689609765" />
+          <Connection Source="LER_15684121949671534389_11472184640987424840_0.IND_3" Destination="FB5.REQ4" Comment="15091019883172259469" />
+          <Connection Source="LER_15684121949671534389_11472184640987424840_0.IND_4" Destination="FB5.REQ4" Comment="13952884059676538876" />
+          <Connection Source="LER_15684121949671534389_11472184640987424840_0.IND_5" Destination="FB5.REQ7" Comment="7195610199924564043" />
+          <Connection Source="LER_15684121949671534389_11472184640987424840_0.INITO" Destination="LDR_15684121949671534389_11472184640987424840_1.INIT" />
+          <Connection Source="FB17.CNF4" Destination="LP_15684121949671534389_4289797556196545631_0.REQ" Comment="15414079114538667449" />
+          <Connection Source="START.COLD" Destination="LP_15684121949671534389_4289797556196545631_0.INIT" />
+          <Connection Source="START.WARM" Destination="LP_15684121949671534389_4289797556196545631_0.INIT" />
+          <Connection Source="FB17.CNF5" Destination="LP_15684121949671534389_4289797556196545631_1.REQ" Comment="10320378972118890963" />
+          <Connection Source="LP_15684121949671534389_4289797556196545631_0.INITO" Destination="LP_15684121949671534389_4289797556196545631_1.INIT" />
+          <Connection Source="FB17.CNF5" Destination="LP_15684121949671534389_4289797556196545631_2.REQ" Comment="8270704007835911870" />
+          <Connection Source="LP_15684121949671534389_4289797556196545631_1.INITO" Destination="LP_15684121949671534389_4289797556196545631_2.INIT" />
+        </EventConnections>
+        <DataConnections>
+          <Connection Source="FB5.OUT_BOOL1" Destination="JACK1.full" dx1="190" />
+          <Connection Source="LDR_15684121949671534389_11472184640987424840_1.RD_1" Destination="FB5.IN_BOOL2" Comment="11202150103866309491" />
+        </DataConnections>
+      </FBNetwork>
+    </Resource>
+    <FBNetwork />
+  </Device>
+</System>

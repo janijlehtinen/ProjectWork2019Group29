@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE FBType SYSTEM "../LibraryElement.dtd">
+<FBType Name="VALFORMAT_21154F699884FA2C9" Comment="MBus device interface function block type" Namespace="Main">
+  <Attribute Name="Runtime.FBType.ImplementingType" Value="Runtime.Standard#DYNGEN_VALFORMAT" />
+  <Attribute Name="Configuration.GenericFBType.InterfaceParams" Value="Runtime.Standard#I:=15;VALUE${I}:INT,BYTE,INT,BYTE,INT,BYTE,STRING,BYTE,BOOL,BOOL,BOOL,BOOL,BOOL,BOOL,BOOL" />
+  <Attribute Name="Configuration.FB.IDCounter" Value="0" />
+  <Identification Standard="61499-2" />
+  <VersionInfo Organization="nxtControl GmbH" Version="1.0" Author="oberwal" Date="09.09.2008" Remarks="Initial Version" />
+  <CompilerInfo>
+    <Compiler Language="Cpp" />
+  </CompilerInfo>
+  <InterfaceList>
+    <EventInputs>
+      <Event Name="REQ" Comment="Request a formatting operation">
+        <With Var="FORMAT" />
+        <With Var="VALUE1" />
+        <With Var="VALUE2" />
+        <With Var="VALUE3" />
+        <With Var="VALUE4" />
+        <With Var="VALUE5" />
+        <With Var="VALUE6" />
+        <With Var="VALUE7" />
+        <With Var="VALUE8" />
+        <With Var="VALUE9" />
+        <With Var="VALUE10" />
+        <With Var="VALUE11" />
+        <With Var="VALUE12" />
+        <With Var="VALUE13" />
+        <With Var="VALUE14" />
+        <With Var="VALUE15" />
+      </Event>
+    </EventInputs>
+    <EventOutputs>
+      <Event Name="CNF" Comment="Confirms a formattiong operation">
+        <With Var="RESULT" />
+        <With Var="STATUS" />
+      </Event>
+    </EventOutputs>
+    <InputVars>
+      <VarDeclaration Name="FORMAT" Type="STRING" Comment="Defines a standard C printf like format" />
+      <VarDeclaration Name="VALUE1" Type="INT" Comment="A list of values to be converted into a string as defined in parameter FORMAT" />
+      <VarDeclaration Name="VALUE2" Type="BYTE" Comment="A list of values to be converted into a string as defined in parameter FORMAT" />
+      <VarDeclaration Name="VALUE3" Type="INT" Comment="A list of values to be converted into a string as defined in parameter FORMAT" />
+      <VarDeclaration Name="VALUE4" Type="BYTE" Comment="A list of values to be converted into a string as defined in parameter FORMAT" />
+      <VarDeclaration Name="VALUE5" Type="INT" Comment="A list of values to be converted into a string as defined in parameter FORMAT" />
+      <VarDeclaration Name="VALUE6" Type="BYTE" Comment="A list of values to be converted into a string as defined in parameter FORMAT" />
+      <VarDeclaration Name="VALUE7" Type="STRING" Comment="A list of values to be converted into a string as defined in parameter FORMAT" />
+      <VarDeclaration Name="VALUE8" Type="BYTE" Comment="A list of values to be converted into a string as defined in parameter FORMAT" />
+      <VarDeclaration Name="VALUE9" Type="BOOL" Comment="A list of values to be converted into a string as defined in parameter FORMAT" />
+      <VarDeclaration Name="VALUE10" Type="BOOL" Comment="A list of values to be converted into a string as defined in parameter FORMAT" />
+      <VarDeclaration Name="VALUE11" Type="BOOL" Comment="A list of values to be converted into a string as defined in parameter FORMAT" />
+      <VarDeclaration Name="VALUE12" Type="BOOL" Comment="A list of values to be converted into a string as defined in parameter FORMAT" />
+      <VarDeclaration Name="VALUE13" Type="BOOL" Comment="A list of values to be converted into a string as defined in parameter FORMAT" />
+      <VarDeclaration Name="VALUE14" Type="BOOL" Comment="A list of values to be converted into a string as defined in parameter FORMAT" />
+      <VarDeclaration Name="VALUE15" Type="BOOL" Comment="A list of values to be converted into a string as defined in parameter FORMAT" />
+    </InputVars>
+    <OutputVars>
+      <VarDeclaration Name="RESULT" Type="STRING" Comment="The formatted result string" />
+      <VarDeclaration Name="STATUS" Type="STRING" Comment="Error information" />
+    </OutputVars>
+  </InterfaceList>
+  <BasicFB>
+    <ECC>
+      <ECState Name="START" />
+    </ECC>
+  </BasicFB>
+</FBType>

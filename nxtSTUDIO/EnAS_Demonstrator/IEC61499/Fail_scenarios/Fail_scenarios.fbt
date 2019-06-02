@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE FBType SYSTEM "../LibraryElement.dtd">
+<FBType GUID="89D9D54759351721" Name="Fail_scenarios" Comment="Composite Function Block Type" Namespace="Main">
+  <Attribute Name="Configuration.FB.IDCounter" Value="1" />
+  <Identification Standard="61499-2" />
+  <VersionInfo Organization="nxtControl GmbH" Version="0.0" Author="erik" Date="5/14/2019" Remarks="template" />
+  <InterfaceList>
+    <EventInputs>
+      <Event Name="INIT" Comment="Initialization Request">
+        <With Var="QI" />
+        <With Var="J1_IN" />
+        <With Var="CONV1_IN" />
+      </Event>
+      <Event Name="REQ" Comment="Normal Execution Request">
+        <With Var="QI" />
+        <With Var="J1_IN" />
+        <With Var="CONV1_IN" />
+      </Event>
+    </EventInputs>
+    <EventOutputs>
+      <Event Name="INITO" Comment="Initialization Confirm">
+        <With Var="J1_OUT" />
+        <With Var="CONV1_OUT" />
+      </Event>
+      <Event Name="CNF" Comment="Execution Confirmation">
+        <With Var="J1_OUT" />
+        <With Var="CONV1_OUT" />
+      </Event>
+    </EventOutputs>
+    <InputVars>
+      <VarDeclaration Name="QI" Type="BOOL" Comment="Input event qualifier" />
+      <VarDeclaration Name="J1_IN" Type="BOOL" />
+      <VarDeclaration Name="CONV1_IN" Type="BOOL" />
+    </InputVars>
+    <OutputVars>
+      <VarDeclaration Name="J1_OUT" Type="BOOL" />
+      <VarDeclaration Name="CONV1_OUT" Type="BOOL" />
+    </OutputVars>
+  </InterfaceList>
+  <FBNetwork>
+    <FB ID="1" Name="IThis1" Type="Fail_scenarios_HMI" x="1040" y="260" Namespace="Main" />
+    <Input Name="INIT" x="12" y="12" Type="Event" />
+    <Input Name="REQ" x="12" y="72" Type="Event" />
+    <Input Name="QI" x="12" y="132" Type="Data" />
+    <Input Name="J1_IN" x="12" y="192" Type="Data" />
+    <Input Name="CONV1_IN" x="12" y="252" Type="Data" />
+    <Output Name="INITO" x="2118.229" y="12" Type="Event" />
+    <Output Name="CNF" x="2144.313" y="72" Type="Event" />
+    <Output Name="J1_OUT" x="2141.896" y="191.8542" Type="Data" />
+    <Output Name="CONV1_OUT" x="2181.708" y="252" Type="Data" />
+    <EventConnections>
+      <Connection Source="INIT" Destination="IThis1.INIT" dx1="249.4167" />
+      <Connection Source="REQ" Destination="IThis1.INID" dx1="237.5417" />
+      <Connection Source="IThis1.INITO" Destination="INITO" dx1="40" />
+      <Connection Source="IThis1.INIDO" Destination="CNF" dx1="76.18762" />
+    </EventConnections>
+    <DataConnections>
+      <Connection Source="QI" Destination="IThis1.QI" dx1="143.2084" />
+      <Connection Source="J1_IN" Destination="IThis1.J1_IN" dx1="76.97919" />
+      <Connection Source="CONV1_IN" Destination="IThis1.CONV1_IN" dx1="40" />
+      <Connection Source="IThis1.J1_OUT" Destination="J1_OUT" dx1="96.18762" />
+      <Connection Source="IThis1.CONV1_OUT" Destination="CONV1_OUT" dx1="116.1876" />
+    </DataConnections>
+  </FBNetwork>
+</FBType>

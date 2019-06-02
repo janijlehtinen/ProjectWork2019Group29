@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE FBType SYSTEM "../LibraryElement.dtd">
+<FBType Name="SYMLINKMULTIVARSRC_277E97BEC1451D2C" Comment="Multiple variables single value symbolic link source FB" Namespace="Main">
+  <Attribute Name="Runtime.FBType.ImplementingType" Value="Runtime.System#DYNGEN_SYMLINKMVAR" />
+  <Attribute Name="Configuration.GenericFBType.InterfaceParams" Value="Runtime.System#I:=2;VALUE${I}:BOOL,BOOL" />
+  <Attribute Name="Configuration.FB.IDCounter" Value="0" />
+  <Identification Standard="61499-2" />
+  <VersionInfo Organization="nxtControl GmbH " Version="1.0" Author="milos" Date="2008-10-02" Remarks="template" />
+  <CompilerInfo>
+    <Compiler Language="Cpp" />
+  </CompilerInfo>
+  <InterfaceList>
+    <EventInputs>
+      <Event Name="INIT" Comment="Initializes the symbolic link data source FB with N (1 &lt;= N &lt;= 16) variables">
+        <With Var="QI" />
+        <With Var="NAME1" />
+        <With Var="NAME2" />
+        <With Var="VALUE1" />
+        <With Var="VALUE2" />
+      </Event>
+      <Event Name="REQ" Comment="Data write request">
+        <With Var="NAME1" />
+        <With Var="NAME2" />
+        <With Var="VALUE1" />
+        <With Var="VALUE2" />
+      </Event>
+    </EventInputs>
+    <EventOutputs>
+      <Event Name="INITO" Comment="Initialization confirm">
+        <With Var="QO" />
+        <With Var="STATUS" />
+      </Event>
+      <Event Name="CNF" Comment="Confirmation of data write request">
+        <With Var="QO" />
+        <With Var="STATUS" />
+      </Event>
+    </EventOutputs>
+    <InputVars>
+      <VarDeclaration Name="QI" Type="BOOL" Comment="INIT event input qualifier" />
+      <VarDeclaration Name="NAME1" Type="STRING" InitialValue="'$${PATH}'" Comment="Names a symbolic link variable" />
+      <VarDeclaration Name="VALUE1" Type="BOOL" Comment="New value(i) for the named variable element" />
+      <VarDeclaration Name="NAME2" Type="STRING" InitialValue="'$${PATH}'" Comment="Names a symbolic link variable" />
+      <VarDeclaration Name="VALUE2" Type="BOOL" Comment="New value(i) for the named variable element" />
+    </InputVars>
+    <OutputVars>
+      <VarDeclaration Name="QO" Type="BOOL" Comment="Output event qualifier" />
+      <VarDeclaration Name="STATUS" Type="STRING" Comment="FB status indicator" />
+    </OutputVars>
+  </InterfaceList>
+  <BasicFB>
+    <ECC>
+      <ECState Name="START" />
+    </ECC>
+  </BasicFB>
+</FBType>

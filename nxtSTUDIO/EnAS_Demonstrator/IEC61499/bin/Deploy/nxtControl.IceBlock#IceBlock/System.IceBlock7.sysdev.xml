@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE System SYSTEM "../LibraryElement.dtd">
+<System Name="System">
+  <Device ID="A0FB5ECDC49BDA00" Name="IceBlock7" Type="IceBlock" x="2196.963" y="595.46" Namespace="nxtControl.IceBlock">
+    <Resource ID="A06A16F190CC6712" Name="RES0" Type="EMB_RES_CNT" x="1040" y="780" Namespace="nxtControl.IceBlock">
+      <FBNetwork>
+        <FB ID="2B533C1516EC500E" Name="initApplicationChain" Type="EVENTCHAINHEAD" x="940" y="160" Namespace="Runtime.Standard" Loaded="true">
+          <Parameter Name="NAME" Value="'APP_INIT'" />
+          <Parameter Name="INVERT" Value="FALSE" />
+        </FB>
+        <FB ID="9A874C32D2ECE13E" Name="initHardwareChain" Type="EVENTCHAINHEAD" x="2140" y="200" Namespace="Runtime.Standard" Loaded="true">
+          <Parameter Name="NAME" Value="'HW_INIT'" />
+          <Parameter Name="INVERT" Value="FALSE" />
+        </FB>
+        <EventConnections>
+          <Connection Source="initApplicationChain.INITO" Destination="initApplicationChain.TRIGGER" dx1="42.70837" dx2="70" dy="-108" />
+          <Connection Source="initHardwareChain.INITO" Destination="initHardwareChain.TRIGGER" dx1="42.7085" dx2="70" dy="-108" />
+          <Connection Source="initApplicationChain.FINISHED" Destination="initHardwareChain.INIT" dx1="76.5" />
+        </EventConnections>
+      </FBNetwork>
+    </Resource>
+    <FBNetwork />
+  </Device>
+</System>

@@ -1,0 +1,1216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE System SYSTEM "../LibraryElement.dtd">
+<System Name="System">
+  <Device ID="1D556ED52592A94B" Name="IceBlock5" Type="IceBlock" x="1676.964" y="575.46" Namespace="nxtControl.IceBlock">
+    <Resource ID="A45EC2FDB9B454B1" Name="RES0" Type="EMB_RES_CNT" x="1840" y="780" Namespace="nxtControl.IceBlock">
+      <FBNetwork>
+        <FB ID="FEE4FA4BDA1D3127" Name="initApplicationChain" Type="EVENTCHAINHEAD" x="2540" y="160" Namespace="Runtime.Standard" Loaded="true">
+          <Parameter Name="NAME" Value="'APP_INIT'" />
+          <Parameter Name="INVERT" Value="FALSE" />
+        </FB>
+        <FB ID="4225483402B84B2A" Name="initHardwareChain" Type="EVENTCHAINHEAD" x="3740" y="200" Namespace="Runtime.Standard" Loaded="true">
+          <Parameter Name="NAME" Value="'HW_INIT'" />
+          <Parameter Name="INVERT" Value="FALSE" />
+        </FB>
+        <FB ID="C88C62B76ACD0C3A" Name="Section5" Type="StandardSection" x="5660" y="1120" Namespace="Main" />
+        <FB ID="EDB25414826B627C" Name="IceBlock5_RES0_RECV" Type="COMMCHANNELUDPRECV" x="2800" y="400" Namespace="Runtime.System" Loaded="true">
+          <Parameter Name="QI" Value="TRUE" />
+          <Parameter Name="OWNADDR" Value="'0.0.0.0:61307'" />
+        </FB>
+        <FB ID="E7A5FBDD7478868E" Name="ICEBLOCKIO" Type="ICEBLOCKIO" x="2000" y="400" Namespace="nxtControl.IceBlock">
+          <Parameter Name="BUS_ID" Value="'IBGPIO'" />
+          <Parameter Name="busCycleTime" Value="T#50ms" />
+          <Parameter Name="autoStart" Value="TRUE" />
+          <Parameter Name="DI0" Value="'Section5.SENSOR'" />
+          <Parameter Name="DO0" Value="'Section5.DRIVE'" />
+          <Parameter Name="DO1" Value="'FB3.GATE'" />
+        </FB>
+        <FB ID="F80779444A5DFE89" Name="FB3" Type="S5Gate" x="2900" y="1200" Namespace="Main" />
+        <FB ID="6055A71EB98CC2E6" Name="CAMERA" Type="ColorDetect" x="4580" y="2340" Namespace="Main" />
+        <FB ID="F75BB5A7AD5840A9" Name="PRODUCE_RED" Type="Produce" x="1880" y="1920" Namespace="Main" />
+        <FB ID="B30EC1D4C382C911" Name="OrderConsole" Type="ProductOrder" x="3240" y="3400" Namespace="Main">
+          <Parameter Name="QI" Value="TRUE" />
+        </FB>
+        <FB ID="7B22A6FC63D8E3AA" Name="IceBlock6_2_RES0" Type="COMMCHANNEL" x="1200" y="1040" Namespace="Runtime.System" Loaded="true">
+          <Attribute Name="Runtime.Communication.Peer" Value="IceBlock6_2.RES0" />
+          <Parameter Name="QI" Value="TRUE" />
+          <Parameter Name="PROTO" Value="2" />
+          <Parameter Name="PEERADDR" Value="192.168.0.104:61308" />
+          <Parameter Name="ID" Value="318350114759489640" />
+          <Parameter Name="ALIVE" Value="3000" />
+        </FB>
+        <FB ID="E5CB0FE9C3C37F65" Name="IceBlock_R_RES0" Type="COMMCHANNEL" x="1200" y="2160" Namespace="Runtime.System" Loaded="true">
+          <Attribute Name="Runtime.Communication.Peer" Value="IceBlock_R.RES0" />
+          <Parameter Name="QI" Value="TRUE" />
+          <Parameter Name="PROTO" Value="2" />
+          <Parameter Name="PEERADDR" Value="192.168.0.34:61300" />
+          <Parameter Name="ID" Value="11476408061065696486" />
+          <Parameter Name="ALIVE" Value="3000" />
+        </FB>
+        <FB ID="ED6165DF7BB11100" Name="IceBlock1_RES0" Type="COMMCHANNEL" x="1200" y="3280" Namespace="Runtime.System" Loaded="true">
+          <Attribute Name="Runtime.Communication.Peer" Value="IceBlock1.RES0" />
+          <Parameter Name="QI" Value="TRUE" />
+          <Parameter Name="PROTO" Value="2" />
+          <Parameter Name="PEERADDR" Value="192.168.0.105:61302" />
+          <Parameter Name="ID" Value="8684053690372021054" />
+          <Parameter Name="ALIVE" Value="3000" />
+        </FB>
+        <FB ID="EEC9AE06582EB156" Name="IceBlock3_RES0" Type="COMMCHANNEL" x="1200" y="4400" Namespace="Runtime.System" Loaded="true">
+          <Attribute Name="Runtime.Communication.Peer" Value="IceBlock3.RES0" />
+          <Parameter Name="QI" Value="TRUE" />
+          <Parameter Name="PROTO" Value="2" />
+          <Parameter Name="PEERADDR" Value="192.168.0.107:61303" />
+          <Parameter Name="ID" Value="9010839850987526484" />
+          <Parameter Name="ALIVE" Value="3000" />
+        </FB>
+        <FB ID="134002496A1F81D0" Name="ButtonConsole" Type="ConsoleHMI" x="4180" y="2980" Namespace="Main" />
+        <FB ID="A72E39FDD0F3454A" Name="IceBlock2_RES0" Type="COMMCHANNEL" x="1200" y="5520" Namespace="Runtime.System" Loaded="true">
+          <Attribute Name="Runtime.Communication.Peer" Value="IceBlock2.RES0" />
+          <Parameter Name="QI" Value="TRUE" />
+          <Parameter Name="PROTO" Value="2" />
+          <Parameter Name="PEERADDR" Value="192.168.0.106:61306" />
+          <Parameter Name="ID" Value="7428705805402624087" />
+          <Parameter Name="ALIVE" Value="3000" />
+        </FB>
+        <FB ID="387D6046F0B5346C" Name="IceBlock4_RES0" Type="COMMCHANNEL" x="1200" y="6640" Namespace="Runtime.System" Loaded="true">
+          <Attribute Name="Runtime.Communication.Peer" Value="IceBlock4.RES0" />
+          <Parameter Name="QI" Value="TRUE" />
+          <Parameter Name="PROTO" Value="2" />
+          <Parameter Name="PEERADDR" Value="192.168.0.110:61305" />
+          <Parameter Name="ID" Value="8976204426807441628" />
+          <Parameter Name="ALIVE" Value="3000" />
+        </FB>
+        <FB ID="3BF47B8C48C0BD23" Name="APP2_SUB_APP1_W3W1_FB" Type="W3W1" x="3360" y="2220" Namespace="Main" />
+        <FB ID="6318425ACA876BFE" Name="APP2_SUB_APP1_S5_OFF_MERGE" Type="E_MERGE" x="5880" y="2180" Namespace="IEC61499.Standard" />
+        <FB ID="A1CE3ECF1C0EE11C" Name="APP2_SUB_APP1_S5_ON_MERGE0" Type="E_MERGE" x="4760" y="1720" Namespace="IEC61499.Standard" />
+        <FB ID="46835D523A321D14" Name="IceBlock_J2_RES0" Type="COMMCHANNEL" x="1200" y="7760" Namespace="Runtime.System" Loaded="true">
+          <Attribute Name="Runtime.Communication.Peer" Value="IceBlock_J2.RES0" />
+          <Parameter Name="QI" Value="TRUE" />
+          <Parameter Name="PROTO" Value="2" />
+          <Parameter Name="PEERADDR" Value="192.168.0.109:61304" />
+          <Parameter Name="ID" Value="4456980697791985048" />
+          <Parameter Name="ALIVE" Value="3000" />
+        </FB>
+        <FB ID="885A94DA9C7CBDA0" Name="IceBlock_J1_RES0" Type="COMMCHANNEL" x="1200" y="8880" Namespace="Runtime.System" Loaded="true">
+          <Attribute Name="Runtime.Communication.Peer" Value="IceBlock_J1.RES0" />
+          <Parameter Name="QI" Value="TRUE" />
+          <Parameter Name="PROTO" Value="2" />
+          <Parameter Name="PEERADDR" Value="192.168.0.102:61301" />
+          <Parameter Name="ID" Value="15684121949671534389" />
+          <Parameter Name="ALIVE" Value="3000" />
+        </FB>
+        <FB ID="59BCDE6AB6770CE" Name="DockConfirmationButton" Type="ConfirmationButton" x="3780" y="940" Namespace="Main">
+          <Parameter Name="message" Value="'Confirm dock'" />
+        </FB>
+        <FB ID="5EE4878D608889C6" Name="FB6" Type="EventWrapper5" x="7180" y="2900" Namespace="Main" />
+        <FB ID="4D53087B00FC478" Name="FB7" Type="EventWrapper_Gate" x="7860" y="1040" Namespace="Main" />
+        <FB ID="68A082813173DAF" Name="FB15" Type="EventOutWrapper5" x="7940" y="2140" Namespace="Main" />
+        <FB ID="6168AF58B973D19D" Name="FB19" Type="EventWrapper_Console" x="5180" y="3160" Namespace="Main" />
+        <FB ID="233F09C0D11DD000" Name="FB22" Type="EventOutWrapper_Console" x="5980" y="3580" Namespace="Main" />
+        <FB ID="4FC47135E31391CF" Name="PRODUCE_GREEN" Type="Produce" x="1920" y="3180" Namespace="Main" />
+        <FB ID="ADAF205EA73671C6" Name="FB23" Type="EventWrapper_Produce_Green" x="960" y="3120" Namespace="Main" />
+        <FB ID="4535F790AB061DA5" Name="FB24" Type="EventWrapper_Produce_RED" x="920" y="1860" Namespace="Main" />
+        <FB ID="FC347C30530D3B45" Name="failure1HMI" Type="fail_scenarios1" x="620" y="2180" Namespace="Main">
+          <Parameter Name="QI" Value="TRUE" />
+        </FB>
+        <FB Name="LER_8684053690372021054_3623230111798763265_0" Type="LINKEVENTRECEIVER_0_0_0_2" Namespace="Runtime.System">
+          <Parameter Name="QI" Value="1" />
+          <Parameter Name="CHANID" Value="8684053690372021054" />
+          <Parameter Name="EVENTWIREIDS" Value="[9334698305240620630,5887018621356211909]" />
+        </FB>
+        <FB Name="LP_15684121949671534389_11472184640987424840_0" Type="LINKPUBLISHER_0_0_1_0" Namespace="Runtime.System">
+          <Parameter Name="QI" Value="1" />
+          <Parameter Name="CHANID" Value="15684121949671534389" />
+          <Parameter Name="EVENTWIREID" Value="10187428418710138159" />
+        </FB>
+        <FB Name="LP_15684121949671534389_11472184640987424840_1" Type="LINKPUBLISHER_0_0_1_0" Namespace="Runtime.System">
+          <Parameter Name="QI" Value="1" />
+          <Parameter Name="CHANID" Value="15684121949671534389" />
+          <Parameter Name="EVENTWIREID" Value="11681129690689609765" />
+        </FB>
+        <FB Name="LP_15684121949671534389_11472184640987424840_2" Type="LINKPUBLISHER_0_0_1_0" Namespace="Runtime.System">
+          <Parameter Name="QI" Value="1" />
+          <Parameter Name="CHANID" Value="15684121949671534389" />
+          <Parameter Name="EVENTWIREID" Value="15091019883172259469" />
+        </FB>
+        <FB Name="LP_15684121949671534389_11472184640987424840_3" Type="LINKPUBLISHER_0_0_1_0" Namespace="Runtime.System">
+          <Parameter Name="QI" Value="1" />
+          <Parameter Name="CHANID" Value="15684121949671534389" />
+          <Parameter Name="EVENTWIREID" Value="13952884059676538876" />
+        </FB>
+        <FB Name="LP_15684121949671534389_11472184640987424840_4" Type="LINKPUBLISHER_1_0_1_0" Namespace="Runtime.System">
+          <Parameter Name="QI" Value="1" />
+          <Parameter Name="CHANID" Value="15684121949671534389" />
+          <Parameter Name="EVENTWIREID" Value="7195610199924564043" />
+          <Parameter Name="DATAWIREIDS" Value="[11202150103866309491]" />
+        </FB>
+        <FB Name="LER_9010839850987526484_2552289582823000924_0" Type="LINKEVENTRECEIVER_0_0_0_3" Namespace="Runtime.System">
+          <Parameter Name="QI" Value="1" />
+          <Parameter Name="CHANID" Value="9010839850987526484" />
+          <Parameter Name="EVENTWIREIDS" Value="[11108232657310786411,15802752801685192087,12834467962400708651]" />
+        </FB>
+        <FB Name="LP_11476408061065696486_1590889336207582205_0" Type="LINKPUBLISHER_0_0_1_0" Namespace="Runtime.System">
+          <Parameter Name="QI" Value="1" />
+          <Parameter Name="CHANID" Value="11476408061065696486" />
+          <Parameter Name="EVENTWIREID" Value="10831426584964251202" />
+        </FB>
+        <FB Name="LP_11476408061065696486_1590889336207582205_1" Type="LINKPUBLISHER_0_0_1_0" Namespace="Runtime.System">
+          <Parameter Name="QI" Value="1" />
+          <Parameter Name="CHANID" Value="11476408061065696486" />
+          <Parameter Name="EVENTWIREID" Value="7100524993341832332" />
+        </FB>
+        <FB Name="LP_11476408061065696486_1590889336207582205_2" Type="LINKPUBLISHER_0_0_1_0" Namespace="Runtime.System">
+          <Parameter Name="QI" Value="1" />
+          <Parameter Name="CHANID" Value="11476408061065696486" />
+          <Parameter Name="EVENTWIREID" Value="4436008997365951281" />
+        </FB>
+        <FB Name="LP_11476408061065696486_1590889336207582205_3" Type="LINKPUBLISHER_0_0_1_0" Namespace="Runtime.System">
+          <Parameter Name="QI" Value="1" />
+          <Parameter Name="CHANID" Value="11476408061065696486" />
+          <Parameter Name="EVENTWIREID" Value="11787702586049426490" />
+        </FB>
+        <FB Name="LP_11476408061065696486_1590889336207582205_4" Type="LINKPUBLISHER_0_0_1_0" Namespace="Runtime.System">
+          <Parameter Name="QI" Value="1" />
+          <Parameter Name="CHANID" Value="11476408061065696486" />
+          <Parameter Name="EVENTWIREID" Value="8694695511428822092" />
+        </FB>
+        <FB Name="LP_11476408061065696486_1590889336207582205_5" Type="LINKPUBLISHER_0_0_1_0" Namespace="Runtime.System">
+          <Parameter Name="QI" Value="1" />
+          <Parameter Name="CHANID" Value="11476408061065696486" />
+          <Parameter Name="EVENTWIREID" Value="10267780447532268063" />
+        </FB>
+        <FB Name="LP_11476408061065696486_1590889336207582205_6" Type="LINKPUBLISHER_0_0_1_0" Namespace="Runtime.System">
+          <Parameter Name="QI" Value="1" />
+          <Parameter Name="CHANID" Value="11476408061065696486" />
+          <Parameter Name="EVENTWIREID" Value="10261845439941977623" />
+        </FB>
+        <FB Name="LP_8976204426807441628_14226702723961609996_0" Type="LINKPUBLISHER_0_0_1_0" Namespace="Runtime.System">
+          <Parameter Name="QI" Value="1" />
+          <Parameter Name="CHANID" Value="8976204426807441628" />
+          <Parameter Name="EVENTWIREID" Value="5675947700871226677" />
+        </FB>
+        <FB Name="LP_8976204426807441628_14226702723961609996_1" Type="LINKPUBLISHER_0_0_1_0" Namespace="Runtime.System">
+          <Parameter Name="QI" Value="1" />
+          <Parameter Name="CHANID" Value="8976204426807441628" />
+          <Parameter Name="EVENTWIREID" Value="10932145728081283051" />
+        </FB>
+        <FB Name="LP_8976204426807441628_14226702723961609996_2" Type="LINKPUBLISHER_0_0_1_0" Namespace="Runtime.System">
+          <Parameter Name="QI" Value="1" />
+          <Parameter Name="CHANID" Value="8976204426807441628" />
+          <Parameter Name="EVENTWIREID" Value="12454334016830884492" />
+        </FB>
+        <FB Name="LER_4456980697791985048_13881220512893219500_0" Type="LINKEVENTRECEIVER_0_0_0_5" Namespace="Runtime.System">
+          <Parameter Name="QI" Value="1" />
+          <Parameter Name="CHANID" Value="4456980697791985048" />
+          <Parameter Name="EVENTWIREIDS" Value="[739337588992102542,13310009758994439662,9738249179530579421,18001977057852321745,16771870560243113154]" />
+        </FB>
+        <FB Name="LP_8684053690372021054_10478506737482796398_0" Type="LINKPUBLISHER_0_0_1_0" Namespace="Runtime.System">
+          <Parameter Name="QI" Value="1" />
+          <Parameter Name="CHANID" Value="8684053690372021054" />
+          <Parameter Name="EVENTWIREID" Value="14814118869326128131" />
+        </FB>
+        <FB Name="LP_8684053690372021054_10478506737482796398_1" Type="LINKPUBLISHER_0_0_1_0" Namespace="Runtime.System">
+          <Parameter Name="QI" Value="1" />
+          <Parameter Name="CHANID" Value="8684053690372021054" />
+          <Parameter Name="EVENTWIREID" Value="8771752266091729255" />
+        </FB>
+        <FB Name="LP_8684053690372021054_10478506737482796398_2" Type="LINKPUBLISHER_0_0_1_0" Namespace="Runtime.System">
+          <Parameter Name="QI" Value="1" />
+          <Parameter Name="CHANID" Value="8684053690372021054" />
+          <Parameter Name="EVENTWIREID" Value="9907742738891006162" />
+        </FB>
+        <FB Name="LP_8684053690372021054_10478506737482796398_3" Type="LINKPUBLISHER_0_0_1_0" Namespace="Runtime.System">
+          <Parameter Name="QI" Value="1" />
+          <Parameter Name="CHANID" Value="8684053690372021054" />
+          <Parameter Name="EVENTWIREID" Value="1132048977505785510" />
+        </FB>
+        <FB Name="LP_8684053690372021054_10478506737482796398_4" Type="LINKPUBLISHER_0_0_1_0" Namespace="Runtime.System">
+          <Parameter Name="QI" Value="1" />
+          <Parameter Name="CHANID" Value="8684053690372021054" />
+          <Parameter Name="EVENTWIREID" Value="10052121652238196543" />
+        </FB>
+        <FB Name="LP_8684053690372021054_10478506737482796398_5" Type="LINKPUBLISHER_0_0_1_0" Namespace="Runtime.System">
+          <Parameter Name="QI" Value="1" />
+          <Parameter Name="CHANID" Value="8684053690372021054" />
+          <Parameter Name="EVENTWIREID" Value="5044790381503314808" />
+        </FB>
+        <FB Name="LP_8684053690372021054_10478506737482796398_6" Type="LINKPUBLISHER_0_0_1_0" Namespace="Runtime.System">
+          <Parameter Name="QI" Value="1" />
+          <Parameter Name="CHANID" Value="8684053690372021054" />
+          <Parameter Name="EVENTWIREID" Value="17027792074888179396" />
+        </FB>
+        <FB Name="LP_8684053690372021054_10478506737482796398_7" Type="LINKPUBLISHER_0_0_1_0" Namespace="Runtime.System">
+          <Parameter Name="QI" Value="1" />
+          <Parameter Name="CHANID" Value="8684053690372021054" />
+          <Parameter Name="EVENTWIREID" Value="17564977485558520779" />
+        </FB>
+        <FB Name="LP_8684053690372021054_10478506737482796398_8" Type="LINKPUBLISHER_1_0_1_0" Namespace="Runtime.System">
+          <Parameter Name="QI" Value="1" />
+          <Parameter Name="CHANID" Value="8684053690372021054" />
+          <Parameter Name="EVENTWIREID" Value="9554431196052377701" />
+          <Parameter Name="DATAWIREIDS" Value="[15475901741326765909]" />
+        </FB>
+        <FB Name="LER_11476408061065696486_15179986707936572010_0" Type="LINKEVENTRECEIVER_0_0_0_5" Namespace="Runtime.System">
+          <Parameter Name="QI" Value="1" />
+          <Parameter Name="CHANID" Value="11476408061065696486" />
+          <Parameter Name="EVENTWIREIDS" Value="[3461362261186706541,8596983698130995392,7934443144132397165,18121952807892395228,9005826506965940365]" />
+        </FB>
+        <FB Name="LDR_11476408061065696486_15179986707936572010_1" Type="LINKDATARECEIVER_0_1_0_0" Namespace="Runtime.System">
+          <Parameter Name="QI" Value="1" />
+          <Parameter Name="CHANID" Value="11476408061065696486" />
+          <Parameter Name="DATAWIREIDS" Value="[9561639208578538297]" />
+        </FB>
+        <FB Name="LP_4456980697791985048_1368498073867314819_0" Type="LINKPUBLISHER_0_0_1_0" Namespace="Runtime.System">
+          <Parameter Name="QI" Value="1" />
+          <Parameter Name="CHANID" Value="4456980697791985048" />
+          <Parameter Name="EVENTWIREID" Value="6805196373408450250" />
+        </FB>
+        <FB Name="LP_4456980697791985048_1368498073867314819_1" Type="LINKPUBLISHER_0_0_1_0" Namespace="Runtime.System">
+          <Parameter Name="QI" Value="1" />
+          <Parameter Name="CHANID" Value="4456980697791985048" />
+          <Parameter Name="EVENTWIREID" Value="401947005996870709" />
+        </FB>
+        <FB Name="LP_4456980697791985048_1368498073867314819_2" Type="LINKPUBLISHER_0_0_1_0" Namespace="Runtime.System">
+          <Parameter Name="QI" Value="1" />
+          <Parameter Name="CHANID" Value="4456980697791985048" />
+          <Parameter Name="EVENTWIREID" Value="7874630010266760467" />
+        </FB>
+        <FB Name="LP_4456980697791985048_1368498073867314819_3" Type="LINKPUBLISHER_0_0_1_0" Namespace="Runtime.System">
+          <Parameter Name="QI" Value="1" />
+          <Parameter Name="CHANID" Value="4456980697791985048" />
+          <Parameter Name="EVENTWIREID" Value="9538090909615893525" />
+        </FB>
+        <FB Name="LP_4456980697791985048_1368498073867314819_4" Type="LINKPUBLISHER_0_0_1_0" Namespace="Runtime.System">
+          <Parameter Name="QI" Value="1" />
+          <Parameter Name="CHANID" Value="4456980697791985048" />
+          <Parameter Name="EVENTWIREID" Value="13671751936776855321" />
+        </FB>
+        <FB Name="LP_4456980697791985048_1368498073867314819_5" Type="LINKPUBLISHER_0_0_1_0" Namespace="Runtime.System">
+          <Parameter Name="QI" Value="1" />
+          <Parameter Name="CHANID" Value="4456980697791985048" />
+          <Parameter Name="EVENTWIREID" Value="1483708701113909118" />
+        </FB>
+        <FB Name="LP_4456980697791985048_1368498073867314819_6" Type="LINKPUBLISHER_0_0_1_0" Namespace="Runtime.System">
+          <Parameter Name="QI" Value="1" />
+          <Parameter Name="CHANID" Value="4456980697791985048" />
+          <Parameter Name="EVENTWIREID" Value="14989443514790628233" />
+        </FB>
+        <FB Name="LP_4456980697791985048_1368498073867314819_7" Type="LINKPUBLISHER_0_0_1_0" Namespace="Runtime.System">
+          <Parameter Name="QI" Value="1" />
+          <Parameter Name="CHANID" Value="4456980697791985048" />
+          <Parameter Name="EVENTWIREID" Value="16201400057818287476" />
+        </FB>
+        <FB Name="LP_7428705805402624087_17823194494192578569_0" Type="LINKPUBLISHER_0_0_1_0" Namespace="Runtime.System">
+          <Parameter Name="QI" Value="1" />
+          <Parameter Name="CHANID" Value="7428705805402624087" />
+          <Parameter Name="EVENTWIREID" Value="16866811114820097734" />
+        </FB>
+        <FB Name="LP_7428705805402624087_17823194494192578569_1" Type="LINKPUBLISHER_0_0_1_0" Namespace="Runtime.System">
+          <Parameter Name="QI" Value="1" />
+          <Parameter Name="CHANID" Value="7428705805402624087" />
+          <Parameter Name="EVENTWIREID" Value="3031916537572035142" />
+        </FB>
+        <FB Name="LP_318350114759489640_18422537445508183460_0" Type="LINKPUBLISHER_0_0_1_0" Namespace="Runtime.System">
+          <Parameter Name="QI" Value="1" />
+          <Parameter Name="CHANID" Value="318350114759489640" />
+          <Parameter Name="EVENTWIREID" Value="12439616332030611710" />
+        </FB>
+        <FB Name="LP_318350114759489640_18422537445508183460_1" Type="LINKPUBLISHER_0_0_1_0" Namespace="Runtime.System">
+          <Parameter Name="QI" Value="1" />
+          <Parameter Name="CHANID" Value="318350114759489640" />
+          <Parameter Name="EVENTWIREID" Value="7392658086049963954" />
+        </FB>
+        <FB Name="LP_318350114759489640_18422537445508183460_2" Type="LINKPUBLISHER_0_0_1_0" Namespace="Runtime.System">
+          <Parameter Name="QI" Value="1" />
+          <Parameter Name="CHANID" Value="318350114759489640" />
+          <Parameter Name="EVENTWIREID" Value="3049848595634367710" />
+        </FB>
+        <FB Name="LP_318350114759489640_18422537445508183460_3" Type="LINKPUBLISHER_0_0_1_0" Namespace="Runtime.System">
+          <Parameter Name="QI" Value="1" />
+          <Parameter Name="CHANID" Value="318350114759489640" />
+          <Parameter Name="EVENTWIREID" Value="12621412739340053994" />
+        </FB>
+        <FB Name="LP_318350114759489640_18422537445508183460_4" Type="LINKPUBLISHER_0_0_1_0" Namespace="Runtime.System">
+          <Parameter Name="QI" Value="1" />
+          <Parameter Name="CHANID" Value="318350114759489640" />
+          <Parameter Name="EVENTWIREID" Value="15764895575643177861" />
+        </FB>
+        <FB Name="LP_318350114759489640_18422537445508183460_5" Type="LINKPUBLISHER_0_0_1_0" Namespace="Runtime.System">
+          <Parameter Name="QI" Value="1" />
+          <Parameter Name="CHANID" Value="318350114759489640" />
+          <Parameter Name="EVENTWIREID" Value="4332090374166141748" />
+        </FB>
+        <FB Name="LP_318350114759489640_18422537445508183460_6" Type="LINKPUBLISHER_0_0_1_0" Namespace="Runtime.System">
+          <Parameter Name="QI" Value="1" />
+          <Parameter Name="CHANID" Value="318350114759489640" />
+          <Parameter Name="EVENTWIREID" Value="96677403959221743" />
+        </FB>
+        <FB Name="LP_318350114759489640_18422537445508183460_7" Type="LINKPUBLISHER_0_0_1_0" Namespace="Runtime.System">
+          <Parameter Name="QI" Value="1" />
+          <Parameter Name="CHANID" Value="318350114759489640" />
+          <Parameter Name="EVENTWIREID" Value="18368507078825141475" />
+        </FB>
+        <FB Name="LP_318350114759489640_18422537445508183460_8" Type="LINKPUBLISHER_0_0_1_0" Namespace="Runtime.System">
+          <Parameter Name="QI" Value="1" />
+          <Parameter Name="CHANID" Value="318350114759489640" />
+          <Parameter Name="EVENTWIREID" Value="18192863597656744242" />
+        </FB>
+        <FB Name="LP_318350114759489640_18422537445508183460_9" Type="LINKPUBLISHER_0_0_1_0" Namespace="Runtime.System">
+          <Parameter Name="QI" Value="1" />
+          <Parameter Name="CHANID" Value="318350114759489640" />
+          <Parameter Name="EVENTWIREID" Value="10116975397919322537" />
+        </FB>
+        <FB Name="LP_318350114759489640_18422537445508183460_10" Type="LINKPUBLISHER_0_0_1_0" Namespace="Runtime.System">
+          <Parameter Name="QI" Value="1" />
+          <Parameter Name="CHANID" Value="318350114759489640" />
+          <Parameter Name="EVENTWIREID" Value="12906337014875880904" />
+        </FB>
+        <FB Name="LP_318350114759489640_18422537445508183460_11" Type="LINKPUBLISHER_0_0_1_0" Namespace="Runtime.System">
+          <Parameter Name="QI" Value="1" />
+          <Parameter Name="CHANID" Value="318350114759489640" />
+          <Parameter Name="EVENTWIREID" Value="505728357434067558" />
+        </FB>
+        <FB Name="LER_318350114759489640_12143347118898552480_0" Type="LINKEVENTRECEIVER_0_0_0_4" Namespace="Runtime.System">
+          <Parameter Name="QI" Value="1" />
+          <Parameter Name="CHANID" Value="318350114759489640" />
+          <Parameter Name="EVENTWIREIDS" Value="[11114840939550328445,16214765850693615661,10402238129775878717,12303760233787091739]" />
+        </FB>
+        <FB Name="LP_9010839850987526484_3014828970713800079_0" Type="LINKPUBLISHER_0_0_1_0" Namespace="Runtime.System">
+          <Parameter Name="QI" Value="1" />
+          <Parameter Name="CHANID" Value="9010839850987526484" />
+          <Parameter Name="EVENTWIREID" Value="14025304364795425647" />
+        </FB>
+        <FB Name="LP_9010839850987526484_3014828970713800079_1" Type="LINKPUBLISHER_0_0_1_0" Namespace="Runtime.System">
+          <Parameter Name="QI" Value="1" />
+          <Parameter Name="CHANID" Value="9010839850987526484" />
+          <Parameter Name="EVENTWIREID" Value="9678465925041974837" />
+        </FB>
+        <FB Name="LP_9010839850987526484_3014828970713800079_2" Type="LINKPUBLISHER_0_0_1_0" Namespace="Runtime.System">
+          <Parameter Name="QI" Value="1" />
+          <Parameter Name="CHANID" Value="9010839850987526484" />
+          <Parameter Name="EVENTWIREID" Value="13061073483110602519" />
+        </FB>
+        <FB Name="LP_9010839850987526484_3014828970713800079_3" Type="LINKPUBLISHER_0_0_1_0" Namespace="Runtime.System">
+          <Parameter Name="QI" Value="1" />
+          <Parameter Name="CHANID" Value="9010839850987526484" />
+          <Parameter Name="EVENTWIREID" Value="17236136946973528104" />
+        </FB>
+        <FB Name="LP_9010839850987526484_3014828970713800079_4" Type="LINKPUBLISHER_0_0_1_0" Namespace="Runtime.System">
+          <Parameter Name="QI" Value="1" />
+          <Parameter Name="CHANID" Value="9010839850987526484" />
+          <Parameter Name="EVENTWIREID" Value="11055042752764579477" />
+        </FB>
+        <FB Name="LP_9010839850987526484_3014828970713800079_5" Type="LINKPUBLISHER_0_0_1_0" Namespace="Runtime.System">
+          <Parameter Name="QI" Value="1" />
+          <Parameter Name="CHANID" Value="9010839850987526484" />
+          <Parameter Name="EVENTWIREID" Value="7100061359606034480" />
+        </FB>
+        <FB Name="LP_9010839850987526484_3014828970713800079_6" Type="LINKPUBLISHER_0_0_1_0" Namespace="Runtime.System">
+          <Parameter Name="QI" Value="1" />
+          <Parameter Name="CHANID" Value="9010839850987526484" />
+          <Parameter Name="EVENTWIREID" Value="5241849255216099242" />
+        </FB>
+        <FB Name="LER_15684121949671534389_4289797556196545631_0" Type="LINKEVENTRECEIVER_0_0_0_3" Namespace="Runtime.System">
+          <Parameter Name="QI" Value="1" />
+          <Parameter Name="CHANID" Value="15684121949671534389" />
+          <Parameter Name="EVENTWIREIDS" Value="[15414079114538667449,10320378972118890963,8270704007835911870]" />
+        </FB>
+        <FB Name="LER_318350114759489640_12143347118898552480_1" Type="LINKEVENTRECEIVER_0_0_0_2" Namespace="Runtime.System">
+          <Parameter Name="QI" Value="1" />
+          <Parameter Name="CHANID" Value="318350114759489640" />
+          <Parameter Name="EVENTWIREIDS" Value="[6666587775212890194,5589159019243673292]" />
+        </FB>
+        <EventConnections>
+          <Connection Source="IceBlock5_RES0_RECV.INITO" Destination="IceBlock6_2_RES0.INIT" dx1="682.396" dx2="690" dy="350" />
+          <Connection Source="IceBlock6_2_RES0.INITO" Destination="IceBlock_R_RES0.INIT" dx1="680.3542" dx2="690" dy="830" />
+          <Connection Source="IceBlock_R_RES0.INITO" Destination="IceBlock1_RES0.INIT" dx1="680.3542" dx2="690" dy="830" />
+          <Connection Source="IceBlock1_RES0.INITO" Destination="IceBlock3_RES0.INIT" dx1="680.3542" dx2="690" dy="830" />
+          <Connection Source="IceBlock3_RES0.INITO" Destination="IceBlock2_RES0.INIT" dx1="680.3542" dx2="690" dy="830" />
+          <Connection Source="IceBlock2_RES0.INITO" Destination="IceBlock4_RES0.INIT" dx1="680.3542" dx2="690" dy="830" />
+          <Connection Source="IceBlock4_RES0.INITO" Destination="IceBlock_J2_RES0.INIT" dx1="680.3542" dx2="690" dy="830" />
+          <Connection Source="IceBlock_J2_RES0.INITO" Destination="IceBlock_J1_RES0.INIT" dx1="680.3542" dx2="690" dy="830" />
+          <Connection Source="initApplicationChain.INITO" Destination="initApplicationChain.TRIGGER" dx1="42.7085" dx2="70" dy="-108" />
+          <Connection Source="initHardwareChain.INITO" Destination="initHardwareChain.TRIGGER" dx1="42.7085" dx2="70" dy="-108" />
+          <Connection Source="initApplicationChain.FINISHED" Destination="initHardwareChain.INIT" dx1="76.5" />
+          <Connection Source="START.COLD" Destination="initApplicationChain.INIT" dx1="140" />
+          <Connection Source="START.WARM" Destination="initApplicationChain.INIT" />
+          <Connection Source="initHardwareChain.FINISHED" Destination="FB3.INIT" dx1="42.7085" dx2="30" dy="410" />
+          <Connection Source="FB3.INITO" Destination="FB6.INIT">
+            <Points>
+              <Points>
+                <X>824.6041</X>
+                <Y>310</Y>
+              </Points>
+              <Points>
+                <X>834.6041</X>
+                <Y>310</Y>
+              </Points>
+              <Points>
+                <X>834.6041</X>
+                <Y>332.5</Y>
+              </Points>
+              <Points>
+                <X>1027.5</X>
+                <Y>332.5</Y>
+              </Points>
+              <Points>
+                <X>1027.5</X>
+                <Y>712.5</Y>
+              </Points>
+              <Points>
+                <X>1197.5</X>
+                <Y>712.5</Y>
+              </Points>
+              <Points>
+                <X>1197.5</X>
+                <Y>735</Y>
+              </Points>
+              <Points>
+                <X>1790</X>
+                <Y>735</Y>
+              </Points>
+            </Points>
+          </Connection>
+          <Connection Source="PRODUCE_RED.TEST" Destination="CAMERA.DETECT">
+            <Points>
+              <Points>
+                <X>697.4479</X>
+                <Y>565</Y>
+              </Points>
+              <Points>
+                <X>707.5</X>
+                <Y>565</Y>
+              </Points>
+              <Points>
+                <X>707.5</X>
+                <Y>537.5</Y>
+              </Points>
+              <Points>
+                <X>1027.5</X>
+                <Y>537.5</Y>
+              </Points>
+              <Points>
+                <X>1027.5</X>
+                <Y>610</Y>
+              </Points>
+              <Points>
+                <X>1140</X>
+                <Y>610</Y>
+              </Points>
+            </Points>
+          </Connection>
+          <Connection Source="PRODUCE_GREEN.TEST" Destination="CAMERA.DETECT">
+            <Points>
+              <Points>
+                <X>707.4479</X>
+                <Y>880</Y>
+              </Points>
+              <Points>
+                <X>717.5</X>
+                <Y>880</Y>
+              </Points>
+              <Points>
+                <X>717.5</X>
+                <Y>832.5</Y>
+              </Points>
+              <Points>
+                <X>1027.5</X>
+                <Y>832.5</Y>
+              </Points>
+              <Points>
+                <X>1027.5</X>
+                <Y>610</Y>
+              </Points>
+              <Points>
+                <X>1140</X>
+                <Y>610</Y>
+              </Points>
+            </Points>
+          </Connection>
+          <Connection Source="Section5.INITO" Destination="CAMERA.INIT" dx1="81.7085" dx2="50" dy="890" />
+          <Connection Source="CAMERA.INITO" Destination="OrderConsole.INIT" dx1="107.6045" dx2="50" dy="470" />
+          <Connection Source="PRODUCE_RED.REJECTED" Destination="OrderConsole.CHECK_J1" dx1="80.2085" />
+          <Connection Source="PRODUCE_GREEN.REJECTED" Destination="OrderConsole.CHECK_J1" dx1="110" />
+          <Connection Source="PRODUCE_RED.DONE" Destination="OrderConsole.READY" dx1="80.20825" />
+          <Connection Source="PRODUCE_GREEN.DONE" Destination="OrderConsole.READY" dx1="40.20825" />
+          <Connection Source="PRODUCE_RED.W3W1" Destination="APP2_SUB_APP1_W3W1_FB.TRIGGER" dx1="90" />
+          <Connection Source="PRODUCE_GREEN.W3W1" Destination="APP2_SUB_APP1_W3W1_FB.TRIGGER" dx1="90" />
+          <Connection Source="APP2_SUB_APP1_W3W1_FB.S5_ON" Destination="APP2_SUB_APP1_S5_ON_MERGE0.EI2" dx1="69.99976" />
+          <Connection Source="APP2_SUB_APP1_W3W1_FB.S5_OFF" Destination="APP2_SUB_APP1_S5_OFF_MERGE.EI2">
+            <Points>
+              <Points>
+                <X>1017.34894</X>
+                <Y>595</Y>
+              </Points>
+              <Points>
+                <X>1034.84888</X>
+                <Y>595</Y>
+              </Points>
+              <Points>
+                <X>1034.84888</X>
+                <Y>567.5</Y>
+              </Points>
+              <Points>
+                <X>1272.5</X>
+                <Y>567.5</Y>
+              </Points>
+              <Points>
+                <X>1272.5</X>
+                <Y>570</Y>
+              </Points>
+              <Points>
+                <X>1465</X>
+                <Y>570</Y>
+              </Points>
+            </Points>
+          </Connection>
+          <Connection Source="APP2_SUB_APP1_S5_ON_MERGE0.EO" Destination="FB6.REQ2" dx1="61.5415" />
+          <Connection Source="APP2_SUB_APP1_S5_OFF_MERGE.EO" Destination="FB6.REQ3" dx1="41.5415" />
+          <Connection Source="FB6.CNF2" Destination="Section5.DRIVE_ON" dx1="90" dx2="110" dy="-230" />
+          <Connection Source="FB6.CNF3" Destination="Section5.DRIVE_OFF" dx1="110" dx2="90" dy="-290" />
+          <Connection Source="FB6.CNF4" Destination="Section5.DELIVERY" dx1="130" dx2="70" dy="-350" />
+          <Connection Source="FB6.CNF5" Destination="Section5.PAUSE" dx1="150" dx2="50" dy="-410" />
+          <Connection Source="FB6.CNF6" Destination="Section5.START" dx1="170" dx2="30" dy="-470" />
+          <Connection Source="FB7.CNF2" Destination="FB3.OPEN">
+            <Points>
+              <Points>
+                <X>2077.1875</X>
+                <Y>300</Y>
+              </Points>
+              <Points>
+                <X>2087.5</X>
+                <Y>300</Y>
+              </Points>
+              <Points>
+                <X>2087.5</X>
+                <Y>242.5</Y>
+              </Points>
+              <Points>
+                <X>1402.5</X>
+                <Y>242.5</Y>
+              </Points>
+              <Points>
+                <X>1402.5</X>
+                <Y>332.5</Y>
+              </Points>
+              <Points>
+                <X>932.5</X>
+                <Y>332.5</Y>
+              </Points>
+              <Points>
+                <X>932.5</X>
+                <Y>282.5</Y>
+              </Points>
+              <Points>
+                <X>702.5</X>
+                <Y>282.5</Y>
+              </Points>
+              <Points>
+                <X>702.5</X>
+                <Y>325</Y>
+              </Points>
+              <Points>
+                <X>720</X>
+                <Y>325</Y>
+              </Points>
+            </Points>
+          </Connection>
+          <Connection Source="FB7.CNF3" Destination="FB3.CLOSE">
+            <Points>
+              <Points>
+                <X>2077.1875</X>
+                <Y>315</Y>
+              </Points>
+              <Points>
+                <X>2087.5</X>
+                <Y>315</Y>
+              </Points>
+              <Points>
+                <X>2087.5</X>
+                <Y>242.5</Y>
+              </Points>
+              <Points>
+                <X>1402.5</X>
+                <Y>242.5</Y>
+              </Points>
+              <Points>
+                <X>1402.5</X>
+                <Y>332.5</Y>
+              </Points>
+              <Points>
+                <X>932.5</X>
+                <Y>332.5</Y>
+              </Points>
+              <Points>
+                <X>932.5</X>
+                <Y>282.5</Y>
+              </Points>
+              <Points>
+                <X>697.5</X>
+                <Y>282.5</Y>
+              </Points>
+              <Points>
+                <X>697.5</X>
+                <Y>340</Y>
+              </Points>
+              <Points>
+                <X>720</X>
+                <Y>340</Y>
+              </Points>
+            </Points>
+          </Connection>
+          <Connection Source="FB7.CNF1" Destination="FB3.INIT">
+            <Points>
+              <Points>
+                <X>2077.1875</X>
+                <Y>285</Y>
+              </Points>
+              <Points>
+                <X>2097.5</X>
+                <Y>285</Y>
+              </Points>
+              <Points>
+                <X>2097.5</X>
+                <Y>242.5</Y>
+              </Points>
+              <Points>
+                <X>1402.5</X>
+                <Y>242.5</Y>
+              </Points>
+              <Points>
+                <X>1402.5</X>
+                <Y>332.5</Y>
+              </Points>
+              <Points>
+                <X>932.5</X>
+                <Y>332.5</Y>
+              </Points>
+              <Points>
+                <X>932.5</X>
+                <Y>282.5</Y>
+              </Points>
+              <Points>
+                <X>707.5</X>
+                <Y>282.5</Y>
+              </Points>
+              <Points>
+                <X>707.5</X>
+                <Y>310</Y>
+              </Points>
+              <Points>
+                <X>720</X>
+                <Y>310</Y>
+              </Points>
+            </Points>
+          </Connection>
+          <Connection Source="FB15.CNF3" Destination="APP2_SUB_APP1_W3W1_FB.S5_SENSOR" dx1="150" dx2="50" dy="-290" />
+          <Connection Source="Section5.SENSOR_OFF" Destination="FB15.REQ3" dx1="61.7085" />
+          <Connection Source="Section5.DELIVERED" Destination="FB15.REQ4" dx1="41.7085" />
+          <Connection Source="FB6.INITO" Destination="FB15.INIT" dx1="50" />
+          <Connection Source="DockConfirmationButton.INITO" Destination="FB7.INIT" dx1="2163.104" />
+          <Connection Source="FB15.INITO" Destination="Section5.INIT" dx1="49.99902" dx2="280" dy="-110">
+            <AvoidsNodes>false</AvoidsNodes>
+          </Connection>
+          <Connection Source="FB6.CNF1" Destination="Section5.INIT" dx1="70" dx2="130" dy="-170" />
+          <Connection Source="Section5.SENSOR_ON" Destination="FB15.REQ2" dx1="81.7085" />
+          <Connection Source="FB19.CNF2" Destination="ButtonConsole.RESET_DONE" dx1="96.9585" dx2="30" dy="-410" />
+          <Connection Source="OrderConsole.INITO" Destination="FB19.INIT" dx1="803.4167" />
+          <Connection Source="FB19.CNF1" Destination="ButtonConsole.INIT" dx1="76.9585" dx2="30" dy="-350" />
+          <Connection Source="FB22.CNF2" Destination="Section5.START" dx1="170" dx2="30" dy="-650" />
+          <Connection Source="FB22.CNF3" Destination="Section5.PAUSE" dx1="190" dx2="50" dy="-710" />
+          <Connection Source="FB22.CNF4" Destination="APP2_SUB_APP1_W3W1_FB.RESET" dx1="210" dx2="30" dy="-950" />
+          <Connection Source="FB22.CNF4" Destination="FB19.REQ2">
+            <Points>
+              <Points>
+                <X>1660.45313</X>
+                <Y>965</Y>
+              </Points>
+              <Points>
+                <X>1692.95313</X>
+                <Y>965</Y>
+              </Points>
+              <Points>
+                <X>1692.95313</X>
+                <Y>877.5</Y>
+              </Points>
+              <Points>
+                <X>1482.5</X>
+                <Y>877.5</Y>
+              </Points>
+              <Points>
+                <X>1482.5</X>
+                <Y>887.5</Y>
+              </Points>
+              <Points>
+                <X>1282.5</X>
+                <Y>887.5</Y>
+              </Points>
+              <Points>
+                <X>1282.5</X>
+                <Y>830</Y>
+              </Points>
+              <Points>
+                <X>1290</X>
+                <Y>830</Y>
+              </Points>
+            </Points>
+          </Connection>
+          <Connection Source="FB22.CNF3" Destination="FB19.REQ2">
+            <Points>
+              <Points>
+                <X>1660.45313</X>
+                <Y>950</Y>
+              </Points>
+              <Points>
+                <X>1687.95313</X>
+                <Y>950</Y>
+              </Points>
+              <Points>
+                <X>1687.95313</X>
+                <Y>877.5</Y>
+              </Points>
+              <Points>
+                <X>1482.5</X>
+                <Y>877.5</Y>
+              </Points>
+              <Points>
+                <X>1482.5</X>
+                <Y>887.5</Y>
+              </Points>
+              <Points>
+                <X>1282.5</X>
+                <Y>887.5</Y>
+              </Points>
+              <Points>
+                <X>1282.5</X>
+                <Y>830</Y>
+              </Points>
+              <Points>
+                <X>1290</X>
+                <Y>830</Y>
+              </Points>
+            </Points>
+          </Connection>
+          <Connection Source="FB22.CNF3" Destination="APP2_SUB_APP1_W3W1_FB.RESET" dx1="190" dx2="30" dy="-890" />
+          <Connection Source="FB22.CNF4" Destination="FB6.REQ3" dx1="210" />
+          <Connection Source="ButtonConsole.START" Destination="FB22.REQ2" dx1="40" />
+          <Connection Source="ButtonConsole.PAUSE" Destination="FB22.REQ3" dx1="40" />
+          <Connection Source="ButtonConsole.RESET" Destination="FB22.REQ4" dx1="40" />
+          <Connection Source="ButtonConsole.INITO" Destination="FB22.REQ1" dx1="40" />
+          <Connection Source="FB19.INITO" Destination="FB22.INIT" dx1="80" />
+          <Connection Source="FB22.INITO" Destination="FB19.REQ1">
+            <Points>
+              <Points>
+                <X>1640.45313</X>
+                <Y>905</Y>
+              </Points>
+              <Points>
+                <X>1652.95313</X>
+                <Y>905</Y>
+              </Points>
+              <Points>
+                <X>1652.95313</X>
+                <Y>877.5</Y>
+              </Points>
+              <Points>
+                <X>1482.5</X>
+                <Y>877.5</Y>
+              </Points>
+              <Points>
+                <X>1482.5</X>
+                <Y>887.5</Y>
+              </Points>
+              <Points>
+                <X>1277.5</X>
+                <Y>887.5</Y>
+              </Points>
+              <Points>
+                <X>1277.5</X>
+                <Y>815</Y>
+              </Points>
+              <Points>
+                <X>1290</X>
+                <Y>815</Y>
+              </Points>
+            </Points>
+          </Connection>
+          <Connection Source="FB22.CNF1" Destination="DockConfirmationButton.INIT">
+            <Points>
+              <Points>
+                <X>1640.45313</X>
+                <Y>920</Y>
+              </Points>
+              <Points>
+                <X>1657.95313</X>
+                <Y>920</Y>
+              </Points>
+              <Points>
+                <X>1657.95313</X>
+                <Y>877.5</Y>
+              </Points>
+              <Points>
+                <X>1457.5</X>
+                <Y>877.5</Y>
+              </Points>
+              <Points>
+                <X>1457.5</X>
+                <Y>537.5</Y>
+              </Points>
+              <Points>
+                <X>927.5</X>
+                <Y>537.5</Y>
+              </Points>
+              <Points>
+                <X>927.5</X>
+                <Y>245</Y>
+              </Points>
+              <Points>
+                <X>940</X>
+                <Y>245</Y>
+              </Points>
+            </Points>
+          </Connection>
+          <Connection Source="FB22.CNF4" Destination="FB23.REQ11">
+            <Points>
+              <Points>
+                <X>1660.45313</X>
+                <Y>965</Y>
+              </Points>
+              <Points>
+                <X>1692.95313</X>
+                <Y>965</Y>
+              </Points>
+              <Points>
+                <X>1692.95313</X>
+                <Y>877.5</Y>
+              </Points>
+              <Points>
+                <X>1482.5</X>
+                <Y>877.5</Y>
+              </Points>
+              <Points>
+                <X>1482.5</X>
+                <Y>887.5</Y>
+              </Points>
+              <Points>
+                <X>1032.5</X>
+                <Y>887.5</Y>
+              </Points>
+              <Points>
+                <X>1032.5</X>
+                <Y>762.5</Y>
+              </Points>
+              <Points>
+                <X>217.5</X>
+                <Y>762.5</Y>
+              </Points>
+              <Points>
+                <X>217.5</X>
+                <Y>955</Y>
+              </Points>
+              <Points>
+                <X>235</X>
+                <Y>955</Y>
+              </Points>
+            </Points>
+          </Connection>
+          <Connection Source="OrderConsole.PRODUCE_GREEN" Destination="FB23.REQ1" dx1="90" dx2="150" dy="-510" />
+          <Connection Source="CAMERA.GREEN" Destination="FB23.REQ5">
+            <Points>
+              <Points>
+                <X>1260.599</X>
+                <Y>625</Y>
+              </Points>
+              <Points>
+                <X>1272.5</X>
+                <Y>625</Y>
+              </Points>
+              <Points>
+                <X>1272.5</X>
+                <Y>712.5</Y>
+              </Points>
+              <Points>
+                <X>1032.5</X>
+                <Y>712.5</Y>
+              </Points>
+              <Points>
+                <X>1032.5</X>
+                <Y>757.5</Y>
+              </Points>
+              <Points>
+                <X>217.5</X>
+                <Y>757.5</Y>
+              </Points>
+              <Points>
+                <X>217.5</X>
+                <Y>865</Y>
+              </Points>
+              <Points>
+                <X>235</X>
+                <Y>865</Y>
+              </Points>
+            </Points>
+          </Connection>
+          <Connection Source="APP2_SUB_APP1_W3W1_FB.DONE" Destination="FB23.REQ6" dx1="60.60425" dx2="90" dy="770" />
+          <Connection Source="CAMERA.OTHER" Destination="FB23.REQ7">
+            <Points>
+              <Points>
+                <X>1260.599</X>
+                <Y>640</Y>
+              </Points>
+              <Points>
+                <X>1272.5</X>
+                <Y>640</Y>
+              </Points>
+              <Points>
+                <X>1272.5</X>
+                <Y>712.5</Y>
+              </Points>
+              <Points>
+                <X>1032.5</X>
+                <Y>712.5</Y>
+              </Points>
+              <Points>
+                <X>1032.5</X>
+                <Y>757.5</Y>
+              </Points>
+              <Points>
+                <X>207.5</X>
+                <Y>757.5</Y>
+              </Points>
+              <Points>
+                <X>207.5</X>
+                <Y>895</Y>
+              </Points>
+              <Points>
+                <X>235</X>
+                <Y>895</Y>
+              </Points>
+            </Points>
+          </Connection>
+          <Connection Source="CAMERA.RED" Destination="FB23.REQ7">
+            <Points>
+              <Points>
+                <X>1260.599</X>
+                <Y>610</Y>
+              </Points>
+              <Points>
+                <X>1282.5</X>
+                <Y>610</Y>
+              </Points>
+              <Points>
+                <X>1282.5</X>
+                <Y>712.5</Y>
+              </Points>
+              <Points>
+                <X>1032.5</X>
+                <Y>712.5</Y>
+              </Points>
+              <Points>
+                <X>1032.5</X>
+                <Y>757.5</Y>
+              </Points>
+              <Points>
+                <X>207.5</X>
+                <Y>757.5</Y>
+              </Points>
+              <Points>
+                <X>207.5</X>
+                <Y>895</Y>
+              </Points>
+              <Points>
+                <X>235</X>
+                <Y>895</Y>
+              </Points>
+            </Points>
+          </Connection>
+          <Connection Source="FB23.CNF1" Destination="PRODUCE_GREEN.START" />
+          <Connection Source="FB23.CNF6" Destination="PRODUCE_GREEN.DELIVERED" />
+          <Connection Source="FB23.CNF2" Destination="PRODUCE_GREEN.AT_W2" />
+          <Connection Source="FB23.CNF3" Destination="PRODUCE_GREEN.ASSEMBLY_DONE" />
+          <Connection Source="FB23.CNF4" Destination="PRODUCE_GREEN.AT_W3" />
+          <Connection Source="FB23.CNF5" Destination="PRODUCE_GREEN.TEST_OK" />
+          <Connection Source="FB23.CNF7" Destination="PRODUCE_GREEN.TEST_FAIL" />
+          <Connection Source="FB23.CNF8" Destination="PRODUCE_GREEN.AT_W4" />
+          <Connection Source="FB23.CNF9" Destination="PRODUCE_GREEN.WP_REMOVED" />
+          <Connection Source="FB23.CNF11" Destination="PRODUCE_GREEN.RESET" dx1="252.7084" />
+          <Connection Source="OrderConsole.PRODUCE_RED" Destination="FB24.REQ1" dx1="70" dx2="150" dy="-450" />
+          <Connection Source="CAMERA.RED" Destination="FB24.REQ5" dx1="70" dx2="40" dy="-648.2916" />
+          <Connection Source="APP2_SUB_APP1_W3W1_FB.DONE" Destination="FB24.REQ6" dx1="40.60425" dx2="30" dy="-470" />
+          <Connection Source="CAMERA.OTHER" Destination="FB24.REQ7" dx1="110" dx2="40" dy="-768.2916" />
+          <Connection Source="CAMERA.GREEN" Destination="FB24.REQ7" dx1="90" dx2="40" dy="-708.2916" />
+          <Connection Source="FB22.CNF4" Destination="FB24.REQ11" dx1="210" dx2="80" dy="-660.146" />
+          <Connection Source="FB24.CNF11" Destination="PRODUCE_RED.RESET" dx1="230" />
+          <Connection Source="FB24.CNF1" Destination="PRODUCE_RED.START" />
+          <Connection Source="FB24.CNF2" Destination="PRODUCE_RED.AT_W2" />
+          <Connection Source="FB24.CNF3" Destination="PRODUCE_RED.ASSEMBLY_DONE" />
+          <Connection Source="FB24.CNF4" Destination="PRODUCE_RED.AT_W3" />
+          <Connection Source="FB24.CNF5" Destination="PRODUCE_RED.TEST_OK" />
+          <Connection Source="FB24.CNF6" Destination="PRODUCE_RED.DELIVERED" />
+          <Connection Source="FB24.CNF7" Destination="PRODUCE_RED.TEST_FAIL" />
+          <Connection Source="FB24.CNF8" Destination="PRODUCE_RED.AT_W4" />
+          <Connection Source="FB24.CNF9" Destination="PRODUCE_RED.WP_REMOVED" />
+          <Connection Source="FB23.INITO" Destination="FB24.INIT" dx1="52.7085" dx2="170" dy="-110" />
+          <Connection Source="OrderConsole.INITO" Destination="failure1HMI.INIT" dx1="50" dx2="50" dy="-390" />
+          <Connection Source="failure1HMI.INITO" Destination="FB23.INIT" dx1="476.9375" dx2="50" dy="690" />
+          <Connection Source="START.WARM" Destination="IceBlock5_RES0_RECV.INIT" dx1="3880" dx2="4990" dy="-170" />
+          <Connection Source="START.COLD" Destination="IceBlock5_RES0_RECV.INIT" dx1="1740" dx2="2830" dy="-110" />
+          <Connection Source="START.COLD" Destination="LER_8684053690372021054_3623230111798763265_0.INIT" />
+          <Connection Source="START.WARM" Destination="LER_8684053690372021054_3623230111798763265_0.INIT" />
+          <Connection Source="LER_8684053690372021054_3623230111798763265_0.IND_1" Destination="FB24.REQ2" Comment="9334698305240620630" />
+          <Connection Source="LER_8684053690372021054_3623230111798763265_0.IND_2" Destination="FB23.REQ2" Comment="5887018621356211909" />
+          <Connection Source="OrderConsole.CLEAR" Destination="LP_15684121949671534389_11472184640987424840_0.REQ" Comment="10187428418710138159" />
+          <Connection Source="START.COLD" Destination="LP_15684121949671534389_11472184640987424840_0.INIT" />
+          <Connection Source="START.WARM" Destination="LP_15684121949671534389_11472184640987424840_0.INIT" />
+          <Connection Source="FB22.CNF4" Destination="LP_15684121949671534389_11472184640987424840_1.REQ" Comment="11681129690689609765" />
+          <Connection Source="LP_15684121949671534389_11472184640987424840_0.INITO" Destination="LP_15684121949671534389_11472184640987424840_1.INIT" />
+          <Connection Source="PRODUCE_GREEN.J1_REMOVE_WP" Destination="LP_15684121949671534389_11472184640987424840_2.REQ" Comment="15091019883172259469" />
+          <Connection Source="LP_15684121949671534389_11472184640987424840_1.INITO" Destination="LP_15684121949671534389_11472184640987424840_2.INIT" />
+          <Connection Source="PRODUCE_RED.J1_REMOVE_WP" Destination="LP_15684121949671534389_11472184640987424840_3.REQ" Comment="13952884059676538876" />
+          <Connection Source="LP_15684121949671534389_11472184640987424840_2.INITO" Destination="LP_15684121949671534389_11472184640987424840_3.INIT" />
+          <Connection Source="failure1HMI.CNF" Destination="LP_15684121949671534389_11472184640987424840_4.REQ" Comment="7195610199924564043" />
+          <Connection Source="LP_15684121949671534389_11472184640987424840_3.INITO" Destination="LP_15684121949671534389_11472184640987424840_4.INIT" />
+          <Connection Source="LER_8684053690372021054_3623230111798763265_0.INITO" Destination="LER_9010839850987526484_2552289582823000924_0.INIT" />
+          <Connection Source="LER_9010839850987526484_2552289582823000924_0.IND_1" Destination="FB24.REQ4" Comment="11108232657310786411" />
+          <Connection Source="LER_9010839850987526484_2552289582823000924_0.IND_2" Destination="FB23.REQ4" Comment="15802752801685192087" />
+          <Connection Source="LER_9010839850987526484_2552289582823000924_0.IND_3" Destination="FB6.REQ4" Comment="12834467962400708651" />
+          <Connection Source="APP2_SUB_APP1_W3W1_FB.SR_INPUT" Destination="LP_11476408061065696486_1590889336207582205_0.REQ" Comment="10831426584964251202" />
+          <Connection Source="LP_15684121949671534389_11472184640987424840_4.INITO" Destination="LP_11476408061065696486_1590889336207582205_0.INIT" />
+          <Connection Source="APP2_SUB_APP1_W3W1_FB.REQ_CONFIG" Destination="LP_11476408061065696486_1590889336207582205_1.REQ" Comment="7100524993341832332" />
+          <Connection Source="LP_11476408061065696486_1590889336207582205_0.INITO" Destination="LP_11476408061065696486_1590889336207582205_1.INIT" />
+          <Connection Source="FB22.CNF3" Destination="LP_11476408061065696486_1590889336207582205_2.REQ" Comment="4436008997365951281" />
+          <Connection Source="LP_11476408061065696486_1590889336207582205_1.INITO" Destination="LP_11476408061065696486_1590889336207582205_2.INIT" />
+          <Connection Source="FB22.CNF3" Destination="LP_11476408061065696486_1590889336207582205_3.REQ" Comment="11787702586049426490" />
+          <Connection Source="LP_11476408061065696486_1590889336207582205_2.INITO" Destination="LP_11476408061065696486_1590889336207582205_3.INIT" />
+          <Connection Source="DockConfirmationButton.CNF" Destination="LP_11476408061065696486_1590889336207582205_4.REQ" Comment="8694695511428822092" />
+          <Connection Source="LP_11476408061065696486_1590889336207582205_3.INITO" Destination="LP_11476408061065696486_1590889336207582205_4.INIT" />
+          <Connection Source="FB22.CNF4" Destination="LP_11476408061065696486_1590889336207582205_5.REQ" Comment="10267780447532268063" />
+          <Connection Source="LP_11476408061065696486_1590889336207582205_4.INITO" Destination="LP_11476408061065696486_1590889336207582205_5.INIT" />
+          <Connection Source="FB22.CNF4" Destination="LP_11476408061065696486_1590889336207582205_6.REQ" Comment="10261845439941977623" />
+          <Connection Source="LP_11476408061065696486_1590889336207582205_5.INITO" Destination="LP_11476408061065696486_1590889336207582205_6.INIT" />
+          <Connection Source="FB22.CNF4" Destination="LP_8976204426807441628_14226702723961609996_0.REQ" Comment="5675947700871226677" />
+          <Connection Source="LP_11476408061065696486_1590889336207582205_6.INITO" Destination="LP_8976204426807441628_14226702723961609996_0.INIT" />
+          <Connection Source="FB22.CNF2" Destination="LP_8976204426807441628_14226702723961609996_1.REQ" Comment="10932145728081283051" />
+          <Connection Source="LP_8976204426807441628_14226702723961609996_0.INITO" Destination="LP_8976204426807441628_14226702723961609996_1.INIT" />
+          <Connection Source="FB22.CNF3" Destination="LP_8976204426807441628_14226702723961609996_2.REQ" Comment="12454334016830884492" />
+          <Connection Source="LP_8976204426807441628_14226702723961609996_1.INITO" Destination="LP_8976204426807441628_14226702723961609996_2.INIT" />
+          <Connection Source="LER_9010839850987526484_2552289582823000924_0.INITO" Destination="LER_4456980697791985048_13881220512893219500_0.INIT" />
+          <Connection Source="LER_4456980697791985048_13881220512893219500_0.IND_1" Destination="FB24.REQ3" Comment="739337588992102542" />
+          <Connection Source="LER_4456980697791985048_13881220512893219500_0.IND_2" Destination="FB23.REQ3" Comment="13310009758994439662" />
+          <Connection Source="LER_4456980697791985048_13881220512893219500_0.IND_3" Destination="OrderConsole.CHECK_J2" Comment="9738249179530579421" />
+          <Connection Source="LER_4456980697791985048_13881220512893219500_0.IND_4" Destination="FB23.REQ9" Comment="18001977057852321745" />
+          <Connection Source="LER_4456980697791985048_13881220512893219500_0.IND_5" Destination="FB24.REQ9" Comment="16771870560243113154" />
+          <Connection Source="PRODUCE_RED.W1W2" Destination="LP_8684053690372021054_10478506737482796398_0.REQ" Comment="14814118869326128131" />
+          <Connection Source="LP_8976204426807441628_14226702723961609996_2.INITO" Destination="LP_8684053690372021054_10478506737482796398_0.INIT" />
+          <Connection Source="PRODUCE_GREEN.W1W2" Destination="LP_8684053690372021054_10478506737482796398_1.REQ" Comment="8771752266091729255" />
+          <Connection Source="LP_8684053690372021054_10478506737482796398_0.INITO" Destination="LP_8684053690372021054_10478506737482796398_1.INIT" />
+          <Connection Source="FB22.CNF3" Destination="LP_8684053690372021054_10478506737482796398_2.REQ" Comment="9907742738891006162" />
+          <Connection Source="LP_8684053690372021054_10478506737482796398_1.INITO" Destination="LP_8684053690372021054_10478506737482796398_2.INIT" />
+          <Connection Source="FB22.CNF3" Destination="LP_8684053690372021054_10478506737482796398_3.REQ" Comment="1132048977505785510" />
+          <Connection Source="LP_8684053690372021054_10478506737482796398_2.INITO" Destination="LP_8684053690372021054_10478506737482796398_3.INIT" />
+          <Connection Source="FB22.CNF2" Destination="LP_8684053690372021054_10478506737482796398_4.REQ" Comment="10052121652238196543" />
+          <Connection Source="LP_8684053690372021054_10478506737482796398_3.INITO" Destination="LP_8684053690372021054_10478506737482796398_4.INIT" />
+          <Connection Source="FB22.CNF3" Destination="LP_8684053690372021054_10478506737482796398_5.REQ" Comment="5044790381503314808" />
+          <Connection Source="LP_8684053690372021054_10478506737482796398_4.INITO" Destination="LP_8684053690372021054_10478506737482796398_5.INIT" />
+          <Connection Source="FB22.CNF4" Destination="LP_8684053690372021054_10478506737482796398_6.REQ" Comment="17027792074888179396" />
+          <Connection Source="LP_8684053690372021054_10478506737482796398_5.INITO" Destination="LP_8684053690372021054_10478506737482796398_6.INIT" />
+          <Connection Source="FB22.CNF4" Destination="LP_8684053690372021054_10478506737482796398_7.REQ" Comment="17564977485558520779" />
+          <Connection Source="LP_8684053690372021054_10478506737482796398_6.INITO" Destination="LP_8684053690372021054_10478506737482796398_7.INIT" />
+          <Connection Source="failure1HMI.CNF" Destination="LP_8684053690372021054_10478506737482796398_8.REQ" Comment="9554431196052377701" />
+          <Connection Source="LP_8684053690372021054_10478506737482796398_7.INITO" Destination="LP_8684053690372021054_10478506737482796398_8.INIT" />
+          <Connection Source="LER_4456980697791985048_13881220512893219500_0.INITO" Destination="LER_11476408061065696486_15179986707936572010_0.INIT" />
+          <Connection Source="LER_11476408061065696486_15179986707936572010_0.IND_1" Destination="FB7.REQ3" Comment="3461362261186706541" />
+          <Connection Source="LER_11476408061065696486_15179986707936572010_0.IND_2" Destination="FB7.REQ2" Comment="8596983698130995392" />
+          <Connection Source="LER_11476408061065696486_15179986707936572010_0.IND_3" Destination="APP2_SUB_APP1_W3W1_FB.CONFIG" Comment="7934443144132397165" />
+          <Connection Source="LER_11476408061065696486_15179986707936572010_0.IND_4" Destination="APP2_SUB_APP1_W3W1_FB.SR_SENSOR" Comment="18121952807892395228" />
+          <Connection Source="LER_11476408061065696486_15179986707936572010_0.IND_5" Destination="DockConfirmationButton.REQ" Comment="9005826506965940365" />
+          <Connection Source="LER_11476408061065696486_15179986707936572010_0.INITO" Destination="LDR_11476408061065696486_15179986707936572010_1.INIT" />
+          <Connection Source="PRODUCE_RED.PLACE_CAP" Destination="LP_4456980697791985048_1368498073867314819_0.REQ" Comment="6805196373408450250" />
+          <Connection Source="LP_8684053690372021054_10478506737482796398_8.INITO" Destination="LP_4456980697791985048_1368498073867314819_0.INIT" />
+          <Connection Source="PRODUCE_GREEN.PLACE_CAP" Destination="LP_4456980697791985048_1368498073867314819_1.REQ" Comment="401947005996870709" />
+          <Connection Source="LP_4456980697791985048_1368498073867314819_0.INITO" Destination="LP_4456980697791985048_1368498073867314819_1.INIT" />
+          <Connection Source="OrderConsole.CLEAR" Destination="LP_4456980697791985048_1368498073867314819_2.REQ" Comment="7874630010266760467" />
+          <Connection Source="LP_4456980697791985048_1368498073867314819_1.INITO" Destination="LP_4456980697791985048_1368498073867314819_2.INIT" />
+          <Connection Source="FB22.CNF4" Destination="LP_4456980697791985048_1368498073867314819_3.REQ" Comment="9538090909615893525" />
+          <Connection Source="LP_4456980697791985048_1368498073867314819_2.INITO" Destination="LP_4456980697791985048_1368498073867314819_3.INIT" />
+          <Connection Source="PRODUCE_GREEN.J2_REMOVE_WP" Destination="LP_4456980697791985048_1368498073867314819_4.REQ" Comment="13671751936776855321" />
+          <Connection Source="LP_4456980697791985048_1368498073867314819_3.INITO" Destination="LP_4456980697791985048_1368498073867314819_4.INIT" />
+          <Connection Source="PRODUCE_RED.J2_REMOVE_WP" Destination="LP_4456980697791985048_1368498073867314819_5.REQ" Comment="1483708701113909118" />
+          <Connection Source="LP_4456980697791985048_1368498073867314819_4.INITO" Destination="LP_4456980697791985048_1368498073867314819_5.INIT" />
+          <Connection Source="PRODUCE_RED.PLACE_CAP1" Destination="LP_4456980697791985048_1368498073867314819_6.REQ" Comment="14989443514790628233" />
+          <Connection Source="LP_4456980697791985048_1368498073867314819_5.INITO" Destination="LP_4456980697791985048_1368498073867314819_6.INIT" />
+          <Connection Source="PRODUCE_GREEN.PLACE_CAP1" Destination="LP_4456980697791985048_1368498073867314819_7.REQ" Comment="16201400057818287476" />
+          <Connection Source="LP_4456980697791985048_1368498073867314819_6.INITO" Destination="LP_4456980697791985048_1368498073867314819_7.INIT" />
+          <Connection Source="FB22.CNF2" Destination="LP_7428705805402624087_17823194494192578569_0.REQ" Comment="16866811114820097734" />
+          <Connection Source="LP_4456980697791985048_1368498073867314819_7.INITO" Destination="LP_7428705805402624087_17823194494192578569_0.INIT" />
+          <Connection Source="FB22.CNF3" Destination="LP_7428705805402624087_17823194494192578569_1.REQ" Comment="3031916537572035142" />
+          <Connection Source="LP_7428705805402624087_17823194494192578569_0.INITO" Destination="LP_7428705805402624087_17823194494192578569_1.INIT" />
+          <Connection Source="PRODUCE_RED.W3W4" Destination="LP_318350114759489640_18422537445508183460_0.REQ" Comment="12439616332030611710" />
+          <Connection Source="LP_7428705805402624087_17823194494192578569_1.INITO" Destination="LP_318350114759489640_18422537445508183460_0.INIT" />
+          <Connection Source="PRODUCE_GREEN.W3W4" Destination="LP_318350114759489640_18422537445508183460_1.REQ" Comment="7392658086049963954" />
+          <Connection Source="LP_318350114759489640_18422537445508183460_0.INITO" Destination="LP_318350114759489640_18422537445508183460_1.INIT" />
+          <Connection Source="FB22.CNF3" Destination="LP_318350114759489640_18422537445508183460_2.REQ" Comment="3049848595634367710" />
+          <Connection Source="LP_318350114759489640_18422537445508183460_1.INITO" Destination="LP_318350114759489640_18422537445508183460_2.INIT" />
+          <Connection Source="FB22.CNF3" Destination="LP_318350114759489640_18422537445508183460_3.REQ" Comment="12621412739340053994" />
+          <Connection Source="LP_318350114759489640_18422537445508183460_2.INITO" Destination="LP_318350114759489640_18422537445508183460_3.INIT" />
+          <Connection Source="PRODUCE_RED.W4W2" Destination="LP_318350114759489640_18422537445508183460_4.REQ" Comment="15764895575643177861" />
+          <Connection Source="LP_318350114759489640_18422537445508183460_3.INITO" Destination="LP_318350114759489640_18422537445508183460_4.INIT" />
+          <Connection Source="PRODUCE_GREEN.W4W2" Destination="LP_318350114759489640_18422537445508183460_5.REQ" Comment="4332090374166141748" />
+          <Connection Source="LP_318350114759489640_18422537445508183460_4.INITO" Destination="LP_318350114759489640_18422537445508183460_5.INIT" />
+          <Connection Source="FB22.CNF4" Destination="LP_318350114759489640_18422537445508183460_6.REQ" Comment="96677403959221743" />
+          <Connection Source="LP_318350114759489640_18422537445508183460_5.INITO" Destination="LP_318350114759489640_18422537445508183460_6.INIT" />
+          <Connection Source="FB15.CNF3" Destination="LP_318350114759489640_18422537445508183460_7.REQ" Comment="18368507078825141475" />
+          <Connection Source="LP_318350114759489640_18422537445508183460_6.INITO" Destination="LP_318350114759489640_18422537445508183460_7.INIT" />
+          <Connection Source="FB22.CNF2" Destination="LP_318350114759489640_18422537445508183460_8.REQ" Comment="18192863597656744242" />
+          <Connection Source="LP_318350114759489640_18422537445508183460_7.INITO" Destination="LP_318350114759489640_18422537445508183460_8.INIT" />
+          <Connection Source="FB22.CNF3" Destination="LP_318350114759489640_18422537445508183460_9.REQ" Comment="10116975397919322537" />
+          <Connection Source="LP_318350114759489640_18422537445508183460_8.INITO" Destination="LP_318350114759489640_18422537445508183460_9.INIT" />
+          <Connection Source="FB22.CNF4" Destination="LP_318350114759489640_18422537445508183460_10.REQ" Comment="12906337014875880904" />
+          <Connection Source="LP_318350114759489640_18422537445508183460_9.INITO" Destination="LP_318350114759489640_18422537445508183460_10.INIT" />
+          <Connection Source="FB22.CNF4" Destination="LP_318350114759489640_18422537445508183460_11.REQ" Comment="505728357434067558" />
+          <Connection Source="LP_318350114759489640_18422537445508183460_10.INITO" Destination="LP_318350114759489640_18422537445508183460_11.INIT" />
+          <Connection Source="LDR_11476408061065696486_15179986707936572010_1.INITO" Destination="LER_318350114759489640_12143347118898552480_0.INIT" />
+          <Connection Source="LER_318350114759489640_12143347118898552480_0.IND_1" Destination="FB24.REQ8" Comment="11114840939550328445" />
+          <Connection Source="LER_318350114759489640_12143347118898552480_0.IND_2" Destination="FB23.REQ8" Comment="16214765850693615661" />
+          <Connection Source="LER_318350114759489640_12143347118898552480_0.IND_3" Destination="FB24.REQ2" Comment="10402238129775878717" />
+          <Connection Source="LER_318350114759489640_12143347118898552480_0.IND_4" Destination="FB23.REQ2" Comment="12303760233787091739" />
+          <Connection Source="PRODUCE_RED.W2W3" Destination="LP_9010839850987526484_3014828970713800079_0.REQ" Comment="14025304364795425647" />
+          <Connection Source="LP_318350114759489640_18422537445508183460_11.INITO" Destination="LP_9010839850987526484_3014828970713800079_0.INIT" />
+          <Connection Source="PRODUCE_GREEN.W2W3" Destination="LP_9010839850987526484_3014828970713800079_1.REQ" Comment="9678465925041974837" />
+          <Connection Source="LP_9010839850987526484_3014828970713800079_0.INITO" Destination="LP_9010839850987526484_3014828970713800079_1.INIT" />
+          <Connection Source="FB22.CNF3" Destination="LP_9010839850987526484_3014828970713800079_2.REQ" Comment="13061073483110602519" />
+          <Connection Source="LP_9010839850987526484_3014828970713800079_1.INITO" Destination="LP_9010839850987526484_3014828970713800079_2.INIT" />
+          <Connection Source="FB15.CNF4" Destination="LP_9010839850987526484_3014828970713800079_3.REQ" Comment="17236136946973528104" />
+          <Connection Source="LP_9010839850987526484_3014828970713800079_2.INITO" Destination="LP_9010839850987526484_3014828970713800079_3.INIT" />
+          <Connection Source="FB22.CNF2" Destination="LP_9010839850987526484_3014828970713800079_4.REQ" Comment="11055042752764579477" />
+          <Connection Source="LP_9010839850987526484_3014828970713800079_3.INITO" Destination="LP_9010839850987526484_3014828970713800079_4.INIT" />
+          <Connection Source="FB22.CNF3" Destination="LP_9010839850987526484_3014828970713800079_5.REQ" Comment="7100061359606034480" />
+          <Connection Source="LP_9010839850987526484_3014828970713800079_4.INITO" Destination="LP_9010839850987526484_3014828970713800079_5.INIT" />
+          <Connection Source="FB22.CNF4" Destination="LP_9010839850987526484_3014828970713800079_6.REQ" Comment="5241849255216099242" />
+          <Connection Source="LP_9010839850987526484_3014828970713800079_5.INITO" Destination="LP_9010839850987526484_3014828970713800079_6.INIT" />
+          <Connection Source="LER_318350114759489640_12143347118898552480_0.INITO" Destination="LER_15684121949671534389_4289797556196545631_0.INIT" />
+          <Connection Source="LER_15684121949671534389_4289797556196545631_0.IND_1" Destination="OrderConsole.CHECK_J1" Comment="15414079114538667449" />
+          <Connection Source="LER_15684121949671534389_4289797556196545631_0.IND_2" Destination="FB24.REQ9" Comment="10320378972118890963" />
+          <Connection Source="LER_15684121949671534389_4289797556196545631_0.IND_3" Destination="FB23.REQ9" Comment="8270704007835911870" />
+          <Connection Source="LER_15684121949671534389_4289797556196545631_0.INITO" Destination="LER_318350114759489640_12143347118898552480_1.INIT" />
+          <Connection Source="LER_318350114759489640_12143347118898552480_1.IND_1" Destination="APP2_SUB_APP1_S5_ON_MERGE0.EI1" Comment="6666587775212890194" />
+          <Connection Source="LER_318350114759489640_12143347118898552480_1.IND_2" Destination="APP2_SUB_APP1_S5_OFF_MERGE.EI1" Comment="5589159019243673292" />
+        </EventConnections>
+        <DataConnections>
+          <Connection Source="FB23.OUT_BOOL1" Destination="PRODUCE_GREEN.J1_WORKING" dx1="32.70837" />
+          <Connection Source="FB23.OUT_BOOL2" Destination="PRODUCE_GREEN.J1_CONV_WORKING" dx1="40" />
+          <Connection Source="FB24.OUT_BOOL1" Destination="PRODUCE_RED.J1_WORKING" dx1="61.20837" />
+          <Connection Source="FB24.OUT_BOOL2" Destination="PRODUCE_RED.J1_CONV_WORKING" dx1="41.20837" />
+          <Connection Source="failure1HMI.J1_OUT" Destination="FB24.IN_BOOL1" dx1="140" dx2="170" dy="110" />
+          <Connection Source="failure1HMI.CONV1_OUT" Destination="FB24.IN_BOOL2" dx1="120" dx2="190" dy="110" />
+          <Connection Source="failure1HMI.J1_OUT" Destination="FB23.IN_BOOL1" dx1="140" dx2="170" dy="319.854" />
+          <Connection Source="failure1HMI.CONV1_OUT" Destination="FB23.IN_BOOL2" dx1="120" dx2="190" dy="259.854" />
+          <Connection Source="failure1HMI.J1_OUT" Destination="LP_15684121949671534389_11472184640987424840_4.SD_1" Comment="11202150103866309491" />
+          <Connection Source="failure1HMI.CONV1_OUT" Destination="LP_8684053690372021054_10478506737482796398_8.SD_1" Comment="15475901741326765909" />
+          <Connection Source="LDR_11476408061065696486_15179986707936572010_1.RD_1" Destination="APP2_SUB_APP1_W3W1_FB.configurationID" Comment="9561639208578538297" />
+        </DataConnections>
+      </FBNetwork>
+    </Resource>
+    <FBNetwork />
+  </Device>
+</System>

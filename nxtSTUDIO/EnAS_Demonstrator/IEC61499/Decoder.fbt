@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE FBType SYSTEM "../LibraryElement.dtd">
+<FBType GUID="2930268E88CC3CAD" Name="Decoder" Comment="Basic Function Block Type" Namespace="Main">
+  <Attribute Name="Configuration.FB.IDCounter" Value="0" />
+  <Identification Standard="61499-2" />
+  <VersionInfo Organization="nxtControl GmbH" Version="0.0" Author="erik" Date="5/5/2019" Remarks="Template" />
+  <InterfaceList>
+    <EventInputs>
+      <Event Name="INIT" Comment="Initialization Request">
+        <With Var="textIN" />
+        <With Var="NAME1" />
+        <With Var="NAME2" />
+        <With Var="NAME3" />
+        <With Var="NAME4" />
+        <With Var="NAME5" />
+        <With Var="NAME6" />
+      </Event>
+      <Event Name="REQ" Comment="Normal Execution Request">
+        <With Var="textIN" />
+        <With Var="NAME1" />
+        <With Var="NAME2" />
+        <With Var="NAME3" />
+        <With Var="NAME4" />
+        <With Var="NAME5" />
+        <With Var="NAME6" />
+      </Event>
+      <Event Name="REQ1" />
+      <Event Name="REQ2" />
+      <Event Name="REQ3" />
+      <Event Name="REQ4" />
+      <Event Name="REQ5" />
+      <Event Name="REQ6" />
+    </EventInputs>
+    <EventOutputs>
+      <Event Name="INITO" Comment="Initialization Confirm" />
+      <Event Name="CNF1" Comment="Execution Confirmation" />
+      <Event Name="CNF2" />
+      <Event Name="CNF3" />
+      <Event Name="CNF4" />
+      <Event Name="CNF5" />
+      <Event Name="CNF6" />
+    </EventOutputs>
+    <InputVars>
+      <VarDeclaration Name="textIN" Type="STRING[255]" />
+      <VarDeclaration Name="NAME1" Type="STRING" Comment="Input event qualifier" />
+      <VarDeclaration Name="NAME2" Type="STRING" />
+      <VarDeclaration Name="NAME3" Type="STRING" />
+      <VarDeclaration Name="NAME4" Type="STRING" />
+      <VarDeclaration Name="NAME5" Type="STRING" />
+      <VarDeclaration Name="NAME6" Type="STRING" />
+    </InputVars>
+  </InterfaceList>
+  <BasicFB>
+    <Attribute Name="FBType.Basic.Algorithm.Order" Value="INIT,REQ" />
+    <InternalVars>
+      <VarDeclaration Name="Internal_var1" Type="DINT" />
+    </InternalVars>
+    <ECC>
+      <ECState Name="START" Comment="Initial State" x="2320.941" y="809.4117" />
+      <ECState Name="INIT" Comment="Initialization" x="2330.529" y="129.1765">
+        <ECAction Algorithm="INIT" Output="INITO" />
+      </ECState>
+      <ECState Name="REQ" Comment="Normal execution" x="137.647" y="832.9412">
+        <ECAction Algorithm="REQ" />
+      </ECState>
+      <ECState Name="CNF1" x="1136" y="228">
+        <ECAction Output="CNF1" />
+      </ECState>
+      <ECState Name="CNF2" x="1156" y="500">
+        <ECAction Output="CNF2" />
+      </ECState>
+      <ECState Name="CNF3" x="1176" y="804">
+        <ECAction Output="CNF3" />
+      </ECState>
+      <ECState Name="CNF4" x="1156" y="1052">
+        <ECAction Output="CNF4" />
+      </ECState>
+      <ECState Name="CNF5" x="1160" y="1304">
+        <ECAction Output="CNF5" />
+      </ECState>
+      <ECState Name="CNF6" x="1148" y="1552">
+        <ECAction Output="CNF6" />
+      </ECState>
+      <ECState Name="STATE1" x="3580" y="99.99998">
+        <ECAction Output="CNF1" />
+      </ECState>
+      <ECState Name="STATE2" x="4140" y="505">
+        <ECAction Output="CNF2" />
+      </ECState>
+      <ECState Name="STATE3" x="4255" y="980.0001">
+        <ECAction Output="CNF3" />
+      </ECState>
+      <ECState Name="STATE4" x="4005" y="1460">
+        <ECAction Output="CNF4" />
+      </ECState>
+      <ECState Name="STATE5" x="3645" y="1820">
+        <ECAction Output="CNF5" />
+      </ECState>
+      <ECState Name="STATE6" x="3250" y="2145">
+        <ECAction Output="CNF6" />
+      </ECState>
+      <ECTransition Source="START" Destination="INIT" Condition="INIT" x="2325.645" y="394.294">
+        <Attribute Name="Configuration.Transaction.BezierPoints" Value="581.0956,116.3181,581.772,68.32891" />
+      </ECTransition>
+      <ECTransition Source="INIT" Destination="START" Condition="1" x="2406.072" y="470.3511">
+        <Attribute Name="Configuration.Transaction.BezierPoints" Value="606.7695,93.68125,606.0931,141.6705" />
+      </ECTransition>
+      <ECTransition Source="START" Destination="REQ" Condition="REQ" x="1267.884" y="1841.34">
+        <Attribute Name="Configuration.Transaction.BezierPoints" Value="494,544,146,538" />
+      </ECTransition>
+      <ECTransition Source="REQ" Destination="CNF1" Condition="Internal_var1 = 1" x="528.3044" y="520.2444">
+        <Attribute Name="Configuration.Transaction.BezierPoints" Value="94.03484,149.1151,156.9483,109.7862" />
+      </ECTransition>
+      <ECTransition Source="REQ" Destination="CNF2" Condition="Internal_var1 = 2" x="556.3522" y="639.726">
+        <Attribute Name="Configuration.Transaction.BezierPoints" Value="98.25587,170.3619,166.8142,147.6664" />
+      </ECTransition>
+      <ECTransition Source="REQ" Destination="CNF3" Condition="Internal_var1 = 3" x="707.6149" y="751.4039">
+        <Attribute Name="Configuration.Transaction.BezierPoints" Value="146.6592,185.0997,216.6009,183.2695" />
+      </ECTransition>
+      <ECTransition Source="REQ" Destination="CNF4" Condition="Internal_var1 = 4" x="703.9748" y="959.4568">
+        <Attribute Name="Configuration.Transaction.BezierPoints" Value="152.5,235,210,247.5" />
+      </ECTransition>
+      <ECTransition Source="REQ" Destination="CNF5" Condition="Internal_var1 = 5" x="685.7248" y="1090.423">
+        <Attribute Name="Configuration.Transaction.BezierPoints" Value="140,250,210,298.75" />
+      </ECTransition>
+      <ECTransition Source="REQ" Destination="CNF6" Condition="Internal_var1 = 6" x="672.9178" y="1209.368">
+        <Attribute Name="Configuration.Transaction.BezierPoints" Value="135,275,206.25,332.5" />
+      </ECTransition>
+      <ECTransition Source="CNF6" Destination="START" Condition="1" x="1905.641" y="1244.13">
+        <Attribute Name="Configuration.Transaction.BezierPoints" Value="466.25,355,510,275" />
+      </ECTransition>
+      <ECTransition Source="CNF2" Destination="START" Condition="1" x="1726.146" y="652.538">
+        <Attribute Name="Configuration.Transaction.BezierPoints" Value="395,155,467.5,171.25" />
+      </ECTransition>
+      <ECTransition Source="CNF1" Destination="START" Condition="1" x="1783.594" y="468.8261">
+        <Attribute Name="Configuration.Transaction.BezierPoints" Value="406.9508,93.04461,490.4963,134.6764" />
+      </ECTransition>
+      <ECTransition Source="CNF3" Destination="START" Condition="1" x="1753.154" y="749.9902">
+        <Attribute Name="Configuration.Transaction.BezierPoints" Value="403.8388,174.8859,475,193.75" />
+      </ECTransition>
+      <ECTransition Source="CNF4" Destination="START" Condition="1" x="1782.396" y="943.4827">
+        <Attribute Name="Configuration.Transaction.BezierPoints" Value="415,248.75,485,223.75" />
+      </ECTransition>
+      <ECTransition Source="CNF5" Destination="START" Condition="1" x="1831.327" y="1099.264">
+        <Attribute Name="Configuration.Transaction.BezierPoints" Value="423.75,306.25,505,247.5" />
+      </ECTransition>
+      <ECTransition Source="START" Destination="STATE1" Condition="REQ1" x="2931.413" y="382.3896">
+        <Attribute Name="Configuration.Transaction.BezierPoints" Value="691.2759,114.1157,777.6793,65.28926" />
+      </ECTransition>
+      <ECTransition Source="START" Destination="STATE2" Condition="REQ2" x="3242.43" y="583.4547">
+        <Attribute Name="Configuration.Transaction.BezierPoints" Value="748.6768,151.6871,875.6448,130.6627" />
+      </ECTransition>
+      <ECTransition Source="START" Destination="STATE3" Condition="REQ3" x="3289.499" y="823.8874">
+        <Attribute Name="Configuration.Transaction.BezierPoints" Value="753.8267,195.4548,892.291,207.7024" />
+      </ECTransition>
+      <ECTransition Source="START" Destination="STATE4" Condition="REQ4" x="3200.413" y="1073.578">
+        <Attribute Name="Configuration.Transaction.BezierPoints" Value="741.4565,240.6751,862.0389,287.7109" />
+      </ECTransition>
+      <ECTransition Source="START" Destination="STATE5" Condition="REQ5" x="3023.412" y="1255.84">
+        <Attribute Name="Configuration.Transaction.BezierPoints" Value="710.7321,273.4984,803.964,344.6106" />
+      </ECTransition>
+      <ECTransition Source="START" Destination="STATE6" Condition="REQ6" x="2833.891" y="1423.899">
+        <Attribute Name="Configuration.Transaction.BezierPoints" Value="675.7391,300.6893,747.1752,402.3758" />
+      </ECTransition>
+      <ECTransition Source="STATE6" Destination="START" Condition="1" x="2773.47" y="1564.336">
+        <Attribute Name="Configuration.Transaction.BezierPoints" Value="729.623,449.8417,656.9733,346.8482" />
+      </ECTransition>
+      <ECTransition Source="STATE5" Destination="START" Condition="1" x="2981.329" y="1394.198">
+        <Attribute Name="Configuration.Transaction.BezierPoints" Value="796.6973,393.019,697.3026,317.3289" />
+      </ECTransition>
+      <ECTransition Source="STATE4" Destination="START" Condition="1" x="3166.996" y="1212.361">
+        <Attribute Name="Configuration.Transaction.BezierPoints" Value="852.0193,331.0651,735.9899,286.4149" />
+      </ECTransition>
+      <ECTransition Source="STATE3" Destination="START" Condition="1" x="3284.057" y="965.6851">
+        <Attribute Name="Configuration.Transaction.BezierPoints" Value="890.4854,251.9986,752.0042,239.8397" />
+      </ECTransition>
+      <ECTransition Source="STATE2" Destination="START" Condition="1" x="3223.37" y="736.7262">
+        <Attribute Name="Configuration.Transaction.BezierPoints" Value="868.5076,178.7037,743.1071,199.3625" />
+      </ECTransition>
+      <ECTransition Source="STATE1" Destination="START" Condition="1" x="2995.783" y="521.1719">
+        <Attribute Name="Configuration.Transaction.BezierPoints" Value="794.6329,110.2467,705.1468,160.6673" />
+      </ECTransition>
+      <ECTransition Source="REQ" Destination="START" Condition="Internal_var1 = 0" x="1243.217" y="2252.34">
+        <Attribute Name="Configuration.Transaction.BezierPoints" Value="16,516,608,840" />
+      </ECTransition>
+    </ECC>
+    <Algorithm Name="INIT" Comment="Initialization algorithm">
+      <ST Text=";&#xD;&#xA;Internal_var1 := 0;" />
+    </Algorithm>
+    <Algorithm Name="REQ" Comment="Normally executed algorithm">
+      <ST Text=";" />
+    </Algorithm>
+  </BasicFB>
+</FBType>

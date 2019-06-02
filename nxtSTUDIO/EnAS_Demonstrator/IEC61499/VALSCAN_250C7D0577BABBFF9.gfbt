@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE FBType SYSTEM "../LibraryElement.dtd">
+<FBType Name="VALSCAN_250C7D0577BABBFF9" Comment="Service interface function block type" Namespace="Main">
+  <Attribute Name="Runtime.FBType.ImplementingType" Value="Runtime.Standard#DYNGEN_VALSCAN" />
+  <Attribute Name="Configuration.GenericFBType.InterfaceParams" Value="Runtime.Standard#I:=11;VALUE${I}:LINT,LINT,LINT,STRING,BOOL,BOOL,BOOL,BOOL,BOOL,BOOL,BOOL" />
+  <Attribute Name="Configuration.FB.IDCounter" Value="0" />
+  <Identification Standard="61499-2" />
+  <VersionInfo Organization="nxtControl GmbH" Version="1.0" Author="hoegdan" Date="02.07.2012" Remarks="Initial Version" />
+  <CompilerInfo>
+    <Compiler Language="Cpp" Vendor="nxtControl" Product="builtin " Version="1.0" />
+  </CompilerInfo>
+  <InterfaceList>
+    <EventInputs>
+      <Event Name="REQ" Comment="Request a formatting operation">
+        <With Var="FORMAT" />
+        <With Var="INSTR" />
+      </Event>
+    </EventInputs>
+    <EventOutputs>
+      <Event Name="CNF" Comment="Confirms a formattiong operation">
+        <With Var="STATUS" />
+        <With Var="VALUE1" />
+        <With Var="VALUE2" />
+        <With Var="VALUE3" />
+        <With Var="VALUE4" />
+        <With Var="VALUE5" />
+        <With Var="VALUE6" />
+        <With Var="VALUE7" />
+        <With Var="VALUE8" />
+        <With Var="VALUE9" />
+        <With Var="VALUE10" />
+        <With Var="VALUE11" />
+      </Event>
+    </EventOutputs>
+    <InputVars>
+      <VarDeclaration Name="FORMAT" Type="STRING" Comment="Defines a standard C printf like format" />
+      <VarDeclaration Name="INSTR" Type="STRING" Comment="The input string where the output values are read from" />
+    </InputVars>
+    <OutputVars>
+      <VarDeclaration Name="STATUS" Type="STRING" Comment="Error information" />
+      <VarDeclaration Name="VALUE1" Type="LINT" Comment="A list of values to be read from input string INSTR as defined in parameter FORMAT" />
+      <VarDeclaration Name="VALUE2" Type="LINT" Comment="A list of values to be read from input string INSTR as defined in parameter FORMAT" />
+      <VarDeclaration Name="VALUE3" Type="LINT" Comment="A list of values to be read from input string INSTR as defined in parameter FORMAT" />
+      <VarDeclaration Name="VALUE4" Type="STRING" Comment="A list of values to be read from input string INSTR as defined in parameter FORMAT" />
+      <VarDeclaration Name="VALUE5" Type="BOOL" Comment="A list of values to be read from input string INSTR as defined in parameter FORMAT" />
+      <VarDeclaration Name="VALUE6" Type="BOOL" Comment="A list of values to be read from input string INSTR as defined in parameter FORMAT" />
+      <VarDeclaration Name="VALUE7" Type="BOOL" Comment="A list of values to be read from input string INSTR as defined in parameter FORMAT" />
+      <VarDeclaration Name="VALUE8" Type="BOOL" Comment="A list of values to be read from input string INSTR as defined in parameter FORMAT" />
+      <VarDeclaration Name="VALUE9" Type="BOOL" Comment="A list of values to be read from input string INSTR as defined in parameter FORMAT" />
+      <VarDeclaration Name="VALUE10" Type="BOOL" Comment="A list of values to be read from input string INSTR as defined in parameter FORMAT" />
+      <VarDeclaration Name="VALUE11" Type="BOOL" Comment="A list of values to be read from input string INSTR as defined in parameter FORMAT" />
+    </OutputVars>
+  </InterfaceList>
+  <BasicFB>
+    <ECC>
+      <ECState Name="START" />
+    </ECC>
+  </BasicFB>
+</FBType>

@@ -1,0 +1,12 @@
+<DeviceFiles>
+        <Device Name="System.IceBlock_J1.dinfo.xml" />
+        <Device Name="System.IceBlock5.dinfo.xml" />
+        <Device Name="System.IceBlock6_2.dinfo.xml" />
+        <Device Name="System.IceBlock_R.dinfo.xml" />
+        <Device Name="System.IceBlock1.dinfo.xml" />
+        <Device Name="System.IceBlock2.dinfo.xml" />
+        <Device Name="System.IceBlock3.dinfo.xml" />
+        <Device Name="System.IceBlock_J2.dinfo.xml" />
+        <Device Name="System.IceBlock4.dinfo.xml" />
+        <Device Name="System.IceBlock7.dinfo.xml" />
+</DeviceFiles>

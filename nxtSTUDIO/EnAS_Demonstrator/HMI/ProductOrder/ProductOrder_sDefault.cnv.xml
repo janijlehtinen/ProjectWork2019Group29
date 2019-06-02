@@ -1,0 +1,14 @@
+<Mapping>
+  <EventInputs>
+    <Event Name="CHECK_J1" Map="REQ_1" />
+    <Event Name="READY" Map="REQ_2" />
+    <Event Name="CHECK_J2" Map="REQ_3" />
+  </EventInputs>
+  <EventOutputs>
+    <Event Name="PRODUCE_RED" Map="IND_1" />
+    <Event Name="PRODUCE_GREEN" Map="IND_2" />
+    <Event Name="CLEAR" Map="IND_3" />
+  </EventOutputs>
+  <Inputs />
+  <Outputs />
+</Mapping>

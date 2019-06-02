@@ -1,0 +1,14 @@
+<Mapping>
+  <EventInputs>
+    <Event Name="IND" Map="REQ_1">ConvOn;StopSignal;Sensor;PauseSignal;ExecutingSignal</Event>
+  </EventInputs>
+  <EventOutputs />
+  <Inputs>
+    <Input Name="ConvOn" Type="BOOL" Map="SD_1" />
+    <Input Name="StopSignal" Type="BOOL" Map="SD_2" />
+    <Input Name="Sensor" Type="BOOL" Map="SD_3" />
+    <Input Name="PauseSignal" Type="BOOL" Map="SD_4" />
+    <Input Name="ExecutingSignal" Type="BOOL" Map="SD_5" />
+  </Inputs>
+  <Outputs />
+</Mapping>

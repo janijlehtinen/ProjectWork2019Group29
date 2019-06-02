@@ -1,0 +1,1329 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>NxtControl.GuiFramework</name>
+    </assembly>
+    <members>
+        <member name="M:NxtControl.GuiFramework.AbstractShape.GetGuiResources(System.IntPtr,System.Int32)">
+             uiFlags: 0 - Count of GDI objects
+             uiFlags: 1 - Count of USER objects
+             - Win32 GDI objects (pens, brushes, fonts, palettes, regions, device contexts, bitmap headers)
+             - Win32 USER objects:
+                  - WIN32 resources (accelerator tables, bitmap resources, dialog box templates, font resources, menu resources, raw data resources, string table entries, message table entries, cursors/icons)
+             - Other USER objects (windows, menus)
+            
+        </member>
+        <member name="M:NxtControl.GuiFramework.AlarmArchiveConfiguration.Wildcard.#ctor(System.String)">
+            <summary>
+            Initializes a wildcard with the given search pattern.
+            </summary>
+            <param name="pattern">The wildcard pattern to match.</param>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:NxtControl.GuiFramework.AlarmArchiveConfiguration.Wildcard.#ctor(System.String,System.Text.RegularExpressions.RegexOptions)" -->
+        <member name="M:NxtControl.GuiFramework.AlarmArchiveConfiguration.Wildcard.WildcardToRegex(System.String)">
+            <summary>
+            Converts a wildcard to a regex.
+            </summary>
+            <param name="pattern">The wildcard pattern to convert.</param>
+            <returns>A regex equivalent of the given wildcard.</returns>
+        </member>
+        <member name="F:NxtControl.GuiFramework.AlarmArchiveConfigDlg.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:NxtControl.GuiFramework.AlarmArchiveConfigDlg.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:NxtControl.GuiFramework.AlarmArchiveConfigDlg.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:NxtControl.GuiFramework.QueryProgressDlg.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="F:NxtControl.GuiFramework.QueryProgressDlg.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:NxtControl.GuiFramework.QueryProgressDlg.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:NxtControl.Alarm.AlarmClasses">
+            <remarks/>
+        </member>
+        <member name="P:NxtControl.Alarm.AlarmClasses.Class">
+            <remarks/>
+        </member>
+        <member name="T:NxtControl.Alarm.AlarmClass">
+            <remarks/>
+        </member>
+        <member name="P:NxtControl.Alarm.AlarmClass.State">
+            <remarks/>
+        </member>
+        <member name="P:NxtControl.Alarm.AlarmClass.Shortcut">
+            <remarks/>
+        </member>
+        <member name="P:NxtControl.Alarm.AlarmClass.Name">
+            <remarks/>
+        </member>
+        <member name="P:NxtControl.Alarm.AlarmClass.Prio">
+            <remarks/>
+        </member>
+        <member name="T:NxtControl.Alarm.AlarmStateDef">
+            <remarks/>
+        </member>
+        <member name="P:NxtControl.Alarm.AlarmStateDef.Text">
+            <remarks/>
+        </member>
+        <member name="P:NxtControl.Alarm.AlarmStateDef.State">
+            <remarks/>
+        </member>
+        <member name="P:NxtControl.Alarm.AlarmStateDef.Color">
+            <remarks/>
+        </member>
+        <member name="T:NxtControl.Alarm.AlarmLangText">
+            <remarks/>
+        </member>
+        <member name="P:NxtControl.Alarm.AlarmLangText.Lang">
+            <remarks/>
+        </member>
+        <member name="P:NxtControl.Alarm.AlarmLangText.Text">
+            <remarks/>
+        </member>
+        <member name="M:NxtControl.Services.IAlarmClassService.SetLanguage(System.String)">
+            <summary>
+            Set the language used for following queries. Only call when it changes (expensive)
+            </summary>
+            <param name="lang"></param>
+        </member>
+        <member name="F:NxtControl.GuiFramework.AlarmControl.AlarmColumn.Shortcut">
+            <summary>
+            Shortcut (defined in the alarm class)
+            </summary>
+        </member>
+        <member name="F:NxtControl.GuiFramework.AlarmControl.AlarmColumn.Ack">
+            <summary>
+            Ack string
+            </summary>
+        </member>
+        <member name="F:NxtControl.GuiFramework.AlarmControl.AlarmColumn.Origin">
+            <summary>
+            Alias (or FB path if alias not defined)
+            </summary>
+        </member>
+        <member name="F:NxtControl.GuiFramework.AlarmControl.AlarmColumn.Text">
+            <summary>
+            Alarm text ("temperature too high" etc)
+            </summary>
+        </member>
+        <member name="F:NxtControl.GuiFramework.AlarmControl.AlarmColumn.CameTime">
+            <summary>
+            Time of the alarm came event
+            </summary>
+        </member>
+        <member name="F:NxtControl.GuiFramework.AlarmControl.AlarmColumn.GoneTime">
+            <summary>
+            Time of the alarm gone event (empty if still present)
+            </summary>
+        </member>
+        <member name="F:NxtControl.GuiFramework.AlarmControl.AlarmColumn.Present">
+            <summary>
+            Whether the alarm is still present (this cannot be derived
+            from state, as it can be not present and still not acked)
+            </summary>
+        </member>
+        <member name="F:NxtControl.GuiFramework.AlarmControl.AlarmColumn.State">
+            <summary>
+            Alarm state (came, came not acked, ...)
+            </summary>
+        </member>
+        <member name="F:NxtControl.GuiFramework.AlarmControl.AlarmColumn.Value">
+            <summary>
+            Value that caused the alarm to come or go
+            </summary>
+        </member>
+        <member name="F:NxtControl.GuiFramework.AlarmControl.AlarmColumn.InfoValue">
+            <summary>
+            Informational value
+            </summary>
+        </member>
+        <member name="F:NxtControl.GuiFramework.AlarmControl.AlarmColumn.CameAckTime">
+            <summary>
+            Time of the came acknowledge (empty if not ackable or not yet acked)
+            </summary>
+        </member>
+        <member name="F:NxtControl.GuiFramework.AlarmControl.AlarmColumn.GoneAckTime">
+            <summary>
+            Time of the gone acknowledge (empty if not ackable or not yet acked)
+            </summary>
+        </member>
+        <member name="F:NxtControl.GuiFramework.AlarmControl.AlarmColumn.Interval">
+            <summary>
+            Interval (starting from 0 in the AlarmInfo, from 1 in display)
+            </summary>
+        </member>
+        <member name="F:NxtControl.GuiFramework.AlarmControl.AlarmColumn.CameAckUser">
+            <summary>
+            User who acked the came event
+            </summary>
+        </member>
+        <member name="F:NxtControl.GuiFramework.AlarmControl.AlarmColumn.GoneAckUser">
+            <summary>
+            User who acked the gone event
+            </summary>
+        </member>
+        <member name="F:NxtControl.GuiFramework.AlarmControl.AlarmColumn.Path">
+            <summary>
+            Path
+            </summary>
+        </member>
+        <member name="F:NxtControl.GuiFramework.AlarmControl.AlarmColumn.Alias">
+            <summary>
+            Alias
+            </summary>
+        </member>
+        <member name="F:NxtControl.GuiFramework.AlarmControl.AlarmColumn.Time">
+            <summary>
+            Time
+            </summary>
+        </member>
+        <member name="F:NxtControl.GuiFramework.AlarmDetailDlg.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:NxtControl.GuiFramework.AlarmDetailDlg.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:NxtControl.GuiFramework.AlarmDetailDlg.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:NxtControl.GuiFramework.ArchivePathDlg.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="F:NxtControl.GuiFramework.ArchivePathDlg.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:NxtControl.GuiFramework.ArchivePathDlg.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:NxtControl.GuiFramework.BoxShape">
+            <summary>
+            Summary description for BoxShape.
+            </summary>
+        </member>
+        <member name="T:NxtControl.GuiFramework.IBoxShape">
+            <summary>
+            Summary description for IBoxShape.
+            </summary>
+        </member>
+        <member name="M:NxtControl.GuiFramework.Digiscope.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:NxtControl.GuiFramework.TextBoxControl.InputPadTime">
+            <summary>
+            Description of InputPadDateAndTime.
+            </summary>
+            <summary>
+            Summary description for InputPadTime.
+            </summary>
+        </member>
+        <member name="M:NxtControl.GuiFramework.GroupShape.HitTestShapes(System.Drawing.Rectangle)">
+            <summary>
+            Finds a top level shape that intersects the given rectangle.
+            </summary>
+            <param name="rect"></param>
+            <returns></returns>
+        </member>
+        <member name="M:NxtControl.GuiFramework.GroupShape.HitTestShape(System.Int32,System.Int32)">
+            <summary>
+            Finds a top level shape. Use this call for hit detection that
+            should not descend into the myShapes's children. 
+            </summary>
+            <param name="x"></param>
+            <param name="y"></param>
+            <returns>IShape</returns>
+        </member>
+        <member name="M:NxtControl.GuiFramework.GroupShape.HitTestShapeInside(System.Int32,System.Int32)">
+            <summary>
+            Finds a figure but descends into a figure's
+            children. Use this method to implement <index>click-through</index>
+            hit detection, that is, you want to detect the inner most
+            figure containing the given point. Function ignores
+            Window Controls
+            </summary>
+            <param name="x"></param>
+            <param name="y"></param>
+            <returns></returns>
+        </member>
+        <member name="F:NxtControl.GuiFramework.CanvasCore.size">
+            <summary>
+            Defines the real size of the canvas
+            </summary>
+        </member>
+        <member name="M:NxtControl.GuiFramework.TextBoxControl.InputPadTime.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:NxtControl.GuiFramework.FillShape">
+            <summary>
+            Summary description for FillShape.
+            </summary>
+        </member>
+        <member name="T:NxtControl.GuiFramework.TextBoxControl.InputPadTimeOfDay">
+            <summary>
+            Description of InputPadDateAndTime.
+            </summary>
+            <summary>
+            Summary description for InputPadTimeOfDay.
+            </summary>
+        </member>
+        <member name="M:NxtControl.GuiFramework.TextBoxControl.InputPadTimeOfDay.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:NxtControl.GuiFramework.TextBoxControl.InputPadDate">
+            <summary>
+            Description of InputPadDate.
+            </summary>
+            <summary>
+            Summary description for InputPadDate.
+            </summary>
+        </member>
+        <member name="M:NxtControl.GuiFramework.TextBoxControl.InputPadDate.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:NxtControl.GuiFramework.TextBoxControl.InputPadDateAndTime">
+            <summary>
+            Description of InputPadDateAndTime.
+            </summary>
+            <summary>
+            Summary description for InputPadDateAndTime.
+            </summary>
+        </member>
+        <member name="M:NxtControl.GuiFramework.TextBoxControl.InputPadDateAndTime.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:NxtControl.GuiFramework.TextBoxControl.InputPadOctal">
+            <summary>
+            Description of Faceplate1.
+            </summary>
+        </member>
+        <member name="M:NxtControl.GuiFramework.TextBoxControl.InputPadOctal.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:NxtControl.GuiFramework.TextBoxControl.InputPadBinary">
+            <summary>
+            Description of Faceplate1.
+            </summary>
+        </member>
+        <member name="M:NxtControl.GuiFramework.TextBoxControl.InputPadBinary.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:NxtControl.GuiFramework.TextBoxControl.InputPadHexadecimal">
+            <summary>
+            Description of Faceplate1.
+            </summary>
+        </member>
+        <member name="M:NxtControl.GuiFramework.TextBoxControl.InputPadHexadecimal.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:NxtControl.GuiFramework.TextBoxControl.InputPadDecimal">
+            <summary>
+            Description of Faceplate1.
+            </summary>
+        </member>
+        <member name="M:NxtControl.GuiFramework.TextBoxControl.InputPadDecimal.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:NxtControl.GuiFramework.TextBoxControl.InputPadNormal.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:NxtControl.GuiFramework.TextBoxControl.InputPadNormal.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:NxtControl.GuiFramework.TextBoxControl.InputPadNormal.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:NxtControl.GuiFramework.TextBoxControl.InputPadNumeric">
+            <summary>
+            Use this dialog to provide an input pad for numeric values
+            </summary>
+            
+        </member>
+        <member name="F:NxtControl.GuiFramework.TextBoxControl.InputPadNumeric.components">
+            <summary>
+            Designer variable used to keep track of non-visual components.
+            </summary>
+        </member>
+        <member name="M:NxtControl.GuiFramework.TextBoxControl.InputPadNumeric.Dispose(System.Boolean)">
+            <summary>
+            Disposes resources used by the form.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:NxtControl.GuiFramework.TextBoxControl.InputPadNumeric.InitializeComponent">
+            <summary>
+            This method is required for Windows Forms designer support.
+            Do not change the method contents inside the source code editor. The Forms designer might
+            not be able to load this method if it was changed manually.
+            </summary>
+        </member>
+        <member name="T:NxtControl.GuiFramework.GroupBox">
+            <summary>
+            Summary description for Group
+            </summary>
+        </member>
+        <member name="T:NxtControl.GuiFramework.Group">
+            <summary>
+            Summary description for Group
+            </summary>
+        </member>
+        <member name="T:NxtControl.GuiFramework.Symbol">
+            <summary>
+            Summary description for Symbol.
+            </summary>
+        </member>
+        <member name="M:NxtControl.GuiFramework.DrawnDateTimePicker.HMIIcon.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:NxtControl.GuiFramework.DrawnDateTimePicker.UTCIcon.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:NxtControl.GuiFramework.DrawnDateTimePicker.RuntimeIcon.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:NxtControl.GuiFramework.TimeZoneType.UTC">
+            <summary>
+            The time shown is in UTC
+            </summary>
+        </member>
+        <member name="F:NxtControl.GuiFramework.TimeZoneType.Runtime">
+            <summary>
+            The time shown is time from Runtime
+            </summary>
+        </member>
+        <member name="F:NxtControl.GuiFramework.TimeZoneType.HMI">
+            <summary>
+            The time shown is time of current HMI
+            </summary>
+        </member>
+        <member name="T:NxtControl.GuiFramework.TagValueEditorParser.FilterInputBox">
+            <summary>
+            Description of InputBox.
+            </summary>
+        </member>
+        <member name="M:NxtControl.GuiFramework.TagValueEditorParser.FilterInputBox.InitializeComponent">
+            <summary>
+            This method is required for Windows Forms designer support.
+            Do not change the method contents inside the source code editor. The Forms designer might
+            not be able to load this method if it was changed manually.
+            </summary>
+        </member>
+        <member name="M:NxtControl.GuiFramework.TagValueEditorParser.ParseNode.Eval(NxtControl.GuiFramework.TagValueEditorParser.ParseTree,System.Object[])">
+            <summary>
+            this implements the evaluation functionality, cannot be used directly
+            </summary>
+            <param name="tree">the parsetree itself</param>
+            <param name="paramlist">optional input parameters</param>
+            <returns>a partial result of the evaluation</returns>
+        </member>
+        <member name="M:NxtControl.GuiFramework.TagValueEditorParser.ParseTree.Eval(System.Object[])">
+            <summary>
+            this is the entry point for executing and evaluating the parse tree.
+            </summary>
+            <param name="paramlist">additional optional input parameters</param>
+            <returns>the output of the evaluation function</returns>
+        </member>
+        <member name="M:NxtControl.GuiFramework.TagValueEditorParser.Scanner.Scan(NxtControl.GuiFramework.TagValueEditorParser.TokenType[])">
+            <summary>
+            executes a lookahead of the next token
+            and will advance the scan on the input string
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:NxtControl.GuiFramework.TagValueEditorParser.Scanner.LookAhead(NxtControl.GuiFramework.TagValueEditorParser.TokenType[])">
+            <summary>
+            returns token with longest best match
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="F:NxtControl.GuiFramework.TagValueEditorConfigurationManagerDlg.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:NxtControl.GuiFramework.TagValueEditorConfigurationManagerDlg.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:NxtControl.GuiFramework.TagValueEditorConfigurationManagerDlg.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:NxtControl.GuiFramework.TagValueEditor.CustomDataGridView.SuspendDrawing">
+            <summary>
+            Suspend drawing updates for the specified control. After the control has been updated
+            call DrawingControl.ResumeDrawing(Control control).
+            </summary>
+            <param name="control">The control to suspend draw updates on.</param>
+        </member>
+        <member name="M:NxtControl.GuiFramework.TagValueEditor.CustomDataGridView.ResumeDrawing">
+            <summary>
+            Resume drawing updates for the specified control.
+            </summary>
+            <param name="control">The control to resume draw updates on.</param>
+        </member>
+        <member name="M:NxtControl.GuiFramework.TagValueEditor.Wildcard.#ctor(System.String)">
+            <summary>
+            Initializes a wildcard with the given search pattern.
+            </summary>
+            <param name="pattern">The wildcard pattern to match.</param>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:NxtControl.GuiFramework.TagValueEditor.Wildcard.#ctor(System.String,System.Text.RegularExpressions.RegexOptions)" -->
+        <member name="M:NxtControl.GuiFramework.TagValueEditor.Wildcard.WildcardToRegex(System.String)">
+            <summary>
+            Converts a wildcard to a regex.
+            </summary>
+            <param name="pattern">The wildcard pattern to convert.</param>
+            <returns>A regex equivalent of the given wildcard.</returns>
+        </member>
+        <member name="F:NxtControl.GuiFramework.JournalConfigurationManagerDlg.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:NxtControl.GuiFramework.JournalConfigurationManagerDlg.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:NxtControl.GuiFramework.JournalConfigurationManagerDlg.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:NxtControl.GuiFramework.JournalViewer.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:NxtControl.GuiFramework.JournalViewer.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:NxtControl.GuiFramework.JournalViewer.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:NxtControl.Drawing.Color">
+            <summary>
+            Color specific to this framework
+            </summary>
+        </member>
+        <member name="M:NxtControl.Drawing.Color.Equals(System.Object)">
+            Override the Object.Equals(object o) method:
+        </member>
+        <member name="T:NxtControl.Drawing.FloatingPopupBase">
+            <summary>
+            Summary description for frmFloatingBase.
+            </summary>
+        </member>
+        <member name="M:NxtControl.Drawing.FloatingPopupBase.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+        </member>
+        <member name="M:NxtControl.Drawing.FloatingPopupBase.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:NxtControl.Drawing.GradientFill">
+            <summary>
+            Color specific to this framework
+            </summary>
+        </member>
+        <member name="M:NxtControl.GuiFramework.GeneralProperty`1.Equals(System.Object)">
+            Override the Object.Equals(object o) method:
+        </member>
+        <member name="T:NxtControl.GuiFramework.ControlWrapper">
+            <summary>
+            Summary description for ControlWrapper.
+            </summary>
+        </member>
+        <member name="T:NxtControl.Drawing.BrushType">
+            <summary>
+            <B>BrushType</B> enumerates the types of the <see cref="T:NxtControl.Drawing.Brush"/>
+            <seealso cref="T:NxtControl.Drawing.Brush"/>
+            </summary>
+        </member>
+        <member name="F:NxtControl.Drawing.BrushType.Null">
+            <summary>Brush will not be applied.</summary>
+        </member>
+        <member name="F:NxtControl.Drawing.BrushType.Solid">
+            <summary>Defines a brush of a single color.</summary>
+        </member>
+        <member name="F:NxtControl.Drawing.BrushType.Texture">
+            <summary>Brush object that uses an image to fill the interior of a shape.</summary>
+        </member>
+        <member name="F:NxtControl.Drawing.BrushType.Name">
+            <summary>Brush shows at Named Brush</summary>
+        </member>
+        <member name="F:NxtControl.Drawing.Brush.brushType">
+            <summary>Type of the Brush</summary>
+        </member>
+        <member name="M:NxtControl.Drawing.Brush.#ctor">
+            <summary>
+            Public Constructor creates Null Brush
+            </summary>
+        </member>
+        <member name="M:NxtControl.Drawing.Brush.#ctor(NxtControl.Drawing.Color)">
+            <summary>
+            Public Constructor creates Solid Brush
+            </summary>
+        </member>
+        <member name="M:NxtControl.Drawing.Brush.#ctor(NxtControl.Drawing.Color,NxtControl.Drawing.GradientFill)">
+            <summary>
+            Public Constructor creates Gradient Brush
+            </summary>
+        </member>
+        <member name="M:NxtControl.Drawing.Brush.Finalize">
+            <summary>
+            Destructor
+            </summary>
+        </member>
+        <member name="M:NxtControl.Drawing.Brush.Dispose">
+            <summary>
+            Releases all resources used by this Brush object.
+            <returns>This method does not return a value.</returns>
+            </summary>
+        </member>
+        <member name="M:NxtControl.Drawing.Brush.Dispose(System.Boolean)">
+            <summary>
+            Releases all resources used by this Brush object.
+            </summary>
+            <param name="disposing">Disposing the managed types</param>
+            <returns>This method does not return a value.</returns>
+        </member>
+        <member name="M:NxtControl.Drawing.Brush.DisposeBrush">
+            <summary>
+            Drop the cached brush
+            </summary>
+        </member>
+        <member name="M:NxtControl.Drawing.Brush.CreateNullBrush">
+            <summary>
+            Creates a new instance of the Null Brush
+            </summary>
+            <returns><see cref="T:NxtControl.Drawing.Brush"/></returns>
+        </member>
+        <member name="M:NxtControl.Drawing.Brush.CreateSolidBrush(NxtControl.Drawing.Color)">
+            <summary>
+            Creates a new instance of the Solid Brush with the specified foreground color
+            </summary>
+            <param name="color">Color used by the brush</param>
+            <returns><see cref="T:NxtControl.Drawing.Brush"/></returns>
+        </member>
+        <member name="M:NxtControl.Drawing.Brush.op_Implicit(NxtControl.Drawing.Brush)~System.Drawing.Brush">
+            <summary>
+            Implicit Casting Operator from the <see cref="T:NxtControl.Drawing.Brush"/> to <see cref="T:System.Drawing.Brush"/>
+            </summary>
+            <param name="brush">Brush to be casted</param>
+            <returns></returns>
+        </member>
+        <member name="P:NxtControl.Drawing.Brush.Type">
+            <summary>
+            Gets the type of the brush
+            </summary>
+            <value>Type of the Brush</value>
+        </member>
+        <member name="M:NxtControl.Drawing.HLSRGB.LightenColor(System.Single)">
+            <summary>
+            Lightens the colour by the specified amount by modifying
+            the luminance (for example, 0.2 would lighten the colour by 20%)
+            </summary>
+        </member>
+        <member name="M:NxtControl.Drawing.HLSRGB.DarkenColor(System.Single)">
+            <summary>
+            Darkens the colour by the specified amount by modifying
+            the luminance (for example, 0.2 would darken the colour by 20%)
+            </summary>
+        </member>
+        <member name="M:NxtControl.Drawing.HLSRGB.#ctor(System.Drawing.Color)">
+            <summary>
+            Constructs an instance of the class from the specified
+            System.Drawing.Color
+            </summary>
+            <param name="c">The System.Drawing.Color to use to initialise the class</param>
+        </member>
+        <member name="M:NxtControl.Drawing.HLSRGB.#ctor(System.Single,System.Single,System.Single)">
+            <summary>
+            Constructs an instance of the class with the specified hue, luminance and saturation values.
+            </summary>
+            <param name="hue">The Hue (between 0.0 and 360.0)</param>
+            <param name="luminance">The Luminance (between 0.0 and 1.0)</param>
+            <param name="saturation">The Saturation (between 0.0 and 1.0)</param>
+            <exception cref="T:System.ArgumentOutOfRangeException">If any of the H,L,S values are out of the acceptable range (0.0-360.0 for Hue and 0.0-1.0 for Luminance and Saturation)</exception>
+        </member>
+        <member name="M:NxtControl.Drawing.HLSRGB.#ctor(System.Byte,System.Byte,System.Byte)">
+            <summary>
+            Constructs an instance of the class with the specified red, green and blue values.
+            </summary>
+            <param name="red">The red component.</param>
+            <param name="green">The green component.</param>
+            <param name="blue">The blue component.</param>
+        </member>
+        <member name="M:NxtControl.Drawing.HLSRGB.#ctor(NxtControl.Drawing.HLSRGB)">
+            <summary>
+            Constructs an instance of the class using the settings of another instance.
+            </summary>
+            <param name="hlsrgb">The instance to clone.</param>
+        </member>
+        <member name="M:NxtControl.Drawing.HLSRGB.#ctor">
+            <summary>
+            Constructs a new instance of the class initialised to black.
+            </summary>
+        </member>
+        <member name="P:NxtControl.Drawing.HLSRGB.Alpha">
+            <summary>
+            Gets or sets the Red component of the colour.
+            </summary>
+        </member>
+        <member name="P:NxtControl.Drawing.HLSRGB.Red">
+            <summary>
+            Gets or sets the Red component of the colour.
+            </summary>
+        </member>
+        <member name="P:NxtControl.Drawing.HLSRGB.Green">
+            <summary>
+            Gets or sets the Green component of the colour.
+            </summary>
+        </member>
+        <member name="P:NxtControl.Drawing.HLSRGB.Blue">
+            <summary>
+            Gets or sets the Blue component of the colour.
+            </summary>
+        </member>
+        <member name="P:NxtControl.Drawing.HLSRGB.Luminance">
+            <summary>
+            Gets or sets the Luminance (0.0 to 1.0) of the colour.
+            </summary>
+            <exception cref="T:System.ArgumentOutOfRangeException">If the value is out of the acceptable range for luminance (0.0 to 1.0)</exception>
+        </member>
+        <member name="P:NxtControl.Drawing.HLSRGB.Hue">
+            <summary>
+            Gets or sets the Hue (0.0 to 360.0) of the colour.
+            </summary>
+            <exception cref="T:System.ArgumentOutOfRangeException">If the value is out of the acceptable range for hue (0.0 to 360.0)</exception>
+        </member>
+        <member name="P:NxtControl.Drawing.HLSRGB.Saturation">
+            <summary>
+            Gets or sets the Saturation (0.0 to 1.0) of the colour.
+            </summary>
+            <exception cref="T:System.ArgumentOutOfRangeException">If the value is out of the acceptable range for saturation (0.0 to 1.0)</exception>
+        </member>
+        <member name="P:NxtControl.Drawing.HLSRGB.Color">
+            <summary>
+            Gets or sets the Color as a System.Drawing.Color instance
+            </summary>
+        </member>
+        <member name="T:NxtControl.Drawing.Geometry">
+            <summary>
+            Summary description for Geometry.
+            </summary>
+        </member>
+        <member name="T:NxtControl.GuiFramework.IImageService">
+            <summary>
+            Summary description for IImageService.
+            </summary>
+        </member>
+        <member name="T:NxtControl.Drawing.ImageHolder">
+            <summary>
+            Summary description for ImageHolder.
+            </summary>
+        </member>
+        <member name="T:NxtControl.GuiFramework.ImageStorage">
+            <remarks/>
+        </member>
+        <member name="T:NxtControl.GuiFramework.ImageCatalogue">
+            <remarks/>
+        </member>
+        <member name="T:NxtControl.GuiFramework.ImageData">
+            <remarks/>
+        </member>
+        <member name="T:NxtControl.Drawing.Matrix">
+            <summary>
+            Summary description for Matrix.
+            </summary>
+        </member>
+        <member name="T:NxtControl.Drawing.DashStyle">
+            <summary>
+            Enum DashStyle 
+            </summary>
+        </member>
+        <member name="T:NxtControl.Drawing.Pen">
+            <summary>
+            Structure Pen
+            </summary>
+        </member>
+        <member name="M:NxtControl.Drawing.Pen.Dispose(System.Boolean)">
+            <summary>
+            Releases all resources used by this Pen object.
+            </summary>
+            <param name="disposing">Disposing the managed types</param>
+            <returns>This method does not return a value.</returns>
+        </member>
+        <member name="M:NxtControl.Drawing.Pen.Equals(System.Object)">
+            Override the Object.Equals(object o) method:
+        </member>
+        <member name="M:NxtControl.Drawing.Pen.DisposePen">
+            <summary>
+            Drop the cached pen
+            </summary>
+        </member>
+        <member name="T:NxtControl.Drawing.Point">
+            <summary>
+            Summary description for Point.
+            </summary>
+        </member>
+        <member name="T:NxtControl.Drawing.PointFCollection">
+            <summary>
+            This class implements a collection of myShapes.
+            </summary>
+        </member>
+        <member name="T:NxtControl.Drawing.Rect">
+            <summary>
+            Summary description for Rect.
+            </summary>
+        </member>
+        <member name="T:NxtControl.Drawing.Size">
+            <summary>
+            Summary description for Size.
+            </summary>
+        </member>
+        <member name="T:NxtControl.Drawing.SizeF">
+            <summary>
+            Summary description for Size.
+            </summary>
+        </member>
+        <member name="T:NxtControl.GuiFramework.LayoutEventArgs">
+            <summary>
+            Summary description for EventArgs.
+            </summary>
+        </member>
+        <member name="M:NxtControl.GuiFramework.LayoutEventArgs.#ctor(System.Drawing.Rectangle,System.Drawing.Rectangle)">
+            <summary>
+            
+            </summary>
+            <param name="oldRect"></param>
+            <param name="newRect"></param>
+        </member>
+        <member name="T:NxtControl.GuiFramework.AuxHMIAccessor">
+            <summary>
+            Color specific to this framework
+            </summary>
+        </member>
+        <member name="T:NxtControl.Automation.DeviceConfigurator.HWComplexProperty.NamedProperty">
+            <remarks/>
+        </member>
+        <member name="P:NxtControl.Automation.DeviceConfigurator.HWComplexProperty.NamedProperty.Name">
+            <remarks/>
+        </member>
+        <member name="T:NxtControl.Automation.DeviceConfigurator.HWComplexProperty.Property">
+            <remarks/>
+        </member>
+        <member name="P:NxtControl.Automation.DeviceConfigurator.HWComplexProperty.Property.Value">
+            <remarks/>
+        </member>
+        <member name="T:NxtControl.Automation.DeviceConfigurator.HWComplexProperty.ComplexProperty">
+            <remarks/>
+        </member>
+        <member name="P:NxtControl.Automation.DeviceConfigurator.HWComplexProperty.ComplexProperty.Items">
+            <remarks/>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:NxtControl.Automation.DeviceConfigurator.HWCAT.DeserializeXMLFile``1(System.String,System.String)" -->
+        <member name="P:NxtControl.Automation.DeviceConfigurator.HWCAT.DeployRequired">
+            <summary>
+            DeployRequired gets or sets if anything has changed in the HW configuration and therefore a deploy is necessary or not.
+            </summary>
+        </member>
+        <member name="T:NxtControl.GuiFramework.PropertyControl">
+            <summary>
+            Summary description for Symbol.
+            </summary>
+        </member>
+        <member name="T:NxtControl.GuiFramework.GraphicSymbol">
+            <summary>
+            Summary description for Symbol.
+            </summary>
+        </member>
+        <member name="F:NxtControl.GuiFramework.JournalConfigDlg.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:NxtControl.GuiFramework.JournalConfigDlg.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:NxtControl.GuiFramework.JournalConfigDlg.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:NxtControl.GuiFramework.JournalConfiguration.Wildcard.#ctor(System.String)">
+            <summary>
+            Initializes a wildcard with the given search pattern.
+            </summary>
+            <param name="pattern">The wildcard pattern to match.</param>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:NxtControl.GuiFramework.JournalConfiguration.Wildcard.#ctor(System.String,System.Text.RegularExpressions.RegexOptions)" -->
+        <member name="M:NxtControl.GuiFramework.JournalConfiguration.Wildcard.WildcardToRegex(System.String)">
+            <summary>
+            Converts a wildcard to a regex.
+            </summary>
+            <param name="pattern">The wildcard pattern to convert.</param>
+            <returns>A regex equivalent of the given wildcard.</returns>
+        </member>
+        <member name="M:NxtControl.GuiFramework.CanvasTopologyRose.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:NxtControl.GuiFramework.HMICanvas">
+            <summary>
+            Summary description for HMICanvas.
+            </summary>
+        </member>
+        <member name="T:NxtControl.GuiFramework.HMISymbol">
+            <summary>
+            Summary description for HMISymbol.
+            </summary>
+        </member>
+        <member name="T:NxtControl.GuiFramework.HMISymbolController">
+            <summary>
+            Summary description for HMISymbol.
+            </summary>
+        </member>
+        <member name="M:NxtControl.GuiFramework.ArchiveConfiguration.Wildcard.#ctor(System.String)">
+            <summary>
+            Initializes a wildcard with the given search pattern.
+            </summary>
+            <param name="pattern">The wildcard pattern to match.</param>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:NxtControl.GuiFramework.ArchiveConfiguration.Wildcard.#ctor(System.String,System.Text.RegularExpressions.RegexOptions)" -->
+        <member name="M:NxtControl.GuiFramework.ArchiveConfiguration.Wildcard.WildcardToRegex(System.String)">
+            <summary>
+            Converts a wildcard to a regex.
+            </summary>
+            <param name="pattern">The wildcard pattern to convert.</param>
+            <returns>A regex equivalent of the given wildcard.</returns>
+        </member>
+        <member name="M:NxtControl.Services.IHMICanvasTopologyService.CreateTopForm(System.String,NxtControl.GuiFramework.ITopForm@)">
+            <summary>
+            Searches for the TopForm with the given topFormId (Name). If does not exists, TopForm is created
+            TopForm automatically creates the StartCanvas defined within Engineering
+            </summary>
+            <param name="topFormId">Id (Name) of the TopForm</param>
+            <param name="topForm">Interface to the found or created TopForm</param>
+            <returns>Returns True if TopForm is created, otherwise false</returns>
+        </member>
+        <member name="M:NxtControl.Services.IHMICanvasTopologyService.CreateEmptyTopForm(System.String,NxtControl.GuiFramework.ITopForm@)">
+            <summary>
+            Searches for the TopForm with the given topFormId (Name). If does not exists, TopForm is created
+            TopForm creates empty StartCanvas with one WorkArea
+            </summary>
+            <param name="topFormId">Id (Name) of the TopForm</param>
+            <param name="topForm">Interface to the found or created TopForm</param>
+            <returns>Returns True if TopForm is created, otherwise False</returns>
+        </member>
+        <member name="M:NxtControl.Services.IHMICanvasTopologyService.CloseTopForm(System.String)">
+            <summary>
+            TopForm with the Id (Name) is closed
+            </summary>
+            <param name="topFormId">Id (Name) of the TopForm</param>
+            <returns>Returns True if TopForm with given Id is found and closed, otherwise False</returns>
+        </member>
+        <member name="M:NxtControl.Services.IHMICanvasTopologyService.GetTopForm(System.String)">
+            <summary>
+            Returns TopForm with gived Id (Name), otherwise null
+            </summary>
+            <param name="topFormId">Id (Name) of the TopForm</param>
+            <returns>Returns TopForm with gived Id (Name), otherwise null</returns>
+        </member>
+        <member name="P:NxtControl.Services.IHMICanvasTopologyService.MainTopForm">
+            <summary>
+            Returns the Main TopForm. The Main TopForm is the first automatically created TopForm and its Id (Name) is "Main"
+            </summary>
+        </member>
+        <member name="P:NxtControl.Services.IHMICanvasTopologyService.AllTopForms">
+            <summary>
+            Returns collection of all TopForms
+            </summary>
+        </member>
+        <member name="M:NxtControl.GuiFramework.EmptyStartCanvas.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="T:NxtControl.GuiFramework.HexInt">
+            <summary>
+            Summary description for HexIntConverter.
+            </summary>
+        </member>
+        <member name="M:NxtControl.GuiFramework.ITopForm.Show">
+            <summary>
+            Shows the TopForm on the screen 
+            </summary>
+        </member>
+        <member name="M:NxtControl.GuiFramework.ITopForm.Activate">
+            <summary>
+            Activates the TopForm and gives it the Focus
+            </summary>
+        </member>
+        <member name="M:NxtControl.GuiFramework.ITopForm.Close">
+            <summary>
+            Closes the TopForm
+            </summary>
+        </member>
+        <member name="M:NxtControl.GuiFramework.ITopForm.GetWorkArea(System.String)">
+            <summary>
+            Returns WorkArea with the given name that is defined in the StartCanvas
+            </summary>
+            <param name="name">Name of the WorkArea</param>
+            <returns>Returns found WorkArea, otherwise null</returns>
+        </member>
+        <member name="P:NxtControl.GuiFramework.ITopForm.Name">
+            <summary>
+            Returns the TopFormId (Name)
+            </summary>
+        </member>
+        <member name="P:NxtControl.GuiFramework.ITopForm.Location">
+            <summary>
+            Gets and sets the Location of the TopForm. The setting of the Location is ignored if ScreenNumber is set
+            </summary>
+        </member>
+        <member name="P:NxtControl.GuiFramework.ITopForm.FullScreen">
+            <summary>
+            Defines or returns if TopForm is FullScreen Form
+            </summary>
+        </member>
+        <member name="P:NxtControl.GuiFramework.ITopForm.FullScreenMaximalZoom">
+            <summary>
+            Defines or returns if TopForm should use Maximal zoom if it is FullScreen and Resize is set to Zoom
+            </summary>
+        </member>
+        <member name="P:NxtControl.GuiFramework.ITopForm.PrimaryScreen">
+            <summary>
+            Defines or returns whether TopForm should be placed on PrimaryScreen
+            </summary>
+        </member>
+        <member name="P:NxtControl.GuiFramework.ITopForm.ScreenNumber">
+            <summary>
+            Defines or returns Screen number where TopForm should be placed. This property is ignored if PrimaryScreen is set to true
+            </summary>
+        </member>
+        <member name="P:NxtControl.GuiFramework.ITopForm.Title">
+            <summary>
+            Defines or returns Title of the TopForm (it is not visible if TopForm is in FullScreen mode)
+            </summary>
+        </member>
+        <member name="P:NxtControl.GuiFramework.ITopForm.TopologyRoot">
+            <summary>
+            Defines or returns the Topology root that it will be used in the MainWorkArea 
+            </summary>
+        </member>
+        <member name="P:NxtControl.GuiFramework.ITopForm.Canvas">
+            <summary>
+            Returns the open Canvas in MainWorkArea
+            </summary>
+        </member>
+        <member name="P:NxtControl.GuiFramework.ITopForm.WorkAreas">
+            <summary>
+            Returns all WorkAreas from the StartCanvas
+            </summary>
+        </member>
+        <member name="T:NxtControl.GuiFramework.ShapeCollection">
+            <summary>
+            This class implements a collection of myShapes.
+            </summary>
+        </member>
+        <member name="T:NxtControl.GuiFramework.Line">
+            <summary>
+            Summary description for Line.
+            </summary>
+        </member>
+        <member name="T:NxtControl.GuiFramework.RoundKnob">
+            <summary>
+            Summary description for FillShape.
+            </summary>
+        </member>
+        <member name="M:NxtControl.GuiFramework.RoundKnob.InitializeCmd">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:NxtControl.GuiFramework.RoundKnob.KnobRenderer.knob">
+            <summary>
+            Control to render
+            </summary>
+        </member>
+        <member name="T:NxtControl.GuiFramework.FreeText">
+            <summary>
+            Summary description for Line.
+            </summary>
+        </member>
+        <member name="F:NxtControl.GuiFramework.TagValueViewDlg.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:NxtControl.GuiFramework.TagValueViewDlg.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:NxtControl.GuiFramework.TagValueViewDlg.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:NxtControl.GuiFramework.SchedulerTaskDefinitionDlg.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:NxtControl.GuiFramework.SchedulerTaskDefinitionDlg.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:NxtControl.GuiFramework.SchedulerTaskDefinitionDlg.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "T:NxtControl.GuiFramework.SchedulerTasksDefinitionDlg" -->
+        <member name="F:NxtControl.GuiFramework.SchedulerTasksDefinitionDlg.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:NxtControl.GuiFramework.SchedulerTasksDefinitionDlg.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:NxtControl.GuiFramework.SchedulerTasksDefinitionDlg.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:NxtControl.GuiFramework.TrendBaseControl.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:NxtControl.GuiFramework.HistoryTrendConfigurationAddFolderDlg.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="F:NxtControl.GuiFramework.HistoryTrendConfigurationAddFolderDlg.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:NxtControl.GuiFramework.HistoryTrendConfigurationAddFolderDlg.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:NxtControl.GuiFramework.HistoryTrendAddPathesDlg.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="F:NxtControl.GuiFramework.HistoryTrendAddPathesDlg.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:NxtControl.GuiFramework.HistoryTrendAddPathesDlg.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:NxtControl.GuiFramework.HistoryTrendConfigurationEditorDlg.components">
+            <summary> 
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:NxtControl.GuiFramework.HistoryTrendConfigurationEditorDlg.Dispose(System.Boolean)">
+            <summary> 
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:NxtControl.GuiFramework.HistoryTrendConfigurationEditorDlg.InitializeComponent">
+            <summary> 
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:NxtControl.GuiFramework.HistoryTrendConfigurationManagerDlg.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:NxtControl.GuiFramework.HistoryTrendConfigurationManagerDlg.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:NxtControl.GuiFramework.HistoryTrendConfigurationManagerDlg.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:NxtControl.GuiFramework.SeriesPropertiesDlg.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:NxtControl.GuiFramework.SeriesPropertiesDlg.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:NxtControl.GuiFramework.SeriesPropertiesDlg.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:NxtControl.GuiFramework.TrendBase.OnTimerTick(System.Object,System.EventArgs)">
+            <summary>
+            This handler is called and trend, if not stopped can set current time as leading  
+            </summary>
+            <param name="sender"></param>
+            <param name="e"></param>
+        </member>
+        <member name="F:NxtControl.GuiFramework.TrendSetTimeAndRangeDlg.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:NxtControl.GuiFramework.TrendSetTimeAndRangeDlg.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:NxtControl.GuiFramework.TrendSetTimeAndRangeDlg.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+    </members>
+</doc>

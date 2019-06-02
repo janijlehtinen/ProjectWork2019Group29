@@ -1,0 +1,16 @@
+<Mapping>
+  <EventInputs>
+    <Event Name="INID" Map="REQ_1">J1_IN;CONV1_IN</Event>
+  </EventInputs>
+  <EventOutputs>
+    <Event Name="INIDO" Map="IND_1">J1_OUT;CONV1_OUT</Event>
+  </EventOutputs>
+  <Inputs>
+    <Input Name="J1_IN" Type="BOOL" Map="SD_1" />
+    <Input Name="CONV1_IN" Type="BOOL" Map="SD_2" />
+  </Inputs>
+  <Outputs>
+    <Output Name="J1_OUT" Type="BOOL" Map="RD_1" />
+    <Output Name="CONV1_OUT" Type="BOOL" Map="RD_2" />
+  </Outputs>
+</Mapping>

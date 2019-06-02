@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DeployInformation ProjectName="EnAS_Demonstrator" ProjectGuid="{408DA983-FB87-4E9B-86CF-75CE76907CED}" System="System" DeviceName="IceBlock1">
+  <DeviceProperties>
+    <Property Name="MacAddress" Value="" />
+    <Property Name="IPAddress" Value="192.168.0.105" />
+    <ComplexProperty Name="Ports">
+      <Property Name="Deploy" Value="61499" />
+      <Property Name="HMI" Value="61498" />
+      <Property Name="Watch" Value="61497" />
+      <Property Name="Archive" Value="61496" />
+    </ComplexProperty>
+    <ComplexProperty Name="License">
+      <Property Name="Certificate" Value="" />
+      <Property Name="Features" Value="" />
+    </ComplexProperty>
+    <Property Name="Login" Value="Yes" />
+  </DeviceProperties>
+  <UsedDll>IEC61499.exe|Runtime.Base.960FB091-507B-4D3E-9357-FFE290B04DE4.dll|nxtControl.IceBlock.960FB091-507B-4D3E-9357-FFE290B04DE4.dll</UsedDll>
+  <FileName>C:\Users\Jani\ProjectWork2019Group29\nxtSTUDIO\EnAS_Demonstrator\IEC61499\System\System.sys</FileName>
+  <BuildTime>2019-06-02 18:20:06Z</BuildTime>
+  <StudioVersion>IEC 61499 IDE, Gaia release-3.0.0 g2193 6473910 Thu Mar 30 22:39:18 2017</StudioVersion>
+  <StudioInfo>V1;CA1FB8BBCF9C8630AD354364F281CD19F900716DE98C9739AD51123AACD4CE6EDC0A4146FA889368D900474AF78A953EB0265469F7C5A521E5074B67BBAB9931F5436E61F8809826F5586E61F8A69938E0024C71A6A49739E40C025DF58C8030E2104B7CE2DEBA3CF3264F69F289CB23F10F477AF29CD823E9025663F28BB634F10F5667B5839F6EC0114D62FE86821BF10E4735DE8BB706CF274765F48B8521E2025667E9DEA627FF09476BEFA2833CF45E593CABDDB214A95B1125DDA7CE62BD576731D9C8CE63D3250F3FAEA6B362A65A123FD8A0B228AB;</StudioInfo>
+  <Actions>
+    <Action Method="normal" Context="deploy" Priority="700" Operation="copy" FileType="bootproject">
+      <LocalFile>System.IceBlock1.drq.xml</LocalFile>
+    </Action>
+  </Actions>
+  <RequestCollectionFileName>System.IceBlock1.drq.xml</RequestCollectionFileName>
+  <DeviceFileName>System.IceBlock1.sysdev.xml</DeviceFileName>
+  <DependenciesFileName>System.IceBlock1.fbdep.txt</DependenciesFileName>
+</DeployInformation>

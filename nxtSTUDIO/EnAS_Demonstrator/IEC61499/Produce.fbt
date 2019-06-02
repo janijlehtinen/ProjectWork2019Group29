@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE FBType SYSTEM "../LibraryElement.dtd">
+<FBType GUID="83E881758E77A5BA" Name="Produce" Comment="Basic Function Block Type" Namespace="Main">
+  <Attribute Name="Configuration.FB.IDCounter" Value="0" />
+  <Identification Standard="61499-2" />
+  <VersionInfo Organization="nxtControl GmbH" Version="0.0" Author="dmidro" Date="9/26/2018" Remarks="Template" />
+  <InterfaceList>
+    <EventInputs>
+      <Event Name="START" />
+      <Event Name="AT_W2" />
+      <Event Name="ASSEMBLY_DONE" />
+      <Event Name="AT_W3" />
+      <Event Name="TEST_OK" />
+      <Event Name="DELIVERED" />
+      <Event Name="TEST_FAIL">
+        <With Var="J1_WORKING" />
+        <With Var="J1_CONV_WORKING" />
+      </Event>
+      <Event Name="AT_W4" />
+      <Event Name="WP_REMOVED" />
+      <Event Name="RESET" />
+    </EventInputs>
+    <EventOutputs>
+      <Event Name="DONE" />
+      <Event Name="W1W2" />
+      <Event Name="PLACE_CAP" />
+      <Event Name="PLACE_CAP1" />
+      <Event Name="W2W3" />
+      <Event Name="TEST" />
+      <Event Name="W3W1" />
+      <Event Name="W3W4" />
+      <Event Name="J1_REMOVE_WP" />
+      <Event Name="J2_REMOVE_WP" />
+      <Event Name="W4W2" />
+      <Event Name="REJECTED" />
+    </EventOutputs>
+    <InputVars>
+      <VarDeclaration Name="J1_WORKING" Type="BOOL" />
+      <VarDeclaration Name="J1_CONV_WORKING" Type="BOOL" />
+    </InputVars>
+  </InterfaceList>
+  <BasicFB>
+    <Attribute Name="FBType.Basic.Algorithm.Order" Value="INIT,REQ" />
+    <InternalVars>
+      <VarDeclaration Name="PLACE_CAP_VAR" Type="BOOL" InitialValue="TRUE" />
+    </InternalVars>
+    <ECC>
+      <ECState Name="START" Comment="Initial State" x="552.9412" y="429.4117" />
+      <ECState Name="TO_ASSEMBLY" x="1200" y="668">
+        <ECAction Output="W1W2" />
+      </ECState>
+      <ECState Name="ASSEMBLE" x="1463.429" y="1140">
+        <ECAction Output="PLACE_CAP" />
+      </ECState>
+      <ECState Name="TO_TEST" x="1808" y="1480">
+        <ECAction Output="W2W3" />
+      </ECState>
+      <ECState Name="TEST" x="2236" y="1848">
+        <ECAction Output="TEST" />
+      </ECState>
+      <ECState Name="TO_OUTPUT" x="3352.889" y="2501.333">
+        <ECAction Output="W3W1" />
+      </ECState>
+      <ECState Name="DONE" x="148.8887" y="2609.778">
+        <ECAction Output="DONE" />
+      </ECState>
+      <ECState Name="REJECT" x="3184" y="1444">
+        <ECAction Output="W3W4" />
+      </ECState>
+      <ECState Name="REMOVE" x="3000" y="1068">
+        <ECAction Output="J1_REMOVE_WP" />
+      </ECState>
+      <ECState Name="REJECT_DONE" x="3240" y="716.0001">
+        <ECAction Output="REJECTED" />
+      </ECState>
+      <ECState Name="RESET" x="2432" y="688.0001" />
+      <ECState Name="TO_ASSEMBLY1" x="2368" y="236">
+        <ECAction Output="W4W2" />
+      </ECState>
+      <ECState Name="REJECT_J2" x="1760" y="2311.111" />
+      <ECState Name="MOVE_W4" x="711.1108" y="2311.112">
+        <ECAction Output="W3W4" />
+      </ECState>
+      <ECState Name="MOVE_W1" x="1138.222" y="1987.111">
+        <ECAction Output="W3W1" />
+      </ECState>
+      <ECState Name="MOVE_W2_1" x="680.889" y="1793.333">
+        <ECAction Output="W1W2" />
+      </ECState>
+      <ECState Name="J2_REMOVE" x="278.5397" y="1632.889">
+        <ECAction Algorithm="REQ" Output="J2_REMOVE_WP" />
+      </ECState>
+      <ECState Name="MOVE_W2_2" x="248" y="2087.111">
+        <ECAction Output="W4W2" />
+      </ECState>
+      <ECState Name="REJECT_DONE2" x="1068.571" y="795.0475">
+        <ECAction Output="REJECTED" />
+      </ECState>
+      <ECState Name="ASSEMBLE1" x="888" y="1316">
+        <ECAction Output="PLACE_CAP1" />
+      </ECState>
+      <ECTransition Source="START" Destination="TO_ASSEMBLY" Condition="START" x="906.1697" y="470.1465">
+        <Attribute Name="Configuration.Transaction.BezierPoints" Value="210.5806,107.3833,241.9248,118.9407" />
+      </ECTransition>
+      <ECTransition Source="TO_ASSEMBLY" Destination="ASSEMBLE" Condition="AT_W2" x="1390.73" y="858.2961">
+        <Attribute Name="Configuration.Transaction.BezierPoints" Value="340.5628,195.2589,358.9106,226.2719" />
+      </ECTransition>
+      <ECTransition Source="ASSEMBLE" Destination="TO_TEST" Condition="ASSEMBLY_DONE" x="1742.93" y="1267.733">
+        <Attribute Name="Configuration.Transaction.BezierPoints" Value="429.0948,303.7995,446.153,323.0222" />
+      </ECTransition>
+      <ECTransition Source="TO_TEST" Destination="TEST" Condition="AT_W3" x="2071.2" y="1598.968">
+        <Attribute Name="Configuration.Transaction.BezierPoints" Value="503.6254,383.9767,528.9878,405.3644" />
+      </ECTransition>
+      <ECTransition Source="TEST" Destination="TO_OUTPUT" Condition="TEST_OK" x="2797.01" y="2099.458">
+        <Attribute Name="Configuration.Transaction.BezierPoints" Value="659.0204,497.2278,736.0083,541.0821" />
+      </ECTransition>
+      <ECTransition Source="TO_OUTPUT" Destination="DONE" Condition="DELIVERED" x="1606.192" y="2751.483">
+        <Attribute Name="Configuration.Transaction.BezierPoints" Value="512.9548,696.8747,273.0518,705.5595" />
+      </ECTransition>
+      <ECTransition Source="DONE" Destination="START" Condition="1" x="73.43953" y="1286.243">
+        <Attribute Name="Configuration.Transaction.BezierPoints" Value="-17.81661,388.6588,14.1826,215.571" />
+      </ECTransition>
+      <ECTransition Source="TEST" Destination="REJECT" Condition="TEST_FAIL AND J1_WORKING" x="2616.424" y="1578.076">
+        <Attribute Name="Configuration.Transaction.BezierPoints" Value="619.153,403.5684,681.1292,376.8246" />
+      </ECTransition>
+      <ECTransition Source="REJECT" Destination="REMOVE" Condition="AT_W4" x="3201.979" y="1253.632">
+        <Attribute Name="Configuration.Transaction.BezierPoints" Value="807.2005,323.5314,804.2461,302.89" />
+      </ECTransition>
+      <ECTransition Source="REMOVE" Destination="REJECT_DONE" Condition="WP_REMOVED" x="3204.054" y="891.5156">
+        <Attribute Name="Configuration.Transaction.BezierPoints" Value="798.0406,234.9652,811.2964,210.7119" />
+      </ECTransition>
+      <ECTransition Source="REJECT_DONE" Destination="TO_ASSEMBLY1" Condition="1" x="3030.187" y="363.5728">
+        <Attribute Name="Configuration.Transaction.BezierPoints" Value="795.2672,101.9405,737.3269,64.64039" />
+      </ECTransition>
+      <ECTransition Source="TO_ASSEMBLY" Destination="RESET" Condition="RESET" x="1856.544" y="566.5289">
+        <Attribute Name="Configuration.Transaction.BezierPoints" Value="427,135.0246,501.6666,137.5447" />
+      </ECTransition>
+      <ECTransition Source="ASSEMBLE" Destination="RESET" Condition="RESET" x="1903.593" y="841.3307">
+        <Attribute Name="Configuration.Transaction.BezierPoints" Value="442.2445,220.9064,507.9247,190.0305" />
+      </ECTransition>
+      <ECTransition Source="TO_TEST" Destination="RESET" Condition="RESET" x="2088.772" y="1021.89">
+        <Attribute Name="Configuration.Transaction.BezierPoints" Value="502.3494,273.7969,539.9562,226.7966" />
+      </ECTransition>
+      <ECTransition Source="TEST" Destination="RESET" Condition="RESET" x="2269.177" y="1267.395">
+        <Attribute Name="Configuration.Transaction.BezierPoints" Value="555.2134,360.781,570.3574,272.8153" />
+      </ECTransition>
+      <ECTransition Source="TO_OUTPUT" Destination="RESET" Condition="RESET" x="2865.791" y="1672.373">
+        <Attribute Name="Configuration.Transaction.BezierPoints" Value="751.7712,496.0738,677.9114,353.0635" />
+      </ECTransition>
+      <ECTransition Source="REJECT" Destination="RESET" Condition="RESET" x="2735.68" y="1109.251">
+        <Attribute Name="Configuration.Transaction.BezierPoints" Value="706.8806,308.0087,653.7859,253.8256" />
+      </ECTransition>
+      <ECTransition Source="REMOVE" Destination="RESET" Condition="RESET" x="2676.23" y="922.2711">
+        <Attribute Name="Configuration.Transaction.BezierPoints" Value="685.836,246.2109,654.7343,222.2091" />
+      </ECTransition>
+      <ECTransition Source="RESET" Destination="START" Condition="1" x="1599.807" y="410.2592">
+        <Attribute Name="Configuration.Transaction.BezierPoints" Value="475.0968,102.2814,340.2015,83.71764" />
+      </ECTransition>
+      <ECTransition Source="TO_ASSEMBLY1" Destination="ASSEMBLE" Condition="AT_W2" x="756.7111" y="758.6957">
+        <Attribute Name="Configuration.Transaction.BezierPoints" Value="143.7736,161.6534,75.88237,228.1628" />
+      </ECTransition>
+      <ECTransition Source="TO_ASSEMBLY1" Destination="RESET" Condition="RESET" x="2482.154" y="451.4855">
+        <Attribute Name="Configuration.Transaction.BezierPoints" Value="622.7021,97.51035,626.804,126.48" />
+      </ECTransition>
+      <ECTransition Source="TEST" Destination="REJECT_J2" Condition="TEST_FAIL AND NOT J1_WORKING" x="2092.731" y="2109.971">
+        <Attribute Name="Configuration.Transaction.BezierPoints" Value="542.3666,518.267,512.3336,541.7875" />
+      </ECTransition>
+      <ECTransition Source="REJECT_J2" Destination="MOVE_W1" Condition="NOT J1_CONV_WORKING&#xD;&#xA;" x="1495.617" y="2120.891">
+        <Attribute Name="Configuration.Transaction.BezierPoints" Value="389.9168,536.8783,356.979,518.8636" />
+      </ECTransition>
+      <ECTransition Source="REJECT_J2" Destination="MOVE_W4" Condition="J1_CONV_WORKING" x="1080.171" y="2436">
+        <Attribute Name="Configuration.Transaction.BezierPoints" Value="290.1219,614.4368,233.4756,616.1851" />
+      </ECTransition>
+      <ECTransition Source="MOVE_W4" Destination="MOVE_W2_2" Condition="AT_W4" x="445.7808" y="2270.99">
+        <Attribute Name="Configuration.Transaction.BezierPoints" Value="125.1382,576.9076,102.8246,566.4579" />
+      </ECTransition>
+      <ECTransition Source="MOVE_W2_2" Destination="J2_REMOVE" Condition="AT_W2" x="196.462" y="1878.547">
+        <Attribute Name="Configuration.Transaction.BezierPoints" Value="47.14661,485.6552,44.01769,456.7096" />
+      </ECTransition>
+      <ECTransition Source="MOVE_W2_1" Destination="J2_REMOVE" Condition="AT_W2" x="333.0081" y="1878.917">
+        <Attribute Name="Configuration.Transaction.BezierPoints" Value="82.9931,482.0965,70.52382,476.2993" />
+      </ECTransition>
+      <ECTransition Source="MOVE_W1" Destination="MOVE_W2_1" Condition="DELIVERED" x="879.0699" y="1888.285">
+        <Attribute Name="Configuration.Transaction.BezierPoints" Value="230.1617,475.3302,207.0226,468.4892" />
+      </ECTransition>
+      <ECTransition Source="J2_REMOVE" Destination="REJECT_DONE2" Condition="WP_REMOVED" x="335.0079" y="1264.668">
+        <Attribute Name="Configuration.Transaction.BezierPoints" Value="35.55522,343.9282,85.89307,296.8561" />
+      </ECTransition>
+      <ECTransition Source="REJECT_DONE2" Destination="ASSEMBLE" Condition="PLACE_CAP_VAR = TRUE" x="1256.166" y="933.9204">
+        <Attribute Name="Configuration.Transaction.BezierPoints" Value="303.68,224.5141,320.7418,236.8455" />
+      </ECTransition>
+      <ECTransition Source="REJECT_DONE2" Destination="ASSEMBLE1" Condition="PLACE_CAP_VAR = FALSE" x="1047.837" y="1028.258">
+        <Attribute Name="Configuration.Transaction.BezierPoints" Value="271.2704,236.2523,260.8022,273.3326" />
+      </ECTransition>
+      <ECTransition Source="ASSEMBLE1" Destination="TO_TEST" Condition="ASSEMBLY_DONE" x="1280.618" y="1493.023">
+        <Attribute Name="Configuration.Transaction.BezierPoints" Value="284,388,354,370" />
+      </ECTransition>
+    </ECC>
+    <Algorithm Name="INIT" Comment="Initialization algorithm">
+      <ST Text=";" />
+    </Algorithm>
+    <Algorithm Name="REQ" Comment="Normally executed algorithm">
+      <ST Text=";&#xD;&#xA;PLACE_CAP_VAR := NOT PLACE_CAP_VAR;&#xD;&#xA;" />
+    </Algorithm>
+  </BasicFB>
+</FBType>

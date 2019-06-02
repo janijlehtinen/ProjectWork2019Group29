@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE FBType SYSTEM "../LibraryElement.dtd">
+<FBType GUID="DD92B0D37D8FB0AA" Name="FailScenarioHMI" Comment="Composite Function Block Type" Namespace="Main">
+  <Attribute Name="Configuration.FB.IDCounter" Value="2" />
+  <Identification Standard="61499-2" />
+  <VersionInfo Organization="nxtControl GmbH" Version="0.0" Author="erik" Date="5/14/2019" Remarks="template" />
+  <InterfaceList>
+    <EventInputs>
+      <Event Name="INIT" Comment="Initialization Request" />
+    </EventInputs>
+    <EventOutputs>
+      <Event Name="INITO" Comment="Initialization Confirm">
+        <With Var="Jack1" />
+        <With Var="Conveyor1" />
+      </Event>
+      <Event Name="CNF" Comment="Execution Confirmation">
+        <With Var="Jack1" />
+        <With Var="Conveyor1" />
+      </Event>
+    </EventOutputs>
+    <OutputVars>
+      <VarDeclaration Name="Jack1" Type="BOOL" Comment="Output event qualifier" />
+      <VarDeclaration Name="Conveyor1" Type="BOOL" />
+    </OutputVars>
+  </InterfaceList>
+  <FBNetwork>
+    <FB ID="1" Name="FB1" Type="Fail_scenarios" x="1200" y="120" Namespace="Main">
+      <Parameter Name="QI" Value="TRUE" />
+    </FB>
+    <FB ID="2" Name="FB2" Type="fail_scenarios1" x="1260" y="760" Namespace="Main">
+      <Parameter Name="QI" Value="TRUE" />
+    </FB>
+    <Input Name="INIT" x="12" y="12" Type="Event" />
+    <Output Name="INITO" x="2320" y="452" Type="Event" />
+    <Output Name="CNF" x="2340" y="512" Type="Event" />
+    <Output Name="Jack1" x="2220" y="752" Type="Data" />
+    <Output Name="Conveyor1" x="2160" y="892" Type="Data" />
+    <EventConnections>
+      <Connection Source="INIT" Destination="FB2.INIT" dx1="49.41669" />
+      <Connection Source="FB2.INITO" Destination="INITO" dx1="96.93762" />
+      <Connection Source="FB2.CNF" Destination="CNF" dx1="96.93762" />
+    </EventConnections>
+    <DataConnections>
+      <Connection Source="FB2.J1_OUT" Destination="Jack1" dx1="96.93762" />
+      <Connection Source="FB2.CONV1_OUT" Destination="Conveyor1" dx1="116.9376" />
+    </DataConnections>
+  </FBNetwork>
+</FBType>

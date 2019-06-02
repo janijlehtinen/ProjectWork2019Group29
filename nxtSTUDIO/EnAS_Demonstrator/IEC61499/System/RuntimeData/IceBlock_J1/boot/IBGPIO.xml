@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<bmgpio xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <gpio name="11" mode="in" />
+  <gpio name="12" mode="in" />
+  <gpio name="13" mode="in" />
+  <gpio name="14" mode="in" />
+  <gpio name="16" mode="out" />
+  <gpio name="15" mode="out" />
+  <gpio name="199" mode="out" />
+  <gpio name="198" mode="out" />
+</bmgpio>

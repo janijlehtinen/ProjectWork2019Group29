@@ -1,0 +1,10 @@
+<Mapping>
+  <EventInputs>
+    <Event Name="INID" Map="REQ_1">PalletPresent</Event>
+  </EventInputs>
+  <EventOutputs />
+  <Inputs>
+    <Input Name="PalletPresent" Type="BOOL" Map="SD_1" />
+  </Inputs>
+  <Outputs />
+</Mapping>
